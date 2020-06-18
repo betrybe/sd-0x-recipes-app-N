@@ -235,31 +235,92 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 9. Após a submissão e validação com sucesso do login, o usuário deve ser redirecionado para a tela principal de receitas.
 
-#### Header
+## Header
 
-10. Todos os elementos devem respeitar os atributos descritos no protótipo para o header disponível na tela principal de receitas;
+### 10 - Todos os elementos devem respeitar os atributos descritos no protótipo para o header disponível na tela principal de receitas.
 
-11. Deve apresentar um ícone para a tela de perfil e um para a busca (caso exista no protótipo);
+### 11 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo). Todas as [rotas](#rotas) serão verificadas.
 
-12. Ao clicar no botão de perfil, a rota deve mudar para a tela de perfil;
+##### As seguintes verificações serão feitas:
 
-13. Ao clicar no botão de busca, a barra de busca deve aparecer. O mesmo serve para escondê-la.
+- Não tem header na tela de login;
+- O header tem os ícones corretos na tela de principal de receitas de comidas;
+- O header tem os ícones corretos na tela de principal de receitas de bebidas;
+- Não tem header na tela de detalhes de uma receita de comida;
+- Não tem header na tela de detalhes de uma receita de bebida;
+- Não tem header na tela de receita em processo de comida;
+- Não tem header na tela de receita em processo de bebida;
+- O header tem os ícones corretos na tela de explorar;
+- O header tem os ícones corretos na tela de explorar comidas;
+- O header tem os ícones corretos na tela de explorar bebidas;
+- O header tem os ícones corretos na tela de explorar comidas por ingrediente;
+- O header tem os ícones corretos na tela de explorar bebidas por ingrediente;
+- O header tem os ícones corretos na tela de explorar comidas por local de origem;
+- O header tem os ícones corretos na tela de perfil;
+- O header tem os ícones corretos na tela de receitas feitas;
+- O header tem os ícones corretos na tela de receitas favoritas.
 
-### Barra de busca - Header
+### 12 - Ao clicar no botão de perfil, deve-se ir para a tela de perfil.
 
-14. Todos os elementos devem respeitar os atributos descritos no protótipo para a barra de busca;
+### 13 - Ao clicar no botão de busca, a barra de busca deve aparecer. O mesmo serve para escondê-la.
 
-15. A barra de busca deve ficar fixa no topo da tela e deve possuir 3 _radio buttons_: `Ingrediente`, `Nome` e `Primeira letra`. Eles devem mudar a forma como serão filtradas as receitas.  Os _endpoints_ da API que você deve usar podem ser consultados [aqui para a API de comidas](https://www.themealdb.com/api.php) e [aqui para a API de bebidas](https://www.thecocktaildb.com/api.php). Exemplo: Ao selecionar `Ingrediente` e buscar por `chicken`, deve-se utilizar o endpoint `https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken`;
+##### As seguintes verificações serão feitas:
 
-15. A busca deve ocorrer 600 milissegundos após a última interação com o input (pesquise por debounce);
+- Ao clicar no botão de busca pela primeira vez a barra de busca aparece;
+- Ao clicar no botão de busca pela segunda vez a barra de busca desaparece.
 
-16. A busca deve ocorrer na API de comidas caso a pessoa esteja na página de comidas e na de bebidas caso esteja na de bebidas;
+## Barra de busca - Header
 
-17. Caso apenas uma receita seja encontrada, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL. Exemplo: `receitasbr.com/receita/{id-da-receita}`;
+### 14 - Todos os elementos devem respeitar os atributos descritos no protótipo para a barra de busca.
 
-18. Caso mais de uma receita seja encontrada, mostrar as receitas em cards da mesma maneira que a tela principal de receitas;
+### 15 - A barra de busca deve ficar logo abaixo do header e deve possuir 3 _radio buttons_: `Ingrediente`, `Nome` e `Primeira letra`. Eles devem mudar a forma como serão filtradas as receitas.  Os _endpoints_ da API que você deve usar podem ser consultados [aqui para a API de comidas](https://www.themealdb.com/api.php) e [aqui para a API de bebidas](https://www.thecocktaildb.com/api.php).
 
-19. Caso nenhuma receita seja encontrada, uma mensagem contendo o texto "Sinto muito, não encontramos nenhuma receita para esses filtros." deve ser exibida.
+##### Exemplo: Ao selecionar `Ingrediente` e buscar por `chicken`, deve-se utilizar o endpoint `https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken`.
+
+##### Observação: Para esse requisito será verificada apenas a tela principal de receitas de comidas.
+
+##### As seguintes verificações serão feitas:
+
+- Se o radio selecionado for `Ingrediente`, a busca na API é feita corretamente pelo ingrediente. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/filter.php?i={ingrediente}`;
+- Se o radio selecionado for `Nome`, a busca na API é feita corretamente pelo nome. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/search.php?s={nome}`;
+- Se o radio selecionado for `Primeira letra`, a busca na API é feita corretamente pelo primeira letra. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/search.php?f={primeira-letra}`;
+- Se o radio selecionado for `Primeira letra` e a busca na API for feita com mais de uma letra, deve-se exibir um `alert` com a mensgem "Sua busca deve conter somente 1 (um) caracter".
+
+### 15 - A busca deve ocorrer 600 milissegundos após a última interação com o input (pesquise por debounce).
+
+##### TODO: substituir por botão de busca, já que o debounce é inviável de testar.
+
+### 16 - A busca deve ocorrer na API de comidas caso a pessoa esteja na página de comidas e na de bebidas caso esteja na de bebidas.
+
+##### Observação: Para esse requisito será verificada apenas a tela principal de receitas de bebidas, já que a de comidas já foi verificada no requisito 15.
+
+##### As seguintes verificações serão feitas:
+
+- Na tela de bebidas, se o radio selecionado for `Ingrediente`, a busca na API é feita corretamente pelo ingrediente. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i={ingrediente}`;
+- Na tela de bebidas, se o radio selecionado for `Nome`, a busca na API é feita corretamente pelo nome. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/search.php?s={nome}`;
+- Na tela de bebidas, se o radio selecionado for Primeira letra, a busca na API é feita corretamente pelo primeira letra. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/search.php?f={primeira-letra}`;
+- Na tela de bebidas, se o radio selecionado for `Primeira letra` e a busca na API for feita com mais de uma letra, deve-se exibir um `alert` com a mensgem "Sua busca deve conter somente 1 (um) caracter".
+
+### 17 - Caso apenas uma receita seja encontrada, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL.
+
+##### As seguintes verificações serão feitas:
+
+- Caso apenas uma comida seja encontrada, deve-se ir para sua rota de detalhes (`/comidas/{id-da-receita}`);
+- Caso apenas uma bebida seja encontrada, deve-se ir para sua rota de detalhes (`/bebidas/{id-da-receita}`).
+
+### 18 - Caso mais de uma receita seja encontrada, mostrar as receitas em cards da mesma maneira que a tela principal de receitas;
+
+##### As seguintes verificações serão feitas:
+
+- Caso mais de uma comida seja encontrada, mostrar as 12 primeiras (ou menos, se não hoverem 12);
+- Caso mais de uma bebida seja encontrada, mostrar as 12 primeiras (ou menos, se não hoverem 12).
+
+### 19 - Caso nenhuma receita seja encontrada, um `alert` contendo o texto "Sinto muito, não encontramos nenhuma receita para esses filtros." deve ser exibido.
+
+##### As seguintes verificações serão feitas:
+
+- Caso nenhuma comida seja encontrada o alert deve ser exibido;
+- Caso nenhuma bebida seja encontrada o alert deve ser exibido.
 
 #### Menu inferior
 
@@ -305,7 +366,7 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 37. O Card de receita deve conter uma foto (`strMealThumb` ou `strDrinkThumb`), o nome (`strMeal` ou `strDrink`) e a categoria da receita (`strCategory`).
 
-38. Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL, além de dizer se a pessoa veio da tela de comidas ou de bebidas. Exemplo: `/receitas/comida/{id-da-receita}`;
+38. Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL, além de dizer se a pessoa veio da tela de comidas ou de bebidas. Exemplo: `/comidas/{id-da-receita}`;
 
 39. O header e o menu inferior devem estar presentes.
 
@@ -468,6 +529,29 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 ### Implementações técnicas
 
 Algumas coisas devem seguir um padrão pré-estabelecido para que os teste de correção funcionem corretamente.
+
+#### Rotas
+
+As rotas a serem utilizadas na aplicação devem ser as seguintes:
+
+* Tela de login: `/`;
+* Tela principal de receitas de comidas: `/comidas`;
+* Tela principal de receitas de bebidas: `/bebidas`;
+* Tela de detalhes de uma receita de comida: `/comidas/{id-da-receita}`;
+* Tela de detalhes de uma receita de bebida: `/bebidas/{id-da-receita}`;
+* Tela de receita em processo de comida: `/bebidas/{id-da-receita}/in-progress`;
+* Tela de receita em processo de bebida: `/bebidas/{id-da-receita}/in-progress`;
+* Tela de explorar: `/explorar`;
+* Tela de explorar comidas: `/explorar/comidas`;
+* Tela de explorar bebidas: `/explorar/bebidas`;
+* Tela de explorar comidas por ingrediente: `/explorar/comidas/ingredientes`;
+* Tela de explorar bebidas por ingrediente: `/explorar/bebidas/ingredientes`;
+* Tela de explorar comidas por local de origem: `/explorar/comidas/area`;
+* Tela de perfil: `/perfil`;
+* Tela de receitas feitas: `/receitas-feitas`;
+* Tela de receitas favoritas: `/receitas-favoritas`.
+
+#### `localStorage`
 
 O uso de `localStorage` é necessário para que as informações não se percam caso a pessoa atualize a página.
 O correto é usar os valores para iniciar sua store ou seu context.

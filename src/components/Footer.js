@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import CocktailIcon from '../images/cocktailIcon.svg';
-import ExplorerIcon from '../images/explorerIcon.svg';
+import DrinkIcon from '../images/drinkIcon.svg';
+import ExploreIcon from '../images/exploreIcon.svg';
 import MealIcon from '../images/mealIcon.svg';
 import { RecipesAppContext } from '../context/RecipesAppContext';
 import '../styles/Footer.css';
@@ -12,16 +12,16 @@ export default function Footer() {
   } = useContext(RecipesAppContext);
 
   return displayFooter ? (
-    <div className="footer-container">
+    <div className="footer-container" data-testid="footer">
       <nav>
         <div>
           <Link to="/bebidas">
-            <img data-testid="drinks-bottom-btn" src={CocktailIcon} alt="Ícone de Bebidas" />
+            <img data-testid="drinks-bottom-btn" src={DrinkIcon} alt="Ícone de Bebidas" />
           </Link>
         </div>
         <div>
           <Link to="/explorar">
-            <img data-testid="explore-bottom-btn" src={ExplorerIcon} alt="Ícone do Explorador" />
+            <img data-testid="explore-bottom-btn" src={ExploreIcon} alt="Ícone do Explorador" />
           </Link>
         </div>
         <div>

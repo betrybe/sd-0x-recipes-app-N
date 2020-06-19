@@ -2,7 +2,8 @@ import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { RecipesAppContext } from '../context/RecipesAppContext';
-import { getRandomRecipe } from '../services/searchBarApi';
+import { fetchMealsByAllCategories } from '../services/mealPageApis';
+import { fetchDrinksByAllCategories } from '../services/drinkPageApis';
 import '../styles/RecipesGenerator.css';
 
 const RecipeCard = ({ recipe, recipeType, index }) => {
@@ -62,19 +63,19 @@ export default function RecipesGenerator({ recipeType }) {
   useEffect(() => {
     async function fetchRandomRecipes() {
       setIsLoading(true);
-      getRandomRecipe(recipeType)
-        .then(
-          (recipe) => setRecipes(
-            (existingRecipes) => (
-              existingRecipes ? [...existingRecipes, ...recipe[`${typeQueryString}`]] : []
-            ),
-          ),
-          () => {
-            setRecipes([]);
-            alert('Ocorreu um erro em sua busca.');
-          },
-        )
+      if (recipeType === 'Comidas') {
+        await fetchMealsByAllCategories()
+        .then(({ meals }) => {
+          setRecipes((prevState) => [...prevState, ...meals.slice(0, 12)]);
+        })
         .then(() => setIsLoading(false));
+      } else {
+        await fetchDrinksByAllCategories()
+        .then(({ drinks }) => {
+          setRecipes((prevState) => [...prevState, ...drinks.slice(0, 12)]);
+        })
+        .then(() => setIsLoading(false));
+      }
     }
     const isNotFilteringOrSearching = !toggleCat && !isFetching && !isSearching && !isFiltering;
     if (isNotFilteringOrSearching && !isExploring

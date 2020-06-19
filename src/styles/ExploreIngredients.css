@@ -1,0 +1,26 @@
+.ingredients-container-explore {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+
+.ingredients-content-explore {
+  border: black 20px;
+  margin-top: 2%;
+  width: 40%;
+}
+
+.ingredients-content-explore button img {
+  margin: 0 auto;
+}
+
+.ingredients-content-explore button div {
+  text-align: center;
+}
+
+.button-explore-ingredients {
+  font-size: 0.9em;
+  height: auto;
+  width: 100%;
+}

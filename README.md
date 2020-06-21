@@ -239,7 +239,7 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ### 10 - Todos os elementos devem respeitar os atributos descritos no protótipo para o header disponível na tela principal de receitas.
 
-### 11 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo). Todas as [rotas](#rotas) serão verificadas.
+### 11 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo). Todas as [rotas](#rotas) serão verificadas. Os ícones podem ser encontrados em `src/images/profileIcon.svg` e em `src/images/searchIcon.svg`.
 
 ##### As seguintes verificações serão feitas:
 
@@ -322,27 +322,43 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 - Caso nenhuma comida seja encontrada o alert deve ser exibido;
 - Caso nenhuma bebida seja encontrada o alert deve ser exibido.
 
-#### Menu inferior
+## Menu inferior
 
-21. Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas;
+### 20 - Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas.
 
-21. Deve apresentar 3 ícones, um para comidas, um para bebidas e outro para exploração. Obs.: O menu inferior deve ficar fixado sempre ao final da página;
+### 21 - Deve ser fixo e apresentar 3 ícones: um para comidas, um para bebidas e outro para exploração.
 
-22. Ao clicar no ícone de comidas, a pessoa deve ser redirecionada para uma lista de comidas;
+##### As seguintes verificações serão feitas:
 
-23. Ao clicar no ícone de bebidas, a pessoa deve ser redirecionada para uma lista de cocktails;
+- O menu inferior deve ficar fixado sempre ao final da página;
+- Apresenta os ícones corretos (drinkIcon.svg, exploreIcon.svg e mealIcon.svg, disponíveis na pasta `src/images/`).
 
-24. Ao clicar no ícone de exploração, a rota deve mudar para a tela de explorar.
+### 22 - O menu inferior só deve aparecer apenas nas telas indicadas pelo protótipo.
 
-#### Tela principal de receitas
+##### As seguintes verificações serão feitas:
 
-26. Todos os elementos devem respeitar os atributos descritos no protótipo para a tela principal de receitas;
+- Não tem footer na tela de login;
+- Tem footer na tela de principal de receitas de comidas;
+- Tem footer na tela de principal de receitas de bebidas;
+- Não tem footer na tela de detalhes de uma receita de comida;
+- Não tem footer na tela de detalhes de uma receita de bebida;
+- Não tem footer na tela de receita em processo de comida;
+- Não tem footer na tela de receita em processo de bebida;
+- Tem footer na tela de explorar;
+- Tem footer na tela de explorar comidas;
+- Tem footer na tela de explorar bebidas;
+- Tem footer na tela de explorar comidas por ingrediente;
+- Tem footer na tela de explorar bebidas por ingrediente;
+- Tem footer na tela de explorar comidas por local de origem;
+- Tem footer na tela de perfil;
+- Não tem footer na tela de receitas feitas;
+- Não tem footer na tela de receitas favoritas.
 
-27. Devem ser carregadas as 12 primeiras receitas de comidas ou bebidas, uma em cada card;
+### 23 - Ao clicar no ícone de comidas, a pessoa deve ser redirecionada para uma lista de comidas;
 
-    27.1. Por padrão as receitas carregadas devem ser receitas de comidas;
+### 24 - Ao clicar no ícone de bebidas, a pessoa deve ser redirecionada para uma lista de cocktails;
 
-    27.2. Caso as receitas sejam de comida, deve-se carregar as 12 primeiras receitas obtidas através do endpoint `https://www.themealdb.com/api/json/v1/1/search.php?s=`;
+### 25 - Ao clicar no ícone de exploração, a rota deve mudar para a tela de explorar.
 
     27.3. Caso as receitas sejam de bebida, deve-se carregar as 12 primeiras receitas obtidas através do endpoint `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`;
 

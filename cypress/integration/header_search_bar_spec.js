@@ -189,6 +189,8 @@ describe('Caso mais de uma receita seja encontrada, mostrar as receitas em cards
     cy.get('[data-testid="search-input"]').type('soup');
 
     soupMeals.meals.forEach((meal, index) => {
+      cy.get(`[data-testid="${index}-recipe-card"]`);
+
       cy.get(`[data-testid="${index}-card-img"]`)
         .should('have.attr', 'src')
         .should('include', meal['strMealThumb']);
@@ -197,6 +199,7 @@ describe('Caso mais de uma receita seja encontrada, mostrar as receitas em cards
       cy.get(`[data-testid="${index}-card-name"]`).contains(meal['strMeal']);
     });
 
+    cy.get('[data-testid="10-recipe-card"]').should('not.exist');
     cy.get('[data-testid="10-card-img"]').should('not.exist');
     cy.get('[data-testid="10-card-category"]').should('not.exist');
     cy.get('[data-testid="10-card-name"]').should('not.exist');
@@ -214,6 +217,8 @@ describe('Caso mais de uma receita seja encontrada, mostrar as receitas em cards
     cy.get('[data-testid="search-input"]').type('gin');
 
     ginDrinks.drinks.slice(0, 12).forEach((drink, index) => {
+      cy.get(`[data-testid="${index}-recipe-card"]`);
+
       cy.get(`[data-testid="${index}-card-img"]`)
         .should('have.attr', 'src')
         .should('include', drink['strDrinkThumb']);
@@ -222,6 +227,7 @@ describe('Caso mais de uma receita seja encontrada, mostrar as receitas em cards
       cy.get(`[data-testid="${index}-card-name"]`).contains(drink['strDrink']);
     });
 
+    cy.get('[data-testid="12-recipe-card"]').should('not.exist');
     cy.get('[data-testid="12-card-img"]').should('not.exist');
     cy.get('[data-testid="12-card-category"]').should('not.exist');
     cy.get('[data-testid="12-card-name"]').should('not.exist');

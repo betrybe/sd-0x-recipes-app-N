@@ -49,7 +49,7 @@ const renderCategories = (
     <button
       className="category-button"
       type="button"
-      data-testid="all-category-filter"
+      data-testid="All-category-filter"
       // disabled={(toggleCategory[0].category === 'All') ? disabled : toggleCategory[0].toggleCat}
       onClick={() => {
         setToggleAndRecipes(toggleCategory, setRecipes, 'All', setIsFetching);

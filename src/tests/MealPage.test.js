@@ -98,7 +98,7 @@ describe('Meal Page tests', () => {
     await wait(() => expect(global.fetch).toHaveBeenCalled());
     expect(global.fetch).toHaveBeenCalledWith('https://www.themealdb.com/api/json/v1/1/list.php?c=list');
 
-    expect(queryByTestId(/all-category-filter/i)).toBeInTheDocument();
+    expect(queryByTestId(/All-category-filter/i)).toBeInTheDocument();
     catMock.meals.forEach(({ strCategory }, index) => {
       if (index < 5) {
         expect(queryByTestId(`${strCategory}-category-filter`)).toBeInTheDocument();

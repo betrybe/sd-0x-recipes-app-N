@@ -12,7 +12,7 @@ const RecipeCard = ({ recipe, recipeType, index }) => {
   const trimmedUrlString = recipeType.toLocaleLowerCase();
   return (
     <div className="recipe-content" key={`str${recipeTypeString}`}>
-      <Link to={`/${trimmedUrlString}/${recipe[`id${recipeTypeString}`]}`}>
+      <Link data-testid={`${index}-recipe-card`} to={`/${trimmedUrlString}/${recipe[`id${recipeTypeString}`]}`}>
         <span
           data-testid={`${index}-card-category`}
           className="recipe-category"

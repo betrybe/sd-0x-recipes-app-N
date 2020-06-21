@@ -98,7 +98,7 @@ describe('Drink page tests', () => {
 
     await wait(() => expect(global.fetch).toHaveBeenCalledWith('https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list'));
     expect(global.fetch).toHaveBeenCalledWith('https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list');
-    expect(queryByTestId(/all-category-filter/i)).toBeInTheDocument();
+    expect(queryByTestId(/All-category-filter/i)).toBeInTheDocument();
 
     catMock.drinks.forEach(async ({ strCategory }, index) => {
       if (index < 5) {

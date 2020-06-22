@@ -23,8 +23,8 @@ const checkFirstMeals = (meals, limit = 12) => {
   cy.get(`[data-testid="${limit}-card-name"]`).should('not.exist');
 };
 
-describe('Todos os elementos devem respeitar os atributos descritos no protótipo para a tela principal de receitas', () => {
-  it('A tela tem os data-testids de todos os 12 cards da tela de comidas', () => {
+describe('Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem', () => {
+  it('A tela tem os data-testids de todos os 12 cards e de todos os locais de origem', () => {
     cy.visit('http://localhost:3000/explorar/comidas/area', {
       onBeforeLoad(win) {
         win.fetch = fetchMock;

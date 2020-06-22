@@ -8,6 +8,8 @@ const dessertMeals = require('../mocks/dessertMeals');
 const goatMeals = require('../mocks/goatMeals');
 const emptyMeals = require('../mocks/emptyMeals');
 const mealCategories = require('../mocks/mealCategories');
+const mealIngredients = require('../mocks/mealIngredients');
+const mealsByIngredient = require('../mocks/mealsByIngredient');
 const drinks = require('../mocks/drinks');
 const oneDrink = require('../mocks/oneDrink');
 const ginDrinks = require('../mocks/ginDrinks');
@@ -18,6 +20,8 @@ const otherDrinks = require('../mocks/otherDrinks');
 const cocoaDrinks = require('../mocks/cocoaDrinks');
 const emptyDrinks = require('../mocks/emptyDrinks');
 const drinkCategories = require('../mocks/drinkCategories');
+const drinkIngredients = require('../mocks/drinkIngredients');
+const drinksByIngredient = require('../mocks/drinksByIngredient');
 const areas = require('../mocks/areas');
 const japaneseMeals = require('../mocks/japaneseMeals');
 const italianMeals = require('../mocks/italianMeals');
@@ -31,6 +35,18 @@ const fetch = (url) => Promise.resolve({
 
     if (url === 'https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list')
         return Promise.resolve(drinkCategories);
+
+    if (url === 'https://www.themealdb.com/api/json/v1/1/list.php?i=list')
+      return Promise.resolve(mealIngredients);
+
+    if (url === 'https://www.themealdb.com/api/json/v1/1/filter.php?i=Chicken')
+      return Promise.resolve(mealsByIngredient);
+
+    if (url === 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
+      return Promise.resolve(drinkIngredients);
+
+    if (url === 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Light rum')
+      return Promise.resolve(drinksByIngredient);
 
     if (url === 'https://www.themealdb.com/api/json/v1/1/list.php?a=list')
       return Promise.resolve(areas);

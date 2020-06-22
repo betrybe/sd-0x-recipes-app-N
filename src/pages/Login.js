@@ -16,8 +16,8 @@ const validatePassword = ({ target }, setPasswordIsValid) => {
 };
 
 const submitForm = (email) => {
-  localStorage.setItem('meals-token', '1');
-  localStorage.setItem('cocktails-token', '1');
+  localStorage.setItem('mealsToken', '1');
+  localStorage.setItem('cocktailsToken', '1');
 
   const emailObject = { email };
   localStorage.setItem('user', JSON.stringify(emailObject));

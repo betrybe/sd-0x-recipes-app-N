@@ -84,13 +84,13 @@ describe('Deve apresentar um ícone para a tela de perfil, um título e um ícon
   it('O header tem os ícones corretos na tela de explorar comidas', () => {
     cy.visit('http://localhost:3000/explorar/comidas');
 
-    hasHeader('Explorar - Comidas', false);
+    hasHeader('Explorar Comidas', false);
   });
 
   it('O header tem os ícones corretos na tela de explorar bebidas', () => {
     cy.visit('http://localhost:3000/explorar/bebidas');
 
-    hasHeader('Explorar - Bebidas', false);
+    hasHeader('Explorar Bebidas', false);
   });
 
   it('O header tem os ícones corretos na tela de explorar comidas por ingrediente', () => {

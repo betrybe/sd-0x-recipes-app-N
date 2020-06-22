@@ -5,9 +5,9 @@ import { RecipesAppContext } from '../context/RecipesAppContext';
 
 const addIdLocalStorage = (id, inProgress, setCanRedirectProgress) => {
   if (!inProgress) {
-    const arrayId = JSON.parse(localStorage.getItem('inProggressRecipes')) || [];
+    const arrayId = JSON.parse(localStorage.getItem('inProgressRecipes')) || [];
     arrayId.push(id);
-    localStorage.setItem('inProggressRecipes', JSON.stringify(arrayId));
+    localStorage.setItem('inProgressRecipes', JSON.stringify(arrayId));
   }
   setCanRedirectProgress(true);
 };
@@ -45,7 +45,7 @@ const CurrentDetailsButton = ({
   const type = (typeFood === 'Meal') ? 'comida' : 'bebida';
   const recipeArray = JSON.parse(localStorage.getItem('doneRecipes')) || [];
   const existArray = recipeArray.some((ele) => ele.id === recipe[0][`id${typeFood}`]);
-  const inProgress = (JSON.parse(localStorage.getItem('inProggressRecipes')) || [])
+  const inProgress = (JSON.parse(localStorage.getItem('inProgressRecipes')) || [])
     .some((inProgressId) => inProgressId === Number(id));
   const {
     displayHeader: [, setDisplayHeader], displayFooter: [, setDisplayFooter], disabled,

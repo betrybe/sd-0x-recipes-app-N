@@ -61,7 +61,7 @@ const renderBySuprise = (type, setIsLoadingLocal, setIdFood) => (
     data-testid="explore-surprise"
     onClick={() => fetchByRandomMeal(type, setIsLoadingLocal, setIdFood)}
   >
-    Me Supreenda!!!
+    Me Surpreenda!
   </button>
 );
 
@@ -74,7 +74,7 @@ const ExploreFoods = ({ type }) => {
 
   useEffect(() => {
     setDisplay(true, false, true);
-    setHeaderTitle(`Explorar - ${type}`);
+    setHeaderTitle(`Explorar ${type}`);
     setRecipeType(type);
   }, [setDisplay, setHeaderTitle, type, setRecipeType]);
 

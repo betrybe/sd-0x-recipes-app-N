@@ -65,13 +65,14 @@ const fetchByIngredient = async (
 const renderIngredients = (
   ingredients, imageUrl, type, setRecipes, setCanRedirect,
 ) => {
-  const newIngredients = ingredients.slice(0, (ingredients.length / 2));
+  const newIngredients = ingredients.slice(0, 12);
   return (
     <div className="ingredients-container-explore">
-      {newIngredients.map((ele) => (
+      {newIngredients.map((ele, index) => (
         <div className="ingredients-content-explore" key={ele.strIngredient || ele.strIngredient1}>
           <button
             className="button-explore-ingredients"
+            data-testid={`${index}-ingredient-card`}
             type="button"
             onClick={() => fetchByIngredient(
               (ele.strIngredient || ele.strIngredient1), type, setRecipes,
@@ -79,14 +80,14 @@ const renderIngredients = (
             )}
           >
             <img
-              data-testid={`${ele.strIngredient || ele.strIngredient1}-card-img`}
+              data-testid={`${index}-card-img`}
               src={
                 `${imageUrl}${ele.strIngredient || ele.strIngredient1}-Small.png`
               }
               alt={`${ele.strIngredient || ele.strIngredient1}`}
             />
             <div
-              data-testid={`${ele.strIngredient || ele.strIngredient1}-card-name`}
+              data-testid={`${index}-card-name`}
             >
               {ele.strIngredient || ele.strIngredient1}
             </div>

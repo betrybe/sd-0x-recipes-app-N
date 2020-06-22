@@ -26,13 +26,11 @@ const checkFirstTwelveRecipes = (recipes, meal = true) => {
       .should('have.attr', 'src')
       .should('include', recipe[`str${recipeType}Thumb`]);
 
-    // cy.get(`[data-testid="${index}-card-category"]`).contains(recipe['strCategory']);
     cy.get(`[data-testid="${index}-card-name"]`).contains(recipe[`str${recipeType}`]);
   });
 
   cy.get('[data-testid="12-recipe-card"]').should('not.exist');
   cy.get('[data-testid="12-card-img"]').should('not.exist');
-  // cy.get('[data-testid="12-card-category"]').should('not.exist');
   cy.get('[data-testid="12-card-name"]').should('not.exist');
 };
 
@@ -47,14 +45,12 @@ describe('Todos os elementos devem respeitar os atributos descritos no protótip
     for (let index = 0; index < 12; index += 1) {
       cy.get(`[data-testid="${index}-recipe-card"]`);
       cy.get(`[data-testid="${index}-card-img"]`);
-      // cy.get(`[data-testid="${index}-card-category"]`);
       cy.get(`[data-testid="${index}-card-name"]`);
     }
 
 
     cy.get('[data-testid="12-recipe-card"]').should('not.exist');
     cy.get('[data-testid="12-card-img"]').should('not.exist');
-    // cy.get('[data-testid="12-card-category"]').should('not.exist');
     cy.get('[data-testid="12-card-name"]').should('not.exist');
   });
 
@@ -68,13 +64,11 @@ describe('Todos os elementos devem respeitar os atributos descritos no protótip
     for (let index = 0; index < 12; index += 1) {
       cy.get(`[data-testid="${index}-recipe-card"]`);
       cy.get(`[data-testid="${index}-card-img"]`);
-      // cy.get(`[data-testid="${index}-card-category"]`);
       cy.get(`[data-testid="${index}-card-name"]`);
     }
 
     cy.get('[data-testid="12-recipe-card"]').should('not.exist');
     cy.get('[data-testid="12-card-img"]').should('not.exist');
-    // cy.get('[data-testid="12-card-category"]').should('not.exist');
     cy.get('[data-testid="12-card-name"]').should('not.exist');
   });
 });

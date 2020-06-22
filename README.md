@@ -369,7 +369,7 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 - A tela tem os data-testids de todos os 12 cards da tela de comidas;
 - A tela tem os data-testids de todos os 12 cards da tela de bebidas.
 
-### 27 - Devem ser carregadas as 12 primeiras receitas de comidas ou bebidas, uma em cada card. O Card de receita deve conter sua foto (`strMealThumb` ou `strDrinkThumb`), seu nome (`strMeal` ou `strDrink`) e sua categoria (`strCategory`).
+### 27 - Devem ser carregadas as 12 primeiras receitas de comidas ou bebidas, uma em cada card. O Card de receita deve conter sua foto (`strMealThumb` ou `strDrinkThumb`) e seu nome (`strMeal` ou `strDrink`).
 
 ##### As seguintes verificações serão feitas:
 

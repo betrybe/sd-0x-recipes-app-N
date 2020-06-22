@@ -552,15 +552,26 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 93. A rota deve ser `/explorar/comidas/ingredientes` ou `/explorar/bebidas/ingredientes`.
 
-#### Tela de explorar por local de origem/area
+## Tela de explorar por local de origem/area
 
-94. Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem. Obs: se a opção escolhida for explorar bebidas, esta tela não deve estar disponível;
+### 94 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem.
 
-95. A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown. Obs: se a opção escolhida for explorar bebidas, esta tela não deve estar disponível;
+### 95 - A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown.
 
-96. No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro. Obs: se a opção escolhida for explorar bebidas, esta tela não deve estar disponível;
+##### As seguintes verificações serão feitas:
 
-97. A rota deve ser `/explorar/comidas/area`. Obs: se a opção escolhida for explorar bebidas, esta rota não deve estar disponível.
+- Devem ser carregadas as 12 primeiras receitas de comidas;
+- Ao selecionar um filtro de local de origem, todas as receitas devem mudar para os dados filtrados da API;
+- Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL.
+
+### 96 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro.
+
+##### As seguintes verificações serão feitas:
+
+- No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All";
+- A opção "All" retorna as receitas sem nenhum filtro.
+
+### 97 - A rota deve ser apenas `/explorar/comidas/area`. A rota `/explorar/bebidas/area` não deve estar disponível, retornando um erro de "Not Found".
 
 #### Tela de perfil
 

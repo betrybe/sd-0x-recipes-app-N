@@ -18,6 +18,9 @@ const otherDrinks = require('../mocks/otherDrinks');
 const cocoaDrinks = require('../mocks/cocoaDrinks');
 const emptyDrinks = require('../mocks/emptyDrinks');
 const drinkCategories = require('../mocks/drinkCategories');
+const areas = require('../mocks/areas');
+const japaneseMeals = require('../mocks/japaneseMeals');
+const italianMeals = require('../mocks/italianMeals');
 
 const fetch = (url) => Promise.resolve({
   status: 200,
@@ -28,6 +31,15 @@ const fetch = (url) => Promise.resolve({
 
     if (url === 'https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list')
         return Promise.resolve(drinkCategories);
+
+    if (url === 'https://www.themealdb.com/api/json/v1/1/list.php?a=list')
+      return Promise.resolve(areas);
+
+    if (url === 'https://www.themealdb.com/api/json/v1/1/filter.php?a=Japanese')
+      return Promise.resolve(japaneseMeals);
+
+    if (url === 'https://www.themealdb.com/api/json/v1/1/filter.php?a=Italian')
+      return Promise.resolve(italianMeals);
 
     if (
       url === 'https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata' ||

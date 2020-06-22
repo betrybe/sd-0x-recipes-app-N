@@ -609,19 +609,24 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ### 93 - A rota deve ser apenas `/explorar/comidas/area`. A rota `/explorar/bebidas/area` não deve estar disponível, retornando um erro de "Not Found".
 
-#### Tela de perfil
+## Tela de perfil
 
-98. Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de perfil;
+### 94 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de perfil.
 
-99. O e-mail da pessoa usuária deve estar visível;
+### 95 - O e-mail da pessoa usuária deve estar visível.
 
-100. Essa tela deve conter 3 botões: um de nome "Receitas feitas", um de nome "Receitas Favoritas" e um de nome "Sair";
+### 96 - Essa tela deve conter 3 botões: um de nome "Receitas Feitas", um de nome "Receitas Favoritas" e um de nome "Sair".
 
-101. Ao clicar no botão de "Receitas Favoritas", a rota deve mudar para a tela de receitas favoritas;
+### 97 - Ao clicar no botão de "Receitas Favoritas", a rota deve mudar para a tela de receitas favoritas.
 
-102. Ao clicar no botão de "Receitas Feitas", a rota deve mudar para a tela de receitas feitas;
+### 98 - Ao clicar no botão de "Receitas Feitas", a rota deve mudar para a tela de receitas feitas.
 
-103. Ao clicar no botão de "Sair", o `localStorage` deve ser limpo e a rota deve mudar para a tela de login.
+### 99 - Ao clicar no botão de "Sair", o `localStorage` deve ser limpo e a rota deve mudar para a tela de login.
+
+##### As seguintes verificações serão feitas:
+
+- Limpa todas as chaves da localStorage;
+- A rota muda para a tela de login.
 
 ---
 

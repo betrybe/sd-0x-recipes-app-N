@@ -82,7 +82,7 @@ describe('ExploreByOrigin page tests', () => {
 
     expect(getByTestId('explore-by-area-dropdown')).toBeInTheDocument();
     foodRecipesMock.meals.forEach(({ strArea }, index) => {
-      expect(getByTestId('all-option')).toBeInTheDocument();
+      expect(getByTestId('All-option')).toBeInTheDocument();
       expect(getByTestId(`${strArea}-option`)).toBeInTheDocument();
       expect(getByTestId(`${index}-card-name`)).toBeInTheDocument();
       expect(getByTestId(`${index}-card-img`)).toBeInTheDocument();

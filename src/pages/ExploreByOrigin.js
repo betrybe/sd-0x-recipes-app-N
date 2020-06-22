@@ -18,10 +18,10 @@ function originSelectionDropdown(setFilterByOrigin, foodAreas, setIsFiltering, s
       }}
     >
       <option
-        data-testid="all-option"
-        value="Todas"
+        data-testid="All-option"
+        value="All"
       >
-        Todas
+        All
       </option>
       {foodAreas && foodAreas.length > 1 ? foodAreas.map((area, index) => (
         <option
@@ -62,7 +62,7 @@ export default function ExploreByOrigin() {
     loading: [isLoading, setIsLoading], headerTitle: [, setHeaderTitle], setDisplay,
   } = useContext(RecipesAppContext);
   const [foodAreas, setFoodAreas] = useState([]);
-  const [filterByOrigin, setFilterByOrigin] = useState('Todas');
+  const [filterByOrigin, setFilterByOrigin] = useState('All');
   const filteredRecipes = useFilterByOrigin(recipes, filterByOrigin, setIsLoading);
 
   useEffect(() => {
@@ -75,7 +75,7 @@ export default function ExploreByOrigin() {
   }, [setHeaderTitle, setDisplay]);
 
   useEffect(() => {
-    if (filterByOrigin === 'Todas') return setIsFiltering(false);
+    if (filterByOrigin === 'All') return setIsFiltering(false);
     setRecipes(filteredRecipes);
     setIsFiltering(true);
     return (() => setRecipes([]));

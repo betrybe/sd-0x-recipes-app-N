@@ -217,29 +217,33 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 1. A cobertura de testes unitários deve ser de no mínimo 90%;
 
-#### Tela de login
+## Tela de login
 
-2. Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de login;
+### 2 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de login.
 
-3. A pessoa deve conseguir escrever seu email no input de email;
+### 3 - A pessoa deve conseguir escrever seu email no input de email.
 
-4. A pessoa deve conseguir escrever sua senha no input de senha;
+### 4 - A pessoa deve conseguir escrever sua senha no input de senha.
 
-5. O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos;
+### 5 - O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos. Caso o formulário esteja inválido, o botão de submeter deve estar desativado, contendo a propriedade `disabled`. Caso contrário, deve estar ativado, não contendo a propriedade `disabled`.
 
-6. Caso o formulário esteja inválido, o botão de submeter deve estar desativado. Caso contrário, deve estar ativado;
+##### As seguintes verificações serão feitas:
 
-7. Após a submissão, 2 tokens devem ser salvos em `localStorage` identificados pelas chaves `mealsToken` e `cocktailsToken` (o token de teste é sempre "1");
+- O botão deve estar desativado se o email for inválido;
+- O botão deve estar desativado se a senha deve tiver 6 caracteres ou menos;
+- O botão deve estar ativado se o email e a senha forem válidos.
 
-8. Após a submissão, o e-mail de pessoa usuária deve ser salvo em `localStorage` na chave `user` no formato `{ email: email-da-pessoa }`;
+### 6 - Após a submissão, 2 tokens devem ser salvos em `localStorage` identificados pelas chaves `mealsToken` e `cocktailsToken` (o token de teste é sempre "1").
 
-9. Após a submissão e validação com sucesso do login, o usuário deve ser redirecionado para a tela principal de receitas de comidas.
+### 7 - Após a submissão, o e-mail de pessoa usuária deve ser salvo em `localStorage` na chave `user` no formato `{ email: email-da-pessoa }`.
+
+### 8 - Após a submissão e validação com sucesso do login, o usuário deve ser redirecionado para a tela principal de receitas de comidas.
 
 ## Header
 
-### 10 - Todos os elementos devem respeitar os atributos descritos no protótipo para o header disponível na tela principal de receitas.
+### 9 - Todos os elementos devem respeitar os atributos descritos no protótipo para o header disponível na tela principal de receitas.
 
-### 11 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo). Todas as [rotas](#rotas) serão verificadas. Os ícones podem ser encontrados em `src/images/profileIcon.svg` e em `src/images/searchIcon.svg`.
+### 10 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo). Todas as [rotas](#rotas) serão verificadas. Os ícones podem ser encontrados em `src/images/profileIcon.svg` e em `src/images/searchIcon.svg`.
 
 ##### As seguintes verificações serão feitas:
 
@@ -260,9 +264,9 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 - O header tem os ícones corretos na tela de receitas feitas;
 - O header tem os ícones corretos na tela de receitas favoritas.
 
-### 12 - Ao clicar no botão de perfil, deve-se ir para a tela de perfil.
+### 11 - Ao clicar no botão de perfil, deve-se ir para a tela de perfil.
 
-### 13 - Ao clicar no botão de busca, a barra de busca deve aparecer. O mesmo serve para escondê-la.
+### 12 - Ao clicar no botão de busca, a barra de busca deve aparecer. O mesmo serve para escondê-la.
 
 ##### As seguintes verificações serão feitas:
 
@@ -271,9 +275,9 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ## Barra de busca - Header
 
-### 14 - Todos os elementos devem respeitar os atributos descritos no protótipo para a barra de busca.
+### 13 - Todos os elementos devem respeitar os atributos descritos no protótipo para a barra de busca.
 
-### 15 - A barra de busca deve ficar logo abaixo do header e deve possuir 3 _radio buttons_: `Ingrediente`, `Nome` e `Primeira letra`. Eles devem mudar a forma como serão filtradas as receitas.  Os _endpoints_ da API que você deve usar podem ser consultados [aqui para a API de comidas](https://www.themealdb.com/api.php) e [aqui para a API de bebidas](https://www.thecocktaildb.com/api.php).
+### 14 - A barra de busca deve ficar logo abaixo do header e deve possuir 3 _radio buttons_: `Ingrediente`, `Nome` e `Primeira letra`. Eles devem mudar a forma como serão filtradas as receitas.  Os _endpoints_ da API que você deve usar podem ser consultados [aqui para a API de comidas](https://www.themealdb.com/api.php) e [aqui para a API de bebidas](https://www.thecocktaildb.com/api.php).
 
 ##### Exemplo: Ao selecionar `Ingrediente` e buscar por `chicken`, deve-se utilizar o endpoint `https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken`.
 

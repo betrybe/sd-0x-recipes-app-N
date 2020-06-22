@@ -103,10 +103,10 @@ test('botão de entrar funciona conforme o esperado', () => {
   fireEvent.change(passwordInput, { target: { value: validPassWord } });
   fireEvent.click(loginSubmitBtn);
 
-  const mealsToken = localStorage.getItem('meals-token');
+  const mealsToken = localStorage.getItem('mealsToken');
   expect(mealsToken).toBe('1');
 
-  const cocktailsToken = localStorage.getItem('cocktails-token');
+  const cocktailsToken = localStorage.getItem('cocktailsToken');
   expect(cocktailsToken).toBe('1');
 
   const user = JSON.parse(localStorage.getItem('user'));

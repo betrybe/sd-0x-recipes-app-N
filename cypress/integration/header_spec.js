@@ -15,9 +15,9 @@ describe('Deve apresentar um ícone para a tela de perfil, um título e um ícon
     cy.get('[data-testid="profile-top-btn"]').should('not.exist');
     cy.get('[data-testid="page-title"]').should('not.exist');
     cy.get('[data-testid="search-top-btn"]').should('not.exist');
-  }
+  };
 
-  const hasHeader = (title, withSearchButton = true) =>{
+  const hasHeader = (title, withSearchButton = true) => {
     cy.get('[data-testid="profile-top-btn"]')
       .should('have.attr', 'src')
       .should('include', 'profileIcon');
@@ -31,7 +31,7 @@ describe('Deve apresentar um ícone para a tela de perfil, um título e um ícon
     } else {
       cy.get('[data-testid="search-top-btn"]').should('not.exist');
     }
-  }
+  };
 
   it('Não tem header na tela de login', () => {
     cy.visit('http://localhost:3000/');

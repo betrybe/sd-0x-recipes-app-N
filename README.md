@@ -233,13 +233,13 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 8. Após a submissão, o e-mail de pessoa usuária deve ser salvo em `localStorage` na chave `user` no formato `{ email: email-da-pessoa }`;
 
-9. Após a submissão e validação com sucesso do login, o usuário deve ser redirecionado para a tela principal de receitas.
+9. Após a submissão e validação com sucesso do login, o usuário deve ser redirecionado para a tela principal de receitas de comidas.
 
 ## Header
 
 ### 10 - Todos os elementos devem respeitar os atributos descritos no protótipo para o header disponível na tela principal de receitas.
 
-### 11 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo). Todas as [rotas](#rotas) serão verificadas.
+### 11 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo). Todas as [rotas](#rotas) serão verificadas. Os ícones podem ser encontrados em `src/images/profileIcon.svg` e em `src/images/searchIcon.svg`.
 
 ##### As seguintes verificações serão feitas:
 
@@ -322,53 +322,109 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 - Caso nenhuma comida seja encontrada o alert deve ser exibido;
 - Caso nenhuma bebida seja encontrada o alert deve ser exibido.
 
-#### Menu inferior
+## Menu inferior
 
-21. Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas;
+### 20 - Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas.
 
-21. Deve apresentar 3 ícones, um para comidas, um para bebidas e outro para exploração. Obs.: O menu inferior deve ficar fixado sempre ao final da página;
+### 21 - Deve ser fixo e apresentar 3 ícones: um para comidas, um para bebidas e outro para exploração.
 
-22. Ao clicar no ícone de comidas, a pessoa deve ser redirecionada para uma lista de comidas;
+##### As seguintes verificações serão feitas:
 
-23. Ao clicar no ícone de bebidas, a pessoa deve ser redirecionada para uma lista de cocktails;
+- O menu inferior deve ficar fixado sempre ao final da página;
+- Apresenta os ícones corretos (drinkIcon.svg, exploreIcon.svg e mealIcon.svg, disponíveis na pasta `src/images/`).
 
-24. Ao clicar no ícone de exploração, a rota deve mudar para a tela de explorar.
+### 22 - O menu inferior só deve aparecer apenas nas telas indicadas pelo protótipo.
 
-#### Tela principal de receitas
+##### As seguintes verificações serão feitas:
 
-26. Todos os elementos devem respeitar os atributos descritos no protótipo para a tela principal de receitas;
+- Não tem footer na tela de login;
+- Tem footer na tela de principal de receitas de comidas;
+- Tem footer na tela de principal de receitas de bebidas;
+- Não tem footer na tela de detalhes de uma receita de comida;
+- Não tem footer na tela de detalhes de uma receita de bebida;
+- Não tem footer na tela de receita em processo de comida;
+- Não tem footer na tela de receita em processo de bebida;
+- Tem footer na tela de explorar;
+- Tem footer na tela de explorar comidas;
+- Tem footer na tela de explorar bebidas;
+- Tem footer na tela de explorar comidas por ingrediente;
+- Tem footer na tela de explorar bebidas por ingrediente;
+- Tem footer na tela de explorar comidas por local de origem;
+- Tem footer na tela de perfil;
+- Não tem footer na tela de receitas feitas;
+- Não tem footer na tela de receitas favoritas.
 
-27. Devem ser carregadas as 12 primeiras receitas de comidas ou bebidas, uma em cada card;
+### 23 - Ao clicar no ícone de comidas, a pessoa deve ser redirecionada para uma lista de comidas;
 
-    27.1. Por padrão as receitas carregadas devem ser receitas de comidas;
+### 24 - Ao clicar no ícone de bebidas, a pessoa deve ser redirecionada para uma lista de cocktails;
 
-    27.2. Caso as receitas sejam de comida, deve-se carregar as 12 primeiras receitas obtidas através do endpoint `https://www.themealdb.com/api/json/v1/1/search.php?s=`;
+### 25 - Ao clicar no ícone de exploração, a rota deve mudar para a tela de explorar.
 
-    27.3. Caso as receitas sejam de bebida, deve-se carregar as 12 primeiras receitas obtidas através do endpoint `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`;
+## Tela principal de receitas
 
-28. A pessoa deve conseguir filtrar por categoria utilizando botões. Cada um com o atributo prefixado: `data-testid=${categoryName}-category-filter`;
+### 26 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela principal de receitas.
 
-29. Ao clicar no filtro de categoria, todas as receitas devem mudar para os dados filtrados da API. Caso o filtro seja selecionado de novo, o app deve retornar as receitas sem nenhum filtro _(como se fosse um toggle)_. As categorias disponíveis devem ser obtidas através da API de [comidas](https://www.themealdb.com/api.php) ou [bebidas](https://www.thecocktaildb.com/api.php);
+##### As seguintes verificações serão feitas:
 
-30. Apenas um filtro de categoria deve poder ser selecionado por vez;
+- A tela tem os data-testids de todos os 12 cards da tela de comidas;
+- A tela tem os data-testids de todos os 12 cards da tela de bebidas.
 
-31. Devem ser exibidas apenas as 5 primeiras categorias retornadas da API;
+### 27 - Devem ser carregadas as 12 primeiras receitas de comidas ou bebidas, uma em cada card. O Card de receita deve conter sua foto (`strMealThumb` ou `strDrinkThumb`) e seu nome (`strMeal` ou `strDrink`).
 
-32. No filtro de categorias deve existir a opção de filtrar por todas as categorias. O nome do filtro deve ser "All";
+##### As seguintes verificações serão feitas:
 
-33. As receitas que serão carregadas dependem de qual ícone a pessoa clicou: comidas acessa a API de comidas e bebidas acessa a API de bebidas;
+- Caso as receitas sejam de comida, deve-se carregar as 12 primeiras receitas obtidas através do endpoint `https://www.themealdb.com/api/json/v1/1/search.php?s=`;
+- Caso as receitas sejam de bebida, deve-se carregar as 12 primeiras receitas obtidas através do endpoint `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`.
 
-34. Se a API utilizada for a de comidas a URL deve ser `/comidas` e caso seja bebidas a URL deve ser `/bebidas`;
+### 28 - A tela deve possuir botões de categoria para serem utilizados como filtro. Cada um com o atributo prefixado: `data-testid=${categoryName}-category-filter`. Devem ser exibidas apenas as 5 primeiras categorias retornadas da API.
 
-35. O título da página mostrado vai depender também de qual ícone a pessoa clicou (comidas ou bebidas);
+##### As seguintes verificações serão feitas:
 
-36. Cada receita que voltar da API deve virar um card;
+- Caso as receitas sejam de comida, deve-se exibir as 5 primeiras categorias de comida obtidas através do endpoint `https://www.themealdb.com/api/json/v1/1/list.php?c=list`;
+- Caso as receitas sejam de bebida, deve-se exibir as 5 primeiras categorias de bebida obtidas através do endpoint `https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list`.
 
-37. O Card de receita deve conter uma foto (`strMealThumb` ou `strDrinkThumb`), o nome (`strMeal` ou `strDrink`) e a categoria da receita (`strCategory`).
+### 29 - Ao clicar no filtro de categoria, todas as receitas devem mudar para os dados filtrados da API. As categorias disponíveis devem ser obtidas através da API de [comidas](https://www.themealdb.com/api.php) ou [bebidas](https://www.thecocktaildb.com/api.php).
 
-38. Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL, além de dizer se a pessoa veio da tela de comidas ou de bebidas. Exemplo: `/comidas/{id-da-receita}`;
+##### As seguintes verificações serão feitas:
 
-39. O header e o menu inferior devem estar presentes.
+- Caso as receitas sejam de comida e a categoria seja "Beef", deve-se carregar as 12 primeiras receitas de "Beef";
+- Caso as receitas sejam de comida e a categoria seja "Breakfast", deve-se carregar as 12 primeiras receitas de "Breakfast";
+- Caso as receitas sejam de comida e a categoria seja "Chicken", deve-se carregar as 12 primeiras receitas de "Chicken";
+- Caso as receitas sejam de comida e a categoria seja "Dessert", deve-se carregar as 12 primeiras receitas de "Dessert";
+- Caso as receitas sejam de comida e a categoria seja "Goat", deve-se carregar as 12 primeiras receitas de "Goat";
+- Caso as receitas sejam de bebida e a categoria seja "Ordinary Drink", deve-se carregar as 12 primeiras receitas de "Ordinary Drink";
+- Caso as receitas sejam de bebida e a categoria seja "Cocktail", deve-se carregar as 12 primeiras receitas de "Cocktail";
+- Caso as receitas sejam de bebida e a categoria seja "Milk / Float / Shake", deve-se carregar as 12 primeiras receitas de "Milk / Float / Shake";
+- Caso as receitas sejam de bebida e a categoria seja "Other/Unknown", deve-se carregar as 12 primeiras receitas de "Other/Unknown";
+- Caso as receitas sejam de bebida e a categoria seja "Cocoa", deve-se carregar as 12 primeiras receitas de "Cocoa".
+
+### 30 - Caso o filtro selecionado no momento seja selecionado de novo, o app deve retornar as receitas sem nenhum filtro, como se fosse um toggle.
+
+##### As seguintes verificações serão feitas:
+
+- Caso as receitas sejam de comida e o filtro tenha sido selecionado novamente, deve-se retornar as 12 primeiras receitas sem filtro;
+- Caso as receitas sejam de bebida e o filtro tenha sido selecionado novamente, deve-se retornar as 12 primeiras receitas sem filtro.
+
+### 31 - Apenas um filtro de categoria deve poder ser selecionado por vez. Ou seja, se outro filtro de categoria for selecionado, ele deve substituir o anterior.
+
+##### As seguintes verificações serão feitas:
+
+- Caso as receitas sejam de comida apenas um filtro de categoria deve poder ser selecionado por vez;
+- Caso as receitas sejam de bebida apenas um filtro de categoria deve poder ser selecionado por vez.
+
+### 32 - No filtro de categorias deve existir a opção de filtrar por todas as categorias, retornando novamente todas as receitas. O nome do filtro deve ser "All".
+
+##### As seguintes verificações serão feitas:
+
+- Caso as receitas sejam de comida deve existir a opção de filtrar por todas as categorias;
+- Caso as receitas sejam de bebida deve existir a opção de filtrar por todas as categorias.
+
+### 33 - Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL, além de dizer se a pessoa veio da tela de comidas ou de bebidas. Exemplo: `/comidas/{id-da-receita}`.
+
+##### As seguintes verificações serão feitas:
+
+- Caso as receitas sejam de comida a rota deve mudar para a tela de detalhes da receita;
+- Caso as receitas sejam de bebida a rota deve mudar para a tela de detalhes da receita.
 
 #### Tela de detalhes de uma receita
 
@@ -496,15 +552,26 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 93. A rota deve ser `/explorar/comidas/ingredientes` ou `/explorar/bebidas/ingredientes`.
 
-#### Tela de explorar por local de origem/area
+## Tela de explorar por local de origem/area
 
-94. Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem. Obs: se a opção escolhida for explorar bebidas, esta tela não deve estar disponível;
+### 94 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem.
 
-95. A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown. Obs: se a opção escolhida for explorar bebidas, esta tela não deve estar disponível;
+### 95 - A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown.
 
-96. No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro. Obs: se a opção escolhida for explorar bebidas, esta tela não deve estar disponível;
+##### As seguintes verificações serão feitas:
 
-97. A rota deve ser `/explorar/comidas/area`. Obs: se a opção escolhida for explorar bebidas, esta rota não deve estar disponível.
+- Devem ser carregadas as 12 primeiras receitas de comidas;
+- Ao selecionar um filtro de local de origem, todas as receitas devem mudar para os dados filtrados da API;
+- Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL.
+
+### 96 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro.
+
+##### As seguintes verificações serão feitas:
+
+- No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All";
+- A opção "All" retorna as receitas sem nenhum filtro.
+
+### 97 - A rota deve ser apenas `/explorar/comidas/area`. A rota `/explorar/bebidas/area` não deve estar disponível, retornando um erro de "Not Found".
 
 #### Tela de perfil
 

@@ -48,7 +48,7 @@ test('renderiza a barra de filtros', () => {
 });
 
 test('renderiza os cards', () => {
-  localStorage.setItem('favorite-recipes', JSON.stringify(localStorageMock));
+  localStorage.setItem('favoriteRecipes', JSON.stringify(localStorageMock));
 
   const { getByText } = render(
     <RecipesAppProvider>
@@ -64,7 +64,7 @@ test('renderiza os cards', () => {
 });
 
 test('renderiza os cards de acordo com o tipo escolhido, comida ou bebida', () => {
-  localStorage.setItem('favorite-recipes', JSON.stringify(localStorageMock));
+  localStorage.setItem('favoriteRecipes', JSON.stringify(localStorageMock));
 
   const { getByText, queryByText } = render(
     <RecipesAppProvider>

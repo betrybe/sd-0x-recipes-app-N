@@ -19,7 +19,7 @@ export default function RecipesAppProvider({ children }) {
   const [isFiltering, setIsFiltering] = useState(false);
   const [filterFoodOrDrinks, setFilterFoodOrDrinks] = useState('All');
   const [disabled, setDisabled] = useState(false);
-  const initialFavoriteRecipes = JSON.parse(localStorage.getItem('favorite-recipes')) || [];
+  const initialFavoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
   const [favoriteRecipes, setFavoriteRecipes] = useState(initialFavoriteRecipes);
   const [recipeDetails, setRecipeDetails] = useState('');
   const [isExploring, setIsExploring] = useState(false);

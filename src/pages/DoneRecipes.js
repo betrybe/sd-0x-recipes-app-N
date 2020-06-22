@@ -17,7 +17,7 @@ const setPageElements = (
 };
 
 const getDoneRecipes = (filterFoodOrDrinks) => {
-  const doneRecipes = JSON.parse(localStorage.getItem('done-recipes')) || [];
+  const doneRecipes = JSON.parse(localStorage.getItem('doneRecipes')) || [];
 
   switch (filterFoodOrDrinks) {
     case 'Food':

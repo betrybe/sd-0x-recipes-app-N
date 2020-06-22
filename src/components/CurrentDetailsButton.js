@@ -5,15 +5,15 @@ import { RecipesAppContext } from '../context/RecipesAppContext';
 
 const addIdLocalStorage = (id, inProgress, setCanRedirectProgress) => {
   if (!inProgress) {
-    const arrayId = JSON.parse(localStorage.getItem('in-progress')) || [];
+    const arrayId = JSON.parse(localStorage.getItem('inProggressRecipes')) || [];
     arrayId.push(id);
-    localStorage.setItem('in-progress', JSON.stringify(arrayId));
+    localStorage.setItem('inProggressRecipes', JSON.stringify(arrayId));
   }
   setCanRedirectProgress(true);
 };
 
 const addDoneRecipesLocalStorage = (recipe, type, typeFood) => {
-  const recipeArray = JSON.parse(localStorage.getItem('done-recipes')) || [];
+  const recipeArray = JSON.parse(localStorage.getItem('doneRecipes')) || [];
   const existArray = recipeArray.some(({ id }) => id === recipe[0][`id${typeFood}`]);
   const newDate = new Date();
   const details = {
@@ -27,7 +27,7 @@ const addDoneRecipesLocalStorage = (recipe, type, typeFood) => {
     doneDate: `${newDate.getDate()}/${newDate.getMonth() + 1}/${newDate.getFullYear()}`,
     tags: (recipe[0].strTags) ? recipe[0].strTags.split(',').slice(0, 2) : null,
   };
-  if (!existArray) localStorage.setItem('done-recipes', JSON.stringify([...recipeArray, details]));
+  if (!existArray) localStorage.setItem('doneRecipes', JSON.stringify([...recipeArray, details]));
 };
 
 const buttonName = (inProgress) => ((inProgress) ? 'Continuar Receita' : 'Iniciar Receita');
@@ -43,9 +43,9 @@ const CurrentDetailsButton = ({
   const [canRedirectDone, setCanRedirectDone] = useState(false);
   const [canRedirectProgress, setCanRedirectProgress] = useState(false);
   const type = (typeFood === 'Meal') ? 'comida' : 'bebida';
-  const recipeArray = JSON.parse(localStorage.getItem('done-recipes')) || [];
+  const recipeArray = JSON.parse(localStorage.getItem('doneRecipes')) || [];
   const existArray = recipeArray.some((ele) => ele.id === recipe[0][`id${typeFood}`]);
-  const inProgress = (JSON.parse(localStorage.getItem('in-progress')) || [])
+  const inProgress = (JSON.parse(localStorage.getItem('inProggressRecipes')) || [])
     .some((inProgressId) => inProgressId === Number(id));
   const {
     displayHeader: [, setDisplayHeader], displayFooter: [, setDisplayFooter], disabled,

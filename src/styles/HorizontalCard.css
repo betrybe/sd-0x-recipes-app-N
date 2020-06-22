@@ -57,7 +57,7 @@
   margin: 0.1em;
 }
 
-.parte-de-baixo-in-done-recipes {
+.parte-de-baixo-in-doneRecipes {
   display: flex;
   flex-direction: column;
 }

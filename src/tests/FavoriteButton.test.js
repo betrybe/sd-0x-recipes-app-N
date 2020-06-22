@@ -28,13 +28,13 @@ test('renderiza o botão quando se passa "index" como prop', () => {
 
   fireEvent.click(button);
 
-  let favoriteRecipes = JSON.parse(localStorage.getItem('favorite-recipes')) || [];
+  let favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
   let isFavorite = favoriteRecipes.some((item) => item.id === '7');
   expect(isFavorite).toBeTruthy();
 
   fireEvent.click(button);
 
-  favoriteRecipes = JSON.parse(localStorage.getItem('favorite-recipes')) || [];
+  favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
   isFavorite = favoriteRecipes.some((item) => item.id === '7');
   expect(isFavorite).toBeFalsy();
 });

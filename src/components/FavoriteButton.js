@@ -21,7 +21,7 @@ const changeState = (
   setIsFavorite(newState);
   setFavoriteRecipes(newFavoriteRecipes);
 
-  localStorage.setItem('favorite-recipes', JSON.stringify(newFavoriteRecipes));
+  localStorage.setItem('favoriteRecipes', JSON.stringify(newFavoriteRecipes));
 };
 
 const FavoriteButton = ({

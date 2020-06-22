@@ -30,7 +30,7 @@ const HorizontalCard = ({ index, type, id, image, name, category, area, alcoholi
           {inDoneRecipes && <ShareButton index={index} id={id} type={type} />}
         </div>
         {inDoneRecipes ?
-          <div className="parte-de-baixo-in-done-recipes">
+          <div className="parte-de-baixo-in-doneRecipes">
             <p data-testid={`${index}-horizontal-done-date`} className="done-date">
               {`Feita em: ${doneDate}`}
             </p>

@@ -432,7 +432,7 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 41. Uma request para a API deve ser feita passando o `id` da receita que deve estar disponível nos parâmetros da URL;
 
-42. Essa tela deve conter uma imagem da receita, o titulo, a categoria (ou se é ou não alcoólico), uma lista de ingredientes seguidos pelas quantidades instruções, um vídeo do youtube "embedado" e recomendações. Obs.: O vídeo do youtube só deve estar disponível para receitas de comida, já que não é retornado pela [API de bebidas](https://www.thecocktaildb.com/api.php);
+42. Essa tela deve conter uma imagem da receita, o título, a categoria (ou se é ou não alcoólico), uma lista de ingredientes seguidos pelas quantidades, instruções, um vídeo do youtube "embedado" e recomendações. Obs.: O vídeo do youtube só deve estar disponível para receitas de comida, já que não é retornado pela [API de bebidas](https://www.thecocktaildb.com/api.php);
 
 43. As recomendações para receitas de comida deverão ser bebidas e vice-versa. Obs.: Para simplificar, utilize receitas aleatórias;
 

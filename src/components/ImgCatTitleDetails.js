@@ -10,7 +10,7 @@ const ImgCatTitleDetails = ({ foods, typeFood }) => (
       alt="imagem da receita"
     />
     <h2 className="title-details" data-testid="recipe-title">{foods[0][`str${typeFood}`]}</h2>
-    <p className="category-details">
+    <p className="category-details" data-testid="recipe-category">
       {(typeFood === 'Drink')
         ? foods[0].strAlcoholic
         : foods[0].strCategory}

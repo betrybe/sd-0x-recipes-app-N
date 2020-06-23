@@ -1,5 +1,11 @@
 const fetchMock = require('../mocks/fetch');
 
+afterEach(() => {
+  cy.window().then((win) => {
+    win.localStorage.clear();
+  });
+});
+
 describe('Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de detalhes de uma receita', () => {
   it('A tela de comida possui todos os atributos data-testid', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
@@ -8,16 +14,16 @@ describe('Todos os elementos devem respeitar os atributos descritos no protótip
       },
     });
 
-    cy.get('[data-testid="recipe-photo"]').should('exist');
-    cy.get('[data-testid="recipe-title"]').should('exist');
-    cy.get('[data-testid="share-btn"]').should('exist');
-    cy.get('[data-testid="favorite-btn"]').should('exist');
-    cy.get('[data-testid="recipe-category"]').should('exist');
-    cy.get('[data-testid="0-ingredient-name-and-measure"]').should('exist');
-    cy.get('[data-testid="instructions"]').should('exist');
-    cy.get('[data-testid="video"]').should('exist');
-    cy.get('[data-testid="0-recomendation-card"]').should('exist');
-    cy.get('[data-testid="start-recipe-btn"]').should('exist');
+    cy.get('[data-testid="recipe-photo"]');
+    cy.get('[data-testid="recipe-title"]');
+    cy.get('[data-testid="share-btn"]');
+    cy.get('[data-testid="favorite-btn"]');
+    cy.get('[data-testid="recipe-category"]');
+    cy.get('[data-testid="0-ingredient-name-and-measure"]');
+    cy.get('[data-testid="instructions"]');
+    cy.get('[data-testid="video"]');
+    cy.get('[data-testid="0-recomendation-card"]');
+    cy.get('[data-testid="start-recipe-btn"]');
   });
 
   it('A tela de bebidas possui todos os atributos data-testid', () => {
@@ -27,15 +33,15 @@ describe('Todos os elementos devem respeitar os atributos descritos no protótip
       },
     });
 
-    cy.get('[data-testid="recipe-photo"]').should('exist');
-    cy.get('[data-testid="recipe-title"]').should('exist');
-    cy.get('[data-testid="share-btn"]').should('exist');
-    cy.get('[data-testid="favorite-btn"]').should('exist');
-    cy.get('[data-testid="recipe-category"]').should('exist');
-    cy.get('[data-testid="0-ingredient-name-and-measure"]').should('exist');
-    cy.get('[data-testid="instructions"]').should('exist');
-    cy.get('[data-testid="0-recomendation-card"]').should('exist');
-    cy.get('[data-testid="start-recipe-btn"]').should('exist');
+    cy.get('[data-testid="recipe-photo"]');
+    cy.get('[data-testid="recipe-title"]');
+    cy.get('[data-testid="share-btn"]');
+    cy.get('[data-testid="favorite-btn"]');
+    cy.get('[data-testid="recipe-category"]');
+    cy.get('[data-testid="0-ingredient-name-and-measure"]');
+    cy.get('[data-testid="instructions"]');
+    cy.get('[data-testid="0-recomendation-card"]');
+    cy.get('[data-testid="start-recipe-btn"]');
   });
 });
 
@@ -174,7 +180,7 @@ describe('Deverão ser mostrados 6 cards de recomendação, onde apenas 2 são m
     cy.get('[data-testid="1-recomendation-card"]').should('exist').and('visible');
     cy.get('[data-testid="1-recomendation-title"]').contains('A1');
 
-    cy.get('[data-testid="2-recomendation-card"]').should('exist');
+    cy.get('[data-testid="2-recomendation-card"]').should('exist').and('not.visible');
     cy.get('[data-testid="2-recomendation-title"]').contains('ABC');
     cy.get('[data-testid="3-recomendation-card"]').should('exist').and('not.visible');
     cy.get('[data-testid="3-recomendation-title"]').contains('Kir');
@@ -240,12 +246,13 @@ describe('Caso a receita já tenha sido feita, o botão "Iniciar Receita" deve s
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
         const doneRecipes = [{
-          "type": "comida",
           "id": "52771",
-          "image": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",
-          "name": "Spicy Arrabiata Penne",
-          "category": "Vegetarian",
+          "type": "comida",
           "area": "Italian",
+          "category": "Vegetarian",
+          "alcoholicOrNot": "",
+          "name": "Spicy Arrabiata Penne",
+          "image": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",
           "doneDate": "22/6/2020",
           "tags": ["Pasta", "Curry"]
         }];
@@ -261,14 +268,15 @@ describe('Caso a receita já tenha sido feita, o botão "Iniciar Receita" deve s
     cy.visit('http://localhost:3000/bebidas/178319', {
       onBeforeLoad(win) {
         const doneRecipes = [{
-          "type": "bebida",
           "id": "178319",
-          "image": "https://www.thecocktaildb.com/images/media/drink/zvsre31572902738.jpg",
-          "name": "Aquamarine",
+          "type": "bebida",
+          "area": "",
           "category": "Cocktail",
           "alcoholicOrNot": "Alcoholic",
+          "name": "Aquamarine",
+          "image": "https://www.thecocktaildb.com/images/media/drink/zvsre31572902738.jpg",
           "doneDate": "23/6/2020",
-          "tags": null
+          "tags": []
         }];
         localStorage.setItem('doneRecipes', JSON.stringify(doneRecipes));
         win.fetch = fetchMock;
@@ -398,6 +406,7 @@ describe('O ícone do coração (favorito) deve vir preenchido caso a receita es
           "type": "comida",
           "area": "Italian",
           "category": "Vegetarian",
+          "alcoholicOrNot": "",
           "name": "Spicy Arrabiata Penne",
           "image": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",
         }];
@@ -429,6 +438,7 @@ describe('O ícone do coração (favorito) deve vir preenchido caso a receita es
         const favoriteRecipes = [{
           "id": "178319",
           "type": "bebida",
+          "area": "",
           "category": "Cocktail",
           "alcoholicOrNot": "Alcoholic",
           "name": "Aquamarine",

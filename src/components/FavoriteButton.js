@@ -42,9 +42,9 @@ const FavoriteButton = ({
             id, category, image, area, name, alcoholicOrNot, type,
           )
         )}
-        data-testid={(index !== null) ? `${index}-horizontal-favorite-btn` : 'favorite-btn'}
       >
         <img
+          data-testid={(index !== null) ? `${index}-horizontal-favorite-btn` : 'favorite-btn'}
           alt=""
           src={isFavorite ? BlackHeartIcon : WhiteHeartIcon}
         />

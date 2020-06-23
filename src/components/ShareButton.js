@@ -18,10 +18,14 @@ const ShareButton = ({ index, id, type }) => {
       <button
         type="button"
         onClick={copyToClipboard}
-        data-testid={(index !== null) ? `${index}-horizontal-share-btn` : 'share-btn'}
       >
         <span className="tooltip-text" data-testid="tooltip-text">{tooltipText}</span>
-        <img alt="" src={ShareIcon} />
+        <img
+          data-testid={(index !== null) ? `${index}-horizontal-share-btn` : 'share-btn'}
+          alt=""
+          src={ShareIcon}
+          onClick={copyToClipboard}
+        />
       </button>
     </div>
   );

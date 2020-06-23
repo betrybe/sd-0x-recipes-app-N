@@ -35,7 +35,9 @@ const HorizontalCard = ({ index, type, id, image, name, category, area, alcoholi
               {`Feita em: ${doneDate}`}
             </p>
             <div className="tags">
-              {(type === 'comida') && tags && tags.map((tag) => <p key={tag}>{tag}</p>)}
+              {(type === 'comida') && tags && tags.map(
+                (tag) => <p data-testid={`${index}-${tag}-horizontal-tag`} key={tag}>{tag}</p>
+              )}
             </div>
           </div> :
           <div className="parte-de-baixo-in-favorite-recipes">

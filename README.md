@@ -262,6 +262,12 @@ Os ingredientes seguem uma ordem lógica onde o nome dele (`strIngredient1`) e a
 
 Algumas coisas devem seguir um padrão pré-estabelecido para que os teste de correção funcionem corretamente.
 
+⚠️ Leia-os atentamente e siga à risca o que for pedido. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação. ⚠️
+
+* Os requisitos do seu projeto são avaliados automaticamente, sendo utilizada a resolução de tela de `360 x 640` (360 pixels de largura por 640 pixels de altura).
+
+    - ⚠️ Logo, recomenda-se desenvolver seu projeto usando a mesma resolução, via instalação [deste plugin](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh?hl=en) do `Chrome` para facilitar a configuração da resolução. ⚠️
+
 ### Rotas
 
 As rotas a serem utilizadas na aplicação devem ser as seguintes:
@@ -351,14 +357,14 @@ Os ícones a serem utilizados na aplicação estão disponíveis do diretório `
 
 Os ícones são:
 
-- `profileIcon.svg`;
-- `searchIcon.svg`;
-- `drinkIcon.svg`;
-- `exploreIcon.svg`;
-- `mealIcon.svg`;
-- `shareIcon.svg`;
-- `whiteHeartIcon.svg`;
-- `blackHeartIcon.svg`.
+* `profileIcon.svg`;
+* `searchIcon.svg`;
+* `drinkIcon.svg`;
+* `exploreIcon.svg`;
+* `mealIcon.svg`;
+* `shareIcon.svg`;
+* `whiteHeartIcon.svg`;
+* `blackHeartIcon.svg`.
 
 ---
 

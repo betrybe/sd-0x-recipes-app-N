@@ -36,7 +36,7 @@ afterEach(() => {
 });
 
 describe('Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas favoritas', () => {
-  it('Todos o data-testids, cumulativo com os atributos em comum com a tela de receitas feitas, estão disponíveis', () => {
+  it('Todos os data-testids, cumulativo com os atributos em comum com a tela de receitas feitas, estão disponíveis', () => {
     cy.get('[data-testid="filter-by-all-btn"]');
     cy.get('[data-testid="filter-by-food-btn"]');
     cy.get('[data-testid="filter-by-drink-btn"]');

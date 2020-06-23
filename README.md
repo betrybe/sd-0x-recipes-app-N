@@ -597,7 +597,7 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 41. Uma request para a API deve ser feita passando o `id` da receita que deve estar disponível nos parâmetros da URL;
 
-42. Essa tela deve conter uma imagem da receita, o titulo, a categoria (ou se é ou não alcoólico), uma lista de ingredientes seguidos pelas quantidades instruções, um vídeo do youtube "embedado" e recomendações. Obs.: O vídeo do youtube só deve estar disponível para receitas de comida, já que não é retornado pela [API de bebidas](https://www.thecocktaildb.com/api.php);
+42. Essa tela deve conter uma imagem da receita, o título, a categoria (ou se é ou não alcoólico), uma lista de ingredientes seguidos pelas quantidades, instruções, um vídeo do youtube "embedado" e recomendações. Obs.: O vídeo do youtube só deve estar disponível para receitas de comida, já que não é retornado pela [API de bebidas](https://www.thecocktaildb.com/api.php);
 
 43. As recomendações para receitas de comida deverão ser bebidas e vice-versa. Obs.: Para simplificar, utilize receitas aleatórias;
 
@@ -619,7 +619,7 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 52. Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para _"despreenchido"_ e vice-versa;
 
-53. As receitas favoritas devem ser salvas em `localStorage` na chave `favoriteRecipes` no formato `[{ id, type, area, category, alcoholic, name, image }]`. E as receitas feitas devem ser salvas em `localStorage` na chave `doneRecipes` no formato `[{ id, type, area, category, alcoholic, name, image, doneDate, tags }]`.
+53. As receitas favoritas devem ser salvas em `localStorage` na chave `favoriteRecipes` no formato `[{ id, type, area, category, alcoholicOrNot, name, image }]`. E as receitas feitas devem ser salvas em `localStorage` na chave `doneRecipes` no formato `[{ id, type, area, category, alcoholicOrNot, name, image, doneDate, tags }]`.
 
 ---
 
@@ -635,7 +635,7 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 57. Ao clicar no checkbox de um ingrediente, o nome dele deve ser "riscado" da lista;
 
-58. O estado do progresso deve ser mantido caso a pessoa atualize a pagina ou volte para a mesma receita. O progresso das receitas devem ser salvos em `localStorage` na chave `inProggressRecipes` no formato `{ id-da-receita: [lista-de-ingredientes-utilizados], ... }`;
+58. O estado do progresso deve ser mantido caso a pessoa atualize a pagina ou volte para a mesma receita. O progresso das receitas devem ser salvos em `localStorage` na chave `inProgressRecipes` no formato `{ id-da-receita: [lista-de-ingredientes-utilizados], ... }`;
 
 59. A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui;
 

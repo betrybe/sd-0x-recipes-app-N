@@ -302,7 +302,7 @@ describe('Quando o botão "Iniciar Receita" for clicado, a rota deve mudar para 
     });
 
     cy.get('[data-testid="start-recipe-btn"]').click();
-    cy.location('href').should('include', '/in-progress');
+    cy.location().should((loc) => expect(loc.pathname).to.eq('/comidas/52771/in-progress'));
   });
 
   it('redireciona para tela de receita (de uma bebida) em progresso', () => {
@@ -313,7 +313,7 @@ describe('Quando o botão "Iniciar Receita" for clicado, a rota deve mudar para 
     });
 
     cy.get('[data-testid="start-recipe-btn"]').click();
-    cy.location('href').should('include', '/in-progress');
+    cy.location().should((loc) => expect(loc.pathname).to.eq('/bebidas/178319/in-progress'));
   });
 });
 
@@ -387,7 +387,20 @@ describe('As receitas favoritas devem ser salvas em `localStorage` na chave `fav
 
     cy.get('[data-testid="favorite-btn"]').click().then(() => {
       const favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
-      expect(favoriteRecipes.some(f => f.id == 52771)).to.be.true;
+      const expectedFavoriteRecipes = [
+        {
+          id: 52771,
+          type: 'comida',
+          area: 'Italian',
+          category: 'Vegetarian',
+          alcoholicOrNot: '',
+          name: 'Spicy Arrabiata Penne',
+          image: 'https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg',
+        },
+      ];
+
+      expect(favoriteRecipes).to.deep.eq(expectedFavoriteRecipes);
+      localStorage.clear();
     });
   });
 
@@ -400,7 +413,20 @@ describe('As receitas favoritas devem ser salvas em `localStorage` na chave `fav
 
     cy.get('[data-testid="favorite-btn"]').click().then(() => {
       const favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
-      expect(favoriteRecipes.some(f => f.id == 178319)).to.be.true;
+      const expectedFavoriteRecipes = [
+        {
+          id: 178319,
+          type: 'bebida',
+          area: '',
+          category: 'Cocktail',
+          alcoholicOrNot:  'Alcoholic',
+          name: 'Aquamarine',
+          image: 'https://www.thecocktaildb.com/images/media/drink/zvsre31572902738.jpg',
+        },
+      ];
+
+      expect(favoriteRecipes).to.deep.eq(expectedFavoriteRecipes);
+      localStorage.clear();
     });
   });
 });

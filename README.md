@@ -470,7 +470,7 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 57. Ao clicar no checkbox de um ingrediente, o nome dele deve ser "riscado" da lista;
 
-58. O estado do progresso deve ser mantido caso a pessoa atualize a pagina ou volte para a mesma receita. O progresso das receitas devem ser salvos em `localStorage` na chave `inProggressRecipes` no formato `{ id-da-receita: [lista-de-ingredientes-utilizados], ... }`;
+58. O estado do progresso deve ser mantido caso a pessoa atualize a pagina ou volte para a mesma receita. O progresso das receitas devem ser salvos em `localStorage` na chave `inProgressRecipes` no formato `{ id-da-receita: [lista-de-ingredientes-utilizados], ... }`;
 
 59. A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui;
 
@@ -670,7 +670,7 @@ No `localStorage` do navegador:
 }]
 ```
 
-* a chave `inProggressRecipes` deve conter a seguinte estrutura:
+* a chave `inProgressRecipes` deve conter a seguinte estrutura:
 ```
 {
     id-da-receita: [lista-de-ingredientes-utilizados],

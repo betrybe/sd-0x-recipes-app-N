@@ -143,7 +143,7 @@ describe('Deverão ser mostrados 6 cards de recomendação, onde apenas 2 são m
 
     cy.get('[data-testid="0-recomendation-card"]').should('exist').and('visible');
     cy.get('[data-testid="1-recomendation-card"]').should('exist').and('visible');
-    cy.get('[data-testid="2-recomendation-card"]').should('exist').and('not.visible');
+    cy.get('[data-testid="2-recomendation-card"]').should('exist');
     cy.get('[data-testid="3-recomendation-card"]').should('exist').and('not.visible');
     cy.get('[data-testid="4-recomendation-card"]').should('exist').and('not.visible');
     cy.get('[data-testid="5-recomendation-card"]').should('exist').and('not.visible');
@@ -164,11 +164,55 @@ describe('Um botão de nome "Iniciar Receita" deve ficar fixo na parte de baixo 
   });
 });
 
-// describe('Caso a receita já tenha sido feita, o botão "Iniciar Receita" deve sumir');
+describe('Caso a receita já tenha sido feita, o botão "Iniciar Receita" deve sumir', () => {
+  it('verifica se botão de iniciar receita não é visível', () => {
+    cy.visit('http://localhost:3000/comidas/52771', {
+      onBeforeLoad(win) {
+        const doneRecipes = [{
+          "type": "comida",
+          "id": "52771",
+          "image": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",
+          "name": "Spicy Arrabiata Penne",
+          "category": "Vegetarian",
+          "area": "Italian",
+          "doneDate": "22/6/2020",
+          "tags": ["Pasta", "Curry"]
+        }];
+        localStorage.setItem('doneRecipes', JSON.stringify(doneRecipes));
+        win.fetch = fetchMock;
+      },
+    });
 
-// describe('Caso a receita tenha sido iniciada mas não finalizada, o texto do botão deve ser "Continuar Receita"');
+    cy.get('[data-testid="start-recipe-btn"]').should('not.be.visible');
+  });
+});
 
-// describe('Quando o botão "Iniciar Receita" for clicado, a rota deve mudar para a tela de receita em processo');
+describe('Caso a receita tenha sido iniciada mas não finalizada, o texto do botão deve ser "Continuar Receita"', () => {
+  it('verifica botão de Continuar Receita', () => {
+    cy.visit('http://localhost:3000/comidas/52771', {
+      onBeforeLoad(win) {
+        const inProgressRecipes = [52771];
+        localStorage.setItem('inProgressRecipes', JSON.stringify(inProgressRecipes));
+        win.fetch = fetchMock;
+      },
+    });
+
+    cy.get('[data-testid="start-recipe-btn"]').contains('Continuar Receita');
+  });
+});
+
+describe('Quando o botão "Iniciar Receita" for clicado, a rota deve mudar para a tela de receita em processo', () => {
+  it('redireciona para tela de receita em progresso', () => {
+    cy.visit('http://localhost:3000/comidas/52771', {
+      onBeforeLoad(win) {
+        win.fetch = fetchMock;
+      },
+    });
+
+    cy.get('[data-testid="start-recipe-btn"]').click();
+    cy.location('href').should('include', '/in-progress');
+  });
+});
 
 // describe('Um botão de compartilhar e um de favoritar a receita devem estar disponíveis');
 
@@ -178,4 +222,17 @@ describe('Um botão de nome "Iniciar Receita" deve ficar fixo na parte de baixo 
 
 // describe('Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para _"despreenchido"_ e vice-versa');
 
-// describe('As receitas favoritas devem ser salvas em `localStorage` na chave `favoriteRecipes`');
+describe('As receitas favoritas devem ser salvas em `localStorage` na chave `favoriteRecipes`', () => {
+  it('favorita receita', () => {
+    cy.visit('http://localhost:3000/comidas/52771', {
+      onBeforeLoad(win) {
+        win.fetch = fetchMock;
+      },
+    });
+
+    cy.get('[data-testid="favorite-btn"]').click().then(() => {
+      const favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
+      expect(favoriteRecipes.some(f => f.id == 52771)).to.be.true;
+    });
+  });
+});

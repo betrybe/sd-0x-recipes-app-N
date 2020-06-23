@@ -484,20 +484,20 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ## Tela de receitas feitas
 
-### 62 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas feitas.
+### 56 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas feitas.
 
-### 63 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, a data em que a pessoa fez a receita, as 2 primeiras tags retornadas pela API e um botão de compartilhar.
+### 57 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, a data em que a pessoa fez a receita, as 2 primeiras tags retornadas pela API e um botão de compartilhar. O ícone do botão de compartilhar pode ser encontrado em `src/images/shareIcon.svg`.
 
-### 64 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica, a data em que a pessoa fez a receita e um botão de compartilhar.
+### 58 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica, a data em que a pessoa fez a receita e um botão de compartilhar. O ícone do botão de compartilhar pode ser encontrado em `src/images/shareIcon.svg`.
 
-### 65 - O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard.
+### 59 - O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard.
 
 ##### As seguintes verificações serão feitas:
 
 - Ao clicar no botão de compartilhar deve aparecer a mensagem "Link copiado!";
 - A URL da tela de detalhes da receita é copiada para o clipboard.
 
-### 66 - Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros. Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente.
+### 60 - Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros. Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente.
 
 ##### As seguintes verificações serão feitas:
 
@@ -505,7 +505,7 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 - Ao clicar no botão "Drinks" as receitas devem ser filtradas por bebidas;
 - Ao clicar no botão "All" o filtro deve ser removido.
 
-### 67 - Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita.
+### 61 - Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita.
 
 ##### As seguintes verificações serão feitas:
 
@@ -514,27 +514,27 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ## Tela de receitas favoritas
 
-### 68 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas favoritas (cumulativo com os atributos em comum com a tela de receitas feitas).
+### 61 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas favoritas (cumulativo com os atributos em comum com a tela de receitas feitas).
 
-### 69 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de "desfavoritar".
+### 63 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de "desfavoritar". Os ícones dos botões podem ser encontrados em `src/images/shareeIcon.svg` e em `src/images/favoriteIcon.svg`, respectivamente.
 
-### 70 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica ou não, um botão de compartilhar e um de "desfavoritar".
+### 64 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica ou não, um botão de compartilhar e um de "desfavoritar". Os ícones dos botões podem ser encontrados em `src/images/shareeIcon.svg` e em `src/images/favoriteIcon.svg`, respectivamente.
 
-### 71 - O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard.
+### 65 - O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard.
 
 ##### As seguintes verificações serão feitas:
 
 - Ao clicar no botão de compartilhar deve aparecer a mensagem "Link copiado!";
 - A URL da tela de detalhes da receita é copiada para o clipboard.
 
-### 72 - O botão de "desfavoritar" deve remover a receita da lista de receitas favoritas do `localStorage` e da tela.
+### 66 - O botão de "desfavoritar" deve remover a receita da lista de receitas favoritas do `localStorage` e da tela.
 
 ##### As seguintes verificações serão feitas:
 
 - Ao clicar no botão de "desfavoritar" a respectiva receita é removida da tela;
 - Ao clicar no botão de "desfavoritar" a respectiva receita é removida do `localStorage`.
 
-### 73 - Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros. Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente.
+### 67 - Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros. Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente.
 
 ##### As seguintes verificações serão feitas:
 
@@ -542,7 +542,7 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 - Ao clicar no botão "Drinks" as receitas devem ser filtradas por bebidas;
 - Ao clicar no botão "All" o filtro deve ser removido.
 
-### 74 - Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita.
+### 68 - Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita.
 
 ##### As seguintes verificações serão feitas:
 
@@ -551,11 +551,11 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ## Tela de explorar
 
-### 75 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar.
+### 69 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar.
 
-### 76 - A tela deve ter dois botões: um para explorar comidas e o outro para explorar bebidas. O nomes dos botões devem ser "Explorar Comidas" e "Explorar Bebidas", respectivamente.
+### 70 - A tela deve ter dois botões: um para explorar comidas e o outro para explorar bebidas. O nomes dos botões devem ser "Explorar Comidas" e "Explorar Bebidas", respectivamente.
 
-### 77 - Ao clicar em um dos botões, a rota deve mudar para a página de explorar comidas ou de explorar bebidas.
+### 71 - Ao clicar em um dos botões, a rota deve mudar para a página de explorar comidas ou de explorar bebidas.
 
 ##### As seguintes verificações serão feitas:
 
@@ -564,30 +564,30 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ## Tela de explorar bebidas ou comidas
 
-### 78- Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar bebidas ou comidas.
+### 72- Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar bebidas ou comidas.
 
 ##### As seguintes verificações serão feitas:
 
 - Tem os data-testids corretos para a tela de explorar comidas;
 - Tem os data-testids corretos para a tela de explorar bebidas.
 
-### 79 - A tela deve ter três botões: um para explorar por ingrediente, um para explorar por local de origem e um para pegar uma receita aleatória. O nomes dos botões devem ser "Por Ingredientes", "Por Local de Origem" e "Me Surpreenda!", respectivamente. Obs: se a opção escolhida for explorar bebidas, o botão para explorar por local de origem não deve estar disponível.
+### 73 - A tela deve ter três botões: um para explorar por ingrediente, um para explorar por local de origem e um para pegar uma receita aleatória. O nomes dos botões devem ser "Por Ingredientes", "Por Local de Origem" e "Me Surpreenda!", respectivamente. Obs: se a opção escolhida for explorar bebidas, o botão para explorar por local de origem não deve estar disponível.
 
 ##### As seguintes verificações serão feitas:
 
 - Tem os botões "Por Ingredientes", "Por Local de Origem" e "Me Surpreenda!" para a tela de explorar comidas;
 - Tem apenas os botões "Por Ingredientes" e "Me Surpreenda!" para a tela de explorar bebidas.
 
-### 80 - Ao clicar em "Por Ingredientes", a rota deve mudar para tela de explorar ingredientes.
+### 74 - Ao clicar em "Por Ingredientes", a rota deve mudar para tela de explorar ingredientes.
 
 ##### As seguintes verificações serão feitas:
 
 - Ao clicar no botão "Por Ingredientes" da tela de explorar comidas a rota muda para a página de explorar comidas por ingrediente;
 - Ao clicar no botão "Explorar Bebidas" da tela de explorar bebidas a rota muda para a página de explorar bebidas por ingrediente.
 
-### 81 - Ao clicar em "Por Local de Origem", a rota deve mudar para tela de explorar por local de origem.
+### 75 - Ao clicar em "Por Local de Origem", a rota deve mudar para tela de explorar por local de origem.
 
-### 82 - Ao clicar em "Me Surpreenda!", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória através da API.
+### 76 - Ao clicar em "Me Surpreenda!", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória através da API.
 
 ##### As seguintes verificações serão feitas:
 
@@ -596,21 +596,21 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ## Tela de explorar ingredientes
 
-### 83 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar ingredientes.
+### 77 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar ingredientes.
 
 ##### As seguintes verificações serão feitas:
 
 - Tem os data-testids corretos para a tela de explorar comidas por ingredientes;
 - Tem os data-testids corretos para a tela de explorar bebidas por ingredientes.
 
-### 84 - A tela deve ter cards para os 12 primeiros ingredientes, de forma que cada card contêm: o nome do ingrediente e uma foto.
+### 78 - A tela deve ter cards para os 12 primeiros ingredientes, de forma que cada card contêm: o nome do ingrediente e uma foto.
 
 ##### As seguintes verificações serão feitas:
 
 - Tem o nome e a foto corretos para a tela de explorar comidas por ingredientes;
 - Tem o nome e a foto corretos para a tela de explorar bebidas por ingredientes.
 
-### 85 -  Ao clicar no card do ingrediente a rota deve mudar para tela principal de receitas, mas mostrando apenas as receitas que contém o ingrediente escolhido.
+### 79 -  Ao clicar no card do ingrediente a rota deve mudar para tela principal de receitas, mas mostrando apenas as receitas que contém o ingrediente escolhido.
 
 ##### As seguintes verificações serão feitas:
 
@@ -619,9 +619,9 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ## Tela de explorar por local de origem/area
 
-### 86 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem.
+### 80 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem.
 
-### 87 - A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown.
+### 81 - A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown.
 
 ##### As seguintes verificações serão feitas:
 
@@ -629,28 +629,28 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 - Ao selecionar um filtro de local de origem, todas as receitas devem mudar para os dados filtrados da API;
 - Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL.
 
-### 88 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro.
+### 82 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro.
 
 ##### As seguintes verificações serão feitas:
 
 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All";
 - A opção "All" retorna as receitas sem nenhum filtro.
 
-### 89 - A rota deve ser apenas `/explorar/comidas/area`. A rota `/explorar/bebidas/area` não deve estar disponível, retornando um erro de "Not Found".
+### 83 - A rota deve ser apenas `/explorar/comidas/area`. A rota `/explorar/bebidas/area` não deve estar disponível, retornando um erro de "Not Found".
 
 ## Tela de perfil
 
-### 94 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de perfil.
+### 84 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de perfil.
 
-### 95 - O e-mail da pessoa usuária deve estar visível.
+### 85 - O e-mail da pessoa usuária deve estar visível.
 
-### 96 - Essa tela deve conter 3 botões: um de nome "Receitas Feitas", um de nome "Receitas Favoritas" e um de nome "Sair".
+### 86 - Essa tela deve conter 3 botões: um de nome "Receitas Feitas", um de nome "Receitas Favoritas" e um de nome "Sair".
 
-### 97 - Ao clicar no botão de "Receitas Favoritas", a rota deve mudar para a tela de receitas favoritas.
+### 87 - Ao clicar no botão de "Receitas Favoritas", a rota deve mudar para a tela de receitas favoritas.
 
-### 98 - Ao clicar no botão de "Receitas Feitas", a rota deve mudar para a tela de receitas feitas.
+### 88 - Ao clicar no botão de "Receitas Feitas", a rota deve mudar para a tela de receitas feitas.
 
-### 99 - Ao clicar no botão de "Sair", o `localStorage` deve ser limpo e a rota deve mudar para a tela de login.
+### 89 - Ao clicar no botão de "Sair", o `localStorage` deve ser limpo e a rota deve mudar para a tela de login.
 
 ##### As seguintes verificações serão feitas:
 

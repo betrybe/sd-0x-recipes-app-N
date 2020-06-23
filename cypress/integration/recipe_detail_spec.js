@@ -155,7 +155,7 @@ describe('As recomendações para receitas de comida deverão ser bebidas e vice
 
     cy.window()
       .its('fetch')
-      .should('be.calledWithMatch', 'https://www.themealdb.com/');
+      .should('be.calledWith', 'https://www.themealdb.com/api/json/v1/1/search.php?s=');
   });
 });
 

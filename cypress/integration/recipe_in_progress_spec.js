@@ -289,6 +289,7 @@ describe('A mesma lógica de favoritar e compartilhar da tela de detalhes de uma
           "type": "comida",
           "area": "Italian",
           "category": "Vegetarian",
+          "alcoholicOrNot": "",
           "name": "Spicy Arrabiata Penne",
           "image": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",
         }];
@@ -332,6 +333,7 @@ describe('A mesma lógica de favoritar e compartilhar da tela de detalhes de uma
         const favoriteRecipes = [{
           "id": "178319",
           "type": "bebida",
+          "area": "",
           "category": "Cocktail",
           "alcoholicOrNot": "Alcoholic",
           "name": "Aquamarine",

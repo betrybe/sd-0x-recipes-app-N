@@ -61,7 +61,7 @@ const createImageCarousel = (title, category, Thumb, index) => (
   <div data-testid={`${index}-recomendation-card`} key={title}>
     <img className="image-carousel" src={Thumb} alt="Imagem" />
     <div>{category}</div>
-    <div>{title}</div>
+    <div data-testid={`${index}-recomendation-title`}>{title}</div>
   </div>
 );
 

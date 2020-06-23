@@ -100,7 +100,7 @@ describe('O botão de compartilhar deve copiar a URL da tela de detalhes da rece
   it('A URL da tela de detalhes da receita é copiada para o clipboard', () => {
     cy.get('[data-testid="0-horizontal-share-btn"]').click();
 
-    return cy.window().then((win) => {
+    cy.window().then((win) => {
       cy.wrap(win.navigator.clipboard.readText())
         .should('eq', 'http://localhost:3000/comidas/52771');
     });

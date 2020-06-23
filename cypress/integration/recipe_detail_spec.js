@@ -118,7 +118,7 @@ describe('Essa tela deve conter uma imagem da receita, o título, a categoria (o
 
     cy.get('[data-testid="recipe-title"]').contains('Aquamarine');
 
-    cy.get('[data-testid="recipe-category"]').contains('Cocktail');
+    cy.get('[data-testid="recipe-category"]').contains('Alcoholic');
 
     cy.get('[data-testid="0-ingredient-name-and-measure"]').contains('Hpnotiq');
     cy.get('[data-testid="0-ingredient-name-and-measure"]').contains('2 oz');

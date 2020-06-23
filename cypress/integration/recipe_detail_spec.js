@@ -170,12 +170,18 @@ describe('Deverão ser mostrados 6 cards de recomendação, onde apenas 2 são m
     cy.get('[data-testid*="recomendation-card"]').should('have.length', 6);
 
     cy.get('[data-testid="0-recomendation-card"]').should('exist').and('visible');
+    cy.get('[data-testid="0-recomendation-title"]').contains('GG');
     cy.get('[data-testid="1-recomendation-card"]').should('exist').and('visible');
+    cy.get('[data-testid="1-recomendation-title"]').contains('A1');
 
     cy.get('[data-testid="2-recomendation-card"]').should('exist');
+    cy.get('[data-testid="2-recomendation-title"]').contains('ABC');
     cy.get('[data-testid="3-recomendation-card"]').should('exist').and('not.visible');
+    cy.get('[data-testid="3-recomendation-title"]').contains('Kir');
     cy.get('[data-testid="4-recomendation-card"]').should('exist').and('not.visible');
+    cy.get('[data-testid="4-recomendation-title"]').contains('747');
     cy.get('[data-testid="5-recomendation-card"]').should('exist').and('not.visible');
+    cy.get('[data-testid="5-recomendation-title"]').contains('252');
   });
 
   it('verifica se exitem todas as recomendações na tela de detalhes de uma bebida', () => {
@@ -188,12 +194,18 @@ describe('Deverão ser mostrados 6 cards de recomendação, onde apenas 2 são m
     cy.get('[data-testid*="recomendation-card"]').should('have.length', 6);
 
     cy.get('[data-testid="0-recomendation-card"]').should('exist').and('visible');
+    cy.get('[data-testid="0-recomendation-title"]').contains('Corba');
     cy.get('[data-testid="1-recomendation-card"]').should('exist').and('visible');
+    cy.get('[data-testid="1-recomendation-title"]').contains('Kumpir');
 
     cy.get('[data-testid="2-recomendation-card"]').should('exist');
+    cy.get('[data-testid="2-recomendation-title"]').contains('Dal fry');
     cy.get('[data-testid="3-recomendation-card"]').should('exist').and('not.visible');
+    cy.get('[data-testid="3-recomendation-title"]').contains('Poutine');
     cy.get('[data-testid="4-recomendation-card"]').should('exist').and('not.visible');
+    cy.get('[data-testid="4-recomendation-title"]').contains('Lasagne');
     cy.get('[data-testid="5-recomendation-card"]').should('exist').and('not.visible');
+    cy.get('[data-testid="5-recomendation-title"]').contains('Timbits');
   });
 });
 
@@ -267,11 +279,13 @@ describe('Caso a receita já tenha sido feita, o botão "Iniciar Receita" deve s
   });
 });
 
-describe('Caso a receita tenha sido iniciada mas não finalizada, o texto do botão deve ser "Continuar Receita"', () => {
+describe.only('Caso a receita tenha sido iniciada mas não finalizada, o texto do botão deve ser "Continuar Receita"', () => {
   it('verifica botão de Continuar Receita na tela de detalhes de uma comida', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
-        const inProgressRecipes = [52771];
+        const inProgressRecipes = [{
+          52771: []
+        }];
         localStorage.setItem('inProgressRecipes', JSON.stringify(inProgressRecipes));
         win.fetch = fetchMock;
       },
@@ -283,7 +297,9 @@ describe('Caso a receita tenha sido iniciada mas não finalizada, o texto do bot
   it('verifica botão de Continuar Receita na tela de detalhes de uma bebida', () => {
     cy.visit('http://localhost:3000/bebidas/178319', {
       onBeforeLoad(win) {
-        const inProgressRecipes = [178319];
+        const inProgressRecipes = [{
+          178319: []
+        }];
         localStorage.setItem('inProgressRecipes', JSON.stringify(inProgressRecipes));
         win.fetch = fetchMock;
       },
@@ -342,7 +358,7 @@ describe('Um botão de compartilhar e um de favoritar a receita devem estar disp
 });
 
 describe('Ao clicar no botão de compartilhar, o link da receita dentro do app deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer', () => {
-  it('verifica a mensagem "Link copiado" e se o link da receita da comida foi copiado para o clipboard', () => {
+  it('verifica a mensagem "Link copiado!" e se o link da receita da comida foi copiado para o clipboard', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
         win.fetch = fetchMock;
@@ -357,7 +373,7 @@ describe('Ao clicar no botão de compartilhar, o link da receita dentro do app d
     });
   });
 
-  it('verifica a mensagem "Link copiado" e se o link da receita da bebida foi copiado para o clipboard', () => {
+  it('verifica a mensagem "Link copiado!" e se o link da receita da bebida foi copiado para o clipboard', () => {
     cy.visit('http://localhost:3000/bebidas/178319', {
       onBeforeLoad(win) {
         win.fetch = fetchMock;

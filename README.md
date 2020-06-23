@@ -663,14 +663,14 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 - Verifica se os botões estão disponíveis na tela de detalhes de uma comida;
 - Verifica se os botões estão disponíveis na tela de detalhes de uma bebida.
 
-### 43 - Ao clicar no botão de compartilhar, o link da receita dentro do app deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer.
+### 43 - Ao clicar no botão de compartilhar, o link da receita dentro do app deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer. O ícone do botão de compartilhar pode ser encontrado em `src/images/shareIcon.svg`.
 
 ##### As seguintes verificações serão feitas:
 
 - Verifica a mensagem "Link copiado!" e se o link da receita da comida foi copiado para o clipboard;
 - Verifica a mensagem "Link copiado!" e se o link da receita da bebida foi copiado para o clipboard.
 
-### 44 - O ícone do coração (favorito) deve vir preenchido caso a receita esteja favoritada, e "despreenchido" caso contrário.
+### 44 - O ícone do coração (favorito) deve vir preenchido caso a receita esteja favoritada, e "despreenchido" caso contrário. Os ícones dos botões podem ser encontrados em `src/images/whiteHeartIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
 
 ##### As seguintes verificações serão feitas:
 
@@ -751,9 +751,9 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ### 61 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas favoritas (cumulativo com os atributos em comum com a tela de receitas feitas).
 
-### 63 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de "desfavoritar". Os ícones dos botões podem ser encontrados em `src/images/shareeIcon.svg` e em `src/images/favoriteIcon.svg`, respectivamente.
+### 63 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de "desfavoritar". Os ícones dos botões podem ser encontrados em `src/images/shareIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
 
-### 64 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica ou não, um botão de compartilhar e um de "desfavoritar". Os ícones dos botões podem ser encontrados em `src/images/shareeIcon.svg` e em `src/images/favoriteIcon.svg`, respectivamente.
+### 64 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica ou não, um botão de compartilhar e um de "desfavoritar". Os ícones dos botões podem ser encontrados em `src/images/shareIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
 
 ### 65 - O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard.
 

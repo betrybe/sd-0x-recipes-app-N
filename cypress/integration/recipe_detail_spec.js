@@ -279,7 +279,7 @@ describe('Caso a receita já tenha sido feita, o botão "Iniciar Receita" deve s
   });
 });
 
-describe.only('Caso a receita tenha sido iniciada mas não finalizada, o texto do botão deve ser "Continuar Receita"', () => {
+describe('Caso a receita tenha sido iniciada mas não finalizada, o texto do botão deve ser "Continuar Receita"', () => {
   it('verifica botão de Continuar Receita na tela de detalhes de uma comida', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
@@ -457,7 +457,7 @@ describe('O ícone do coração (favorito) deve vir preenchido caso a receita es
   });
 });
 
-describe.only('Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para _"despreenchido"_ e vice-versa', () => {
+describe('Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para _"despreenchido"_ e vice-versa', () => {
   it('favorita comida', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {

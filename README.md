@@ -478,31 +478,35 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 61. Após clicar no botão "Finalizar receita", a rota deve mudar para a página de receitas feitas, cuja rota deve ser `/receitas-feitas`.
 
-#### Tela de receitas feitas
+## Tela de receitas feitas
 
-62. Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas feitas;
+### 62 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas feitas.
 
-63. A tela deve conter cards horizontais, um para cada receita feita;
+### 63 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, a data em que a pessoa fez a receita, as 2 primeiras tags retornadas pela API e um botão de compartilhar.
 
-64. Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, a data em que a pessoa fez a receita, as 2 primeiras tags retornadas pela API e um botão de compartilhar;
+### 64 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica, a data em que a pessoa fez a receita e um botão de compartilhar.
 
-65. Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica, a data em que a pessoa fez a receita e um botão de compartilhar;
+### 65 - O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard.
 
-66. O botão de compartilhar deve copiar a URL da tela de detalhes daquela receita para o clipboard;
+##### As seguintes verificações serão feitas:
 
-67. Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros. Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente;
+- Ao clicar no botão de compartilhar deve aparecer a mensagem "Link copiado!";
+- A URL da tela de detalhes da receita é copiada para o clipboard.
 
-68. Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita;
+### 66 - Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros. Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente.
 
-69. A rota dessa página deve ser `/receitas-feitas`.
+##### As seguintes verificações serão feitas:
 
-#### Tela de receitas favoritas
+- Ao clicar no botão "Food" as receitas devem ser filtradas por comidas;
+- Ao clicar no botão "Drinks" as receitas devem ser filtradas por bebidas;
+- Ao clicar no botão "All" o filtro deve ser removido.
 
-70. Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas favoritas (cumulativo com os atributos em comum com a tela de receitas feitas);
+### 67 - Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita.
 
-71. A tela deve conter cards horizontais, um para cada receita feita;
+##### As seguintes verificações serão feitas:
 
-72. Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de _"desfavoritar"_;
+- Ao clicar na foto da receita, a rota deve mudar para a tela de detalhes daquela receita;
+- Ao clicar no nome da receita, a rota deve mudar para a tela de detalhes daquela receita.
 
 73. Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica ou não, um botão de compartilhar e um de _"desfavoritar"_;
 

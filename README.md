@@ -667,7 +667,7 @@ As rotas a serem utilizadas na aplicação devem ser as seguintes:
 * Tela principal de receitas de bebidas: `/bebidas`;
 * Tela de detalhes de uma receita de comida: `/comidas/{id-da-receita}`;
 * Tela de detalhes de uma receita de bebida: `/bebidas/{id-da-receita}`;
-* Tela de receita em processo de comida: `/bebidas/{id-da-receita}/in-progress`;
+* Tela de receita em processo de comida: `/comidas/{id-da-receita}/in-progress`;
 * Tela de receita em processo de bebida: `/bebidas/{id-da-receita}/in-progress`;
 * Tela de explorar: `/explorar`;
 * Tela de explorar comidas: `/explorar/comidas`;

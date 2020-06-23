@@ -9,7 +9,7 @@ describe('Profile screen', () => {
         win.localStorage.setItem('cocktailsToken', '1');
         win.localStorage.setItem('doneRecipes', '[]');
         win.localStorage.setItem('favoriteRecipes', '[]');
-        win.localStorage.setItem('inProggressRecipes', '{}');
+        win.localStorage.setItem('inProgressRecipes', '{}');
       },
     });
   });
@@ -65,7 +65,7 @@ describe('Profile screen', () => {
         expect(win.localStorage.getItem('cocktailsToken')).to.eq('1');
         expect(win.localStorage.getItem('doneRecipes')).to.eq('[]');
         expect(win.localStorage.getItem('favoriteRecipes')).to.eq('[]');
-        expect(win.localStorage.getItem('inProggressRecipes')).to.eq('{}');
+        expect(win.localStorage.getItem('inProgressRecipes')).to.eq('{}');
       });
 
       cy.get('[data-testid="profile-logout-btn"]').click();
@@ -76,7 +76,7 @@ describe('Profile screen', () => {
         expect(win.localStorage.getItem('cocktailsToken')).to.be.null;
         expect(win.localStorage.getItem('doneRecipes')).to.be.null;
         expect(win.localStorage.getItem('favoriteRecipes')).to.be.null;
-        expect(win.localStorage.getItem('inProggressRecipes')).to.be.null;
+        expect(win.localStorage.getItem('inProgressRecipes')).to.be.null;
       });
     });
 

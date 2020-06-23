@@ -143,7 +143,7 @@ describe('As recomendações para receitas de comida deverão ser bebidas e vice
 
     cy.window()
       .its('fetch')
-      .should('be.calledWithMatch', 'https://www.thecocktaildb.com/');
+      .should('be.calledWith', 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=');
   });
 
   it('verifica se a requisição para a API de comidas foi realizada', () => {

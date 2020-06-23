@@ -389,9 +389,165 @@ describe('Ao clicar no botão de compartilhar, o link da receita dentro do app d
   });
 });
 
-// describe('O ícone do coração (favorito) deve vir preenchido caso a receita esteja favoritada, e _"despreenchido"_ caso contrário');
+describe('O ícone do coração (favorito) deve vir preenchido caso a receita esteja favoritada, e _"despreenchido"_ caso contrário', () => {
+  it('verifica comida favoritada', () => {
+    cy.visit('http://localhost:3000/comidas/52771', {
+      onBeforeLoad(win) {
+        const favoriteRecipes = [{
+          "id": "52771",
+          "type": "comida",
+          "area": "Italian",
+          "category": "Vegetarian",
+          "name": "Spicy Arrabiata Penne",
+          "image": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",
+        }];
+        localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));
+        win.fetch = fetchMock;
+      },
+    });
 
-// describe('Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para _"despreenchido"_ e vice-versa');
+    cy.get('[data-testid="favorite-btn"]')
+      .should('have.attr', 'src')
+      .should('include', 'blackHeartIcon');
+  });
+
+  it('verifica comida não favoritada', () => {
+    cy.visit('http://localhost:3000/comidas/52771', {
+      onBeforeLoad(win) {
+        win.fetch = fetchMock;
+      },
+    });
+
+    cy.get('[data-testid="favorite-btn"]')
+      .should('have.attr', 'src')
+      .should('include', 'whiteHeartIcon');
+  });
+
+  it('verifica bebida favoritada', () => {
+    cy.visit('http://localhost:3000/bebidas/178319', {
+      onBeforeLoad(win) {
+        const favoriteRecipes = [{
+          "id": "178319",
+          "type": "bebida",
+          "category": "Cocktail",
+          "alcoholicOrNot": "Alcoholic",
+          "name": "Aquamarine",
+          "image": "https://www.thecocktaildb.com/images/media/drink/zvsre31572902738.jpg",
+        }];
+        localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));
+        win.fetch = fetchMock;
+      },
+    });
+
+    cy.get('[data-testid="favorite-btn"]')
+      .should('have.attr', 'src')
+      .should('include', 'blackHeartIcon');
+  });
+
+  it('verifica bebida não favoritada', () => {
+    cy.visit('http://localhost:3000/bebidas/178319', {
+      onBeforeLoad(win) {
+        win.fetch = fetchMock;
+      },
+    });
+
+    cy.get('[data-testid="favorite-btn"]')
+      .should('have.attr', 'src')
+      .should('include', 'whiteHeartIcon');
+  });
+});
+
+describe.only('Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para _"despreenchido"_ e vice-versa', () => {
+  it('favorita comida', () => {
+    cy.visit('http://localhost:3000/comidas/52771', {
+      onBeforeLoad(win) {
+        win.fetch = fetchMock;
+      },
+    });
+
+    cy.get('[data-testid="favorite-btn"]')
+      .should('have.attr', 'src')
+      .should('include', 'whiteHeartIcon');
+
+    cy.get('[data-testid="favorite-btn"]').click();
+
+    cy.get('[data-testid="favorite-btn"]')
+      .should('have.attr', 'src')
+      .should('include', 'blackHeartIcon');
+  });
+
+  it('desfavorita comida', () => {
+    cy.visit('http://localhost:3000/comidas/52771', {
+      onBeforeLoad(win) {
+        const favoriteRecipes = [{
+          "id": "52771",
+          "type": "comida",
+          "area": "Italian",
+          "category": "Vegetarian",
+          "name": "Spicy Arrabiata Penne",
+          "image": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",
+        }];
+        localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));
+        win.fetch = fetchMock;
+      },
+    });
+
+    cy.get('[data-testid="favorite-btn"]')
+      .should('have.attr', 'src')
+      .should('include', 'blackHeartIcon');
+
+    cy.get('[data-testid="favorite-btn"]').click();
+
+    cy.get('[data-testid="favorite-btn"]')
+      .should('have.attr', 'src')
+      .should('include', 'whiteHeartIcon');
+  });
+
+  it('favorita bebida', () => {
+    cy.visit('http://localhost:3000/bebidas/178319', {
+      onBeforeLoad(win) {
+        win.fetch = fetchMock;
+      },
+    });
+
+    cy.get('[data-testid="favorite-btn"]')
+      .should('have.attr', 'src')
+      .should('include', 'whiteHeartIcon');
+
+    cy.get('[data-testid="favorite-btn"]').click();
+
+    cy.get('[data-testid="favorite-btn"]')
+      .should('have.attr', 'src')
+      .should('include', 'blackHeartIcon');
+  });
+
+  it('desfavorita bebida', () => {
+    cy.visit('http://localhost:3000/bebidas/178319', {
+      onBeforeLoad(win) {
+        const favoriteRecipes = [{
+          "id": "178319",
+          "type": "bebida",
+          "category": "Cocktail",
+          "alcoholicOrNot": "Alcoholic",
+          "name": "Aquamarine",
+          "image": "https://www.thecocktaildb.com/images/media/drink/zvsre31572902738.jpg",
+        }];
+        localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));
+        win.fetch = fetchMock;
+      },
+    });
+
+    cy.get('[data-testid="favorite-btn"]')
+      .should('have.attr', 'src')
+      .should('include', 'blackHeartIcon');
+
+    cy.get('[data-testid="favorite-btn"]').click();
+
+    cy.get('[data-testid="favorite-btn"]')
+      .should('have.attr', 'src')
+      .should('include', 'whiteHeartIcon');
+  });
+});
 
 describe('As receitas favoritas devem ser salvas em `localStorage` na chave `favoriteRecipes`', () => {
   it('favorita receita de uma comida', () => {

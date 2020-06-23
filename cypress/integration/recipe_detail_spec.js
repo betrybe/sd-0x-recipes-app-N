@@ -317,9 +317,61 @@ describe('Quando o botão "Iniciar Receita" for clicado, a rota deve mudar para 
   });
 });
 
-// describe('Um botão de compartilhar e um de favoritar a receita devem estar disponíveis');
+describe.only('Um botão de compartilhar e um de favoritar a receita devem estar disponíveis', () => {
+  it('verifica se os botões estão disponíveis na tela de detalhes de uma comida', () => {
+    cy.visit('http://localhost:3000/comidas/52771', {
+      onBeforeLoad(win) {
+        win.fetch = fetchMock;
+      },
+    });
 
-// describe('Ao clicar no botão de compartilhar, o link da receita dentro do app deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer');
+    cy.get('[data-testid="share-btn"]').should('exist');
+    cy.get('[data-testid="favorite-btn"]').should('exist');
+  });
+
+  it('verifica se os botões estão disponíveis na tela de detalhes de uma bebida', () => {
+    cy.visit('http://localhost:3000/bebidas/178319', {
+      onBeforeLoad(win) {
+        win.fetch = fetchMock;
+      },
+    });
+
+    cy.get('[data-testid="share-btn"]').should('exist');
+    cy.get('[data-testid="favorite-btn"]').should('exist');
+  });
+});
+
+describe('Ao clicar no botão de compartilhar, o link da receita dentro do app deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer', () => {
+  it('verifica a mensagem "Link copiado" e se o link da receita da comida foi copiado para o clipboard', () => {
+    cy.visit('http://localhost:3000/comidas/52771', {
+      onBeforeLoad(win) {
+        win.fetch = fetchMock;
+      },
+    });
+
+    cy.get('[data-testid="share-btn"]').click();
+    cy.contains('Link copiado!');
+    cy.window().then((win) => {
+      cy.wrap(win.navigator.clipboard.readText())
+        .should('eq', 'http://localhost:3000/comidas/52771');
+    });
+  });
+
+  it('verifica a mensagem "Link copiado" e se o link da receita da bebida foi copiado para o clipboard', () => {
+    cy.visit('http://localhost:3000/bebidas/178319', {
+      onBeforeLoad(win) {
+        win.fetch = fetchMock;
+      },
+    });
+
+    cy.get('[data-testid="share-btn"]').click();
+    cy.contains('Link copiado!');
+    cy.window().then((win) => {
+      cy.wrap(win.navigator.clipboard.readText())
+        .should('eq', 'http://localhost:3000/bebidas/178319');
+    });
+  });
+});
 
 // describe('O ícone do coração (favorito) deve vir preenchido caso a receita esteja favoritada, e _"despreenchido"_ caso contrário');
 

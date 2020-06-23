@@ -4,6 +4,61 @@ Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora
 
 Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir desse repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
 
+---
+
+## Instruções para entregar seu projeto:
+
+### ANTES DE COMEÇAR A DESENVOLVER:
+
+1. Clone o repositório
+  * `git clone git@github.com:tryber/sd-0x-recipes-app-N.git`.
+  * Entre na pasta do repositório que você acabou de clonar:
+    * `cd sd-0x-recipes-app-N`
+
+2. Instale as dependências, inicialize o projeto e rode os testes
+  * Instale as dependências:
+    * `npm install`
+  * Inicialize o projeto:
+    * `npm start` (uma nova página deve abrir no seu navegador com um texto simples)
+  * Verifique que os testes E2E estão executando:
+    * `npm run cy` (os testes devem rodar e falhar)
+    * `npm run cy:open` (os testes devem rodar e falhar, legal caso queira ver o Cypress funcionando)
+
+3. Crie uma branch a partir da branch `master`
+  * Verifique que você está na branch `master`
+    * Exemplo: `git branch`
+  * Se não estiver, mude para a branch `master`
+    * Exemplo: `git checkout master`
+  * Agora, crie uma branch onde você vai guardar os `commits` do seu projeto
+    * Você deve criar uma branch no seguinte formato: `nome-de-usuário-nome-do-projeto`
+    * Exemplo: `git checkout -b joaozinho-movie-card-library`
+
+5. Adicione as mudanças ao _stage_ do Git e faça um `commit`
+  * Verifique que as mudanças ainda não estão no _stage_
+    * Exemplo: `git status` (deve aparecer listada a pasta _components_ em vermelho)
+  * Adicione o novo arquivo ao _stage_ do Git
+      * Exemplo:
+        * `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
+        * `git status` (deve aparecer listado o arquivo _components/Header.jsx_ em verde)
+  * Faça o `commit` inicial
+      * Exemplo:
+        * `git commit -m 'iniciando o projeto. VAMOS COM TUDO :rocket:'` (fazendo o primeiro commit)
+        * `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
+
+6. Adicione a sua branch com o novo `commit` ao repositório remoto
+  * Usando o exemplo anterior: `git push -u origin joaozinho-movie-cards-library`
+
+7. Crie um novo `Pull Request` _(PR)_
+  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-recipes-app-N/pulls)
+  * Clique no botão verde _"New pull request"_
+  * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
+  * Clique no botão verde _"Create pull request"_
+  * Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
+  * **Não se preocupe em preencher mais nada por enquanto!**
+  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-recipes-app-N/pulls) e confira que o seu _Pull Request_ está criado
+
+---
+
 ## O que deverá ser desenvolvido
 
 Você irá desenvolver um app de receitas, utilizando o que há de mais moderno dentro do ecossistema React: Hooks e Context API!
@@ -32,15 +87,15 @@ Você pode ler mais sobre atributos para testes [nesse link](https://www.eduardo
 
 ## Desenvolvimento e testes
 
-Este repositório já contem um _template_ com um App React criado, configurado e com os testes automatizados.
+Este repositório já contem um _template_ com um App React criado, configurado e com os testes da avaliação automatizada.
 
-Esses [testes E2E](https://www.guru99.com/end-to-end-testing.html) automatizados podem ser utilizados para ajudar a validar as funcionalidades do projeto. Porém, não são pré-requisitos para a avaliação; ou seja, não é necessário que todos esses testes passem. É possível executar os testes localmente via `npm run cy`. Esse comando roda a suite de testes do [Cypress](https://www.cypress.io/how-it-works/) que valida se o fluxo geral e os requisitos funcionais estão funcionando.
+Esses [testes E2E](https://www.guru99.com/end-to-end-testing.html) automatizados podem ser utilizados para ajudar a validar as funcionalidades do projeto localmente. É possível executar esses testes via `npm run cy:open`. Esse comando abre a interface que permite rodar a suite de testes do [Cypress](https://www.cypress.io/how-it-works/) que valida o fluxo geral e os requisitos funcionais do projeto.
 
 Esses testes não consideram o layout de maneira geral, mas sim os atributos e informações corretas, então preste atenção nos atributos definidos no protótipo.
 
 Os testes te darão uma mensagem de erro caso não estejam passando (seja qual for o motivo). 😉
 
-#### Além dos testes automatizados, um dos requisitos do projeto se baseia em **escrever testes unitários que cubram pelo menos 90% do projeto**. Na [documentação do Jest CLI](https://jestjs.io/docs/en/cli) é possível ver como essa cobertura é coletada.
+#### Além dos testes da avaliação automatizada, um dos requisitos do projeto se baseia em **escrever testes unitários que cubram pelo menos 90% do projeto**. Na [documentação do Jest CLI](https://jestjs.io/docs/en/cli) é possível ver como essa cobertura é coletada.
 
 ## APIs
 
@@ -200,6 +255,110 @@ As respostas seguem a mesma estrutura, com algumas particularidade relativas as 
 ```
 
 Os ingredientes seguem uma ordem lógica onde o nome dele (`strIngredient1`) e a quantidade (`strMeasure1`) tem o mesmo número no final (1, nesse caso).
+
+---
+
+## Implementações técnicas
+
+Algumas coisas devem seguir um padrão pré-estabelecido para que os teste de correção funcionem corretamente.
+
+### Rotas
+
+As rotas a serem utilizadas na aplicação devem ser as seguintes:
+
+* Tela de login: `/`;
+* Tela principal de receitas de comidas: `/comidas`;
+* Tela principal de receitas de bebidas: `/bebidas`;
+* Tela de detalhes de uma receita de comida: `/comidas/{id-da-receita}`;
+* Tela de detalhes de uma receita de bebida: `/bebidas/{id-da-receita}`;
+* Tela de receita em processo de comida: `/comidas/{id-da-receita}/in-progress`;
+* Tela de receita em processo de bebida: `/bebidas/{id-da-receita}/in-progress`;
+* Tela de explorar: `/explorar`;
+* Tela de explorar comidas: `/explorar/comidas`;
+* Tela de explorar bebidas: `/explorar/bebidas`;
+* Tela de explorar comidas por ingrediente: `/explorar/comidas/ingredientes`;
+* Tela de explorar bebidas por ingrediente: `/explorar/bebidas/ingredientes`;
+* Tela de explorar comidas por local de origem: `/explorar/comidas/area`;
+* Tela de perfil: `/perfil`;
+* Tela de receitas feitas: `/receitas-feitas`;
+* Tela de receitas favoritas: `/receitas-favoritas`.
+
+### `localStorage`
+
+O uso de `localStorage` é necessário para que as informações não se percam caso a pessoa atualize a página.
+O correto é usar os valores para iniciar sua store ou seu context.
+
+No `localStorage` do navegador:
+
+* a chave `mealsToken` deve conter a seguinte estrutura:
+```
+1
+```
+
+* a chave `cocktailsToken` deve conter a seguinte estrutura:
+```
+1
+```
+
+* a chave `user` deve conter a seguinte estrutura:
+```
+{
+    email: email-da-pessoa
+}
+```
+
+* a chave `doneRecipes` deve conter a seguinte estrutura:
+```
+[{
+    id: id-da-receita,
+    type: comida-ou-bebida,
+    area: area-da-receita-ou-texto-vazio,
+    category: categoria-da-receita-ou-texto-vazio,
+    alcoholic: alcoholic-ou-non-alcoholic-ou-texto-vazio,
+    name: nome-da-receita,
+    image: imagem-da-receita,
+    doneDate: quando-a-receita-foi-concluida,
+    tags: array-de-tags-da-receita-ou-array-vazio
+}]
+```
+
+* a chave `favoriteRecipes` deve conter a seguinte estrutura:
+```
+[{
+    id: id-da-receita,
+    type: comida-ou-bebida,
+    area: area-da-receita-ou-texto-vazio,
+    category: categoria-da-receita-ou-texto-vazio,
+    alcoholic: alcoholic-ou-non-alcoholic-ou-texto-vazio,
+    name: nome-da-receita,
+    image: imagem-da-receita
+}]
+```
+
+* a chave `inProggressRecipes` deve conter a seguinte estrutura:
+```
+{
+    id-da-receita: [lista-de-ingredientes-utilizados],
+    ...
+}
+```
+
+    **Observação:** Cada ID representa o ID de uma receita e cada item da lista de ingredientes da respectiva receita deve ser representado apenas pelo número do ingrediente no formato numérico.
+
+### Ícones
+
+Os ícones a serem utilizados na aplicação estão disponíveis do diretório `src/image/`. Esses ícones serão utilizados pelos testes da avaliação automatizada, então certifique-se de utilizá-los nos requisitos e de não renomeá-los.
+
+Os ícones são:
+
+- `profileIcon.svg`;
+- `searchIcon.svg`;
+- `drinkIcon.svg`;
+- `exploreIcon.svg`;
+- `mealIcon.svg`;
+- `shareIcon.svg`;
+- `whiteHeartIcon.svg`;
+- `blackHeartIcon.svg`.
 
 ---
 
@@ -656,148 +815,6 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 ---
 
 ***Obs: A maneira como as APIs devem ser estruturadas segue os seguintes modelos: https://www.themealdb.com/api.php e https://www.thecocktaildb.com/api.php***
-
----
-
-### Implementações técnicas
-
-Algumas coisas devem seguir um padrão pré-estabelecido para que os teste de correção funcionem corretamente.
-
-#### Rotas
-
-As rotas a serem utilizadas na aplicação devem ser as seguintes:
-
-* Tela de login: `/`;
-* Tela principal de receitas de comidas: `/comidas`;
-* Tela principal de receitas de bebidas: `/bebidas`;
-* Tela de detalhes de uma receita de comida: `/comidas/{id-da-receita}`;
-* Tela de detalhes de uma receita de bebida: `/bebidas/{id-da-receita}`;
-* Tela de receita em processo de comida: `/comidas/{id-da-receita}/in-progress`;
-* Tela de receita em processo de bebida: `/bebidas/{id-da-receita}/in-progress`;
-* Tela de explorar: `/explorar`;
-* Tela de explorar comidas: `/explorar/comidas`;
-* Tela de explorar bebidas: `/explorar/bebidas`;
-* Tela de explorar comidas por ingrediente: `/explorar/comidas/ingredientes`;
-* Tela de explorar bebidas por ingrediente: `/explorar/bebidas/ingredientes`;
-* Tela de explorar comidas por local de origem: `/explorar/comidas/area`;
-* Tela de perfil: `/perfil`;
-* Tela de receitas feitas: `/receitas-feitas`;
-* Tela de receitas favoritas: `/receitas-favoritas`.
-
-#### `localStorage`
-
-O uso de `localStorage` é necessário para que as informações não se percam caso a pessoa atualize a página.
-O correto é usar os valores para iniciar sua store ou seu context.
-
-No `localStorage` do navegador:
-
-* a chave `mealsToken` deve conter a seguinte estrutura:
-```
-1
-```
-
-* a chave `cocktailsToken` deve conter a seguinte estrutura:
-```
-1
-```
-
-* a chave `user` deve conter a seguinte estrutura:
-```
-{
-    email: email-da-pessoa
-}
-```
-
-* a chave `doneRecipes` deve conter a seguinte estrutura:
-```
-[{
-    id: id-da-receita,
-    type: comida-ou-bebida,
-    area: area-da-receita-ou-texto-vazio,
-    category: categoria-da-receita-ou-texto-vazio,
-    alcoholic: alcoholic-ou-non-alcoholic-ou-texto-vazio,
-    name: nome-da-receita,
-    image: imagem-da-receita,
-    doneDate: quando-a-receita-foi-concluida,
-    tags: array-de-tags-da-receita-ou-array-vazio
-}]
-```
-
-* a chave `favoriteRecipes` deve conter a seguinte estrutura:
-```
-[{
-    id: id-da-receita,
-    type: comida-ou-bebida,
-    area: area-da-receita-ou-texto-vazio,
-    category: categoria-da-receita-ou-texto-vazio,
-    alcoholic: alcoholic-ou-non-alcoholic-ou-texto-vazio,
-    name: nome-da-receita,
-    image: imagem-da-receita
-}]
-```
-
-* a chave `inProggressRecipes` deve conter a seguinte estrutura:
-```
-{
-    id-da-receita: [lista-de-ingredientes-utilizados],
-    ...
-}
-```
-
-    **Observação:** Cada ID representa o ID de uma receita e cada item da lista de ingredientes da respectiva receita deve ser representado apenas pelo número do ingrediente no formato numérico.
-
----
-
-## Instruções para entregar seu projeto:
-
-### ANTES DE COMEÇAR A DESENVOLVER:
-
-1. Clone o repositório
-  * `git clone git@github.com:tryber/sd-0x-recipes-app-N.git`.
-  * Entre na pasta do repositório que você acabou de clonar:
-    * `cd sd-0x-recipes-app-N`
-
-2. Instale as dependências, inicialize o projeto e rode os testes
-  * Instale as dependências:
-    * `npm install`
-  * Inicialize o projeto:
-    * `npm start` (uma nova página deve abrir no seu navegador com um texto simples)
-  * Verifique que os testes E2E estão executando:
-    * `npm run cy` (os testes devem rodar e falhar)
-    * `npm run cy:open` (os testes devem rodar e falhar, legal caso queira ver o Cypress funcionando)
-
-3. Crie uma branch a partir da branch `master`
-  * Verifique que você está na branch `master`
-    * Exemplo: `git branch`
-  * Se não estiver, mude para a branch `master`
-    * Exemplo: `git checkout master`
-  * Agora, crie uma branch onde você vai guardar os `commits` do seu projeto
-    * Você deve criar uma branch no seguinte formato: `nome-de-usuário-nome-do-projeto`
-    * Exemplo: `git checkout -b joaozinho-movie-card-library`
-
-5. Adicione as mudanças ao _stage_ do Git e faça um `commit`
-  * Verifique que as mudanças ainda não estão no _stage_
-    * Exemplo: `git status` (deve aparecer listada a pasta _components_ em vermelho)
-  * Adicione o novo arquivo ao _stage_ do Git
-      * Exemplo:
-        * `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-        * `git status` (deve aparecer listado o arquivo _components/Header.jsx_ em verde)
-  * Faça o `commit` inicial
-      * Exemplo:
-        * `git commit -m 'iniciando o projeto. VAMOS COM TUDO :rocket:'` (fazendo o primeiro commit)
-        * `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
-
-6. Adicione a sua branch com o novo `commit` ao repositório remoto
-  * Usando o exemplo anterior: `git push -u origin joaozinho-movie-cards-library`
-
-7. Crie um novo `Pull Request` _(PR)_
-  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-recipes-app-N/pulls)
-  * Clique no botão verde _"New pull request"_
-  * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
-  * Clique no botão verde _"Create pull request"_
-  * Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
-  * **Não se preocupe em preencher mais nada por enquanto!**
-  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-recipes-app-N/pulls) e confira que o seu _Pull Request_ está criado
 
 ---
 

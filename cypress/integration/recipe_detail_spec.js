@@ -317,7 +317,7 @@ describe('Quando o botão "Iniciar Receita" for clicado, a rota deve mudar para 
   });
 });
 
-describe.only('Um botão de compartilhar e um de favoritar a receita devem estar disponíveis', () => {
+describe('Um botão de compartilhar e um de favoritar a receita devem estar disponíveis', () => {
   it('verifica se os botões estão disponíveis na tela de detalhes de uma comida', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {

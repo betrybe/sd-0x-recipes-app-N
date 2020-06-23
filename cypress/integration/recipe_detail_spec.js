@@ -342,7 +342,7 @@ describe.only('Um botão de compartilhar e um de favoritar a receita devem estar
 });
 
 describe('Ao clicar no botão de compartilhar, o link da receita dentro do app deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer', () => {
-  it('verifica a mensagem "Link copiado" e se o link da receita da comida foi copiado para o clipboard', () => {
+  it('verifica a mensagem "Link copiado!" e se o link da receita da comida foi copiado para o clipboard', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
         win.fetch = fetchMock;
@@ -357,7 +357,7 @@ describe('Ao clicar no botão de compartilhar, o link da receita dentro do app d
     });
   });
 
-  it('verifica a mensagem "Link copiado" e se o link da receita da bebida foi copiado para o clipboard', () => {
+  it('verifica a mensagem "Link copiado!" e se o link da receita da bebida foi copiado para o clipboard', () => {
     cy.visit('http://localhost:3000/bebidas/178319', {
       onBeforeLoad(win) {
         win.fetch = fetchMock;

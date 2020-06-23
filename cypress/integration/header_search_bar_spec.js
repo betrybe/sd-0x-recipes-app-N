@@ -14,6 +14,7 @@ describe('Todos os elementos devem respeitar os atributos descritos no protótip
     cy.get('[data-testid="ingredient-search-radio"]');
     cy.get('[data-testid="name-search-radio"]');
     cy.get('[data-testid="first-letter-search-radio"]');
+    cy.get('[data-testid="exec-search-btn"]');
   });
 });
 
@@ -28,6 +29,7 @@ describe('A barra de busca deve ficar logo abaixo do header e deve possuir 3 rad
     cy.get('[data-testid="search-top-btn"]').click();
     cy.get('[data-testid="ingredient-search-radio"]').click();
     cy.get('[data-testid="search-input"]').type('chicken');
+    cy.get('[data-testid="exec-search-btn"]').click();
     cy.window()
       .its('fetch')
       .should('be.calledWith', 'https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken');
@@ -43,6 +45,7 @@ describe('A barra de busca deve ficar logo abaixo do header e deve possuir 3 rad
     cy.get('[data-testid="search-top-btn"]').click();
     cy.get('[data-testid="name-search-radio"]').click();
     cy.get('[data-testid="search-input"]').type('soup');
+    cy.get('[data-testid="exec-search-btn"]').click();
     cy.window()
       .its('fetch')
       .should('be.calledWith', 'https://www.themealdb.com/api/json/v1/1/search.php?s=soup');
@@ -58,6 +61,7 @@ describe('A barra de busca deve ficar logo abaixo do header e deve possuir 3 rad
     cy.get('[data-testid="search-top-btn"]').click();
     cy.get('[data-testid="first-letter-search-radio"]').click();
     cy.get('[data-testid="search-input"]').type('a');
+    cy.get('[data-testid="exec-search-btn"]').click();
     cy.window()
       .its('fetch')
       .should('be.calledWith', 'https://www.themealdb.com/api/json/v1/1/search.php?f=a');
@@ -73,16 +77,12 @@ describe('A barra de busca deve ficar logo abaixo do header e deve possuir 3 rad
     cy.get('[data-testid="search-top-btn"]').click();
     cy.get('[data-testid="first-letter-search-radio"]').click();
     cy.get('[data-testid="search-input"]').type('aaa');
+    cy.get('[data-testid="exec-search-btn"]').click();
     cy.window()
       .its('alert')
       .should('be.calledWith', 'Sua busca deve conter somente 1 (um) caracter');
   });
 });
-
-describe('A busca deve ocorrer 600 milissegundos após a última interação com o input (pesquise por debounce)', () => {
-  // TODO: substituir por botão de busca, já que o debounce é inviável de testar
-});
-
 
 describe('A busca deve ocorrer na API de comidas caso a pessoa esteja na página de comidas e na de bebidas caso esteja na de bebidas', () => {
   it('Na tela de bebidas, se o radio selecionado for Ingrediente, a busca na API é feita corretamente pelo ingrediente', () => {
@@ -95,6 +95,7 @@ describe('A busca deve ocorrer na API de comidas caso a pessoa esteja na página
     cy.get('[data-testid="search-top-btn"]').click();
     cy.get('[data-testid="ingredient-search-radio"]').click();
     cy.get('[data-testid="search-input"]').type('lemon');
+    cy.get('[data-testid="exec-search-btn"]').click();
     cy.window()
       .its('fetch')
       .should('be.calledWith', 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=lemon');
@@ -110,6 +111,7 @@ describe('A busca deve ocorrer na API de comidas caso a pessoa esteja na página
     cy.get('[data-testid="search-top-btn"]').click();
     cy.get('[data-testid="name-search-radio"]').click();
     cy.get('[data-testid="search-input"]').type('gin');
+    cy.get('[data-testid="exec-search-btn"]').click();
     cy.window()
       .its('fetch')
       .should('be.calledWith', 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=gin');
@@ -125,6 +127,7 @@ describe('A busca deve ocorrer na API de comidas caso a pessoa esteja na página
     cy.get('[data-testid="search-top-btn"]').click();
     cy.get('[data-testid="first-letter-search-radio"]').click();
     cy.get('[data-testid="search-input"]').type('a');
+    cy.get('[data-testid="exec-search-btn"]').click();
     cy.window()
       .its('fetch')
       .should('be.calledWith', 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a');
@@ -140,6 +143,7 @@ describe('A busca deve ocorrer na API de comidas caso a pessoa esteja na página
     cy.get('[data-testid="search-top-btn"]').click();
     cy.get('[data-testid="first-letter-search-radio"]').click();
     cy.get('[data-testid="search-input"]').type('aaa');
+    cy.get('[data-testid="exec-search-btn"]').click();
     cy.window()
       .its('alert')
       .should('be.calledWith', 'Sua busca deve conter somente 1 (um) caracter');
@@ -157,6 +161,7 @@ describe('Caso apenas uma receita seja encontrada, a rota deve mudar para a tela
     cy.get('[data-testid="search-top-btn"]').click();
     cy.get('[data-testid="name-search-radio"]').click();
     cy.get('[data-testid="search-input"]').type('Arrabiata');
+    cy.get('[data-testid="exec-search-btn"]').click();
 
     cy.location().should((loc) => expect(loc.pathname).to.eq('/comidas/52771'));
   });
@@ -171,6 +176,7 @@ describe('Caso apenas uma receita seja encontrada, a rota deve mudar para a tela
     cy.get('[data-testid="search-top-btn"]').click();
     cy.get('[data-testid="name-search-radio"]').click();
     cy.get('[data-testid="search-input"]').type('Aquamarine');
+    cy.get('[data-testid="exec-search-btn"]').click();
 
     cy.location().should((loc) => expect(loc.pathname).to.eq('/bebidas/178319'));
   });
@@ -187,6 +193,7 @@ describe('Caso mais de uma receita seja encontrada, mostrar as receitas em cards
     cy.get('[data-testid="search-top-btn"]').click();
     cy.get('[data-testid="name-search-radio"]').click();
     cy.get('[data-testid="search-input"]').type('soup');
+    cy.get('[data-testid="exec-search-btn"]').click();
 
     soupMeals.meals.forEach((meal, index) => {
       cy.get(`[data-testid="${index}-recipe-card"]`);
@@ -213,6 +220,7 @@ describe('Caso mais de uma receita seja encontrada, mostrar as receitas em cards
     cy.get('[data-testid="search-top-btn"]').click();
     cy.get('[data-testid="name-search-radio"]').click();
     cy.get('[data-testid="search-input"]').type('gin');
+    cy.get('[data-testid="exec-search-btn"]').click();
 
     ginDrinks.drinks.slice(0, 12).forEach((drink, index) => {
       cy.get(`[data-testid="${index}-recipe-card"]`);
@@ -242,6 +250,7 @@ describe('Caso nenhuma receita seja encontrada, um alert contendo o texto "Sinto
     cy.get('[data-testid="search-top-btn"]').click();
     cy.get('[data-testid="name-search-radio"]').click();
     cy.get('[data-testid="search-input"]').type('xablau');
+    cy.get('[data-testid="exec-search-btn"]').click();
 
     cy.window()
       .its('alert')
@@ -259,6 +268,7 @@ describe('Caso nenhuma receita seja encontrada, um alert contendo o texto "Sinto
     cy.get('[data-testid="search-top-btn"]').click();
     cy.get('[data-testid="name-search-radio"]').click();
     cy.get('[data-testid="search-input"]').type('xablau');
+    cy.get('[data-testid="exec-search-btn"]').click();
 
     cy.window()
       .its('alert')

@@ -46,7 +46,7 @@ const handleClick = (target, setCheckbox, checkbox, index) => {
 
 const renderCheckBox = (inputsCheckbox, checkbox, setCheckbox) => (
   inputsCheckbox.map((el, index) => (
-    <label key={el} className="label-checkbox" htmlFor={`- ${el[0]} - ${el[1]}`}>
+    <label key={el} className="label-checkbox" htmlFor={`- ${el[0]} - ${el[1]}`} data-testid={`${index}-ingredient-step`}>
       <input
         data-testid={`- ${el[0]} - ${el[1]} - ingredients`}
         className="input-checkbox"

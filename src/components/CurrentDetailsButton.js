@@ -64,7 +64,7 @@ const CurrentDetailsButton = ({
       <button
         disabled={(renderInProgress) ? disabled[0] : false}
         className="start-button"
-        data-testid="start-recipe-btn"
+        data-testid="finish-recipe-btn"
         type="button"
         onClick={({ target }) => (
           (inProgress)

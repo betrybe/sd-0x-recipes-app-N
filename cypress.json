@@ -1,3 +1,11 @@
 {
-  "chromeWebSecurity": false
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter.json"
+  },
+  "video": false,
+  "screenshotOnRunFailure": false,
+  "viewportWidth": 320,
+  "viewportHeight": 480,
+  "defaultCommandTimeout": 10000
 }

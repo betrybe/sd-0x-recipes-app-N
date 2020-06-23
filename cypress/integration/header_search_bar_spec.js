@@ -84,11 +84,6 @@ describe('A barra de busca deve ficar logo abaixo do header e deve possuir 3 rad
   });
 });
 
-describe('A busca deve ocorrer 600 milissegundos após a última interação com o input (pesquise por debounce)', () => {
-  // TODO: substituir por botão de busca, já que o debounce é inviável de testar
-});
-
-
 describe('A busca deve ocorrer na API de comidas caso a pessoa esteja na página de comidas e na de bebidas caso esteja na de bebidas', () => {
   it('Na tela de bebidas, se o radio selecionado for Ingrediente, a busca na API é feita corretamente pelo ingrediente', () => {
     cy.visit('http://localhost:3000/bebidas', {

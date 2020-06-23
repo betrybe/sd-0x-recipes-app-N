@@ -118,7 +118,7 @@ describe('Essa tela deve conter uma imagem da receita, o título, a categoria (o
 
     cy.get('[data-testid="recipe-title"]').contains('Aquamarine');
 
-    cy.get('[data-testid="recipe-category"]').contains('Cocktail');
+    cy.get('[data-testid="recipe-category"]').contains('Alcoholic');
 
     cy.get('[data-testid="0-ingredient-name-and-measure"]').contains('Hpnotiq');
     cy.get('[data-testid="0-ingredient-name-and-measure"]').contains('2 oz');
@@ -155,7 +155,7 @@ describe('As recomendações para receitas de comida deverão ser bebidas e vice
 
     cy.window()
       .its('fetch')
-      .should('be.calledWithMatch', 'https://www.themealdb.com/');
+      .should('be.calledWith', 'https://www.themealdb.com/api/json/v1/1/search.php?s=');
   });
 });
 
@@ -302,7 +302,7 @@ describe('Quando o botão "Iniciar Receita" for clicado, a rota deve mudar para 
     });
 
     cy.get('[data-testid="start-recipe-btn"]').click();
-    cy.location('href').should('include', '/in-progress');
+    cy.location().should((loc) => expect(loc.pathname).to.eq('/comidas/52771/in-progress'));
   });
 
   it('redireciona para tela de receita (de uma bebida) em progresso', () => {
@@ -313,13 +313,65 @@ describe('Quando o botão "Iniciar Receita" for clicado, a rota deve mudar para 
     });
 
     cy.get('[data-testid="start-recipe-btn"]').click();
-    cy.location('href').should('include', '/in-progress');
+    cy.location().should((loc) => expect(loc.pathname).to.eq('/bebidas/178319/in-progress'));
   });
 });
 
-// describe('Um botão de compartilhar e um de favoritar a receita devem estar disponíveis');
+describe('Um botão de compartilhar e um de favoritar a receita devem estar disponíveis', () => {
+  it('verifica se os botões estão disponíveis na tela de detalhes de uma comida', () => {
+    cy.visit('http://localhost:3000/comidas/52771', {
+      onBeforeLoad(win) {
+        win.fetch = fetchMock;
+      },
+    });
 
-// describe('Ao clicar no botão de compartilhar, o link da receita dentro do app deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer');
+    cy.get('[data-testid="share-btn"]').should('exist');
+    cy.get('[data-testid="favorite-btn"]').should('exist');
+  });
+
+  it('verifica se os botões estão disponíveis na tela de detalhes de uma bebida', () => {
+    cy.visit('http://localhost:3000/bebidas/178319', {
+      onBeforeLoad(win) {
+        win.fetch = fetchMock;
+      },
+    });
+
+    cy.get('[data-testid="share-btn"]').should('exist');
+    cy.get('[data-testid="favorite-btn"]').should('exist');
+  });
+});
+
+describe('Ao clicar no botão de compartilhar, o link da receita dentro do app deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer', () => {
+  it('verifica a mensagem "Link copiado" e se o link da receita da comida foi copiado para o clipboard', () => {
+    cy.visit('http://localhost:3000/comidas/52771', {
+      onBeforeLoad(win) {
+        win.fetch = fetchMock;
+      },
+    });
+
+    cy.get('[data-testid="share-btn"]').click();
+    cy.contains('Link copiado!');
+    cy.window().then((win) => {
+      cy.wrap(win.navigator.clipboard.readText())
+        .should('eq', 'http://localhost:3000/comidas/52771');
+    });
+  });
+
+  it('verifica a mensagem "Link copiado" e se o link da receita da bebida foi copiado para o clipboard', () => {
+    cy.visit('http://localhost:3000/bebidas/178319', {
+      onBeforeLoad(win) {
+        win.fetch = fetchMock;
+      },
+    });
+
+    cy.get('[data-testid="share-btn"]').click();
+    cy.contains('Link copiado!');
+    cy.window().then((win) => {
+      cy.wrap(win.navigator.clipboard.readText())
+        .should('eq', 'http://localhost:3000/bebidas/178319');
+    });
+  });
+});
 
 // describe('O ícone do coração (favorito) deve vir preenchido caso a receita esteja favoritada, e _"despreenchido"_ caso contrário');
 
@@ -335,7 +387,20 @@ describe('As receitas favoritas devem ser salvas em `localStorage` na chave `fav
 
     cy.get('[data-testid="favorite-btn"]').click().then(() => {
       const favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
-      expect(favoriteRecipes.some(f => f.id == 52771)).to.be.true;
+      const expectedFavoriteRecipes = [
+        {
+          id: 52771,
+          type: 'comida',
+          area: 'Italian',
+          category: 'Vegetarian',
+          alcoholicOrNot: '',
+          name: 'Spicy Arrabiata Penne',
+          image: 'https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg',
+        },
+      ];
+
+      expect(favoriteRecipes).to.deep.eq(expectedFavoriteRecipes);
+      localStorage.clear();
     });
   });
 
@@ -348,7 +413,20 @@ describe('As receitas favoritas devem ser salvas em `localStorage` na chave `fav
 
     cy.get('[data-testid="favorite-btn"]').click().then(() => {
       const favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
-      expect(favoriteRecipes.some(f => f.id == 178319)).to.be.true;
+      const expectedFavoriteRecipes = [
+        {
+          id: 178319,
+          type: 'bebida',
+          area: '',
+          category: 'Cocktail',
+          alcoholicOrNot:  'Alcoholic',
+          name: 'Aquamarine',
+          image: 'https://www.thecocktaildb.com/images/media/drink/zvsre31572902738.jpg',
+        },
+      ];
+
+      expect(favoriteRecipes).to.deep.eq(expectedFavoriteRecipes);
+      localStorage.clear();
     });
   });
 });

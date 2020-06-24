@@ -703,19 +703,66 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 #### Tela de receita em processo
 
-55. Essa tela deve conter uma imagem da receita, seu titulo, sua categoria (ou se a bebida é alcoólica ou não) uma lista de ingredientes com suas respectivas quantidades, e suas instruções;
+### 48 - Essa tela deve conter uma imagem da receita, seu titulo, sua categoria (ou se a bebida é alcoólica ou não) uma lista de ingredientes com suas respectivas quantidades, e suas instruções;
 
-56. A lista de ingredientes deve conter um checkbox para cada um dos items;
+##### As seguintes verificações serão feitas:
 
-57. Ao clicar no checkbox de um ingrediente, o nome dele deve ser "riscado" da lista;
+- A tela de receita de uma comida em processo possui todos os data-testid;
+- A tela de receita de uma bebida em processo possui todos os data-testid.
 
-58. O estado do progresso deve ser mantido caso a pessoa atualize a pagina ou volte para a mesma receita. O progresso das receitas devem ser salvos em `localStorage` na chave `inProgressRecipes` no formato `{ id-da-receita: [lista-de-ingredientes-utilizados], ... }`;
+### 49 - A lista de ingredientes deve conter um checkbox para cada um dos items;
 
-59. A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui;
+##### As seguintes verificações serão feitas:
 
-60. O botão de finalizar receita só pode estar habilitado quando todos os ingredientes estiverem _"checkados"_ (marcados);
+- Cada ingrediente de uma receita de comida deve possuir um checkbox;
+- Cada ingrediente de uma receita de bebida deve possuir um checkbox.
 
-61. Após clicar no botão "Finalizar receita", a rota deve mudar para a página de receitas feitas, cuja rota deve ser `/receitas-feitas`.
+### 50 - Ao clicar no checkbox de um ingrediente, o nome dele deve ser "riscado" da lista;
+
+##### As seguintes verificações serão feitas:
+
+- Verifica se ao marcar clicar em um checkbox de um ingrediente de uma comida, o nome aparecerá riscado, mostrando que esse passo foi finalizado;
+- Verifica se ao marcar clicar em um checkbox de um ingrediente de uma bebida, o nome aparecerá riscado, mostrando que esse passo foi finalizado.
+
+### 51 - O estado do progresso deve ser mantido caso a pessoa atualize a pagina ou volte para a mesma receita. O progresso das receitas devem ser salvos em `localStorage` na chave` inProgressRecipes` no formato `{ id-da-receita: [lista-de-ingredientes-utilizados], ... }`;
+
+##### As seguintes verificações serão feitas:
+
+- Recarrega a página em progresso de um comida e espera que os ingredientes já marcados, continuam marcados;
+- Recarrega a página em progresso de um bebida e espera que os ingredientes já marcados, continuam marcados;
+
+### 52 - A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui;
+
+##### As seguintes verificações serão feitas:
+
+- Verifica a mensagem "Link copiado!" e se o link da receita da comida foi copiado para o clipboard;
+- Verifica a mensagem "Link copiado!" e se o link da receita da bebida foi copiado para o clipboard;
+- Verifica se a comida favoritada vem com o coração preenchido;
+- Verifica se a comida não favoritada vem com o coração "despreenchido";
+- Verifica se a bebida favoritada vem com o coração preenchido;
+- Verifica se a bebida não favoritada vem com o coração "despreenchido";
+- Favorita a comida;
+- Desfavorita a comida;
+- Favorita a bebida;
+- Desfavorita a bebida;
+- Verifica se após favoritar receita de uma comida, ela é salva corretamente no localStorage;
+- Verifica se após favoritar receita de uma bebida, ela é salva corretamente no localStorage.
+
+### 53 - O botão de finalizar receita só pode estar habilitado quando todos os ingredientes estiverem _"checkados"_ (marcados);
+
+##### As seguintes verificações serão feitas:
+
+- Botão de finalizar receita de comida está desabilitado enquanto todos os checkboxs não estiverem marcados;
+- Botão de finalizar receita de bebida está desabilitado enquanto todos os checkboxs não estiverem marcados;
+- Botão de finalizar receita de comida está habilitado quando todos os checkboxs estiverem marcados;
+- Botão de finalizar receita de bebida está habilitado quando todos os checkboxs estiverem marcados.
+
+### 54 - Após clicar no botão "Finalizar receita", a rota deve mudar para a página de receitas feitas, cuja rota deve ser `/receitas-feitas`.
+
+##### As seguintes verificações serão feitas:
+
+- A pessoa é redirecionada para a tela de receitas feitas após finalizar uma receita de comida;
+- A pessoa é redirecionada para a tela de receitas feitas após finalizar uma receita de bebida.
 
 ## Tela de receitas feitas
 

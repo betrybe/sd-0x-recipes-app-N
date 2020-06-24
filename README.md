@@ -4,6 +4,61 @@ Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora
 
 Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir desse repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
 
+---
+
+## Instruções para entregar seu projeto:
+
+### ANTES DE COMEÇAR A DESENVOLVER:
+
+1. Clone o repositório
+  * `git clone git@github.com:tryber/sd-0x-recipes-app-N.git`.
+  * Entre na pasta do repositório que você acabou de clonar:
+    * `cd sd-0x-recipes-app-N`
+
+2. Instale as dependências, inicialize o projeto e rode os testes
+  * Instale as dependências:
+    * `npm install`
+  * Inicialize o projeto:
+    * `npm start` (uma nova página deve abrir no seu navegador com um texto simples)
+  * Verifique que os testes E2E estão executando:
+    * `npm run cy` (os testes devem rodar e falhar)
+    * `npm run cy:open` (os testes devem rodar e falhar, legal caso queira ver o Cypress funcionando)
+
+3. Crie uma branch a partir da branch `master`
+  * Verifique que você está na branch `master`
+    * Exemplo: `git branch`
+  * Se não estiver, mude para a branch `master`
+    * Exemplo: `git checkout master`
+  * Agora, crie uma branch onde você vai guardar os `commits` do seu projeto
+    * Você deve criar uma branch no seguinte formato: `nome-de-usuário-nome-do-projeto`
+    * Exemplo: `git checkout -b joaozinho-movie-card-library`
+
+5. Adicione as mudanças ao _stage_ do Git e faça um `commit`
+  * Verifique que as mudanças ainda não estão no _stage_
+    * Exemplo: `git status` (deve aparecer listada a pasta _components_ em vermelho)
+  * Adicione o novo arquivo ao _stage_ do Git
+      * Exemplo:
+        * `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
+        * `git status` (deve aparecer listado o arquivo _components/Header.jsx_ em verde)
+  * Faça o `commit` inicial
+      * Exemplo:
+        * `git commit -m 'iniciando o projeto. VAMOS COM TUDO :rocket:'` (fazendo o primeiro commit)
+        * `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
+
+6. Adicione a sua branch com o novo `commit` ao repositório remoto
+  * Usando o exemplo anterior: `git push -u origin joaozinho-movie-cards-library`
+
+7. Crie um novo `Pull Request` _(PR)_
+  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-recipes-app-N/pulls)
+  * Clique no botão verde _"New pull request"_
+  * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
+  * Clique no botão verde _"Create pull request"_
+  * Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
+  * **Não se preocupe em preencher mais nada por enquanto!**
+  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-recipes-app-N/pulls) e confira que o seu _Pull Request_ está criado
+
+---
+
 ## O que deverá ser desenvolvido
 
 Você irá desenvolver um app de receitas, utilizando o que há de mais moderno dentro do ecossistema React: Hooks e Context API!
@@ -32,15 +87,15 @@ Você pode ler mais sobre atributos para testes [nesse link](https://www.eduardo
 
 ## Desenvolvimento e testes
 
-Este repositório já contem um _template_ com um App React criado, configurado e com os testes automatizados.
+Este repositório já contem um _template_ com um App React criado, configurado e com os testes da avaliação automatizada.
 
-Esses [testes E2E](https://www.guru99.com/end-to-end-testing.html) automatizados podem ser utilizados para ajudar a validar as funcionalidades do projeto. Porém, não são pré-requisitos para a avaliação; ou seja, não é necessário que todos esses testes passem. É possível executar os testes localmente via `npm run cy`. Esse comando roda a suite de testes do [Cypress](https://www.cypress.io/how-it-works/) que valida se o fluxo geral e os requisitos funcionais estão funcionando.
+Esses [testes E2E](https://www.guru99.com/end-to-end-testing.html) automatizados podem ser utilizados para ajudar a validar as funcionalidades do projeto localmente. É possível executar esses testes via `npm run cy:open`. Esse comando abre a interface que permite rodar a suite de testes do [Cypress](https://www.cypress.io/how-it-works/) que valida o fluxo geral e os requisitos funcionais do projeto.
 
 Esses testes não consideram o layout de maneira geral, mas sim os atributos e informações corretas, então preste atenção nos atributos definidos no protótipo.
 
 Os testes te darão uma mensagem de erro caso não estejam passando (seja qual for o motivo). 😉
 
-#### Além dos testes automatizados, um dos requisitos do projeto se baseia em **escrever testes unitários que cubram pelo menos 90% do projeto**. Na [documentação do Jest CLI](https://jestjs.io/docs/en/cli) é possível ver como essa cobertura é coletada.
+#### Além dos testes da avaliação automatizada, um dos requisitos do projeto se baseia em **escrever testes unitários que cubram pelo menos 90% do projeto**. Na [documentação do Jest CLI](https://jestjs.io/docs/en/cli) é possível ver como essa cobertura é coletada.
 
 ## APIs
 
@@ -200,6 +255,116 @@ As respostas seguem a mesma estrutura, com algumas particularidade relativas as 
 ```
 
 Os ingredientes seguem uma ordem lógica onde o nome dele (`strIngredient1`) e a quantidade (`strMeasure1`) tem o mesmo número no final (1, nesse caso).
+
+---
+
+## Implementações técnicas
+
+Algumas coisas devem seguir um padrão pré-estabelecido para que os teste de correção funcionem corretamente.
+
+⚠️ Leia-os atentamente e siga à risca o que for pedido. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação. ⚠️
+
+* Os requisitos do seu projeto são avaliados automaticamente, sendo utilizada a resolução de tela de `360 x 640` (360 pixels de largura por 640 pixels de altura).
+
+    - ⚠️ Logo, recomenda-se desenvolver seu projeto usando a mesma resolução, via instalação [deste plugin](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh?hl=en) do `Chrome` para facilitar a configuração da resolução. ⚠️
+
+### Rotas
+
+As rotas a serem utilizadas na aplicação devem ser as seguintes:
+
+* Tela de login: `/`;
+* Tela principal de receitas de comidas: `/comidas`;
+* Tela principal de receitas de bebidas: `/bebidas`;
+* Tela de detalhes de uma receita de comida: `/comidas/{id-da-receita}`;
+* Tela de detalhes de uma receita de bebida: `/bebidas/{id-da-receita}`;
+* Tela de receita em processo de comida: `/comidas/{id-da-receita}/in-progress`;
+* Tela de receita em processo de bebida: `/bebidas/{id-da-receita}/in-progress`;
+* Tela de explorar: `/explorar`;
+* Tela de explorar comidas: `/explorar/comidas`;
+* Tela de explorar bebidas: `/explorar/bebidas`;
+* Tela de explorar comidas por ingrediente: `/explorar/comidas/ingredientes`;
+* Tela de explorar bebidas por ingrediente: `/explorar/bebidas/ingredientes`;
+* Tela de explorar comidas por local de origem: `/explorar/comidas/area`;
+* Tela de perfil: `/perfil`;
+* Tela de receitas feitas: `/receitas-feitas`;
+* Tela de receitas favoritas: `/receitas-favoritas`.
+
+### `localStorage`
+
+O uso de `localStorage` é necessário para que as informações não se percam caso a pessoa atualize a página.
+O correto é usar os valores para iniciar sua store ou seu context.
+
+No `localStorage` do navegador:
+
+* a chave `mealsToken` deve conter a seguinte estrutura:
+```
+1
+```
+
+* a chave `cocktailsToken` deve conter a seguinte estrutura:
+```
+1
+```
+
+* a chave `user` deve conter a seguinte estrutura:
+```
+{
+    email: email-da-pessoa
+}
+```
+
+* a chave `doneRecipes` deve conter a seguinte estrutura:
+```
+[{
+    id: id-da-receita,
+    type: comida-ou-bebida,
+    area: area-da-receita-ou-texto-vazio,
+    category: categoria-da-receita-ou-texto-vazio,
+    alcoholicOrNot: alcoholic-ou-non-alcoholic-ou-texto-vazio,
+    name: nome-da-receita,
+    image: imagem-da-receita,
+    doneDate: quando-a-receita-foi-concluida,
+    tags: array-de-tags-da-receita-ou-array-vazio
+}]
+```
+
+* a chave `favoriteRecipes` deve conter a seguinte estrutura:
+```
+[{
+    id: id-da-receita,
+    type: comida-ou-bebida,
+    area: area-da-receita-ou-texto-vazio,
+    category: categoria-da-receita-ou-texto-vazio,
+    alcoholicOrNot: alcoholic-ou-non-alcoholic-ou-texto-vazio,
+    name: nome-da-receita,
+    image: imagem-da-receita
+}]
+```
+
+* a chave `inProggressRecipes` deve conter a seguinte estrutura:
+```
+{
+    id-da-receita: [lista-de-ingredientes-utilizados],
+    ...
+}
+```
+
+    **Observação:** Cada ID representa o ID de uma receita e cada item da lista de ingredientes da respectiva receita deve ser representado apenas pelo número do ingrediente no formato numérico.
+
+### Ícones
+
+Os ícones a serem utilizados na aplicação estão disponíveis do diretório `src/image/`. Esses ícones serão utilizados pelos testes da avaliação automatizada, então certifique-se de utilizá-los nos requisitos e de não renomeá-los.
+
+Os ícones são:
+
+* `profileIcon.svg`;
+* `searchIcon.svg`;
+* `drinkIcon.svg`;
+* `exploreIcon.svg`;
+* `mealIcon.svg`;
+* `shareIcon.svg`;
+* `whiteHeartIcon.svg`;
+* `blackHeartIcon.svg`.
 
 ---
 
@@ -426,41 +591,115 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 - Caso as receitas sejam de comida a rota deve mudar para a tela de detalhes da receita;
 - Caso as receitas sejam de bebida a rota deve mudar para a tela de detalhes da receita.
 
-#### Tela de detalhes de uma receita
+## Tela de detalhes de uma receita
 
-40. Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de detalhes de uma receita;
+### 33 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de detalhes de uma receita.
 
-41. Uma request para a API deve ser feita passando o `id` da receita que deve estar disponível nos parâmetros da URL;
+##### As seguintes verificações serão feitas:
 
-42. Essa tela deve conter uma imagem da receita, o título, a categoria (ou se é ou não alcoólico), uma lista de ingredientes seguidos pelas quantidades, instruções, um vídeo do youtube "embedado" e recomendações. Obs.: O vídeo do youtube só deve estar disponível para receitas de comida, já que não é retornado pela [API de bebidas](https://www.thecocktaildb.com/api.php);
+- A tela de comida possui todos os atributos data-testid;
+- A tela de bebidas possui todos os atributos data-testid.
 
-43. As recomendações para receitas de comida deverão ser bebidas e vice-versa. Obs.: Para simplificar, utilize receitas aleatórias;
+### 34 - Uma request para a API deve ser feita passando o `id` da receita que deve estar disponível nos parâmetros da URL.
 
-44. Deverão ser mostrados 6 cards de recomendação, onde apenas 2 são mostrados e o scroll é horizontal, similar a um `carousel`;
+##### As seguintes verificações serão feitas:
 
-45. Um botão de nome "Iniciar Receita" deve ficar fixo na parte de baixo da tela o tempo todo;
+- Verifica se a requisição para a API de comidas foi realizada. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/lookup.php?i={id-da-receita}`;
+- Verifica se a requisição para a API de bebidas foi realizada. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i={id-da-receita}`.
 
-46. Caso a receita já tenha sido feita, o botão "Iniciar Receita" deve sumir;
+### 35 - Essa tela deve conter uma imagem da receita, o título, a categoria (ou se é ou não alcoólico), uma lista de ingredientes seguidos pelas quantidades, instruções, um vídeo do youtube "embedado" e recomendações. Obs.: O vídeo do youtube só deve estar disponível para receitas de comida, já que não é retornado pela [API de bebidas](https://www.thecocktaildb.com/api.php).
 
-47. Caso a receita tenha sido iniciada mas não finalizada, o texto do botão deve ser "Continuar Receita";
+##### As seguintes verificações serão feitas:
 
-48. Quando o botão "Iniciar Receita" for clicado, a rota deve mudar para a tela de receita em processo;
+- Verifica se os elementos descritos no protótipo existem na tela de detalhes de comida;
+- Verifica se os elementos descritos no protótipo existem na tela de detalhes de bebida.
 
-49. Um botão de compartilhar e um de favoritar a receita devem estar disponíveis;
+### 36 - As recomendações para receitas de comida deverão ser bebidas e vice-versa.
 
-50. Ao clicar no botão de compartilhar, o link da receita dentro do app deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer;
+##### As seguintes verificações serão feitas:
 
-51. O ícone do coração (favorito) deve vir preenchido caso a receita esteja favoritada, e _"despreenchido"_ caso contrário;
+- Verifica se a requisição para a API de bebidas foi realizada. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`;
+- Verifica se a requisição para a API de comidas foi realizada. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/search.php?s=`.
 
-52. Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para _"despreenchido"_ e vice-versa;
+### 37 - Deverão ser mostrados 6 cards de recomendação, onde apenas 2 são mostrados e o scroll é horizontal, similar a um `carousel`.
 
-53. As receitas favoritas devem ser salvas em `localStorage` na chave `favoriteRecipes` no formato `[{ id, type, area, category, alcoholicOrNot, name, image }]`. E as receitas feitas devem ser salvas em `localStorage` na chave `doneRecipes` no formato `[{ id, type, area, category, alcoholicOrNot, name, image, doneDate, tags }]`.
+##### As seguintes verificações serão feitas:
+
+- Verifica se exitem todas as recomendações na tela de detalhes de uma comida. Apenas as 6 primeiras bebidas devem ser exibidas;
+- Verifica se exitem todas as recomendações na tela de detalhes de uma bebida. Apenas as 6 primeiras comidas devem ser exibidas.
+
+### 38 - Um botão de nome "Iniciar Receita" deve ficar fixo na parte de baixo da tela o tempo todo.
+
+##### As seguintes verificações serão feitas:
+
+- Verifica posicionamento do botão na tela de detalhes de comida;
+- Verifica posicionamento do botão na tela de detalhes de bebida.
+
+### 39 - Caso a receita já tenha sido feita, o botão "Iniciar Receita" deve sumir.
+
+##### As seguintes verificações serão feitas:
+
+- Verifica se botão de iniciar receita não é visível na tela de detalhes de uma comida;
+- Verifica se botão de iniciar receita não é visível na tela de detalhes de uma bebida.
+
+### 40 - Caso a receita tenha sido iniciada mas não finalizada, o texto do botão deve ser "Continuar Receita".
+
+##### As seguintes verificações serão feitas:
+
+- Verifica botão de "Continuar Receita" na tela de detalhes de uma comida;
+- Verifica botão de "Continuar Receita" na tela de detalhes de uma bebida
+
+### 41 - Quando o botão "Iniciar Receita" for clicado, a rota deve mudar para a tela de receita em processo.
+
+##### As seguintes verificações serão feitas:
+
+- Redireciona para tela de receita da comida em processo;
+- Redireciona para tela de receita da bebida em processo.
+
+### 42 - Um botão de compartilhar e um de favoritar a receita devem estar disponíveis.
+
+##### As seguintes verificações serão feitas:
+
+- Verifica se os botões estão disponíveis na tela de detalhes de uma comida;
+- Verifica se os botões estão disponíveis na tela de detalhes de uma bebida.
+
+### 43 - Ao clicar no botão de compartilhar, o link da receita dentro do app deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer. O ícone do botão de compartilhar pode ser encontrado em `src/images/shareIcon.svg`.
+
+##### As seguintes verificações serão feitas:
+
+- Verifica a mensagem "Link copiado!" e se o link da receita da comida foi copiado para o clipboard;
+- Verifica a mensagem "Link copiado!" e se o link da receita da bebida foi copiado para o clipboard.
+
+### 44 - O ícone do coração (favorito) deve vir preenchido caso a receita esteja favoritada, e "despreenchido" caso contrário. Os ícones dos botões podem ser encontrados em `src/images/whiteHeartIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
+
+##### As seguintes verificações serão feitas:
+
+- Verifica se a comida favoritada vem com o coração preenchido;
+- Verifica se a comida não favoritada vem com o coração "despreenchido";
+- Verifica se a bebida favoritada vem com o coração preenchido;
+- Verifica se a bebida não favoritada vem com o coração "despreenchido".
+
+### 45 - Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para "despreenchido" e vice-versa.
+
+##### As seguintes verificações serão feitas:
+
+- Favorita a comida;
+- Desfavorita a comida;
+- Favorita a bebida;
+- Desfavorita a bebida.
+
+### 46 - As receitas favoritas devem ser salvas em `localStorage` na chave `favoriteRecipes` no formato `[{ id, type, area, category, alcoholicOrNot, name, image }]`. E as receitas feitas devem ser salvas em `localStorage` na chave `doneRecipes` no formato `[{ id, type, area, category, alcoholicOrNot, name, image, doneDate, tags }]`.
+
+##### As seguintes verificações serão feitas:
+
+- Verifica se após favoritar receita de uma comida, ela é salva corretamente no localStorage;
+- Verifica se após favoritar receita de uma bebida, ela é salva corretamente no localStorage.
 
 ---
 
 ## Requisitos - Apresentação 2
 
-54. A cobertura de testes unitários deve ser de no mínimo 90%;
+### 47 - A cobertura de testes unitários deve ser de no mínimo 90%.
 
 #### Tela de receita em processo
 
@@ -559,9 +798,9 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ### 61 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas favoritas (cumulativo com os atributos em comum com a tela de receitas feitas).
 
-### 63 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de "desfavoritar". Os ícones dos botões podem ser encontrados em `src/images/shareeIcon.svg` e em `src/images/favoriteIcon.svg`, respectivamente.
+### 63 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de "desfavoritar". Os ícones dos botões podem ser encontrados em `src/images/shareIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
 
-### 64 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica ou não, um botão de compartilhar e um de "desfavoritar". Os ícones dos botões podem ser encontrados em `src/images/shareeIcon.svg` e em `src/images/favoriteIcon.svg`, respectivamente.
+### 64 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica ou não, um botão de compartilhar e um de "desfavoritar". Os ícones dos botões podem ser encontrados em `src/images/shareIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
 
 ### 65 - O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard.
 
@@ -703,148 +942,6 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 ---
 
 ***Obs: A maneira como as APIs devem ser estruturadas segue os seguintes modelos: https://www.themealdb.com/api.php e https://www.thecocktaildb.com/api.php***
-
----
-
-### Implementações técnicas
-
-Algumas coisas devem seguir um padrão pré-estabelecido para que os teste de correção funcionem corretamente.
-
-#### Rotas
-
-As rotas a serem utilizadas na aplicação devem ser as seguintes:
-
-* Tela de login: `/`;
-* Tela principal de receitas de comidas: `/comidas`;
-* Tela principal de receitas de bebidas: `/bebidas`;
-* Tela de detalhes de uma receita de comida: `/comidas/{id-da-receita}`;
-* Tela de detalhes de uma receita de bebida: `/bebidas/{id-da-receita}`;
-* Tela de receita em processo de comida: `/comidas/{id-da-receita}/in-progress`;
-* Tela de receita em processo de bebida: `/bebidas/{id-da-receita}/in-progress`;
-* Tela de explorar: `/explorar`;
-* Tela de explorar comidas: `/explorar/comidas`;
-* Tela de explorar bebidas: `/explorar/bebidas`;
-* Tela de explorar comidas por ingrediente: `/explorar/comidas/ingredientes`;
-* Tela de explorar bebidas por ingrediente: `/explorar/bebidas/ingredientes`;
-* Tela de explorar comidas por local de origem: `/explorar/comidas/area`;
-* Tela de perfil: `/perfil`;
-* Tela de receitas feitas: `/receitas-feitas`;
-* Tela de receitas favoritas: `/receitas-favoritas`.
-
-#### `localStorage`
-
-O uso de `localStorage` é necessário para que as informações não se percam caso a pessoa atualize a página.
-O correto é usar os valores para iniciar sua store ou seu context.
-
-No `localStorage` do navegador:
-
-* a chave `mealsToken` deve conter a seguinte estrutura:
-```
-1
-```
-
-* a chave `cocktailsToken` deve conter a seguinte estrutura:
-```
-1
-```
-
-* a chave `user` deve conter a seguinte estrutura:
-```
-{
-    email: email-da-pessoa
-}
-```
-
-* a chave `doneRecipes` deve conter a seguinte estrutura:
-```
-[{
-    id: id-da-receita,
-    type: comida-ou-bebida,
-    area: area-da-receita-ou-texto-vazio,
-    category: categoria-da-receita-ou-texto-vazio,
-    alcoholic: alcoholic-ou-non-alcoholic-ou-texto-vazio,
-    name: nome-da-receita,
-    image: imagem-da-receita,
-    doneDate: quando-a-receita-foi-concluida,
-    tags: array-de-tags-da-receita-ou-array-vazio
-}]
-```
-
-* a chave `favoriteRecipes` deve conter a seguinte estrutura:
-```
-[{
-    id: id-da-receita,
-    type: comida-ou-bebida,
-    area: area-da-receita-ou-texto-vazio,
-    category: categoria-da-receita-ou-texto-vazio,
-    alcoholic: alcoholic-ou-non-alcoholic-ou-texto-vazio,
-    name: nome-da-receita,
-    image: imagem-da-receita
-}]
-```
-
-* a chave `inProgressRecipes` deve conter a seguinte estrutura:
-```
-{
-    id-da-receita: [lista-de-ingredientes-utilizados],
-    ...
-}
-```
-
-    **Observação:** Cada ID representa o ID de uma receita e cada item da lista de ingredientes da respectiva receita deve ser representado apenas pelo número do ingrediente no formato numérico.
-
----
-
-## Instruções para entregar seu projeto:
-
-### ANTES DE COMEÇAR A DESENVOLVER:
-
-1. Clone o repositório
-  * `git clone git@github.com:tryber/sd-0x-recipes-app-N.git`.
-  * Entre na pasta do repositório que você acabou de clonar:
-    * `cd sd-0x-recipes-app-N`
-
-2. Instale as dependências, inicialize o projeto e rode os testes
-  * Instale as dependências:
-    * `npm install`
-  * Inicialize o projeto:
-    * `npm start` (uma nova página deve abrir no seu navegador com um texto simples)
-  * Verifique que os testes E2E estão executando:
-    * `npm run cy` (os testes devem rodar e falhar)
-    * `npm run cy:open` (os testes devem rodar e falhar, legal caso queira ver o Cypress funcionando)
-
-3. Crie uma branch a partir da branch `master`
-  * Verifique que você está na branch `master`
-    * Exemplo: `git branch`
-  * Se não estiver, mude para a branch `master`
-    * Exemplo: `git checkout master`
-  * Agora, crie uma branch onde você vai guardar os `commits` do seu projeto
-    * Você deve criar uma branch no seguinte formato: `nome-de-usuário-nome-do-projeto`
-    * Exemplo: `git checkout -b joaozinho-movie-card-library`
-
-5. Adicione as mudanças ao _stage_ do Git e faça um `commit`
-  * Verifique que as mudanças ainda não estão no _stage_
-    * Exemplo: `git status` (deve aparecer listada a pasta _components_ em vermelho)
-  * Adicione o novo arquivo ao _stage_ do Git
-      * Exemplo:
-        * `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-        * `git status` (deve aparecer listado o arquivo _components/Header.jsx_ em verde)
-  * Faça o `commit` inicial
-      * Exemplo:
-        * `git commit -m 'iniciando o projeto. VAMOS COM TUDO :rocket:'` (fazendo o primeiro commit)
-        * `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
-
-6. Adicione a sua branch com o novo `commit` ao repositório remoto
-  * Usando o exemplo anterior: `git push -u origin joaozinho-movie-cards-library`
-
-7. Crie um novo `Pull Request` _(PR)_
-  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-recipes-app-N/pulls)
-  * Clique no botão verde _"New pull request"_
-  * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
-  * Clique no botão verde _"Create pull request"_
-  * Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
-  * **Não se preocupe em preencher mais nada por enquanto!**
-  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-recipes-app-N/pulls) e confira que o seu _Pull Request_ está criado
 
 ---
 

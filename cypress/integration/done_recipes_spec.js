@@ -3,7 +3,7 @@
 describe('Done recipes screen', () => {
   const doneRecipes = [
     {
-      id: 52771,
+      id: '52771',
       type: 'comida',
       area: 'Italian',
       category: 'Vegetarian',
@@ -14,7 +14,7 @@ describe('Done recipes screen', () => {
       tags: ['Pasta', 'Curry'],
     },
     {
-      id: 178319,
+      id: '178319',
       type: 'bebida',
       area: '',
       category: 'Cocktail',

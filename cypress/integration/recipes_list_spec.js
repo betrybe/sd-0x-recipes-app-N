@@ -339,7 +339,6 @@ describe('No filtro de categorias deve existir a opção de filtrar por todas as
   });
 });
 
-
 describe('Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL', () => {
   it('Caso as receitas sejam de comida a rota deve mudar para a tela de detalhes da receita', () => {
     cy.visit('http://localhost:3000/comidas', {

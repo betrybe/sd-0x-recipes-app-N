@@ -1,5 +1,8 @@
 {
   "requirements": [{
+    "description": "A cobertura de testes unitários deve ser de no mínimo 90%",
+    "bonus": false
+  }, {
     "description": "Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de login",
     "bonus": false
   }, {
@@ -91,6 +94,18 @@
     "bonus": false
   }, {
     "description": "Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL",
+    "bonus": false
+  }, {
+    "description": "Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de detalhes de uma receita",
+    "bonus": false
+  }, {
+    "description": "Uma request para a API deve ser feita passando o `id` da receita que deve estar disponível nos parâmetros da URL",
+    "bonus": false
+  }, {
+    "description": "Essa tela deve conter uma imagem da receita, o título, a categoria (ou se é ou não alcoólico), uma lista de ingredientes seguidos pelas quantidades, instruções, um vídeo do youtube \"embedado\" e recomendações",
+    "bonus": false
+  }, {
+    "description": "As recomendações para receitas de comida deverão ser bebidas e vice-versa",
     "bonus": false
   }, {
     "description": "Deverão ser mostrados 6 cards de recomendação, onde apenas 2 são mostrados e o scroll é horizontal, similar a um `carousel`",

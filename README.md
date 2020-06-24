@@ -31,7 +31,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
     * Exemplo: `git checkout master`
   * Agora, crie uma branch onde você vai guardar os `commits` do seu projeto
     * Você deve criar uma branch no seguinte formato: `nome-de-usuário-nome-do-projeto`
-    * Exemplo: `git checkout -b joaozinho-movie-card-library`
+    * Exemplo: `git checkout -b joaozinho-recipes-app`
 
 5. Adicione as mudanças ao _stage_ do Git e faça um `commit`
   * Verifique que as mudanças ainda não estão no _stage_
@@ -46,7 +46,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
         * `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
 
 6. Adicione a sua branch com o novo `commit` ao repositório remoto
-  * Usando o exemplo anterior: `git push -u origin joaozinho-movie-cards-library`
+  * Usando o exemplo anterior: `git push -u origin joaozinho-recipes-app`
 
 7. Crie um novo `Pull Request` _(PR)_
   * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-recipes-app-N/pulls)
@@ -798,25 +798,25 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ### 61 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas favoritas (cumulativo com os atributos em comum com a tela de receitas feitas).
 
-### 63 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de "desfavoritar". Os ícones dos botões podem ser encontrados em `src/images/shareIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
+### 62 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de "desfavoritar". Os ícones dos botões podem ser encontrados em `src/images/shareIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
 
-### 64 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica ou não, um botão de compartilhar e um de "desfavoritar". Os ícones dos botões podem ser encontrados em `src/images/shareIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
+### 63 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica ou não, um botão de compartilhar e um de "desfavoritar". Os ícones dos botões podem ser encontrados em `src/images/shareIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
 
-### 65 - O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard.
+### 64 - O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard.
 
 ##### As seguintes verificações serão feitas:
 
 - Ao clicar no botão de compartilhar deve aparecer a mensagem "Link copiado!";
 - A URL da tela de detalhes da receita é copiada para o clipboard.
 
-### 66 - O botão de "desfavoritar" deve remover a receita da lista de receitas favoritas do `localStorage` e da tela.
+### 65 - O botão de "desfavoritar" deve remover a receita da lista de receitas favoritas do `localStorage` e da tela.
 
 ##### As seguintes verificações serão feitas:
 
 - Ao clicar no botão de "desfavoritar" a respectiva receita é removida da tela;
 - Ao clicar no botão de "desfavoritar" a respectiva receita é removida do `localStorage`.
 
-### 67 - Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros. Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente.
+### 66 - Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros. Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente.
 
 ##### As seguintes verificações serão feitas:
 
@@ -824,7 +824,7 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 - Ao clicar no botão "Drinks" as receitas devem ser filtradas por bebidas;
 - Ao clicar no botão "All" o filtro deve ser removido.
 
-### 68 - Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita.
+### 67 - Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita.
 
 ##### As seguintes verificações serão feitas:
 
@@ -833,11 +833,11 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ## Tela de explorar
 
-### 69 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar.
+### 68 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar.
 
-### 70 - A tela deve ter dois botões: um para explorar comidas e o outro para explorar bebidas. O nomes dos botões devem ser "Explorar Comidas" e "Explorar Bebidas", respectivamente.
+### 69 - A tela deve ter dois botões: um para explorar comidas e o outro para explorar bebidas. O nomes dos botões devem ser "Explorar Comidas" e "Explorar Bebidas", respectivamente.
 
-### 71 - Ao clicar em um dos botões, a rota deve mudar para a página de explorar comidas ou de explorar bebidas.
+### 70 - Ao clicar em um dos botões, a rota deve mudar para a página de explorar comidas ou de explorar bebidas.
 
 ##### As seguintes verificações serão feitas:
 
@@ -846,30 +846,30 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ## Tela de explorar bebidas ou comidas
 
-### 72- Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar bebidas ou comidas.
+### 71 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar bebidas ou comidas.
 
 ##### As seguintes verificações serão feitas:
 
 - Tem os data-testids corretos para a tela de explorar comidas;
 - Tem os data-testids corretos para a tela de explorar bebidas.
 
-### 73 - A tela deve ter três botões: um para explorar por ingrediente, um para explorar por local de origem e um para pegar uma receita aleatória. O nomes dos botões devem ser "Por Ingredientes", "Por Local de Origem" e "Me Surpreenda!", respectivamente. Obs: se a opção escolhida for explorar bebidas, o botão para explorar por local de origem não deve estar disponível.
+### 72 - A tela deve ter três botões: um para explorar por ingrediente, um para explorar por local de origem e um para pegar uma receita aleatória. O nomes dos botões devem ser "Por Ingredientes", "Por Local de Origem" e "Me Surpreenda!", respectivamente. Obs: se a opção escolhida for explorar bebidas, o botão para explorar por local de origem não deve estar disponível.
 
 ##### As seguintes verificações serão feitas:
 
 - Tem os botões "Por Ingredientes", "Por Local de Origem" e "Me Surpreenda!" para a tela de explorar comidas;
 - Tem apenas os botões "Por Ingredientes" e "Me Surpreenda!" para a tela de explorar bebidas.
 
-### 74 - Ao clicar em "Por Ingredientes", a rota deve mudar para tela de explorar ingredientes.
+### 73 - Ao clicar em "Por Ingredientes", a rota deve mudar para tela de explorar ingredientes.
 
 ##### As seguintes verificações serão feitas:
 
 - Ao clicar no botão "Por Ingredientes" da tela de explorar comidas a rota muda para a página de explorar comidas por ingrediente;
 - Ao clicar no botão "Explorar Bebidas" da tela de explorar bebidas a rota muda para a página de explorar bebidas por ingrediente.
 
-### 75 - Ao clicar em "Por Local de Origem", a rota deve mudar para tela de explorar por local de origem.
+### 74 - Ao clicar em "Por Local de Origem", a rota deve mudar para tela de explorar por local de origem.
 
-### 76 - Ao clicar em "Me Surpreenda!", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória através da API.
+### 75 - Ao clicar em "Me Surpreenda!", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória através da API.
 
 ##### As seguintes verificações serão feitas:
 
@@ -878,21 +878,21 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ## Tela de explorar ingredientes
 
-### 77 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar ingredientes.
+### 76 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar ingredientes.
 
 ##### As seguintes verificações serão feitas:
 
 - Tem os data-testids corretos para a tela de explorar comidas por ingredientes;
 - Tem os data-testids corretos para a tela de explorar bebidas por ingredientes.
 
-### 78 - A tela deve ter cards para os 12 primeiros ingredientes, de forma que cada card contêm: o nome do ingrediente e uma foto.
+### 77 - A tela deve ter cards para os 12 primeiros ingredientes, de forma que cada card contêm: o nome do ingrediente e uma foto.
 
 ##### As seguintes verificações serão feitas:
 
 - Tem o nome e a foto corretos para a tela de explorar comidas por ingredientes;
 - Tem o nome e a foto corretos para a tela de explorar bebidas por ingredientes.
 
-### 79 -  Ao clicar no card do ingrediente a rota deve mudar para tela principal de receitas, mas mostrando apenas as receitas que contém o ingrediente escolhido.
+### 78 -  Ao clicar no card do ingrediente a rota deve mudar para tela principal de receitas, mas mostrando apenas as receitas que contém o ingrediente escolhido.
 
 ##### As seguintes verificações serão feitas:
 
@@ -901,9 +901,9 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ## Tela de explorar por local de origem/area
 
-### 80 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem.
+### 79 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem.
 
-### 81 - A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown.
+### 80 - A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown.
 
 ##### As seguintes verificações serão feitas:
 
@@ -911,28 +911,28 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 - Ao selecionar um filtro de local de origem, todas as receitas devem mudar para os dados filtrados da API;
 - Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL.
 
-### 82 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro.
+### 81 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro.
 
 ##### As seguintes verificações serão feitas:
 
 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All";
 - A opção "All" retorna as receitas sem nenhum filtro.
 
-### 83 - A rota deve ser apenas `/explorar/comidas/area`. A rota `/explorar/bebidas/area` não deve estar disponível, retornando um erro de "Not Found".
+### 82 - A rota deve ser apenas `/explorar/comidas/area`. A rota `/explorar/bebidas/area` não deve estar disponível, retornando um erro de "Not Found".
 
 ## Tela de perfil
 
-### 84 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de perfil.
+### 83 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de perfil.
 
-### 85 - O e-mail da pessoa usuária deve estar visível.
+### 84 - O e-mail da pessoa usuária deve estar visível.
 
-### 86 - Essa tela deve conter 3 botões: um de nome "Receitas Feitas", um de nome "Receitas Favoritas" e um de nome "Sair".
+### 85 - Essa tela deve conter 3 botões: um de nome "Receitas Feitas", um de nome "Receitas Favoritas" e um de nome "Sair".
 
-### 87 - Ao clicar no botão de "Receitas Favoritas", a rota deve mudar para a tela de receitas favoritas.
+### 86 - Ao clicar no botão de "Receitas Favoritas", a rota deve mudar para a tela de receitas favoritas.
 
-### 88 - Ao clicar no botão de "Receitas Feitas", a rota deve mudar para a tela de receitas feitas.
+### 87 - Ao clicar no botão de "Receitas Feitas", a rota deve mudar para a tela de receitas feitas.
 
-### 89 - Ao clicar no botão de "Sair", o `localStorage` deve ser limpo e a rota deve mudar para a tela de login.
+### 88 - Ao clicar no botão de "Sair", o `localStorage` deve ser limpo e a rota deve mudar para a tela de login.
 
 ##### As seguintes verificações serão feitas:
 
@@ -968,25 +968,24 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ---
 
-### DEPOIS DE TERMINAR O DESENVOLVIMENTO
+### DEPOIS DE TERMINAR O DESENVOLVIMENTO (OPCIONAL)
 
-Para **"entregar"** seu projeto, siga os passos a seguir:
+Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
 
-* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas
-  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**
-  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**
-  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-0x`
+* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
 
-Se ainda houver alguma dúvida sobre como entregar seu projeto, [aqui tem um video explicativo](https://vimeo.com/362189205).
+  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
+
+  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
+
+  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-0x`.
+
+Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
 
 ---
 
 ### REVISANDO UM PULL REQUEST
 
-⚠⚠⚠
+Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
 
-À medida que você e os outros alunos forem entregando os projetos, vocês serão alertados **via Slack** para também fazer a revisão dos _Pull Requests_ dos seus colegas. Fiquem atentos às mensagens do _"Pull Reminders"_ no _Slack_!
-
-Os monitores também farão a revisão de todos os projetos, e irão avaliar tanto o seu _Pull Request_, quanto as revisões que você fizer nos _Pull Requests_ dos seus colegas!!!
-
-Use o material que você já viu sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os projetos que chegaram para você.
+#VQV 🚀

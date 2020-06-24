@@ -456,7 +456,6 @@ describe('O botão de finalizar receita só pode estar habilitado quando todos o
   });
 });
 
-
 describe('Após clicar no botão "Finalizar receita", a rota deve mudar para a página de receitas feitas, cuja rota deve ser `/receitas-feitas`', () => {
   it('redireciona após concluir uma receita de comida', () => {
     cy.visit('http://localhost:3000/comidas/52771/in-progress', {

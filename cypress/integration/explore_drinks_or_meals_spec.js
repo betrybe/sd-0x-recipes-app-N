@@ -63,8 +63,6 @@ describe('Ao clicar em "Por Local de Origem", a rota deve mudar para tela de exp
   });
 });
 
-
-
 describe('Ao clicar em "Me Surpreenda!", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória', () => {
   it('Ao clicar no botão "Por Ingredientes" da tela de explorar comidas a rota muda para a página de detalhes de uma comida aleatória', () => {
     cy.visit('http://localhost:3000/explorar/comidas', {

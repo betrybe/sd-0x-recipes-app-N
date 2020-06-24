@@ -19,7 +19,7 @@ describe('A tela deve ter dois botões: um para explorar comidas e o outro para 
 });
 
 
-describe('A tela deve ter dois botões: um para explorar comidas e o outro para explorar bebidas', () => {
+describe('Ao clicar em um dos botões, a rota deve mudar para a página de explorar comidas ou de explorar bebidas', () => {
   it('O nomes dos botões devem ser "Explorar Comidas" e "Explorar Bebidas"', () => {
     cy.visit('http://localhost:3000/explorar');
 

@@ -91,7 +91,6 @@ describe('A tela segue as mesmas especificações da tela de receitas principal,
   });
 });
 
-
 describe('No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All"', () => {
   it('No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All"', () => {
     cy.visit('http://localhost:3000/explorar/comidas/area', {

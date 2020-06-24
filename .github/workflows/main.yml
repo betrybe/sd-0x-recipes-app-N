@@ -14,6 +14,7 @@ jobs:
         with:
           repository-test-name: 'betrybe/sd-0x-recipes-app-n-tests'
           repository-test-branch: 'master'
+          npm-start: true
       - name: Store evaluation step
         uses: betrybe/store-evaluation-action@v2
         with:

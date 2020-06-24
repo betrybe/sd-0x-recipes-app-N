@@ -168,7 +168,7 @@ describe('A mesma lógica de favoritar e compartilhar da tela de detalhes de uma
     cy.contains('Link copiado!');
     cy.window().then((win) => {
       cy.wrap(win.navigator.clipboard.readText())
-        .should('eq', 'http://localhost:3000/comidas/52771/in-progress');
+        .should('eq', 'http://localhost:3000/comidas/52771');
     });
   });
 
@@ -183,7 +183,7 @@ describe('A mesma lógica de favoritar e compartilhar da tela de detalhes de uma
     cy.contains('Link copiado!');
     cy.window().then((win) => {
       cy.wrap(win.navigator.clipboard.readText())
-        .should('eq', 'http://localhost:3000/bebidas/178319/in-progress');
+        .should('eq', 'http://localhost:3000/bebidas/178319');
     });
   });
 
@@ -358,7 +358,7 @@ describe('A mesma lógica de favoritar e compartilhar da tela de detalhes de uma
       const favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
       const expectedFavoriteRecipes = [
         {
-          id: 52771,
+          id: '52771',
           type: 'comida',
           area: 'Italian',
           category: 'Vegetarian',
@@ -384,7 +384,7 @@ describe('A mesma lógica de favoritar e compartilhar da tela de detalhes de uma
       const favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
       const expectedFavoriteRecipes = [
         {
-          id: 178319,
+          id: '178319',
           type: 'bebida',
           area: '',
           category: 'Cocktail',

@@ -96,7 +96,7 @@ describe('Ao clicar no checkbox de um ingrediente, o nome dele deve ser "riscado
   });
 });
 
-describe.only('O estado do progresso deve ser mantido caso a pessoa atualize a pagina ou volte para a mesma receita', () => {
+describe('O estado do progresso deve ser mantido caso a pessoa atualize a pagina ou volte para a mesma receita', () => {
   it('salva o progresso de uma receita de comida em andamento', () => {
     cy.visit('http://localhost:3000/comidas/52771/in-progress', {
       onBeforeLoad(win) {

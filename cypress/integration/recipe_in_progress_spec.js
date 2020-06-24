@@ -96,7 +96,7 @@ describe('Ao clicar no checkbox de um ingrediente, o nome dele deve ser "riscado
   });
 });
 
-describe('O estado do progresso deve ser mantido caso a pessoa atualize a pagina ou volte para a mesma receita', () => {
+describe.only('O estado do progresso deve ser mantido caso a pessoa atualize a pagina ou volte para a mesma receita', () => {
   it('salva o progresso de uma receita de comida em andamento', () => {
     cy.visit('http://localhost:3000/comidas/52771/in-progress', {
       onBeforeLoad(win) {
@@ -104,19 +104,15 @@ describe('O estado do progresso deve ser mantido caso a pessoa atualize a pagina
       },
     });
 
-    cy.get('[data-testid*="ingredient-step"]')
+    cy.get('[data-testid="0-ingredient-step"]')
       .find('input[type="checkbox"]')
-      .first()
       .check();
 
     cy.reload();
 
-    cy.get('[data-testid*="ingredient-step"]')
+    cy.get('[data-testid="0-ingredient-step"]')
       .find('input[type="checkbox"]')
-      .first()
-      .then($el => {
-        expect($el.css('text-decoration')).to.be.eq('none solid rgb(0, 0, 0)');
-      });
+      .should('have.attr', 'checked');
   });
 
   it('salva o progresso de uma receita de bebida em andamento', () => {
@@ -126,19 +122,15 @@ describe('O estado do progresso deve ser mantido caso a pessoa atualize a pagina
       },
     });
 
-    cy.get('[data-testid*="ingredient-step"]')
+    cy.get('[data-testid="0-ingredient-step"]')
       .find('input[type="checkbox"]')
-      .first()
       .check();
 
     cy.reload();
 
-    cy.get('[data-testid*="ingredient-step"]')
+    cy.get('[data-testid="0-ingredient-step"]')
       .find('input[type="checkbox"]')
-      .first()
-      .then($el => {
-        expect($el.css('text-decoration')).to.be.eq('none solid rgb(0, 0, 0)');
-      });
+      .should('have.attr', 'checked');
   });
 });
 

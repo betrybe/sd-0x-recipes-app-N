@@ -701,7 +701,7 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ### 47 - A cobertura de testes unitários deve ser de no mínimo 90%.
 
-#### Tela de receita em processo
+## Tela de receita em processo
 
 ### 48 - Essa tela deve conter uma imagem da receita, seu titulo, sua categoria (ou se a bebida é alcoólica ou não) uma lista de ingredientes com suas respectivas quantidades, e suas instruções;
 

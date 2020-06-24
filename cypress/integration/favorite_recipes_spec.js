@@ -3,7 +3,7 @@
 describe('Favorite recipes screen', () => {
   const favoriteRecipes = [
     {
-      id: 52771,
+      id: '52771',
       type: 'comida',
       area: 'Italian',
       category: 'Vegetarian',
@@ -12,7 +12,7 @@ describe('Favorite recipes screen', () => {
       image: 'https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg',
     },
     {
-      id: 178319,
+      id: '178319',
       type: 'bebida',
       area: '',
       category: 'Cocktail',

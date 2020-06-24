@@ -571,7 +571,7 @@ describe('As receitas favoritas devem ser salvas em `localStorage` na chave `fav
       const favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
       const expectedFavoriteRecipes = [
         {
-          id: 52771,
+          id: '52771',
           type: 'comida',
           area: 'Italian',
           category: 'Vegetarian',
@@ -596,7 +596,7 @@ describe('As receitas favoritas devem ser salvas em `localStorage` na chave `fav
       const favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
       const expectedFavoriteRecipes = [
         {
-          id: 178319,
+          id: '178319',
           type: 'bebida',
           area: '',
           category: 'Cocktail',

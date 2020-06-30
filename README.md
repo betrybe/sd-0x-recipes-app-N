@@ -343,7 +343,7 @@ No `localStorage` do navegador:
 
 * a chave `inProgressRecipes` deve conter a seguinte estrutura:
 ```
-[{
+{
     cocktails: {
         id-da-bebida: [lista-de-ingredientes-utilizados],
         ...
@@ -352,7 +352,7 @@ No `localStorage` do navegador:
         id-da-comida: [lista-de-ingredientes-utilizados],
         ...
     }
-}]
+}
 ```
 
     **Observação:** `id-da-bebida` e `id-da-comida` representam o ID de uma bebida e comida, respectivamente, e cada item da lista de ingredientes da respectiva receita deve ser representado apenas pelo número do ingrediente no formato numérico.

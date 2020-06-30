@@ -341,7 +341,7 @@ No `localStorage` do navegador:
 }]
 ```
 
-* a chave `inProggressRecipes` deve conter a seguinte estrutura:
+* a chave `inProgressRecipes` deve conter a seguinte estrutura:
 ```
 {
     id-da-receita: [lista-de-ingredientes-utilizados],

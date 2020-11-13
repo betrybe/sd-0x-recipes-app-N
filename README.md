@@ -6,60 +6,65 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 ---
 
-## Instruções para entregar seu projeto:
+# HABILIDADES
 
-### ANTES DE COMEÇAR A DESENVOLVER:
+Nesse projeto você será capaz de:
 
-1. Clone o repositório
-  * `git clone git@github.com:tryber/sd-0x-recipes-app-N.git`.
-  * Entre na pasta do repositório que você acabou de clonar:
-    * `cd sd-0x-recipes-app-N`
-
-2. Instale as dependências, inicialize o projeto e rode os testes
-  * Instale as dependências:
-    * `npm install`
-  * Inicialize o projeto:
-    * `npm start` (uma nova página deve abrir no seu navegador com um texto simples)
-  * Verifique que os testes E2E estão executando:
-    * `npm run cy` (os testes devem rodar e falhar)
-    * `npm run cy:open` (os testes devem rodar e falhar, legal caso queira ver o Cypress funcionando)
-
-3. Crie uma branch a partir da branch `master`
-  * Verifique que você está na branch `master`
-    * Exemplo: `git branch`
-  * Se não estiver, mude para a branch `master`
-    * Exemplo: `git checkout master`
-  * Agora, crie uma branch onde você vai guardar os `commits` do seu projeto
-    * Você deve criar uma branch no seguinte formato: `nome-de-usuário-nome-do-projeto`
-    * Exemplo: `git checkout -b joaozinho-recipes-app`
-
-5. Adicione as mudanças ao _stage_ do Git e faça um `commit`
-  * Verifique que as mudanças ainda não estão no _stage_
-    * Exemplo: `git status` (deve aparecer listada a pasta _components_ em vermelho)
-  * Adicione o novo arquivo ao _stage_ do Git
-      * Exemplo:
-        * `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-        * `git status` (deve aparecer listado o arquivo _components/Header.jsx_ em verde)
-  * Faça o `commit` inicial
-      * Exemplo:
-        * `git commit -m 'iniciando o projeto. VAMOS COM TUDO :rocket:'` (fazendo o primeiro commit)
-        * `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
-
-6. Adicione a sua branch com o novo `commit` ao repositório remoto
-  * Usando o exemplo anterior: `git push -u origin joaozinho-recipes-app`
-
-7. Crie um novo `Pull Request` _(PR)_
-  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-recipes-app-N/pulls)
-  * Clique no botão verde _"New pull request"_
-  * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
-  * Clique no botão verde _"Create pull request"_
-  * Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
-  * **Não se preocupe em preencher mais nada por enquanto!**
-  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-recipes-app-N/pulls) e confira que o seu _Pull Request_ está criado
+  - Utilizar a Context API do React para gerenciar estado
+  - Utilizar o React Hook useState
+  - Utilizar o React Hook useContext
+  - Utilizar o React Hook useEffect
+  - Criar Hooks customizados
 
 ---
 
-## O que deverá ser desenvolvido
+## SUMÁRIO
+
+- [O que deverá ser desenvolvido](#o-que-deverá-ser-desenvolvido)
+  - [Protótipo do projeto](#protótipo-do-projeto)
+- [Data de entrega](#data-de-entrega)
+- [Como desenvolver](#como-desenvolver)
+  - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
+- [Requisitos do projeto](#requisitos-do-projeto)
+  - [Linter](#linter)
+  - [Execução de testes de requisito](#execução-de-testes-de-requisito)
+  - [API de Trivia](#api-de-trivia)
+  - [Gravatar](#gravatar)
+  - [Grupos de prioridade](#grupos-de-prioridade)
+  - [Observações técnicas](#observações-técnicas)
+- [Lista de requisitos](#lista-de-requisitos)
+  - [Tela de início](#tela-de-inicio)
+    - [1 - Crie a tela de login, onde a pessoa que joga deve preencher as informações para iniciar um jogo](#1-crie-a-tela-de-login-onde-a-pessoa-que-joga-deve-preencher-as-informações-para-iniciar-um-jogo)
+    - [2 - Crie o botão de iniciar o jogo](#2-crie-o-botão-de-iniciar-o-jogo)
+    - [3 - Crie um botão que leva a pessoa para a tela de configuração](#3-crie-um-botão-que-leva-a-pessoa-para-tela-de-configuração)
+  - [Tela de jogo](#tela-de-jogo)
+    - [4 - Crie um header que deve conter as informações da pessoa jogadora](#4-crie-um-header-que-deve-conter-as-informações-da-pessoa-jogadora)
+    - [5 - Crie a página de jogo que deve conter as informações relacionadas à pergunta](#5-crie-a-página-de-jogo-que-deve-conter-as-informações-relacionadas-à-pergunta)
+    - [6 - Desenvolva o jogo onde só deve ser possível escolher uma resposta correta por pergunta](#6-desenvolva-o-jogo-onde-só-deve-ser-possível-escolher-uma-resposta-correta-por-pergunta)
+    - [7 - Desenvolva o estilo que, ao clicar em uma resposta, a correta deve ficar verde e as incorretas, vermelhas](#7-desenvolva-o-estilo-que-ao-clicar-em-uma-resposta-a-correta-deve-ficar-verde-e-as-incorretas-vermelhas)
+    - [8 - Desenvolva um timer onde a pessoa que joga tem 30 segundos para responder](#8-desenvolva-um-timer-onde-a-pessoa-que-joga-tem-30-segundos-para-responder)
+    - [9 - Crie o placar os as seguintes características](#9-crie-o-placar-com-as-seguintes-características)
+    - [10 - Crie um botão de próxima que apareça após a resposta ser dada](#10-crie-um-botão-de-próxima-que-apareça-após-a-resposta-ser-dada)
+    - [11 - Desenvolva o jogo de forma que a pessoa que joga deve responder 5 perguntas no total](#11-desenvolva-o-jogo-de-forma-que-a-pessoa-que-joga-deve-responder-5-perguntas-no-total)
+  - [Tela de feedback](#tela-de-feedback)
+    - [12 - Desenvolva o header de feedback, que deve conter as informações da pessoa jogadora](#12-desenvolva-o-header-de-feedback-que-deve-conter-as-informações-da-pessoa-jogadora)
+    - [13 - Crie a mensagem de feedback para ser exibida à pessoa usuária](#13-crie-a-mensagem-de-feedback-para-ser-exibida-a-pessoa-usuária)
+    - [14 - Exiba as informações relacionadas aos resultados obtidos para a pessoa usuária](#14-exiba-as-informações-relacionadas-aos-resultados-obtidos-para-a-pessoa-usuária)
+    - [15 - Crie a opção para a pessoa jogadora poder jogar novamente](#15-crie-a-opção-para-a-pessoa-jogadora-poder-jogar-novamente)
+    - [16 - Crie a opção para a pessoa jogadora poder visualizar a tela de ranking](#16-crie-a-opção-para-a-pessoa-jogadora-poder-visualizar-a-tela-de-ranking)
+  - [Tela de ranking](#tela-de-ranking)
+    - [17 - Crie a tela de ranking](#17-crie-a-tela-de-ranking)
+    - [18 - Crie um botão para ir ao início](#18-crie-um-botão-para-ir-ao-início)
+  - [Extra não avaliativo: tela de configurações](#extra-não-avaliativo-tela-de-configurações)
+- [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
+  - [Durante o desenvolvimento](#durante-o-desenvolvimento)
+  - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
+  - [Revisando um Pull Request](#revisando-um-pull-request)
+- [Avisos finais](#avisos-finais)
+
+---
+
+## O QUE DEVERÁ SER DESENVOLVIDO
 
 Você irá desenvolver um app de receitas, utilizando o que há de mais moderno dentro do ecossistema React: Hooks e Context API!
 
@@ -85,17 +90,110 @@ Você pode ler mais sobre atributos para testes [nesse link](https://www.eduardo
 
 ---
 
-## Desenvolvimento e testes
+## DATA DE ENTREGA
 
-Este repositório já contem um _template_ com um App React criado, configurado e com os testes da avaliação automatizada.
+Projeto em grupo.
 
-Esses [testes E2E](https://www.guru99.com/end-to-end-testing.html) automatizados podem ser utilizados para ajudar a validar as funcionalidades do projeto localmente. É possível executar esses testes via `npm run cy:open`. Esse comando abre a interface que permite rodar a suite de testes do [Cypress](https://www.cypress.io/how-it-works/) que valida o fluxo geral e os requisitos funcionais do projeto.
+Serão dez dias de projeto.
 
-Esses testes não consideram o layout de maneira geral, mas sim os atributos e informações corretas, então preste atenção nos atributos definidos no protótipo.
+O projeto tem até a seguinte data: dd/mm/yyyy - 14:00h para ter entregue a avaliação final.
 
-Os testes te darão uma mensagem de erro caso não estejam passando (seja qual for o motivo). 😉
+---
 
-#### Além dos testes da avaliação automatizada, um dos requisitos do projeto se baseia em **escrever testes unitários que cubram pelo menos 90% do projeto**. Na [documentação do Jest CLI](https://jestjs.io/docs/en/cli) é possível ver como essa cobertura é coletada.
+## COMO DESENVOLVER
+
+Este repositório **já conta com uma `main-group` para cada grupo**, identificada como `main-group-1` para o grupo 1, `main-group-2` para o grupo 2, e assim por diante. Para desenvolver, você sempre deve:
+
+* **Criar sua branch de desenvolvimento a partir da sua branch main**. Para isso, clone este repositório, faça o `git checkout main-group-XX && git pull` e em seguida o `git checkout -b main-group-XX-minha-feature`.
+* Para criar uma Pull Request para fazer **Code Review**, entitule-a `[GRUPO XX] Meu título` e **sempre aponte a Pull Request da sua branch para a branch `main-group-XX` do seu grupo, como no exemplo abaixo:**
+
+![Exemplo de como apontar uma Pull Request para a branch main do grupo](pull-request-para-branch-do-grupo.png)
+
+* Quando várias pessoas desenvolvem para um mesmo projeto podem ocorrer **conflitos de merge** que precisarão ser resolvidos. Prestem atenção a isso!
+
+⚠ **ATENÇÃO! É POSSÍVEL COMMITAR, POR ENGANO, NA BRANCH DE OUTRO GRUPO, ENTÃO TOME MUITO CUIDADO** ⚠
+
+### ANTES DE COMEÇAR A DESENVOLVER:
+
+### Antes de começar a desenvolver:
+
+1. Clone o repositório
+  * `git clone git@github.com:tryber/sd-0x-recipes-app-N.git`.
+  * Entre na pasta do repositório que você acabou de clonar:
+    * `cd sd-0x-recipes-app-N`
+  * Vá para a branch do seu grupo, com `git checkout main-group-XX && git pull`, onde `XX` é o número do seu grupo. Exemplos: `main-group-1`, `main-group-22`.
+
+2. Instale as dependências e inicialize o projeto
+  * Instale as dependências:
+    * `npm install`
+  * Inicialize o projeto:
+    * `npm start` (uma nova página deve abrir no seu navegador com um texto simples)
+
+3. Faça alterações separadas por novas branchs criadas a partir da branch `main-group-XX`, criando uma nova branch para cada demanda
+  * Verifique que você está na branch `main-group-XX`
+    * Exemplo: `git branch`
+  * Se não estiver, mude para a branch `main-group-XX`
+    * Exemplo: `git checkout main-group-XX && git pull`
+  * Agora, crie uma branch para a demanda que você vai desenvolver do seu projeto
+    * Você deve criar uma branch com uma breve descrição da demanda a ser desenvolvida
+    * Exemplo: `git checkout -b main-group-XX-cria-campo-de-input`
+
+4. Adicione as mudanças ao _stage_ do Git e faça um `commit`
+  * Verifique que as mudanças ainda não estão no _stage_
+    * Exemplo: `git status` (devem aparecer listadas as novas alterações em vermelho)
+  * Adicione o arquivo alterado ao _stage_ do Git
+      * Exemplo:
+        * `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
+        * `git status` (devem aparecer listadas as novas alterações em verde)
+  * Faça seus `commit`
+      * Exemplo:
+        * `git commit -m 'cria componente de input`
+        * `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
+
+5. Adicione a sua branch com o novo `commit` ao repositório remoto
+  * Usando o exemplo anterior: `git push -u origin main-group-XX-cria-campo-de-input`
+
+6. Crie um novo `Pull Request` _(PR)_
+  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-recipes-app-N/pulls)
+  * Clique no botão verde _"New pull request"_
+  * Clique na caixa de seleção _"Compare"_ e escolha a branch do grupo, `main-group-XX`, e a sua branch **com atenção**
+  * Coloque um título para a sua _Pull Request_
+    * Exemplo: _"[GRUPO XX] Cria tela de busca"_
+  * Clique no botão verde _"Create pull request"_
+  * Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
+  * **Não se preocupe em preencher mais nada por enquanto!**
+  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-recipes-app-N/pulls) e confira que o seu _Pull Request_ está criado
+
+7. Assim que aprovado por pelo menos duas pessoas do seu grupo e o _Linter_ estiver adereçado, acesse **SEU** _Pull Request_ e clique no botão _"Merge pull request"_
+
+---
+
+## REQUISITOS DO PROJETO
+
+Para o bom andamento deste projeto disponibilizamos, além do README a seguir, um quadro Kanban com as demandas a realizar para o projeto ser concluído com sucesso. Confira o Slack para saber como acessar o quadro! É de suma importância que o grupo se organize utilizando o quadro para maior eficiência e para que se minimizem os conflitos que a união de vários códigos trará.
+
+Além disso, você verá que os requisitos do projeto tem, além das observações técnicas e do que será validado, descrições tais quais se veriam em um projeto real. É muito importante ser capaz de ler descrições como essa e transformá-las em produtos ou, se houver dúvida, saber tirar tais dúvidas! Seguimos à disposição no Slack para isso.
+
+
+Este repositório já contem um _template_ com um App React criado, configurado e com os testes automatizados que fazem parte da correção. Ele também conta com uma branch **main-group** para cada grupo, identificada como `main-group-1` para o grupo 1, `main-group-2` para o grupo 2 e assim por diante.
+
+### Linter
+
+Para garantir a qualidade do seu código de forma a tê-lo mais legível, de mais fácil manutenção e seguindo as boas práticas de desenvolvimento nós utilizamos neste projeto o linter `ESLint`. Para rodar o linter localmente no seu projeto, execute o comando abaixo:
+
+```bash
+npm run lint
+```
+
+⚠ **PULL REQUESTS COM ISSUES DE LINTER NÃO SERÃO AVALIADAS. ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!** ⚠
+
+### Execução de testes de requisito
+
+Para o projeto ser validado, todos os testes de comportamento devem passar. É possível testar isso local rodando `npm run cy`. Esse comando roda a suite de testes do Cypress que valida se o fluxo geral e os requisitos funcionais estão funcionando como deveriam. Você pode também executar o comando `npm run cy:open` para ter um resultado visual dos testes executados.
+
+Esses testes não consideram o layout de maneira geral, mas sim os atributos e informações corretas, então preste atenção nisso! Os testes te darão uma mensagem de erro caso não estejam passando (seja qual for o motivo). 😉
+
+**Atenção:** Sua aplicação deve estar rodando para o Cypress no terminal poder testar.
 
 ## APIs
 
@@ -258,7 +356,11 @@ Os ingredientes seguem uma ordem lógica onde o nome dele (`strIngredient1`) e a
 
 ---
 
-## Implementações técnicas
+### Grupos de prioridade
+
+#### ---- FAZER GRUPOS DE PRIORIDADE ----
+
+## Observações técnicas
 
 Algumas coisas devem seguir um padrão pré-estabelecido para que os teste de correção funcionem corretamente.
 
@@ -374,15 +476,14 @@ Os ícones são:
 
 ---
 
-# Requisitos do projeto
-
-⚠️ Lembre-se que o seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate**.
+### LISTA DE REQUISITOS
 
 Nesse projeto, a pessoa que estiver utilizando o app pode procurar uma receita especifica, explorar receitas baseado em diferentes critérios, favoritar e fazer as receitas entre outras funcionalidades.
 
 As telas sofrem variações dependendo do tipo da receita (se é comida ou bebida, no caso).
 
-#### O projeto sera composto por duas entregas, cada uma especificada abaixo com seus respectivos requisitos e o prazo decidido com o especialista.
+
+<!-- #### O projeto sera composto por duas entregas, cada uma especificada abaixo com seus respectivos requisitos e o prazo decidido com o especialista. -->
 
 ## Requisitos - Apresentação 1
 
@@ -949,8 +1050,6 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ***Obs: A maneira como as APIs devem ser estruturadas segue os seguintes modelos: https://www.themealdb.com/api.php e https://www.thecocktaildb.com/api.php***
 
----
-
 ### DURANTE O DESENVOLVIMENTO
 
 * ⚠ **LEMBRE-SE DE CRIAR TODOS OS ARQUIVOS DENTRO DA PASTA COM O SEU NOME** ⚠
@@ -995,3 +1094,21 @@ Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362
 Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
 
 #VQV 🚀
+
+
+<!-- ======== -->
+
+## Desenvolvimento e testes
+
+Este repositório já contem um _template_ com um App React criado, configurado e com os testes da avaliação automatizada.
+
+Esses [testes E2E](https://www.guru99.com/end-to-end-testing.html) automatizados podem ser utilizados para ajudar a validar as funcionalidades do projeto localmente. É possível executar esses testes via `npm run cy:open`. Esse comando abre a interface que permite rodar a suite de testes do [Cypress](https://www.cypress.io/how-it-works/) que valida o fluxo geral e os requisitos funcionais do projeto.
+
+Esses testes não consideram o layout de maneira geral, mas sim os atributos e informações corretas, então preste atenção nos atributos definidos no protótipo.
+
+Os testes te darão uma mensagem de erro caso não estejam passando (seja qual for o motivo). 😉
+
+#### Além dos testes da avaliação automatizada, um dos requisitos do projeto se baseia em **escrever testes unitários que cubram pelo menos 90% do projeto**. Na [documentação do Jest CLI](https://jestjs.io/docs/en/cli) é possível ver como essa cobertura é coletada.
+
+
+<!-- ==== -->

@@ -586,9 +586,18 @@ O formulário só fica válido após um email válido e uma senha de mais de 6 c
 
 ## Barra de busca - Header
 
-### 13 - Todos os elementos devem respeitar os atributos descritos no protótipo para a barra de busca.
+### 13 - Todos os elementos devem respeitar os atributos descritos no protótipo para a barra de busca
+  Deve existir os data-testids tanto da barra de busca quanto de todos os radio-buttons
 
-### 14 - A barra de busca deve ficar logo abaixo do header e deve possuir 3 _radio buttons_: `Ingrediente`, `Nome` e `Primeira letra`. Eles, em conjunto com a `search-input`, devem mudar a forma como serão filtradas as receitas após clicar no botão `Buscar`.  Os _endpoints_ da API que você deve usar podem ser consultados [aqui para a API de comidas](https://www.themealdb.com/api.php) e [aqui para a API de bebidas](https://www.thecocktaildb.com/api.php).
+  **Observações técnicas**
+
+  * O input de busca deve possuir o atributo `data-testid="search-input"`
+  * O radio button de busca de ingrediente deve possuir o atributo `data-testid="ingredient-search-radio"`
+  * O radio button de busca da primeira letra deve possuir o atributo `"data-testid="first-letter-search-radio"`
+
+### 14 - A barra de busca deve ficar logo abaixo do header e deve possuir 3 radio buttons: Ingrediente, Nome e Primeira letra. Eles devem mudar a forma como serão filtradas as receitas
+
+A barra de busca deve ficar logo abaixo do header e deve possuir 3 _radio buttons_: `Ingrediente`, `Nome` e `Primeira letra`. Eles, em conjunto com a `search-input`, devem mudar a forma como serão filtradas as receitas após clicar no botão `Buscar`.  Os _endpoints_ da API que você deve usar podem ser consultados [aqui para a API de comidas](https://www.themealdb.com/api.php) e [aqui para a API de bebidas](https://www.thecocktaildb.com/api.php).
 
 ##### Exemplo: Ao selecionar `Ingrediente` e buscar por `chicken`, deve-se utilizar o endpoint `https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken`.
 

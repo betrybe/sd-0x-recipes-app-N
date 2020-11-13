@@ -38,14 +38,14 @@ Nesse projeto você será capaz de:
     - [Ícones](#icones)
 - [Lista de requisitos](#lista-de-requisitos)
   - [Testes unitários](#testes-unitarios)
-    - [1 -  A cobertura de testes unitários deve ser de no mínimo 90%](#1)
+    - [1 - A cobertura de testes unitários deve ser de no mínimo 90%](#1---a-cobertura-de-testes-unit%C3%A1rios-deve-ser-de-no-m%C3%ADnimo-90)
   - [Tela de login](#tela-de-login)
-    - [2 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de login](#2)
-    - [3 - A pessoa deve conseguir escrever seu email no input de email](#3)
-    - [4 - A pessoa deve conseguir escrever sua senha no input de senha](#4)
-    - [5 - O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos](#5)
-    - [6 - Após a submissão, 2 tokens devem ser salvos em localStorage identificados pelas chaves mealsToken e cocktailsToken](#6)
-    - [7 - Desenvolva o estilo que, ao clicar em uma resposta, a correta deve ficar verde e as incorretas, vermelhas](#7-desenvolva-o-estilo-que-ao-clicar-em-uma-resposta-a-correta-deve-ficar-verde-e-as-incorretas-vermelhas)
+    - [2 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de login](#2---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-de-login)
+    - [3 - A pessoa deve conseguir escrever seu email no input de email](#3---a-pessoa-deve-conseguir-escrever-seu-email-no-input-de-email)
+    - [4 - A pessoa deve conseguir escrever sua senha no input de senha](#4---a-pessoa-deve-conseguir-escrever-sua-senha-no-input-de-senha)
+    - [5 - O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos](#5---o-formulário-só-fica-válido-após-um-email-válido-e-uma-senha-de-mais-de-6-caracteres-serem-preenchidos)
+    - [6 - Após a submissão, 2 tokens devem ser salvos em localStorage identificados pelas chaves mealsToken e cocktailsToken](#6---após-a-submissão-2-tokens-devem-ser-salvos-em-localstorage-identificados-pelas-chaves-mealstoken-e-cocktailstoken)
+    - [7 - Desenvolva o estilo que, ao clicar em uma resposta, a correta deve ficar verde e as incorretas, vermelhas](#7---após-a-submissão-o-e-mail-de-pessoa-usuária-deve-ser-salvo-em-localstorage-na-chave-user)
     - [8 - Desenvolva um timer onde a pessoa que joga tem 30 segundos para responder](#8-desenvolva-um-timer-onde-a-pessoa-que-joga-tem-30-segundos-para-responder)
     - [9 - Crie o placar os as seguintes características](#9-crie-o-placar-com-as-seguintes-características)
     - [10 - Crie um botão de próxima que apareça após a resposta ser dada](#10-crie-um-botão-de-próxima-que-apareça-após-a-resposta-ser-dada)
@@ -463,7 +463,9 @@ No `localStorage` do navegador:
 }
 ```
 
-    **Observação:** `id-da-bebida` e `id-da-comida` representam o ID de uma bebida e comida, respectivamente, e cada item da lista de ingredientes da respectiva receita deve ser representado apenas pelo número do ingrediente no formato numérico.
+**Observações técnicas** 
+
+* `id-da-bebida` e `id-da-comida` representam o ID de uma bebida e comida, respectivamente, e cada item da lista de ingredientes da respectiva receita deve ser representado apenas pelo número do ingrediente no formato numérico.
 
 ### Ícones
 

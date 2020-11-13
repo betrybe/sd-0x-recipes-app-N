@@ -94,7 +94,7 @@ describe('6 - Após a submissão, 2 tokens devem ser salvos em localStorage iden
   });
 });
 
-describe('Após a submissão, o e-mail de pessoa usuária deve ser salvo em localStorage na chave user', () => {
+describe('7 - Após a submissão, o e-mail de pessoa usuária deve ser salvo em localStorage na chave user', () => {
   it('Após a submissão a chave user deve estar salva em localStorage', () => {
     cy.visit('http://localhost:3000/', {
       onBeforeLoad(win) {
@@ -119,7 +119,7 @@ describe('Após a submissão, o e-mail de pessoa usuária deve ser salvo em loca
   });
 });
 
-describe('Após a submissão e validação com sucesso do login, o usuário deve ser redirecionado para a tela principal de receitas de comidas', () => {
+describe('8 - Após a submissão e validação com sucesso do login, o usuário deve ser redirecionado para a tela principal de receitas de comidas', () => {
   it('A rota muda para a tela principal de receitas de comidas', () => {
     cy.visit('http://localhost:3000/', {
       onBeforeLoad(win) {

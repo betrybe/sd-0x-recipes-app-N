@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Todos os elementos devem respeitar os atributos descritos no protótipo para o header', () => {
+describe('9 - Todos os elementos devem respeitar os atributos descritos no protótipo para o header', () => {
   it('Tem os data-testids profile-top-btn, page-title e search-top-btn', () => {
     cy.visit('http://localhost:3000/comidas');
 
@@ -10,7 +10,7 @@ describe('Todos os elementos devem respeitar os atributos descritos no protótip
   });
 });
 
-describe('Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo)', () => {
+describe('10 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo)', () => {
   const hasNoHeader = () => {
     cy.get('[data-testid="profile-top-btn"]').should('not.exist');
     cy.get('[data-testid="page-title"]').should('not.exist');
@@ -130,7 +130,7 @@ describe('Deve apresentar um ícone para a tela de perfil, um título e um ícon
   });
 });
 
-describe('Ao clicar no botão de perfil, deve-se ir para a tela de perfil', () => {
+describe('11 - Ao clicar no botão de perfil, deve-se ir para a tela de perfil', () => {
   it('A mudança de tela ocorre corretamente', () => {
     cy.visit('http://localhost:3000/comidas');
 

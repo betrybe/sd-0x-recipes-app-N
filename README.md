@@ -37,7 +37,7 @@ Nesse projeto você será capaz de:
     - [localStorage](#localStorage)
     - [Ícones](#icones)
 - [Lista de requisitos](#lista-de-requisitos)
-  - [Testes unitários](#testes-unitarios)
+  - [Testes unitários](#testes-unitários)
     - [1 - A cobertura de testes unitários deve ser de no mínimo 90%](#1---a-cobertura-de-testes-unit%C3%A1rios-deve-ser-de-no-m%C3%ADnimo-90)
   - [Tela de login](#tela-de-login)
     - [2 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de login](#2---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-de-login)
@@ -47,11 +47,12 @@ Nesse projeto você será capaz de:
     - [6 - Após a submissão, 2 tokens devem ser salvos em localStorage identificados pelas chaves mealsToken e cocktailsToken](#6---após-a-submissão-2-tokens-devem-ser-salvos-em-localstorage-identificados-pelas-chaves-mealstoken-e-cocktailstoken)
     - [7 - Desenvolva o estilo que, ao clicar em uma resposta, a correta deve ficar verde e as incorretas, vermelhas](#7---após-a-submissão-o-e-mail-de-pessoa-usuária-deve-ser-salvo-em-localstorage-na-chave-user)
     - [8 -  Após a submissão e validação com sucesso do login, o usuário deve ser redirecionado para a tela principal de receitas de comidas](#8---após-a-submissão-e-validação-com-sucesso-do-login-o-usuário-deve-ser-redirecionado-para-a-tela-principal-de-receitas-de-comidas)
-    - [9 - Crie o placar os as seguintes características](#9-crie-o-placar-com-as-seguintes-características)
-    - [10 - Crie um botão de próxima que apareça após a resposta ser dada](#10-crie-um-botão-de-próxima-que-apareça-após-a-resposta-ser-dada)
-    - [11 - Desenvolva o jogo de forma que a pessoa que joga deve responder 5 perguntas no total](#11-desenvolva-o-jogo-de-forma-que-a-pessoa-que-joga-deve-responder-5-perguntas-no-total)
-  - [Tela de feedback](#tela-de-feedback)
-    - [12 - Desenvolva o header de feedback, que deve conter as informações da pessoa jogadora](#12-desenvolva-o-header-de-feedback-que-deve-conter-as-informações-da-pessoa-jogadora)
+  - [Header](#header)
+    - [9 - Todos os elementos devem respeitar os atributos descritos no protótipo para o header disponível na tela principal de receitas](#9-crie-o-placar-com-as-seguintes-características)
+    - [10 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo) ](#10-crie-um-botão-de-próxima-que-apareça-após-a-resposta-ser-dada)
+    - [11 - Ao clicar no botão de perfil, deve-se ir para a tela de perfil](#11-desenvolva-o-jogo-de-forma-que-a-pessoa-que-joga-deve-responder-5-perguntas-no-total)
+    - [12 - Ao clicar no botão de busca, a barra de busca deve aparecer. O mesmo serve para escondê-la](#12-desenvolva-o-header-de-feedback-que-deve-conter-as-informações-da-pessoa-jogadora)
+  - [Barra de busca - Header](#tela-de-feedback)
     - [13 - Crie a mensagem de feedback para ser exibida à pessoa usuária](#13-crie-a-mensagem-de-feedback-para-ser-exibida-a-pessoa-usuária)
     - [14 - Exiba as informações relacionadas aos resultados obtidos para a pessoa usuária](#14-exiba-as-informações-relacionadas-aos-resultados-obtidos-para-a-pessoa-usuária)
     - [15 - Crie a opção para a pessoa jogadora poder jogar novamente](#15-crie-a-opção-para-a-pessoa-jogadora-poder-jogar-novamente)
@@ -493,11 +494,11 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ## Testes unitários
 
-### 1 - A cobertura de testes unitários deve ser de no mínimo 90%.
+### 1 - A cobertura de testes unitários deve ser de no mínimo 90%
 
 ## Tela de login
 
-### 2 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de login.
+### 2 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de login
 
   **Observações técnicas**
 
@@ -505,11 +506,11 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
   * O input de senha deve possuir o atributo `data-testid="password-input"`
   * O botão "Entrar" deve possuir o atributo `data-testid="login-submit-btn"`
 
-### 3 - A pessoa deve conseguir escrever seu email no input de email.
+### 3 - A pessoa deve conseguir escrever seu email no input de email
 
-### 4 - A pessoa deve conseguir escrever sua senha no input de senha.
+### 4 - A pessoa deve conseguir escrever sua senha no input de senha
 
-### 5 - O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos.
+### 5 - O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos
 
 O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos. Caso o formulário esteja inválido, o botão de submeter deve estar desativado, contendo a propriedade `disabled`. Caso contrário, deve estar ativado, não contendo a propriedade `disabled`.
 
@@ -520,54 +521,68 @@ O formulário só fica válido após um email válido e uma senha de mais de 6 c
   * O botão deve estar ativado se o email e a senha forem válidos
 
 
-### 6 - Após a submissão, 2 tokens devem ser salvos em `localStorage` identificados pelas chaves `mealsToken` e `cocktailsToken`.
+### 6 - Após a submissão, 2 tokens devem ser salvos em `localStorage` identificados pelas chaves `mealsToken` e `cocktailsToken`
 
   **Observações técnicas**
+
   * O token de teste é sempre `1`
 
-### 7 - Após a submissão, o e-mail de pessoa usuária deve ser salvo em localStorage na chave user.
+### 7 - Após a submissão, o e-mail de pessoa usuária deve ser salvo em localStorage na chave user
 
   **Observações ténicas**
+
   * Após a submissão, o e-mail de pessoa usuária deve ser salvo em `localStorage` na chave `user` no formato `{ email: email-da-pessoa }`.
 
-### 8 - Após a submissão e validação com sucesso do login, o usuário deve ser redirecionado para a tela principal de receitas de comidas.
+### 8 - Após a submissão e validação com sucesso do login, o usuário deve ser redirecionado para a tela principal de receitas de comidas
 
   **Observações técnicas**
+
   * A rota muda para a tela principal de receitas de comidas
 
 ## Header
 
-### 9 - Todos os elementos devem respeitar os atributos descritos no protótipo para o header disponível na tela principal de receitas.
+### 9 - Todos os elementos devem respeitar os atributos descritos no protótipo para o header disponível na tela principal de receitas
 
-### 10 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo). Todas as [rotas](#rotas) serão verificadas. Os ícones podem ser encontrados em `src/images/profileIcon.svg` e em `src/images/searchIcon.svg`.
+  **Observações técnicas**
 
-##### As seguintes verificações serão feitas:
+  * Possui os data-testids `profile-top-btn`, `page-title` e `search-top-btn`
 
-- Não tem header na tela de login;
-- O header tem os ícones corretos na tela de principal de receitas de comidas;
-- O header tem os ícones corretos na tela de principal de receitas de bebidas;
-- Não tem header na tela de detalhes de uma receita de comida;
-- Não tem header na tela de detalhes de uma receita de bebida;
-- Não tem header na tela de receita em processo de comida;
-- Não tem header na tela de receita em processo de bebida;
-- O header tem os ícones corretos na tela de explorar;
-- O header tem os ícones corretos na tela de explorar comidas;
-- O header tem os ícones corretos na tela de explorar bebidas;
-- O header tem os ícones corretos na tela de explorar comidas por ingrediente;
-- O header tem os ícones corretos na tela de explorar bebidas por ingrediente;
-- O header tem os ícones corretos na tela de explorar comidas por local de origem;
-- O header tem os ícones corretos na tela de perfil;
-- O header tem os ícones corretos na tela de receitas feitas;
-- O header tem os ícones corretos na tela de receitas favoritas.
 
-### 11 - Ao clicar no botão de perfil, deve-se ir para a tela de perfil.
+### 10 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo) 
 
-### 12 - Ao clicar no botão de busca, a barra de busca deve aparecer. O mesmo serve para escondê-la.
+  Todas as [rotas](#rotas) serão verificadas. Os ícones podem ser encontrados em `src/images/profileIcon.svg` e em `src/images/searchIcon.svg`.
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
-- Ao clicar no botão de busca pela primeira vez a barra de busca aparece;
-- Ao clicar no botão de busca pela segunda vez a barra de busca desaparece.
+  * Não tem header na tela de login;
+  * O header tem os ícones corretos na tela de principal de receitas de comidas;
+  * O header tem os ícones corretos na tela de principal de receitas de bebidas;
+  * Não tem header na tela de detalhes de uma receita de comida;
+  * Não tem header na tela de detalhes de uma receita de bebida;
+  * Não tem header na tela de receita em processo de comida;
+  * Não tem header na tela de receita em processo de bebida;
+  * O header tem os ícones corretos na tela de explorar;
+  * O header tem os ícones corretos na tela de explorar comidas;
+  * O header tem os ícones corretos na tela de explorar bebidas;
+  * O header tem os ícones corretos na tela de explorar comidas por ingrediente;
+  * O header tem os ícones corretos na tela de explorar bebidas por ingrediente;
+  * O header tem os ícones corretos na tela de explorar comidas por local de origem;
+  * O header tem os ícones corretos na tela de perfil;
+  * O header tem os ícones corretos na tela de receitas feitas;
+  * O header tem os ícones corretos na tela de receitas favoritas.
+
+### 11 - Ao clicar no botão de perfil, deve-se ir para a tela de perfil
+
+  **Observações técnicas**
+
+  * A mudança de tela ocorre
+
+### 12 - Ao clicar no botão de busca, a barra de busca deve aparecer. O mesmo serve para escondê-la
+
+  **Observações técnicas**
+  
+  * Ao clicar no botão de busca pela primeira vez a barra de busca aparece;
+  * Ao clicar no botão de busca pela segunda vez a barra de busca desaparece.
 
 ## Barra de busca - Header
 

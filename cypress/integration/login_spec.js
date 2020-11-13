@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de login', () => {
+describe('2 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de login', () => {
   it('Tem os data-testids email-input, password-input e login-submit-btn', () => {
     cy.visit('http://localhost:3000/');
 
@@ -10,7 +10,7 @@ describe('Todos os elementos devem respeitar os atributos descritos no protótip
   });
 });
 
-describe('A pessoa deve conseguir escrever seu email no input de email', () => {
+describe('3 - A pessoa deve conseguir escrever seu email no input de email', () => {
   it('É possível escrever o email', () => {
     cy.visit('http://localhost:3000/');
 
@@ -19,7 +19,7 @@ describe('A pessoa deve conseguir escrever seu email no input de email', () => {
   });
 });
 
-describe('A pessoa deve conseguir escrever sua senha no input de senha', () => {
+describe('4 - A pessoa deve conseguir escrever sua senha no input de senha', () => {
   it('É possível escrever a senha', () => {
     cy.visit('http://localhost:3000/');
 
@@ -28,7 +28,7 @@ describe('A pessoa deve conseguir escrever sua senha no input de senha', () => {
   });
 });
 
-describe('O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos', () => {
+describe('5 - O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos', () => {
   it('O botão deve estar desativado se o email for inválido', () => {
     cy.visit('http://localhost:3000/');
 
@@ -67,7 +67,7 @@ describe('O formulário só fica válido após um email válido e uma senha de m
   });
 });
 
-describe('Após a submissão, 2 tokens devem ser salvos em localStorage identificados pelas chaves mealsToken e cocktailsToken', () => {
+describe('6 - Após a submissão, 2 tokens devem ser salvos em localStorage identificados pelas chaves mealsToken e cocktailsToken', () => {
   it('Após a submissão mealsToken e cocktailsToken devem estar salvos em localStorage', () => {
     cy.visit('http://localhost:3000/', {
       onBeforeLoad(win) {

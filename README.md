@@ -28,19 +28,23 @@ Nesse projeto você será capaz de:
 - [Requisitos do projeto](#requisitos-do-projeto)
   - [Linter](#linter)
   - [Execução de testes de requisito](#execução-de-testes-de-requisito)
-  - [API de Trivia](#api-de-trivia)
-  - [Gravatar](#gravatar)
+  - [API's](#apis)
+  - [TheMealDB API](#themealdb-api)
+  - [The CockTailDB API](#the-cocktaildb-api)
   - [Grupos de prioridade](#grupos-de-prioridade)
   - [Observações técnicas](#observações-técnicas)
+    - [Rotas](#rotas)
+    - [localStorage](#localStorage)
+    - [Ícones](#icones)
 - [Lista de requisitos](#lista-de-requisitos)
-  - [Tela de início](#tela-de-inicio)
-    - [1 - Crie a tela de login, onde a pessoa que joga deve preencher as informações para iniciar um jogo](#1-crie-a-tela-de-login-onde-a-pessoa-que-joga-deve-preencher-as-informações-para-iniciar-um-jogo)
-    - [2 - Crie o botão de iniciar o jogo](#2-crie-o-botão-de-iniciar-o-jogo)
-    - [3 - Crie um botão que leva a pessoa para a tela de configuração](#3-crie-um-botão-que-leva-a-pessoa-para-tela-de-configuração)
-  - [Tela de jogo](#tela-de-jogo)
-    - [4 - Crie um header que deve conter as informações da pessoa jogadora](#4-crie-um-header-que-deve-conter-as-informações-da-pessoa-jogadora)
-    - [5 - Crie a página de jogo que deve conter as informações relacionadas à pergunta](#5-crie-a-página-de-jogo-que-deve-conter-as-informações-relacionadas-à-pergunta)
-    - [6 - Desenvolva o jogo onde só deve ser possível escolher uma resposta correta por pergunta](#6-desenvolva-o-jogo-onde-só-deve-ser-possível-escolher-uma-resposta-correta-por-pergunta)
+  - [Testes unitários](#testes-unitarios)
+    - [1 -  A cobertura de testes unitários deve ser de no mínimo 90%](#1)
+  - [Tela de login](#tela-de-login)
+    - [2 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de login](#2)
+    - [3 - A pessoa deve conseguir escrever seu email no input de email](#3)
+    - [4 - A pessoa deve conseguir escrever sua senha no input de senha](#4)
+    - [5 - O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos](#5)
+    - [6 - Após a submissão, 2 tokens devem ser salvos em localStorage identificados pelas chaves mealsToken e cocktailsToken](#6)
     - [7 - Desenvolva o estilo que, ao clicar em uma resposta, a correta deve ficar verde e as incorretas, vermelhas](#7-desenvolva-o-estilo-que-ao-clicar-em-uma-resposta-a-correta-deve-ficar-verde-e-as-incorretas-vermelhas)
     - [8 - Desenvolva um timer onde a pessoa que joga tem 30 segundos para responder](#8-desenvolva-um-timer-onde-a-pessoa-que-joga-tem-30-segundos-para-responder)
     - [9 - Crie o placar os as seguintes características](#9-crie-o-placar-com-as-seguintes-características)
@@ -73,6 +77,8 @@ Nela será possível ver, buscar, filtrar, favoritar e acompanhar o processo de 
 A base de dados serão 2 APIs distintas, uma para comidas e outra para bebidas.
 
 O layout tem como foco dispositivos móveis, então todos os protótipos vão estar desenvolvidos em telas menores.
+
+### Protótipo do projeto
 
 Você pode acessar um protótipo no link abaixo:
 
@@ -483,9 +489,7 @@ Nesse projeto, a pessoa que estiver utilizando o app pode procurar uma receita e
 As telas sofrem variações dependendo do tipo da receita (se é comida ou bebida, no caso).
 
 
-<!-- #### O projeto sera composto por duas entregas, cada uma especificada abaixo com seus respectivos requisitos e o prazo decidido com o especialista. -->
-
-## Requisitos - Apresentação 1
+## Testes unitários
 
 ### 1 - A cobertura de testes unitários deve ser de no mínimo 90%.
 
@@ -493,23 +497,41 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ### 2 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de login.
 
+  **Observações técnicas**
+
+  * O input de email deve possuir o atributo `data-testid="email-input"`
+  * O input de senha deve possuir o atributo `data-testid="password-input"`
+  * O botão "Entrar" deve possuir o atributo `data-testid="login-submit-btn"`
+
 ### 3 - A pessoa deve conseguir escrever seu email no input de email.
 
 ### 4 - A pessoa deve conseguir escrever sua senha no input de senha.
 
-### 5 - O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos. Caso o formulário esteja inválido, o botão de submeter deve estar desativado, contendo a propriedade `disabled`. Caso contrário, deve estar ativado, não contendo a propriedade `disabled`.
+### 5 - O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos.
 
-##### As seguintes verificações serão feitas:
+O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos. Caso o formulário esteja inválido, o botão de submeter deve estar desativado, contendo a propriedade `disabled`. Caso contrário, deve estar ativado, não contendo a propriedade `disabled`.
 
-- O botão deve estar desativado se o email for inválido;
-- O botão deve estar desativado se a senha deve tiver 6 caracteres ou menos;
-- O botão deve estar ativado se o email e a senha forem válidos.
+  **Observações técnicas**
 
-### 6 - Após a submissão, 2 tokens devem ser salvos em `localStorage` identificados pelas chaves `mealsToken` e `cocktailsToken` (o token de teste é sempre "1").
+  * O botão deve estar desativado se o email for inválido
+  * O botão deve estar desativado se a senha deve tiver 6 caracteres ou menos
+  * O botão deve estar ativado se o email e a senha forem válidos
 
-### 7 - Após a submissão, o e-mail de pessoa usuária deve ser salvo em `localStorage` na chave `user` no formato `{ email: email-da-pessoa }`.
+
+### 6 - Após a submissão, 2 tokens devem ser salvos em `localStorage` identificados pelas chaves `mealsToken` e `cocktailsToken`.
+
+  **Observações técnicas**
+  * O token de teste é sempre `1`
+
+### 7 - Após a submissão, o e-mail de pessoa usuária deve ser salvo em localStorage na chave user.
+
+  **Observações ténicas**
+  * Após a submissão, o e-mail de pessoa usuária deve ser salvo em `localStorage` na chave `user` no formato `{ email: email-da-pessoa }`.
 
 ### 8 - Após a submissão e validação com sucesso do login, o usuário deve ser redirecionado para a tela principal de receitas de comidas.
+
+  **Observações técnicas**
+  * A rota muda para a tela principal de receitas de comidas
 
 ## Header
 

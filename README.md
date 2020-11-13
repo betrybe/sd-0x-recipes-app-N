@@ -46,7 +46,7 @@ Nesse projeto você será capaz de:
     - [5 - O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos](#5---o-formulário-só-fica-válido-após-um-email-válido-e-uma-senha-de-mais-de-6-caracteres-serem-preenchidos)
     - [6 - Após a submissão, 2 tokens devem ser salvos em localStorage identificados pelas chaves mealsToken e cocktailsToken](#6---após-a-submissão-2-tokens-devem-ser-salvos-em-localstorage-identificados-pelas-chaves-mealstoken-e-cocktailstoken)
     - [7 - Desenvolva o estilo que, ao clicar em uma resposta, a correta deve ficar verde e as incorretas, vermelhas](#7---após-a-submissão-o-e-mail-de-pessoa-usuária-deve-ser-salvo-em-localstorage-na-chave-user)
-    - [8 - Desenvolva um timer onde a pessoa que joga tem 30 segundos para responder](#8---após-a-submissão-e-validação-com-sucesso-do-login-o-usuário-deve-ser-redirecionado-para-a-tela-principal-de-receitas-de-comidas)
+    - [8 -  Após a submissão e validação com sucesso do login, o usuário deve ser redirecionado para a tela principal de receitas de comidas](#8---após-a-submissão-e-validação-com-sucesso-do-login-o-usuário-deve-ser-redirecionado-para-a-tela-principal-de-receitas-de-comidas)
     - [9 - Crie o placar os as seguintes características](#9-crie-o-placar-com-as-seguintes-características)
     - [10 - Crie um botão de próxima que apareça após a resposta ser dada](#10-crie-um-botão-de-próxima-que-apareça-após-a-resposta-ser-dada)
     - [11 - Desenvolva o jogo de forma que a pessoa que joga deve responder 5 perguntas no total](#11-desenvolva-o-jogo-de-forma-que-a-pessoa-que-joga-deve-responder-5-perguntas-no-total)

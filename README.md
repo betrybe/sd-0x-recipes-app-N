@@ -38,14 +38,10 @@ Nesse projeto você será capaz de:
     - [Ícones](#icones)
 - [Lista de requisitos](#lista-de-requisitos)
   <details>
-      <summary>Ver requisitos </summary>
-    - [Testes unitários](#testes-unitários)
-      - [1 - A cobertura de testes unitários deve ser de no mínimo 90%](#1---a-cobertura-de-testes-unit%C3%A1rios-deve-ser-de-no-m%C3%ADnimo-90)
+  - [Testes unitários](#testes-unitários)
+    - [1 - A cobertura de testes unitários deve ser de no mínimo 90%](#1---a-cobertura-de-testes-unit%C3%A1rios-deve-ser-de-no-m%C3%ADnimo-90)
 
   - [Tela de login](#tela-de-login)
-    <details>
-      <summary>Ver mais </summary>
-
     - [2 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de login](#2---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-de-login)
     - [3 - A pessoa deve conseguir escrever seu email no input de email](#3---a-pessoa-deve-conseguir-escrever-seu-email-no-input-de-email)
     - [4 - A pessoa deve conseguir escrever sua senha no input de senha](#4---a-pessoa-deve-conseguir-escrever-sua-senha-no-input-de-senha)
@@ -53,7 +49,6 @@ Nesse projeto você será capaz de:
     - [6 - Após a submissão, 2 tokens devem ser salvos em localStorage identificados pelas chaves mealsToken e cocktailsToken](#6---após-a-submissão-2-tokens-devem-ser-salvos-em-localstorage-identificados-pelas-chaves-mealstoken-e-cocktailstoken)
     - [7 - Desenvolva o estilo que, ao clicar em uma resposta, a correta deve ficar verde e as incorretas, vermelhas](#7---após-a-submissão-o-e-mail-de-pessoa-usuária-deve-ser-salvo-em-localstorage-na-chave-user)
     - [8 -  Após a submissão e validação com sucesso do login, o usuário deve ser redirecionado para a tela principal de receitas de comidas](#8---após-a-submissão-e-validação-com-sucesso-do-login-o-usuário-deve-ser-redirecionado-para-a-tela-principal-de-receitas-de-comidas)
-  </details>
 
   - [Header](#header)
     - [9 - Todos os elementos devem respeitar os atributos descritos no protótipo para o header disponível na tela principal de receitas](#9---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-o-header-disponível-na-tela-principal-de-receitas)

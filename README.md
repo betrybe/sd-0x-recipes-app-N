@@ -126,19 +126,13 @@ Nesse projeto você será capaz de:
   <details>
     <summary>Tela de receita em progresso</summary>
 
-    - []()
-    - []()
-    - []()
-    - []()
-    - []()
-    - []()
-    - []()
-    - []()
-    - []()
-    - []()
-    - []()
-    - []()
-    - []()
+    - [47 - Essa tela deve conter uma imagem da receita, seu titulo, sua categoria (ou se a bebida é alcoólica ou não) uma lista de ingredientes com suas respectivas quantidade e suas instruções]()
+    - [48 - A lista de ingredientes deve conter um checkbox para cada um dos items]()
+    - [49 - Ao clicar no checkbox de um ingrediente, o nome dele deve ser "riscado" da lista]()
+    - [50 - O estado do progresso deve ser mantido caso a pessoa atualize a página ou volte para a mesma receita]()
+    - [51 - A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui]()
+    - [52 - O botão de finalizar receita só pode estar habilitado quando todos os ingredientes estiverem _"checkados"_ (marcados)]()
+    - [53 - Após clicar no botão "Finalizar receita", a rota deve mudar para a página de receitas feitas, cuja rota deve ser `/receitas-feitas`]()
   </details>
 
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
@@ -1049,7 +1043,7 @@ O progresso das receitas devem ser salvos em `localStorage` na chave` inProgress
   * Favorita receita de uma comida;
   * Favorita receita de uma bebida.
 
-### 52 - O botão de finalizar receita só pode estar habilitado quando todos os ingredientes estiverem _"checkados"_ (marcados);
+### 52 - O botão de finalizar receita só pode estar habilitado quando todos os ingredientes estiverem _"checkados"_ (marcados)
 
   O botão deve ficar desabilitado em quanto todos os checkboxs não forem marcados.
 
@@ -1060,7 +1054,7 @@ O progresso das receitas devem ser salvos em `localStorage` na chave` inProgress
   * Verifica se botão para finalizar está habilitado em receitas de comidas;
   * Verifica se botão para finalizar está habilitado em receitas de bebidas.
 
-### 53 - Após clicar no botão "Finalizar receita", a rota deve mudar para a página de receitas feitas, cuja rota deve ser `/receitas-feitas`.
+### 53 - Após clicar no botão "Finalizar receita", a rota deve mudar para a página de receitas feitas, cuja rota deve ser `/receitas-feitas`
 
   **Observações técnicas**
 

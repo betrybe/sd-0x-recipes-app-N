@@ -66,7 +66,6 @@ Nesse projeto você será capaz de:
     - [10 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo) ](#10---deve-apresentar-um-ícone-para-a-tela-de-perfil-um-título-e-um-ícone-para-a-busca-caso-exista-no-protótipo)
     - [11 - Ao clicar no botão de perfil, deve-se ir para a tela de perfil](#11---ao-clicar-no-botão-de-perfil-deve-se-ir-para-a-tela-de-perfil)
     - [12 - Ao clicar no botão de busca, a barra de busca deve aparecer. O mesmo serve para escondê-la](#12---ao-clicar-no-botão-de-busca-a-barra-de-busca-deve-aparecer-o-mesmo-serve-para-escondê-la)
-
   </details>
 
   <details>
@@ -673,39 +672,48 @@ A barra de busca deve ficar logo abaixo do header e deve possuir 3 _radio button
 
 ### 19 - Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas
 
+  **Observações técnicas**
+
+  * O menu inferior deve ter possuir o atributo `data-testid="footer"`;
+  * O elemento que leva para a página de drinks deve possuir o atributo `data-testid="drinks-bottom-btn"`;
+  * O elemento que leva para a página de explorar deve possuir o atributo `data-testid="explore-bottom-btn"`;
+  * O elemento que leva para a página de comidas deve possuir o atributo `data-testid="food-bottom-btn"`.
+
 ### 20 - Deve ser fixo e apresentar 3 ícones: um para comidas, um para bebidas e outro para exploração
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
-- O menu inferior deve ficar fixado sempre ao final da página;
-- Apresenta os ícones corretos (drinkIcon.svg, exploreIcon.svg e mealIcon.svg, disponíveis na pasta `src/images/`).
+  * O menu inferior deve ficar fixado sempre ao final da página;
+  * Apresenta os ícones corretos (drinkIcon.svg, exploreIcon.svg e mealIcon.svg, disponíveis na pasta `src/images/`).
 
 ### 21 - O menu inferior só deve aparecer apenas nas telas indicadas pelo protótipo
 
-##### As seguintes verificações serão feitas:
+O menu inferior deve aparecer somente nas telas indicas no protótipo, sendo elas de comida, de explorar e de perfil.
 
-- Não tem footer na tela de login;
-- Tem footer na tela de principal de receitas de comidas;
-- Tem footer na tela de principal de receitas de bebidas;
-- Não tem footer na tela de detalhes de uma receita de comida;
-- Não tem footer na tela de detalhes de uma receita de bebida;
-- Não tem footer na tela de receita em processo de comida;
-- Não tem footer na tela de receita em processo de bebida;
-- Tem footer na tela de explorar;
-- Tem footer na tela de explorar comidas;
-- Tem footer na tela de explorar bebidas;
-- Tem footer na tela de explorar comidas por ingrediente;
-- Tem footer na tela de explorar bebidas por ingrediente;
-- Tem footer na tela de explorar comidas por local de origem;
-- Tem footer na tela de perfil;
-- Não tem footer na tela de receitas feitas;
-- Não tem footer na tela de receitas favoritas.
+  **ObservaçÕes técnicas**
 
-### 22 - Ao clicar no ícone de comidas, a pessoa deve ser redirecionada para uma lista de comidas;
+  * Não tem footer na tela de login;
+  * Tem footer na tela de principal de receitas de comidas;
+  * Tem footer na tela de principal de receitas de bebidas;
+  * Não tem footer na tela de detalhes de uma receita de comida;
+  * Não tem footer na tela de detalhes de uma receita de bebida;
+  * Não tem footer na tela de receita em processo de comida;
+  * Não tem footer na tela de receita em processo de bebida;
+  * Tem footer na tela de explorar;
+  * Tem footer na tela de explorar comidas;
+  * Tem footer na tela de explorar bebidas;
+  * Tem footer na tela de explorar comidas por ingrediente;
+  * Tem footer na tela de explorar bebidas por ingrediente;
+  * Tem footer na tela de explorar comidas por local de origem;
+  * Tem footer na tela de perfil;
+  * Não tem footer na tela de receitas feitas;
+  * Não tem footer na tela de receitas favoritas.
 
-### 23 - Ao clicar no ícone de bebidas, a pessoa deve ser redirecionada para uma lista de cocktails;
+### 22 - Ao clicar no ícone de bebidas, a pessoa deve ser redirecionada para uma lista de cocktails
 
-### 24 - Ao clicar no ícone de exploração, a rota deve mudar para a tela de explorar.
+### 23 - Ao clicar no ícone de exploração, a rota deve mudar para a tela de explorar
+
+### 24 - Ao clicar no ícone de comidas, a pessoa deve ser redirecionada para uma lista de comidas
 
 ## Tela principal de receitas
 

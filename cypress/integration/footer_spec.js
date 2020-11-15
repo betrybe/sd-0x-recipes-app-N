@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas', () => {
+describe('19 - Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas', () => {
   it('Tem os data-testids footer, drinks-bottom-btn, explore-bottom-btn e food-bottom-btn', () => {
     cy.visit('http://localhost:3000/comidas');
 
@@ -11,7 +11,7 @@ describe('Todos os elementos devem respeitar os atributos descritos no protótip
   });
 });
 
-describe('Deve ser fixo e apresentar 3 ícones: um para comidas, um para bebidas e outro para exploração', () => {
+describe('20 - Deve ser fixo e apresentar 3 ícones: um para comidas, um para bebidas e outro para exploração', () => {
   it('O menu inferior deve ficar fixado sempre ao final da página', () => {
     cy.visit('http://localhost:3000/comidas');
 
@@ -36,7 +36,7 @@ describe('Deve ser fixo e apresentar 3 ícones: um para comidas, um para bebidas
   });
 });
 
-describe('O menu inferior só deve aparecer apenas nas telas indicadas pelo protótipo', () => {
+describe('21 - O menu inferior só deve aparecer apenas nas telas indicadas pelo protótipo', () => {
   const hasNoFooter = () => {
     cy.get('[data-testid="footer"]').should('not.exist');
     cy.get('[data-testid="drinks-bottom-btn"]').should('not.exist');
@@ -148,7 +148,7 @@ describe('O menu inferior só deve aparecer apenas nas telas indicadas pelo prot
   });
 });
 
-describe('Ao clicar no ícone de bebidas, a pessoa deve ser redirecionada para uma lista de cocktails', () => {
+describe('22 - Ao clicar no ícone de bebidas, a pessoa deve ser redirecionada para uma lista de cocktails', () => {
   it('Redireciona para a rota correta', () => {
     cy.visit('http://localhost:3000/comidas');
 
@@ -157,7 +157,7 @@ describe('Ao clicar no ícone de bebidas, a pessoa deve ser redirecionada para u
   });
 });
 
-describe('Ao clicar no ícone de exploração, a rota deve mudar para a tela de explorar', () => {
+describe('23 - Ao clicar no ícone de exploração, a rota deve mudar para a tela de explorar', () => {
   it('Redireciona para a rota correta', () => {
     cy.visit('http://localhost:3000/comidas');
 
@@ -166,7 +166,7 @@ describe('Ao clicar no ícone de exploração, a rota deve mudar para a tela de 
   });
 });
 
-describe('Ao clicar no ícone de comidas, a pessoa deve ser redirecionada para uma lista de comidas', () => {
+describe('24 - Ao clicar no ícone de comidas, a pessoa deve ser redirecionada para uma lista de comidas', () => {
   it('Redireciona para a rota correta', () => {
     cy.visit('http://localhost:3000/bebidas');
 

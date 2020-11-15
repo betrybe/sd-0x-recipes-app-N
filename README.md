@@ -41,8 +41,8 @@ Nesse projeto você será capaz de:
       - [1 - A cobertura de testes unitários deve ser de no mínimo 90%](#1---a-cobertura-de-testes-unit%C3%A1rios-deve-ser-de-no-m%C3%ADnimo-90)
 
   - [Tela de login](#tela-de-login)
-  <details>
-    <summary>Ver mais</summary>
+    <details>
+      <summary>Ver mais</summary>
 
     - [2 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de login](#2---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-de-login)
     - [3 - A pessoa deve conseguir escrever seu email no input de email](#3---a-pessoa-deve-conseguir-escrever-seu-email-no-input-de-email)

@@ -78,22 +78,20 @@ Nesse projeto você será capaz de:
     - [16 - Caso apenas uma receita seja encontrada, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL](#16---caso-apenas-uma-receita-seja-encontrada-a-rota-deve-mudar-para-a-tela-de-detalhes-da-receita-com-o-id-da-mesma-na-url)
     - [17 - Caso mais de uma receita seja encontrada, mostrar as receitas em cards da mesma maneira que a tela principal de receitas](#17---caso-mais-de-uma-receita-seja-encontrada-mostrar-as-receitas-em-cards-da-mesma-maneira-que-a-tela-principal-de-receitas)
     - [18 - Caso nenhuma receita seja encontrada, um `alert` contendo o texto "Sinto muito, não encontramos nenhuma receita para esses filtros." deve ser exibido](#18---caso-nenhuma-receita-seja-encontrada-um-alert-contendo-o-texto-sinto-muito-não-encontramos-nenhuma-receita-para-esses-filtros-deve-ser-exibido)
-  -[Menu inferior](#menu-inferior)
-    - [19 - Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas](#)
-    - [20 - Deve ser fixo e apresentar 3 ícones: um para comidas, um para bebidas e outro para exploração](#)
-    - [21 - O menu inferior só deve aparecer apenas nas telas indicadas pelo protótipo](#)
-    - [22 - Ao clicar no ícone de bebidas, a pessoa deve ser redirecionada para uma lista de cocktails](#)
-    - [23 - Ao clicar no ícone de exploração, a rota deve mudar para a tela de explorar](#)
-    - [24 - Ao clicar no ícone de comidas, a pessoa deve ser redirecionada para uma lista de comidas](#)
-  - [Tela principal de receitas](#tela-principal-de-receitas)
-
+  </details>
 
   <details>
     <summary>Menu inferior</summary>
+    - [19 - Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas](#19---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-o-menu-inferior-disponível-na-tela-principal-de-receitas)
+    - [20 - Deve ser fixo e apresentar 3 ícones: um para comidas, um para bebidas e outro para exploração](#20---deve-ser-fixo-e-apresentar-3-ícones-um-para-comidas-um-para-bebidas-e-outro-para-exploração)
+    - [21 - O menu inferior só deve aparecer apenas nas telas indicadas pelo protótipo](#21---o-menu-inferior-só-deve-aparecer-apenas-nas-telas-indicadas-pelo-protótipo)
+    - [22 - Ao clicar no ícone de bebidas, a pessoa deve ser redirecionada para uma lista de cocktails](#22---ao-clicar-no-ícone-de-bebidas-a-pessoa-deve-ser-redirecionada-para-uma-lista-de-cocktails)
+    - [23 - Ao clicar no ícone de exploração, a rota deve mudar para a tela de explorar](#23---ao-clicar-no-ícone-de-exploração-a-rota-deve-mudar-para-a-tela-de-explorar)
+    - [24 - Ao clicar no ícone de comidas, a pessoa deve ser redirecionada para uma lista de comidas](#24---ao-clicar-no-ícone-de-comidas-a-pessoa-deve-ser-redirecionada-para-uma-lista-de-comidas)
+  </details>
 
-    <!-- - [Menu inferior](#menu-inferior) -->
-    - [19 - Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas](#)
-    - [20 - Deve ser fixo e apresentar 3 ícones: um para comidas, um para bebidas e outro para exploração](#)
+  <details>
+    <summary>Tela principal de receitas</summary>
   </details>
 
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
@@ -250,63 +248,63 @@ O modelo de resposta para uma `meal` é o seguinte:
     <summary>Ver modelo de resposta para uma meal</summary>
 
     ```json
-    {
-      "meals":[
-          {
-            "idMeal":"52882",
-            "strMeal":"Three Fish Pie",
-            "strDrinkAlternate":null,
-            "strCategory":"Seafood",
-            "strArea":"British",
-            "strInstructions":"Preheat the oven to 200C\/400F\/Gas 6 (180C fan).\r\nPut the potatoes into a saucepan of cold salted water. Bring up to the boil and simmer until completely tender. Drain well and then mash with the butter and milk. Add pepper and taste to check the seasoning. Add salt and more pepper if necessary.\r\nFor the fish filling, melt the butter in a saucepan, add the leeks and stir over the heat. Cover with a lid and simmer gently for 10 minutes, or until soft. Measure the flour into a small bowl. Add the wine and whisk together until smooth.\r\nAdd the milk to the leeks, bring to the boil and then add the wine mixture. Stir briskly until thickened. Season and add the parsley and fish. Stir over the heat for two minutes, then spoon into an ovenproof casserole. Scatter over the eggs. Allow to cool until firm.\r\nSpoon the mashed potatoes over the fish mixture and mark with a fork. Sprinkle with cheese.\r\nBake for 30-40 minutes, or until lightly golden-brown on top and bubbling around the edges.",
-            "strMealThumb":"https:\/\/www.themealdb.com\/images\/media\/meals\/spswqs1511558697.jpg",
-            "strTags":"Fish,Seafood,Dairy,Pie",
-            "strYoutube":"https:\/\/www.youtube.com\/watch?v=Ds1Jb8H5Sg8",
-            "strIngredient1":"Potatoes",
-            "strIngredient2":"Butter",
-            "strIngredient3":"Milk",
-            "strIngredient4":"Gruy\u00e8re",
-            "strIngredient5":"Butter",
-            "strIngredient6":"Leek",
-            "strIngredient7":"Plain Flour",
-            "strIngredient8":"White Wine",
-            "strIngredient9":"Milk",
-            "strIngredient10":"Parsley",
-            "strIngredient11":"Salmon",
-            "strIngredient12":"Haddock",
-            "strIngredient13":"Smoked Haddock",
-            "strIngredient14":"Eggs",
-            "strIngredient15":"",
-            "strIngredient16":"",
-            "strIngredient17":"",
-            "strIngredient18":"",
-            "strIngredient19":"",
-            "strIngredient20":"",
-            "strMeasure1":"1kg",
-            "strMeasure2":"Knob",
-            "strMeasure3":"Dash",
-            "strMeasure4":"50g",
-            "strMeasure5":"75g",
-            "strMeasure6":"2 sliced",
-            "strMeasure7":"75g",
-            "strMeasure8":"150ml",
-            "strMeasure9":"568ml",
-            "strMeasure10":"2 tbs chopped",
-            "strMeasure11":"250g",
-            "strMeasure12":"250g",
-            "strMeasure13":"250g",
-            "strMeasure14":"6",
-            "strMeasure15":"",
-            "strMeasure16":"",
-            "strMeasure17":"",
-            "strMeasure18":"",
-            "strMeasure19":"",
-            "strMeasure20":"",
-            "strSource":"https:\/\/www.bbc.co.uk\/food\/recipes\/three_fish_pie_58875",
-            "dateModified":null
-          }
-      ]
-    }
+      {
+        "meals":[
+            {
+              "idMeal":"52882",
+              "strMeal":"Three Fish Pie",
+              "strDrinkAlternate":null,
+              "strCategory":"Seafood",
+              "strArea":"British",
+              "strInstructions":"Preheat the oven to 200C\/400F\/Gas 6 (180C fan).\r\nPut the potatoes into a saucepan of cold salted water. Bring up to the boil and simmer until completely tender. Drain well and then mash with the butter and milk. Add pepper and taste to check the seasoning. Add salt and more pepper if necessary.\r\nFor the fish filling, melt the butter in a saucepan, add the leeks and stir over the heat. Cover with a lid and simmer gently for 10 minutes, or until soft. Measure the flour into a small bowl. Add the wine and whisk together until smooth.\r\nAdd the milk to the leeks, bring to the boil and then add the wine mixture. Stir briskly until thickened. Season and add the parsley and fish. Stir over the heat for two minutes, then spoon into an ovenproof casserole. Scatter over the eggs. Allow to cool until firm.\r\nSpoon the mashed potatoes over the fish mixture and mark with a fork. Sprinkle with cheese.\r\nBake for 30-40 minutes, or until lightly golden-brown on top and bubbling around the edges.",
+              "strMealThumb":"https:\/\/www.themealdb.com\/images\/media\/meals\/spswqs1511558697.jpg",
+              "strTags":"Fish,Seafood,Dairy,Pie",
+              "strYoutube":"https:\/\/www.youtube.com\/watch?v=Ds1Jb8H5Sg8",
+              "strIngredient1":"Potatoes",
+              "strIngredient2":"Butter",
+              "strIngredient3":"Milk",
+              "strIngredient4":"Gruy\u00e8re",
+              "strIngredient5":"Butter",
+              "strIngredient6":"Leek",
+              "strIngredient7":"Plain Flour",
+              "strIngredient8":"White Wine",
+              "strIngredient9":"Milk",
+              "strIngredient10":"Parsley",
+              "strIngredient11":"Salmon",
+              "strIngredient12":"Haddock",
+              "strIngredient13":"Smoked Haddock",
+              "strIngredient14":"Eggs",
+              "strIngredient15":"",
+              "strIngredient16":"",
+              "strIngredient17":"",
+              "strIngredient18":"",
+              "strIngredient19":"",
+              "strIngredient20":"",
+              "strMeasure1":"1kg",
+              "strMeasure2":"Knob",
+              "strMeasure3":"Dash",
+              "strMeasure4":"50g",
+              "strMeasure5":"75g",
+              "strMeasure6":"2 sliced",
+              "strMeasure7":"75g",
+              "strMeasure8":"150ml",
+              "strMeasure9":"568ml",
+              "strMeasure10":"2 tbs chopped",
+              "strMeasure11":"250g",
+              "strMeasure12":"250g",
+              "strMeasure13":"250g",
+              "strMeasure14":"6",
+              "strMeasure15":"",
+              "strMeasure16":"",
+              "strMeasure17":"",
+              "strMeasure18":"",
+              "strMeasure19":"",
+              "strMeasure20":"",
+              "strSource":"https:\/\/www.bbc.co.uk\/food\/recipes\/three_fish_pie_58875",
+              "dateModified":null
+            }
+        ]
+      }
     ```
   </details>
 

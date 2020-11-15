@@ -107,7 +107,20 @@ Nesse projeto você será capaz de:
     <details>
     <summary>Tela de detalhes de uma receita</summary>
 
-    - []()
+    - [33 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de detalhes de uma receita](#33---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-de-detalhes-de-uma-receita)
+    - [34 - Uma request para a API deve ser feita passando o `id` da receita que deve estar disponível nos parâmetros da URL](#34---uma-request-para-a-api-deve-ser-feita-passando-o-id-da-receita-que-deve-estar-disponível-nos-parâmetros-da-url)
+    - [35 - Essa tela deve conter uma imagem da receita, o título, a categoria (ou se é ou não alcoólico), uma lista de ingredientes seguidos pelas quantidades, instruções, um vídeo do youtube "embedado" e recomendações](#35---essa-tela-deve-conter-uma-imagem-da-receita-o-título-a-categoria-ou-se-é-ou-não-alcoólico-uma-lista-de-ingredientes-seguidos-pelas-quantidades-instruções-um-vídeo-do-youtube-embedado-e-recomendações)
+    - [36 - As recomendações para receitas de comida deverão ser bebidas e vice-versa](#36---as-recomendações-para-receitas-de-comida-deverão-ser-bebidas-e-vice-versa)
+    - [37 - Deverão ser mostrados 6 cards de recomendação, onde apenas 2 são mostrados e o scroll é horizontal, similar a um `carousel`](#37---deverão-ser-mostrados-6-cards-de-recomendação-onde-apenas-2-são-mostrados-e-o-scroll-é-horizontal-similar-a-um-carousel)
+    - [38 - Um botão de nome "Iniciar Receita" deve ficar fixo na parte de baixo da tela o tempo todo](#38---um-botão-de-nome-iniciar-receita-deve-ficar-fixo-na-parte-de-baixo-da-tela-o-tempo-todo)
+    - [39 - Caso a receita já tenha sido feita, o botão "Iniciar Receita" deve sumir](#39---caso-a-receita-já-tenha-sido-feita-o-botão-iniciar-receita-deve-sumir)
+    - [40 - Caso a receita tenha sido iniciada mas não finalizada, o texto do botão deve ser "Continuar Receita"](#40---caso-a-receita-tenha-sido-iniciada-mas-não-finalizada-o-texto-do-botão-deve-ser-continuar-receita)
+    - [41 - Quando o botão "Iniciar Receita" for clicado, a rota deve mudar para a tela de receita em processo](#41---quando-o-botão-iniciar-receita-for-clicado-a-rota-deve-mudar-para-a-tela-de-receita-em-processo)
+    - [42 - Um botão de compartilhar e um de favoritar a receita devem estar disponíveis](#42---um-botão-de-compartilhar-e-um-de-favoritar-a-receita-devem-estar-disponíveis)
+    - [43 - Ao clicar no botão de compartilhar, o link da receita dentro do app deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer](#43---ao-clicar-no-botão-de-compartilhar-o-link-da-receita-dentro-do-app-deve-ser-copiado-para-o-clipboard-e-uma-mensagem-avisando-que-o-link-foi-copiado-deve-aparecer)
+    - [44 - O ícone do coração (favorito) deve vir preenchido caso a receita esteja favoritada e "despreenchido" caso contrário](#44---o-ícone-do-coração-favorito-deve-vir-preenchido-caso-a-receita-esteja-favoritada-e-despreenchido-caso-contrário)
+    - [45 - Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para "despreenchido" e vice-versa](#45---ao-clicar-no-botão-de-favoritar-o-ícone-do-coração-deve-mudar-de-seu-estado-atual-caso-esteja-preenchido-deve-mudar-para-despreenchido-e-vice-versa)
+    - [46 - As receitas favoritas devem ser salvas em `localStorage` na chave `favoriteRecipes`](#46---as-receitas-favoritas-devem-ser-salvas-em-localstorage-na-chave-favoriterecipes)
     </details>
 
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
@@ -871,7 +884,7 @@ A verificação será feita através das receitas retornadas pela API, como por 
   * Verifica se a requisição para a API de bebidas foi realizada. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`;
   * Verifica se a requisição para a API de comidas foi realizada. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/search.php?s=`.
 
-### 37 - Deverão ser mostrados 6 cards de recomendação, onde apenas 2 são mostrados e o scroll é horizontal, similar a um `carousel`.
+### 37 - Deverão ser mostrados 6 cards de recomendação, onde apenas 2 são mostrados e o scroll é horizontal, similar a um `carousel`
 
   **Observações técnicas**
 
@@ -952,39 +965,39 @@ Os ícones dos botões podem ser encontrados em `src/images/whiteHeartIcon.svg` 
   * Verifica se após favoritar receita de uma comida, ela é salva corretamente no localStorage;
   * Verifica se após favoritar receita de uma bebida, ela é salva corretamente no localStorage.
 
-### 47 - A cobertura de testes unitários deve ser de no mínimo 90%
+<!-- ### 47 - A cobertura de testes unitários deve ser de no mínimo 90% -->
 
 ## Tela de receita em processo
 
-### 48 - Essa tela deve conter uma imagem da receita, seu titulo, sua categoria (ou se a bebida é alcoólica ou não) uma lista de ingredientes com suas respectivas quantidades, e suas instruções;
+### 47 - Essa tela deve conter uma imagem da receita, seu titulo, sua categoria (ou se a bebida é alcoólica ou não) uma lista de ingredientes com suas respectivas quantidades, e suas instruções;
 
 ##### As seguintes verificações serão feitas:
 
 - A tela de receita de uma comida em processo possui todos os data-testid;
 - A tela de receita de uma bebida em processo possui todos os data-testid.
 
-### 49 - A lista de ingredientes deve conter um checkbox para cada um dos items;
+### 48 - A lista de ingredientes deve conter um checkbox para cada um dos items;
 
 ##### As seguintes verificações serão feitas:
 
 - Cada ingrediente de uma receita de comida deve possuir um checkbox;
 - Cada ingrediente de uma receita de bebida deve possuir um checkbox.
 
-### 50 - Ao clicar no checkbox de um ingrediente, o nome dele deve ser "riscado" da lista;
+### 49 - Ao clicar no checkbox de um ingrediente, o nome dele deve ser "riscado" da lista;
 
 ##### As seguintes verificações serão feitas:
 
 - Verifica se ao marcar clicar em um checkbox de um ingrediente de uma comida, o nome aparecerá riscado, mostrando que esse passo foi finalizado;
 - Verifica se ao marcar clicar em um checkbox de um ingrediente de uma bebida, o nome aparecerá riscado, mostrando que esse passo foi finalizado.
 
-### 51 - O estado do progresso deve ser mantido caso a pessoa atualize a pagina ou volte para a mesma receita. O progresso das receitas devem ser salvos em `localStorage` na chave` inProgressRecipes` no formato especificado na seção [`localStorage`](#localStorage);
+### 50 - O estado do progresso deve ser mantido caso a pessoa atualize a pagina ou volte para a mesma receita. O progresso das receitas devem ser salvos em `localStorage` na chave` inProgressRecipes` no formato especificado na seção [`localStorage`](#localStorage);
 
 ##### As seguintes verificações serão feitas:
 
 - Recarrega a página em progresso de um comida e espera que os ingredientes já marcados, continuam marcados;
 - Recarrega a página em progresso de um bebida e espera que os ingredientes já marcados, continuam marcados;
 
-### 52 - A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui;
+### 51 - A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui;
 
 ##### As seguintes verificações serão feitas:
 
@@ -1001,7 +1014,7 @@ Os ícones dos botões podem ser encontrados em `src/images/whiteHeartIcon.svg` 
 - Verifica se após favoritar receita de uma comida, ela é salva corretamente no localStorage;
 - Verifica se após favoritar receita de uma bebida, ela é salva corretamente no localStorage.
 
-### 53 - O botão de finalizar receita só pode estar habilitado quando todos os ingredientes estiverem _"checkados"_ (marcados);
+### 52 - O botão de finalizar receita só pode estar habilitado quando todos os ingredientes estiverem _"checkados"_ (marcados);
 
 ##### As seguintes verificações serão feitas:
 
@@ -1010,7 +1023,7 @@ Os ícones dos botões podem ser encontrados em `src/images/whiteHeartIcon.svg` 
 - Botão de finalizar receita de comida está habilitado quando todos os checkboxs estiverem marcados;
 - Botão de finalizar receita de bebida está habilitado quando todos os checkboxs estiverem marcados.
 
-### 54 - Após clicar no botão "Finalizar receita", a rota deve mudar para a página de receitas feitas, cuja rota deve ser `/receitas-feitas`.
+### 53 - Após clicar no botão "Finalizar receita", a rota deve mudar para a página de receitas feitas, cuja rota deve ser `/receitas-feitas`.
 
 ##### As seguintes verificações serão feitas:
 

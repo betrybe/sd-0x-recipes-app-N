@@ -94,14 +94,14 @@ Nesse projeto você será capaz de:
   <details>
     <summary>Tela principal de receitas</summary>
 
-    - [25 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela principal de receitas]()
-    - [26 - Devem ser carregadas as 12 primeiras receitas de comidas ou bebidas, uma em cada card]()
-    - [27 - A tela deve possuir botões de categoria para serem utilizados como filtro]()
-    - [28 - Ao clicar no filtro de categoria, todas as receitas devem mudar para os dados filtrados da API]() 
-    - [29 - Caso o filtro selecionado no momento seja selecionado de novo, o app deve retornar as receitas sem nenhum filtro, como se fosse um toggle]()
-    - [30 - Apenas um filtro de categoria deve poder ser selecionado por vez]()
-    - [31 - No filtro de categorias deve existir a opção de filtrar por todas as categorias]()
-    - [32 - Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL]()
+    - [25 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela principal de receitas](#25---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-principal-de-receitas)
+    - [26 - Devem ser carregadas as 12 primeiras receitas de comidas ou bebidas, uma em cada card](#26---devem-ser-carregadas-as-12-primeiras-receitas-de-comidas-ou-bebidas-uma-em-cada-card)
+    - [27 - A tela deve possuir botões de categoria para serem utilizados como filtro](#27---a-tela-deve-possuir-botões-de-categoria-para-serem-utilizados-como-filtro)
+    - [28 - Ao clicar no filtro de categoria, todas as receitas devem mudar para os dados filtrados da API](#28---ao-clicar-no-filtro-de-categoria-todas-as-receitas-devem-mudar-para-os-dados-filtrados-da-api) 
+    - [29 - Caso o filtro selecionado no momento seja selecionado de novo, o app deve retornar as receitas sem nenhum filtro, como se fosse um toggle](#29---caso-o-filtro-selecionado-no-momento-seja-selecionado-de-novo-o-app-deve-retornar-as-receitas-sem-nenhum-filtro-como-se-fosse-um-toggle)
+    - [30 - Apenas um filtro de categoria deve poder ser selecionado por vez](#30---apenas-um-filtro-de-categoria-deve-poder-ser-selecionado-por-vez)
+    - [31 - No filtro de categorias deve existir a opção de filtrar por todas as categorias](#31---no-filtro-de-categorias-deve-existir-a-opção-de-filtrar-por-todas-as-categorias)
+    - [32 - Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL](#32---ao-clicar-no-card-a-rota-deve-mudar-para-a-tela-de-detalhes-da-receita-com-o-id-da-mesma-na-url)
   </details>
 
     <details>

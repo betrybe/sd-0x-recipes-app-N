@@ -50,6 +50,7 @@ Nesse projeto você será capaz de:
     - [7 - Desenvolva o estilo que, ao clicar em uma resposta, a correta deve ficar verde e as incorretas, vermelhas](#7---após-a-submissão-o-e-mail-de-pessoa-usuária-deve-ser-salvo-em-localstorage-na-chave-user)
     - [8 -  Após a submissão e validação com sucesso do login, o usuário deve ser redirecionado para a tela principal de receitas de comidas](#8---após-a-submissão-e-validação-com-sucesso-do-login-o-usuário-deve-ser-redirecionado-para-a-tela-principal-de-receitas-de-comidas)
   </details>
+
   - [Header](#header)
     - [9 - Todos os elementos devem respeitar os atributos descritos no protótipo para o header disponível na tela principal de receitas](#9---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-o-header-disponível-na-tela-principal-de-receitas)
     - [10 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo) ](#10---deve-apresentar-um-ícone-para-a-tela-de-perfil-um-título-e-um-ícone-para-a-busca-caso-exista-no-protótipo)

@@ -82,6 +82,7 @@ Nesse projeto você será capaz de:
 
   <details>
     <summary>Menu inferior</summary>
+  
     - [19 - Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas](#19---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-o-menu-inferior-disponível-na-tela-principal-de-receitas)
     - [20 - Deve ser fixo e apresentar 3 ícones: um para comidas, um para bebidas e outro para exploração](#20---deve-ser-fixo-e-apresentar-3-ícones-um-para-comidas-um-para-bebidas-e-outro-para-exploração)
     - [21 - O menu inferior só deve aparecer apenas nas telas indicadas pelo protótipo](#21---o-menu-inferior-só-deve-aparecer-apenas-nas-telas-indicadas-pelo-protótipo)
@@ -337,7 +338,7 @@ As respostas seguem a mesma estrutura, com algumas particularidade relativas as 
   <details>
     <summary>Ver modelo de resposta para drinks</summary>
 
-    ```json
+  ```json
     {
       "drinks":[
           {
@@ -397,7 +398,7 @@ As respostas seguem a mesma estrutura, com algumas particularidade relativas as 
           }
       ]
     }
-    ```
+  ```
   </details>
 
 Os ingredientes seguem uma ordem lógica onde o nome dele (`strIngredient1`) e a quantidade (`strMeasure1`) tem o mesmo número no final (1, nesse caso).

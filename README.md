@@ -126,13 +126,13 @@ Nesse projeto você será capaz de:
   <details>
     <summary>Tela de receita em progresso</summary>
 
-    - [47 - Essa tela deve conter uma imagem da receita, seu titulo, sua categoria (ou se a bebida é alcoólica ou não) uma lista de ingredientes com suas respectivas quantidade e suas instruções]()
-    - [48 - A lista de ingredientes deve conter um checkbox para cada um dos items]()
-    - [49 - Ao clicar no checkbox de um ingrediente, o nome dele deve ser "riscado" da lista]()
-    - [50 - O estado do progresso deve ser mantido caso a pessoa atualize a página ou volte para a mesma receita]()
-    - [51 - A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui]()
-    - [52 - O botão de finalizar receita só pode estar habilitado quando todos os ingredientes estiverem _"checkados"_ (marcados)]()
-    - [53 - Após clicar no botão "Finalizar receita", a rota deve mudar para a página de receitas feitas, cuja rota deve ser `/receitas-feitas`]()
+    - [47 - Essa tela deve conter uma imagem da receita, seu titulo, sua categoria (ou se a bebida é alcoólica ou não) uma lista de ingredientes com suas respectivas quantidade e suas instruções](#47---essa-tela-deve-conter-uma-imagem-da-receita-seu-titulo-sua-categoria-ou-se-a-bebida-é-alcoólica-ou-não-uma-lista-de-ingredientes-com-suas-respectivas-quantidade-e-suas-instruções)
+    - [48 - A lista de ingredientes deve conter um checkbox para cada um dos items](#48---a-lista-de-ingredientes-deve-conter-um-checkbox-para-cada-um-dos-items)
+    - [49 - Ao clicar no checkbox de um ingrediente, o nome dele deve ser "riscado" da lista](#49---ao-clicar-no-checkbox-de-um-ingrediente-o-nome-dele-deve-ser-riscado-da-lista)
+    - [50 - O estado do progresso deve ser mantido caso a pessoa atualize a página ou volte para a mesma receita](#50---o-estado-do-progresso-deve-ser-mantido-caso-a-pessoa-atualize-a-página-ou-volte-para-a-mesma-receita)
+    - [51 - A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui](#51---a-mesma-lógica-de-favoritar-e-compartilhar-da-tela-de-detalhes-de-uma-receita-se-aplica-aqui)
+    - [52 - O botão de finalizar receita só pode estar habilitado quando todos os ingredientes estiverem _"checkados"_ (marcados)](#52---o-botão-de-finalizar-receita-só-pode-estar-habilitado-quando-todos-os-ingredientes-estiverem-checkados-marcados)
+    - [53 - Após clicar no botão "Finalizar receita", a rota deve mudar para a página de receitas feitas, cuja rota deve ser `/receitas-feitas`](#53---após-clicar-no-botão-finalizar-receita-a-rota-deve-mudar-para-a-página-de-receitas-feitas-cuja-rota-deve-ser-receitas-feitas)
   </details>
 
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)

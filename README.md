@@ -62,11 +62,11 @@ Nesse projeto você será capaz de:
     <summary>Header</summary>
 
     <!-- - [Header](#header) -->
-      - [9 - Todos os elementos devem respeitar os atributos descritos no protótipo para o header disponível na tela principal de receitas](#9---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-o-header-disponível-na-tela-principal-de-receitas)
-      - [10 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo) ](#10---deve-apresentar-um-ícone-para-a-tela-de-perfil-um-título-e-um-ícone-para-a-busca-caso-exista-no-protótipo)
-      - [11 - Ao clicar no botão de perfil, deve-se ir para a tela de perfil](#11---ao-clicar-no-botão-de-perfil-deve-se-ir-para-a-tela-de-perfil)
-      - [12 - Ao clicar no botão de busca, a barra de busca deve aparecer. O mesmo serve para escondê-la](#12---ao-clicar-no-botão-de-busca-a-barra-de-busca-deve-aparecer-o-mesmo-serve-para-escondê-la)
-      
+    - [9 - Todos os elementos devem respeitar os atributos descritos no protótipo para o header disponível na tela principal de receitas](#9---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-o-header-disponível-na-tela-principal-de-receitas)
+    - [10 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo) ](#10---deve-apresentar-um-ícone-para-a-tela-de-perfil-um-título-e-um-ícone-para-a-busca-caso-exista-no-protótipo)
+    - [11 - Ao clicar no botão de perfil, deve-se ir para a tela de perfil](#11---ao-clicar-no-botão-de-perfil-deve-se-ir-para-a-tela-de-perfil)
+    - [12 - Ao clicar no botão de busca, a barra de busca deve aparecer. O mesmo serve para escondê-la](#12---ao-clicar-no-botão-de-busca-a-barra-de-busca-deve-aparecer-o-mesmo-serve-para-escondê-la)
+
   </details>
 
   <details>

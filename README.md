@@ -38,7 +38,6 @@ Nesse projeto você será capaz de:
     - [Ícones](#icones)
 - [Lista de requisitos](#lista-de-requisitos)
     <details>
-
   - [Testes unitários](#testes-unitários)
     - [1 - A cobertura de testes unitários deve ser de no mínimo 90%](#1---a-cobertura-de-testes-unit%C3%A1rios-deve-ser-de-no-m%C3%ADnimo-90)
   - [Tela de login](#tela-de-login)
@@ -65,7 +64,7 @@ Nesse projeto você será capaz de:
     - [19 - Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas](#)
     - [20 - Deve ser fixo e apresentar 3 ícones: um para comidas, um para bebidas e outro para exploração](#)
 
-  <details>
+  </details>
 
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)

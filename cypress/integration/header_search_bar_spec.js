@@ -84,7 +84,7 @@ describe('14 - A barra de busca deve ficar logo abaixo do header e deve possuir 
   });
 });
 
-describe('A busca deve ocorrer na API de comidas caso a pessoa esteja na página de comidas e na de bebidas caso esteja na de bebidas', () => {
+describe('15 - A busca deve ocorrer na API de comidas caso a pessoa esteja na página de comidas e na de bebidas caso esteja na de bebidas', () => {
   it('Na tela de bebidas, se o radio selecionado for Ingrediente, a busca na API é feita corretamente pelo ingrediente', () => {
     cy.visit('http://localhost:3000/bebidas', {
       onBeforeLoad(win) {
@@ -150,7 +150,7 @@ describe('A busca deve ocorrer na API de comidas caso a pessoa esteja na página
   });
 });
 
-describe('Caso apenas uma receita seja encontrada, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL', () => {
+describe('16 - Caso apenas uma receita seja encontrada, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL', () => {
   it('Caso apenas uma comida seja encontrada, deve-se ir para sua rota de detalhes', () => {
     cy.visit('http://localhost:3000/comidas', {
       onBeforeLoad(win) {
@@ -182,7 +182,7 @@ describe('Caso apenas uma receita seja encontrada, a rota deve mudar para a tela
   });
 });
 
-describe('Caso mais de uma receita seja encontrada, mostrar as receitas em cards da mesma maneira que a tela principal de receitas', () => {
+describe('17 - Caso mais de uma receita seja encontrada, mostrar as receitas em cards da mesma maneira que a tela principal de receitas', () => {
   it('Caso mais de uma comida seja encontrada, mostrar as 12 primeiras', () => {
     cy.visit('http://localhost:3000/comidas', {
       onBeforeLoad(win) {
@@ -238,7 +238,7 @@ describe('Caso mais de uma receita seja encontrada, mostrar as receitas em cards
   });
 });
 
-describe('Caso nenhuma receita seja encontrada, um alert contendo o texto "Sinto muito, não encontramos nenhuma receita para esses filtros." deve ser exibido', () => {
+describe('18 - Caso nenhuma receita seja encontrada, um alert contendo o texto "Sinto muito, não encontramos nenhuma receita para esses filtros." deve ser exibido', () => {
   it('Caso nenhuma comida seja encontrada o alert deve ser exibido', () => {
     cy.visit('http://localhost:3000/comidas', {
       onBeforeLoad(win) {

@@ -502,9 +502,9 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
   **Observações técnicas**
 
-  * O input de email deve possuir o atributo `data-testid="email-input"`
-  * O input de senha deve possuir o atributo `data-testid="password-input"`
-  * O botão "Entrar" deve possuir o atributo `data-testid="login-submit-btn"`
+  * O input de email deve possuir o atributo `data-testid="email-input"`;
+  * O input de senha deve possuir o atributo `data-testid="password-input"`;
+  * O botão "Entrar" deve possuir o atributo `data-testid="login-submit-btn"`.
 
 ### 3 - A pessoa deve conseguir escrever seu email no input de email
 
@@ -516,16 +516,16 @@ O formulário só fica válido após um email válido e uma senha de mais de 6 c
 
   **Observações técnicas**
 
-  * O botão deve estar desativado se o email for inválido
-  * O botão deve estar desativado se a senha deve tiver 6 caracteres ou menos
-  * O botão deve estar ativado se o email e a senha forem válidos
+  * O botão deve estar desativado se o email for inválido;
+  * O botão deve estar desativado se a senha deve tiver 6 caracteres ou menos;
+  * O botão deve estar ativado se o email e a senha forem válidos.
 
 
 ### 6 - Após a submissão, 2 tokens devem ser salvos em `localStorage` identificados pelas chaves `mealsToken` e `cocktailsToken`
 
   **Observações técnicas**
 
-  * O token de teste é sempre `1`
+  * O token de teste é sempre `1`.
 
 ### 7 - Após a submissão, o e-mail de pessoa usuária deve ser salvo em localStorage na chave user
 
@@ -537,7 +537,7 @@ O formulário só fica válido após um email válido e uma senha de mais de 6 c
 
   **Observações técnicas**
 
-  * A rota muda para a tela principal de receitas de comidas
+  * A rota muda para a tela principal de receitas de comidas.
 
 ## Header
 
@@ -545,12 +545,12 @@ O formulário só fica válido após um email válido e uma senha de mais de 6 c
 
   **Observações técnicas**
 
-  * Possui os data-testids `profile-top-btn`, `page-title` e `search-top-btn`
+  * Possui os data-testids `profile-top-btn`, `page-title` e `search-top-btn`.
 
 
 ### 10 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo) 
 
-  Todas as [rotas](#rotas) serão verificadas. Os ícones podem ser encontrados em `src/images/profileIcon.svg` e em `src/images/searchIcon.svg`.
+Todas as [rotas](#rotas) serão verificadas. Os ícones podem ser encontrados em `src/images/profileIcon.svg` e em `src/images/searchIcon.svg`.
 
   **Observações técnicas**
 
@@ -575,7 +575,7 @@ O formulário só fica válido após um email válido e uma senha de mais de 6 c
 
   **Observações técnicas**
 
-  * A mudança de tela ocorre
+  * A mudança de tela ocorre.
 
 ### 12 - Ao clicar no botão de busca, a barra de busca deve aparecer. O mesmo serve para escondê-la
 
@@ -587,60 +587,60 @@ O formulário só fica válido após um email válido e uma senha de mais de 6 c
 ## Barra de busca - Header
 
 ### 13 - Todos os elementos devem respeitar os atributos descritos no protótipo para a barra de busca
-  Deve existir os data-testids tanto da barra de busca quanto de todos os radio-buttons
+
+Deve existir os data-testids tanto da barra de busca quanto de todos os radio-buttons.
 
   **Observações técnicas**
 
-  * O input de busca deve possuir o atributo `data-testid="search-input"`
-  * O radio button de busca de ingrediente deve possuir o atributo `data-testid="ingredient-search-radio"`
-  * O radio button de busca da primeira letra deve possuir o atributo `"data-testid="first-letter-search-radio"`
+  * O input de busca deve possuir o atributo `data-testid="search-input"`;
+  * O radio button de busca de ingrediente deve possuir o atributo `data-testid="ingredient-search-radio"`;
+  * O radio button de busca da primeira letra deve possuir o atributo `"data-testid="first-letter-search-radio"`.
 
 ### 14 - A barra de busca deve ficar logo abaixo do header e deve possuir 3 radio buttons: Ingrediente, Nome e Primeira letra. Eles devem mudar a forma como serão filtradas as receitas
 
 A barra de busca deve ficar logo abaixo do header e deve possuir 3 _radio buttons_: `Ingrediente`, `Nome` e `Primeira letra`. Eles, em conjunto com a `search-input`, devem mudar a forma como serão filtradas as receitas após clicar no botão `Buscar`.  Os _endpoints_ da API que você deve usar podem ser consultados [aqui para a API de comidas](https://www.themealdb.com/api.php) e [aqui para a API de bebidas](https://www.thecocktaildb.com/api.php).
 
+  **Observações técnicas**
+
+  * Se o radio selecionado for `Ingrediente`, a busca na API é feita corretamente pelo ingrediente. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/filter.php?i={ingrediente}`;
+  * Se o radio selecionado for `Nome`, a busca na API é feita corretamente pelo nome. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/search.php?s={nome}`;
+  * Se o radio selecionado for `Primeira letra`, a busca na API é feita corretamente pelo primeira letra. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/search.php?f={primeira-letra}`;
+  * Se o radio selecionado for `Primeira letra` e a busca na API for feita com mais de uma letra, deve-se exibir um `alert` com a mensgem "Sua busca deve conter somente 1 (um) caracter".
+
 ##### Exemplo: Ao selecionar `Ingrediente` e buscar por `chicken`, deve-se utilizar o endpoint `https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken`.
 
 ##### Observação: Para esse requisito será verificada apenas a tela principal de receitas de comidas.
 
-##### As seguintes verificações serão feitas:
+### 15 - A busca deve ocorrer na API de comidas caso a pessoa esteja na página de comidas e na de bebidas caso esteja na de bebidas
 
-- Se o radio selecionado for `Ingrediente`, a busca na API é feita corretamente pelo ingrediente. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/filter.php?i={ingrediente}`;
-- Se o radio selecionado for `Nome`, a busca na API é feita corretamente pelo nome. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/search.php?s={nome}`;
-- Se o radio selecionado for `Primeira letra`, a busca na API é feita corretamente pelo primeira letra. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/search.php?f={primeira-letra}`;
-- Se o radio selecionado for `Primeira letra` e a busca na API for feita com mais de uma letra, deve-se exibir um `alert` com a mensgem "Sua busca deve conter somente 1 (um) caracter".
+  **Observações técnicas**
 
-### 15 - A busca deve ocorrer na API de comidas caso a pessoa esteja na página de comidas e na de bebidas caso esteja na de bebidas.
-
+  * Na tela de bebidas, se o radio selecionado for `Ingrediente`, a busca na API é feita corretamente pelo ingrediente. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i={ingrediente}`;
+  * Na tela de bebidas, se o radio selecionado for `Nome`, a busca na API é feita corretamente pelo nome. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/search.php?s={nome}`;
+  * Na tela de bebidas, se o radio selecionado for Primeira letra, a busca na API é feita corretamente pelo primeira letra. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/search.php?f={primeira-letra}`;
+  * Na tela de bebidas, se o radio selecionado for `Primeira letra` e a busca na API for feita com mais de uma letra, deve-se exibir um `alert` com a mensgem "Sua busca deve conter somente 1 (um) caracter".
 ##### Observação: Para esse requisito será verificada apenas a tela principal de receitas de bebidas, já que a de comidas já foi verificada no requisito 15.
 
-##### As seguintes verificações serão feitas:
+### 16 - Caso apenas uma receita seja encontrada, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL
 
-- Na tela de bebidas, se o radio selecionado for `Ingrediente`, a busca na API é feita corretamente pelo ingrediente. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i={ingrediente}`;
-- Na tela de bebidas, se o radio selecionado for `Nome`, a busca na API é feita corretamente pelo nome. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/search.php?s={nome}`;
-- Na tela de bebidas, se o radio selecionado for Primeira letra, a busca na API é feita corretamente pelo primeira letra. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/search.php?f={primeira-letra}`;
-- Na tela de bebidas, se o radio selecionado for `Primeira letra` e a busca na API for feita com mais de uma letra, deve-se exibir um `alert` com a mensgem "Sua busca deve conter somente 1 (um) caracter".
+  **Observações técnicas**
 
-### 16 - Caso apenas uma receita seja encontrada, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL.
+  * Caso apenas uma comida seja encontrada, deve-se ir para sua rota de detalhes (`/comidas/{id-da-receita}`);
+  * Caso apenas uma bebida seja encontrada, deve-se ir para sua rota de detalhes (`/bebidas/{id-da-receita}`).
 
-##### As seguintes verificações serão feitas:
+### 17 - Caso mais de uma receita seja encontrada, mostrar as receitas em cards da mesma maneira que a tela principal de receitas
 
-- Caso apenas uma comida seja encontrada, deve-se ir para sua rota de detalhes (`/comidas/{id-da-receita}`);
-- Caso apenas uma bebida seja encontrada, deve-se ir para sua rota de detalhes (`/bebidas/{id-da-receita}`).
+  **ObservaçÕes técnicas**
 
-### 17 - Caso mais de uma receita seja encontrada, mostrar as receitas em cards da mesma maneira que a tela principal de receitas;
+  * Caso mais de uma comida seja encontrada, mostrar as 12 primeiras (ou menos, se não hoverem 12);
+  * Caso mais de uma bebida seja encontrada, mostrar as 12 primeiras (ou menos, se não hoverem 12).
 
-##### As seguintes verificações serão feitas:
+### 18 - Caso nenhuma receita seja encontrada, um `alert` contendo o texto "Sinto muito, não encontramos nenhuma receita para esses filtros." deve ser exibido
 
-- Caso mais de uma comida seja encontrada, mostrar as 12 primeiras (ou menos, se não hoverem 12);
-- Caso mais de uma bebida seja encontrada, mostrar as 12 primeiras (ou menos, se não hoverem 12).
+  **ObservaçÕes técnicas**
 
-### 18 - Caso nenhuma receita seja encontrada, um `alert` contendo o texto "Sinto muito, não encontramos nenhuma receita para esses filtros." deve ser exibido.
-
-##### As seguintes verificações serão feitas:
-
-- Caso nenhuma comida seja encontrada o alert deve ser exibido;
-- Caso nenhuma bebida seja encontrada o alert deve ser exibido.
+  * Caso nenhuma comida seja encontrada o alert deve ser exibido;
+  * Caso nenhuma bebida seja encontrada o alert deve ser exibido.
 
 ## Menu inferior
 

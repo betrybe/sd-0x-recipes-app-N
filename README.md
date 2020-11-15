@@ -53,14 +53,15 @@ Nesse projeto você será capaz de:
     - [11 - Ao clicar no botão de perfil, deve-se ir para a tela de perfil](#11---ao-clicar-no-botão-de-perfil-deve-se-ir-para-a-tela-de-perfil)
     - [12 - Ao clicar no botão de busca, a barra de busca deve aparecer. O mesmo serve para escondê-la](#12---ao-clicar-no-botão-de-busca-a-barra-de-busca-deve-aparecer-o-mesmo-serve-para-escondê-la)
   - [Barra de busca - Header](#barra-de-busca---header)
-    - [13 - Crie a mensagem de feedback para ser exibida à pessoa usuária](#13-crie-a-mensagem-de-feedback-para-ser-exibida-a-pessoa-usuária)
-    - [14 - Exiba as informações relacionadas aos resultados obtidos para a pessoa usuária](#14-exiba-as-informações-relacionadas-aos-resultados-obtidos-para-a-pessoa-usuária)
-    - [15 - Crie a opção para a pessoa jogadora poder jogar novamente](#15-crie-a-opção-para-a-pessoa-jogadora-poder-jogar-novamente)
-    - [16 - Crie a opção para a pessoa jogadora poder visualizar a tela de ranking](#16-crie-a-opção-para-a-pessoa-jogadora-poder-visualizar-a-tela-de-ranking)
-  - [Tela de ranking](#tela-de-ranking)
-    - [17 - Crie a tela de ranking](#17-crie-a-tela-de-ranking)
-    - [18 - Crie um botão para ir ao início](#18-crie-um-botão-para-ir-ao-início)
-  - [Extra não avaliativo: tela de configurações](#extra-não-avaliativo-tela-de-configurações)
+    - [13 - Todos os elementos devem respeitar os atributos descritos no protótipo para a barra de busca](#13---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-barra-de-busca)
+    - [14 - A barra de busca deve ficar logo abaixo do header e deve possuir 3 radio buttons: Ingrediente, Nome e Primeira letra. Eles devem mudar a forma como serão filtradas as receitas](#14---a-barra-de-busca-deve-ficar-logo-abaixo-do-header-e-deve-possuir-3-radio-buttons-ingrediente-nome-e-primeira-letra-eles-devem-mudar-a-forma-como-serão-filtradas-as-receitas)
+    - [15 - A busca deve ocorrer na API de comidas caso a pessoa esteja na página de comidas e na de bebidas caso esteja na de bebidas](#15---a-busca-deve-ocorrer-na-api-de-comidas-caso-a-pessoa-esteja-na-página-de-comidas-e-na-de-bebidas-caso-esteja-na-de-bebidas)
+    - [16 - Caso apenas uma receita seja encontrada, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL](#16---caso-apenas-uma-receita-seja-encontrada-a-rota-deve-mudar-para-a-tela-de-detalhes-da-receita-com-o-id-da-mesma-na-url)
+    - [17 - Caso mais de uma receita seja encontrada, mostrar as receitas em cards da mesma maneira que a tela principal de receitas](#17---caso-mais-de-uma-receita-seja-encontrada-mostrar-as-receitas-em-cards-da-mesma-maneira-que-a-tela-principal-de-receitas)
+    - [18 - Caso nenhuma receita seja encontrada, um `alert` contendo o texto "Sinto muito, não encontramos nenhuma receita para esses filtros." deve ser exibido](#18---caso-nenhuma-receita-seja-encontrada-um-alert-contendo-o-texto-sinto-muito-não-encontramos-nenhuma-receita-para-esses-filtros-deve-ser-exibido)
+  - [Menu inferior](#menu-inferior)
+    - [19 - Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas](#)
+    - [20 - Deve ser fixo e apresentar 3 ícones: um para comidas, um para bebidas e outro para exploração](#)
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
   - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
@@ -644,16 +645,16 @@ A barra de busca deve ficar logo abaixo do header e deve possuir 3 _radio button
 
 ## Menu inferior
 
-### 19 - Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas.
+### 19 - Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas
 
-### 20 - Deve ser fixo e apresentar 3 ícones: um para comidas, um para bebidas e outro para exploração.
+### 20 - Deve ser fixo e apresentar 3 ícones: um para comidas, um para bebidas e outro para exploração
 
 ##### As seguintes verificações serão feitas:
 
 - O menu inferior deve ficar fixado sempre ao final da página;
 - Apresenta os ícones corretos (drinkIcon.svg, exploreIcon.svg e mealIcon.svg, disponíveis na pasta `src/images/`).
 
-### 21 - O menu inferior só deve aparecer apenas nas telas indicadas pelo protótipo.
+### 21 - O menu inferior só deve aparecer apenas nas telas indicadas pelo protótipo
 
 ##### As seguintes verificações serão feitas:
 

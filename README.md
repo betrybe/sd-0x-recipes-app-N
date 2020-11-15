@@ -93,7 +93,20 @@ Nesse projeto você será capaz de:
 
   <details>
     <summary>Tela principal de receitas</summary>
+
+    - [25 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela principal de receitas]()
+    - [26 - Devem ser carregadas as 12 primeiras receitas de comidas ou bebidas, uma em cada card]()
+    - [27 - A tela deve possuir botões de categoria para serem utilizados como filtro]()
+    - [28 - Ao clicar no filtro de categoria, todas as receitas devem mudar para os dados filtrados da API]() 
+    - [29 - Caso o filtro selecionado no momento seja selecionado de novo, o app deve retornar as receitas sem nenhum filtro, como se fosse um toggle]()
+    - [30 - Apenas um filtro de categoria deve poder ser selecionado por vez]()
+    - [31 - No filtro de categorias deve existir a opção de filtrar por todas as categorias]()
+    - [32 - Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL]()
   </details>
+
+    <details>
+    <summary>Tela de detalhes de uma receita</summary>
+    </details>
 
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
@@ -733,69 +746,81 @@ O menu inferior deve aparecer somente nas telas indicas no protótipo, sendo ela
 
 ## Tela principal de receitas
 
-### 25 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela principal de receitas.
+### 25 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela principal de receitas
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
-- A tela tem os data-testids de todos os 12 cards da tela de comidas;
-- A tela tem os data-testids de todos os 12 cards da tela de bebidas.
+  * A tela tem os data-testids de todos os 12 cards da tela de comidas;
+  * A tela tem os data-testids de todos os 12 cards da tela de bebidas.
 
-### 26 - Devem ser carregadas as 12 primeiras receitas de comidas ou bebidas, uma em cada card. O Card de receita deve conter sua foto (`strMealThumb` ou `strDrinkThumb`) e seu nome (`strMeal` ou `strDrink`).
+### 26 - Devem ser carregadas as 12 primeiras receitas de comidas ou bebidas, uma em cada card
 
-##### As seguintes verificações serão feitas:
+O Card de receita deve conter sua foto (`strMealThumb` ou `strDrinkThumb`) e seu nome (`strMeal` ou `strDrink`).
 
-- Caso as receitas sejam de comida, deve-se carregar as 12 primeiras receitas obtidas através do endpoint `https://www.themealdb.com/api/json/v1/1/search.php?s=`;
-- Caso as receitas sejam de bebida, deve-se carregar as 12 primeiras receitas obtidas através do endpoint `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`.
+  **Observações técnicas**
 
-### 27 - A tela deve possuir botões de categoria para serem utilizados como filtro. Cada um com o atributo prefixado: `data-testid=${categoryName}-category-filter`. Devem ser exibidas apenas as 5 primeiras categorias retornadas da API.
+  * Caso as receitas sejam de comida, deve-se carregar as 12 primeiras receitas obtidas através do endpoint `https://www.themealdb.com/api/json/v1/1/search.php?s=`;
+  * Caso as receitas sejam de bebida, deve-se carregar as 12 primeiras receitas obtidas através do endpoint `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`.
 
-##### As seguintes verificações serão feitas:
+### 27 - A tela deve possuir botões de categoria para serem utilizados como filtro
 
-- Caso as receitas sejam de comida, deve-se exibir as 5 primeiras categorias de comida obtidas através do endpoint `https://www.themealdb.com/api/json/v1/1/list.php?c=list`;
-- Caso as receitas sejam de bebida, deve-se exibir as 5 primeiras categorias de bebida obtidas através do endpoint `https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list`.
+Cada botão deve conter o atributo prefixado `data-testid=${categoryName}-category-filter` e devem ser exibidas apenas as 5 primeiras categorias retornadas da API.
 
-### 28 - Ao clicar no filtro de categoria, todas as receitas devem mudar para os dados filtrados da API. As categorias disponíveis devem ser obtidas através da API de [comidas](https://www.themealdb.com/api.php) ou [bebidas](https://www.thecocktaildb.com/api.php).
+  **Observações técnicas**
 
-##### As seguintes verificações serão feitas:
+  * Caso as receitas sejam de comida, deve-se exibir as 5 primeiras categorias de comida obtidas através do endpoint `https://www.themealdb.com/api/json/v1/1/list.php?c=list`;
+  * Caso as receitas sejam de bebida, deve-se exibir as 5 primeiras categorias de bebida obtidas através do endpoint `https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list`.
 
-- Caso as receitas sejam de comida e a categoria seja "Beef", deve-se carregar as 12 primeiras receitas de "Beef";
-- Caso as receitas sejam de comida e a categoria seja "Breakfast", deve-se carregar as 12 primeiras receitas de "Breakfast";
-- Caso as receitas sejam de comida e a categoria seja "Chicken", deve-se carregar as 12 primeiras receitas de "Chicken";
-- Caso as receitas sejam de comida e a categoria seja "Dessert", deve-se carregar as 12 primeiras receitas de "Dessert";
-- Caso as receitas sejam de comida e a categoria seja "Goat", deve-se carregar as 12 primeiras receitas de "Goat";
-- Caso as receitas sejam de bebida e a categoria seja "Ordinary Drink", deve-se carregar as 12 primeiras receitas de "Ordinary Drink";
-- Caso as receitas sejam de bebida e a categoria seja "Cocktail", deve-se carregar as 12 primeiras receitas de "Cocktail";
-- Caso as receitas sejam de bebida e a categoria seja "Milk / Float / Shake", deve-se carregar as 12 primeiras receitas de "Milk / Float / Shake";
-- Caso as receitas sejam de bebida e a categoria seja "Other/Unknown", deve-se carregar as 12 primeiras receitas de "Other/Unknown";
-- Caso as receitas sejam de bebida e a categoria seja "Cocoa", deve-se carregar as 12 primeiras receitas de "Cocoa".
+### 28 - Ao clicar no filtro de categoria, todas as receitas devem mudar para os dados filtrados da API
 
-### 29 - Caso o filtro selecionado no momento seja selecionado de novo, o app deve retornar as receitas sem nenhum filtro, como se fosse um toggle.
+As categorias disponíveis devem ser obtidas através da API de [comidas](https://www.themealdb.com/api.php) ou [bebidas](https://www.thecocktaildb.com/api.php).
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
-- Caso as receitas sejam de comida e o filtro tenha sido selecionado novamente, deve-se retornar as 12 primeiras receitas sem filtro;
-- Caso as receitas sejam de bebida e o filtro tenha sido selecionado novamente, deve-se retornar as 12 primeiras receitas sem filtro.
+  * Caso as receitas sejam de comida e a categoria seja "Beef", deve-se carregar as 12 primeiras receitas de "Beef";
+  * Caso as receitas sejam de comida e a categoria seja "Breakfast", deve-se carregar as 12 primeiras receitas de "Breakfast";
+  * Caso as receitas sejam de comida e a categoria seja "Chicken", deve-se carregar as 12 primeiras receitas de "Chicken";
+  * Caso as receitas sejam de comida e a categoria seja "Dessert", deve-se carregar as 12 primeiras receitas de "Dessert";
+  * Caso as receitas sejam de comida e a categoria seja "Goat", deve-se carregar as 12 primeiras receitas de "Goat";
+  * Caso as receitas sejam de bebida e a categoria seja "Ordinary Drink", deve-se carregar as 12 primeiras receitas de "Ordinary Drink";
+  * Caso as receitas sejam de bebida e a categoria seja "Cocktail", deve-se carregar as 12 primeiras receitas de "Cocktail";
+  * Caso as receitas sejam de bebida e a categoria seja "Milk / Float / Shake", deve-se carregar as 12 primeiras receitas de "Milk / Float / Shake";
+  * Caso as receitas sejam de bebida e a categoria seja "Other/Unknown", deve-se carregar as 12 primeiras receitas de "Other/Unknown";
+  * Caso as receitas sejam de bebida e a categoria seja "Cocoa", deve-se carregar as 12 primeiras receitas de "Cocoa".
 
-### 30 - Apenas um filtro de categoria deve poder ser selecionado por vez. Ou seja, se outro filtro de categoria for selecionado, ele deve substituir o anterior.
+### 29 - Caso o filtro selecionado no momento seja selecionado de novo, o app deve retornar as receitas sem nenhum filtro, como se fosse um toggle
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
-- Caso as receitas sejam de comida apenas um filtro de categoria deve poder ser selecionado por vez;
-- Caso as receitas sejam de bebida apenas um filtro de categoria deve poder ser selecionado por vez.
+  * Caso as receitas sejam de comida e o filtro tenha sido selecionado novamente, deve-se retornar as 12 primeiras receitas sem filtro;
+  * Caso as receitas sejam de bebida e o filtro tenha sido selecionado novamente, deve-se retornar as 12 primeiras receitas sem filtro.
 
-### 31 - No filtro de categorias deve existir a opção de filtrar por todas as categorias, retornando novamente todas as receitas. O nome do filtro deve ser "All".
+### 30 - Apenas um filtro de categoria deve poder ser selecionado por vez
 
-##### As seguintes verificações serão feitas:
+Ou seja, se outro filtro de categoria for selecionado, ele deve substituir o anterior.
 
-- Caso as receitas sejam de comida deve existir a opção de filtrar por todas as categorias;
-- Caso as receitas sejam de bebida deve existir a opção de filtrar por todas as categorias.
+  **Observações técnicas**
 
-### 32 - Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL, além de dizer se a pessoa veio da tela de comidas ou de bebidas. Exemplo: `/comidas/{id-da-receita}`.
+  * Caso as receitas sejam de comida apenas um filtro de categoria deve poder ser selecionado por vez;
+  * Caso as receitas sejam de bebida apenas um filtro de categoria deve poder ser selecionado por vez.
 
-##### As seguintes verificações serão feitas:
+### 31 - No filtro de categorias deve existir a opção de filtrar por todas as categorias
 
-- Caso as receitas sejam de comida a rota deve mudar para a tela de detalhes da receita;
-- Caso as receitas sejam de bebida a rota deve mudar para a tela de detalhes da receita.
+Ou seja, retornando novamente todas as receitas. O nome do filtro deve ser "All".
+
+  **Observações técnicas**
+
+  * Caso as receitas sejam de comida deve existir a opção de filtrar por todas as categorias;
+  * Caso as receitas sejam de bebida deve existir a opção de filtrar por todas as categorias.
+
+### 32 - Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL
+
+  Além de dizer se a pessoa veio da tela de comidas ou de bebidas. Exemplo: `/comidas/{id-da-receita}`.
+
+  **Observações técnicas**
+
+  * Caso as receitas sejam de comida a rota deve mudar para a tela de detalhes da receita;
+  * Caso as receitas sejam de bebida a rota deve mudar para a tela de detalhes da receita.
 
 ## Tela de detalhes de uma receita
 

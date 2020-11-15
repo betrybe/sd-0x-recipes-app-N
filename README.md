@@ -60,6 +60,7 @@ Nesse projeto você será capaz de:
 
   <details>
     <summary>Header</summary>
+
     <!-- - [Header](#header) -->
       - [9 - Todos os elementos devem respeitar os atributos descritos no protótipo para o header disponível na tela principal de receitas](#9---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-o-header-disponível-na-tela-principal-de-receitas)
       - [10 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo) ](#10---deve-apresentar-um-ícone-para-a-tela-de-perfil-um-título-e-um-ícone-para-a-busca-caso-exista-no-protótipo)
@@ -80,6 +81,7 @@ Nesse projeto você será capaz de:
 
   <details>
     <summary>Menu inferior</summary>
+
     <!-- - [Menu inferior](#menu-inferior) -->
     - [19 - Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas](#)
     - [20 - Deve ser fixo e apresentar 3 ícones: um para comidas, um para bebidas e outro para exploração](#)

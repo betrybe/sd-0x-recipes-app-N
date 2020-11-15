@@ -106,6 +106,8 @@ Nesse projeto você será capaz de:
 
     <details>
     <summary>Tela de detalhes de uma receita</summary>
+
+    - []()
     </details>
 
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
@@ -824,113 +826,133 @@ Ou seja, retornando novamente todas as receitas. O nome do filtro deve ser "All"
 
 ## Tela de detalhes de uma receita
 
-### 33 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de detalhes de uma receita.
+### 33 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de detalhes de uma receita
 
-##### As seguintes verificações serão feitas:
+A verificação será feita a partir dos atributos data-testid's:
 
-- A tela de comida possui todos os atributos data-testid;
-- A tela de bebidas possui todos os atributos data-testid.
+  * A foto deve possuir o atributo `data-testid="recipe-photo"`;
+  * O título deve possuir o atributo `data-testid="recipe-title"`;
+  * O botão de compartilhar deve possuir o atributo `data-testid="share-btn"`;
+  * O botão de compartilhar deve possuir o atributo `data-testid="favorite-btn"`;
+  * O texto da categoria deve possuir o atributo `data-testid="recipe-category"`;
+  * Os ingredientes devem possuir o atributo `data-testid="${index}-ingredient-name-and-measure"`;
+  * O texto de instruções deve possuir o atributo `data-testid="instructions"`;
+  * O vídeo, presente somente na tela de comidas, deve possuir o atributo `data-testid="video"`;
+  * O card de receitas recomendadas deve possuir o atributo `data-testid="${index}-recomendation-card"`;
+  * O botão de iniciar receita deve possuir o atributo `data-testid="start-recipe-btn"`;
 
-### 34 - Uma request para a API deve ser feita passando o `id` da receita que deve estar disponível nos parâmetros da URL.
+  **Observações técnicas**
 
-##### As seguintes verificações serão feitas:
+  * A tela de comida possui todos os atributos data-testid;
+  * A tela de bebidas possui todos os atributos data-testid.
 
-- Verifica se a requisição para a API de comidas foi realizada. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/lookup.php?i={id-da-receita}`;
-- Verifica se a requisição para a API de bebidas foi realizada. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i={id-da-receita}`.
+### 34 - Uma request para a API deve ser feita passando o `id` da receita que deve estar disponível nos parâmetros da URL
 
-### 35 - Essa tela deve conter uma imagem da receita, o título, a categoria (ou se é ou não alcoólico), uma lista de ingredientes seguidos pelas quantidades, instruções, um vídeo do youtube "embedado" e recomendações. Obs.: O vídeo do youtube só deve estar disponível para receitas de comida, já que não é retornado pela [API de bebidas](https://www.thecocktaildb.com/api.php).
+  **Observações técnicas**
 
-##### As seguintes verificações serão feitas:
+  * Verifica se a requisição para a API de comidas foi realizada. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/lookup.php?i={id-da-receita}`;
+  * Verifica se a requisição para a API de bebidas foi realizada. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i={id-da-receita}`.
 
-- Verifica se os elementos descritos no protótipo existem na tela de detalhes de comida;
-- Verifica se os elementos descritos no protótipo existem na tela de detalhes de bebida.
+### 35 - Essa tela deve conter uma imagem da receita, o título, a categoria (ou se é ou não alcoólico), uma lista de ingredientes seguidos pelas quantidades, instruções, um vídeo do youtube "embedado" e recomendações
 
-### 36 - As recomendações para receitas de comida deverão ser bebidas e vice-versa.
+A verificação será feita através das receitas retornadas pela API, como por exemplo, o texto dos ingredientes e das instruções.
 
-##### As seguintes verificações serão feitas:
+  Lembre-se: O vídeo do youtube só deve estar disponível para receitas de comida, já que não é retornado pela [API de bebidas](https://www.thecocktaildb.com/api.php).
 
-- Verifica se a requisição para a API de bebidas foi realizada. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`;
-- Verifica se a requisição para a API de comidas foi realizada. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/search.php?s=`.
+  **Observações técnicas**
+
+  * Verifica se os elementos descritos no protótipo existem na tela de detalhes de comida;
+  * Verifica se os elementos descritos no protótipo existem na tela de detalhes de bebida.
+
+### 36 - As recomendações para receitas de comida deverão ser bebidas e vice-versa
+
+  **Observações técnicas**
+
+  * Verifica se a requisição para a API de bebidas foi realizada. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`;
+  * Verifica se a requisição para a API de comidas foi realizada. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/search.php?s=`.
 
 ### 37 - Deverão ser mostrados 6 cards de recomendação, onde apenas 2 são mostrados e o scroll é horizontal, similar a um `carousel`.
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
-- Verifica se exitem todas as recomendações na tela de detalhes de uma comida. Apenas as 6 primeiras bebidas devem ser exibidas;
-- Verifica se exitem todas as recomendações na tela de detalhes de uma bebida. Apenas as 6 primeiras comidas devem ser exibidas.
+  * Verifica se existem todas as recomendações na tela de detalhes de uma comida. Apenas as 6 primeiras bebidas devem ser exibidas;
+  * Verifica se existem todas as recomendações na tela de detalhes de uma bebida. Apenas as 6 primeiras comidas devem ser exibidas.
 
-### 38 - Um botão de nome "Iniciar Receita" deve ficar fixo na parte de baixo da tela o tempo todo.
+### 38 - Um botão de nome "Iniciar Receita" deve ficar fixo na parte de baixo da tela o tempo todo
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
-- Verifica posicionamento do botão na tela de detalhes de comida;
-- Verifica posicionamento do botão na tela de detalhes de bebida.
+  * Verifica posicionamento do botão na tela de detalhes de comida;
+  * Verifica posicionamento do botão na tela de detalhes de bebida.
 
-### 39 - Caso a receita já tenha sido feita, o botão "Iniciar Receita" deve sumir.
+### 39 - Caso a receita já tenha sido feita, o botão "Iniciar Receita" deve sumir
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
-- Verifica se botão de iniciar receita não é visível na tela de detalhes de uma comida;
-- Verifica se botão de iniciar receita não é visível na tela de detalhes de uma bebida.
+  * Verifica se botão de iniciar receita não é visível na tela de detalhes de uma comida;
+  * Verifica se botão de iniciar receita não é visível na tela de detalhes de uma bebida.
 
-### 40 - Caso a receita tenha sido iniciada mas não finalizada, o texto do botão deve ser "Continuar Receita".
+### 40 - Caso a receita tenha sido iniciada mas não finalizada, o texto do botão deve ser "Continuar Receita"
 
-##### As seguintes verificações serão feitas:
+  **ObservaçÕes técnicas**
 
-- Verifica botão de "Continuar Receita" na tela de detalhes de uma comida;
-- Verifica botão de "Continuar Receita" na tela de detalhes de uma bebida
+  * Verifica botão de "Continuar Receita" na tela de detalhes de uma comida;
+  * Verifica botão de "Continuar Receita" na tela de detalhes de uma bebida
 
-### 41 - Quando o botão "Iniciar Receita" for clicado, a rota deve mudar para a tela de receita em processo.
+### 41 - Quando o botão "Iniciar Receita" for clicado, a rota deve mudar para a tela de receita em processo
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
-- Redireciona para tela de receita da comida em processo;
-- Redireciona para tela de receita da bebida em processo.
+  * Redireciona para tela de receita da comida em processo;
+  * Redireciona para tela de receita da bebida em processo.
 
-### 42 - Um botão de compartilhar e um de favoritar a receita devem estar disponíveis.
+### 42 - Um botão de compartilhar e um de favoritar a receita devem estar disponíveis
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
-- Verifica se os botões estão disponíveis na tela de detalhes de uma comida;
-- Verifica se os botões estão disponíveis na tela de detalhes de uma bebida.
+  * Verifica se os botões estão disponíveis na tela de detalhes de uma comida;
+  * Verifica se os botões estão disponíveis na tela de detalhes de uma bebida.
 
-### 43 - Ao clicar no botão de compartilhar, o link da receita dentro do app deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer. O ícone do botão de compartilhar pode ser encontrado em `src/images/shareIcon.svg`.
+### 43 - Ao clicar no botão de compartilhar, o link da receita dentro do app deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer
 
-##### As seguintes verificações serão feitas:
+O ícone do botão de compartilhar pode ser encontrado em `src/images/shareIcon.svg`.
 
-- Verifica a mensagem "Link copiado!" e se o link da receita da comida foi copiado para o clipboard;
-- Verifica a mensagem "Link copiado!" e se o link da receita da bebida foi copiado para o clipboard.
+  **Observações técnicas**
 
-### 44 - O ícone do coração (favorito) deve vir preenchido caso a receita esteja favoritada, e "despreenchido" caso contrário. Os ícones dos botões podem ser encontrados em `src/images/whiteHeartIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
+  * Verifica a mensagem "Link copiado!" e se o link da receita da comida foi copiado para o clipboard;
+  * Verifica a mensagem "Link copiado!" e se o link da receita da bebida foi copiado para o clipboard.
 
-##### As seguintes verificações serão feitas:
+### 44 - O ícone do coração (favorito) deve vir preenchido caso a receita esteja favoritada e "despreenchido" caso contrário
 
-- Verifica se a comida favoritada vem com o coração preenchido;
-- Verifica se a comida não favoritada vem com o coração "despreenchido";
-- Verifica se a bebida favoritada vem com o coração preenchido;
-- Verifica se a bebida não favoritada vem com o coração "despreenchido".
+Os ícones dos botões podem ser encontrados em `src/images/whiteHeartIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
 
-### 45 - Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para "despreenchido" e vice-versa.
+  **Observações técnicas**
 
-##### As seguintes verificações serão feitas:
+  * Verifica se a comida favoritada vem com o coração preenchido;
+  * Verifica se a comida não favoritada vem com o coração "despreenchido";
+  * Verifica se a bebida favoritada vem com o coração preenchido;
+  * Verifica se a bebida não favoritada vem com o coração "despreenchido".
 
-- Favorita a comida;
-- Desfavorita a comida;
-- Favorita a bebida;
-- Desfavorita a bebida.
+### 45 - Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para "despreenchido" e vice-versa
 
-### 46 - As receitas favoritas devem ser salvas em `localStorage` na chave `favoriteRecipes` no formato `[{ id, type, area, category, alcoholicOrNot, name, image }]`. E as receitas feitas devem ser salvas em `localStorage` na chave `doneRecipes` no formato `[{ id, type, area, category, alcoholicOrNot, name, image, doneDate, tags }]`.
+  **Observações técnicas**
 
-##### As seguintes verificações serão feitas:
+  * Favorita a comida;
+  * Desfavorita a comida;
+  * Favorita a bebida;
+  * Desfavorita a bebida.
 
-- Verifica se após favoritar receita de uma comida, ela é salva corretamente no localStorage;
-- Verifica se após favoritar receita de uma bebida, ela é salva corretamente no localStorage.
+### 46 - As receitas favoritas devem ser salvas em `localStorage` na chave `favoriteRecipes` 
 
----
+  * O formato deve ser `[{ id, type, area, category, alcoholicOrNot, name, image }]`. 
+  * As receitas feitas devem ser salvas em `localStorage` na chave `doneRecipes` no formato `[{ id, type, area, category, alcoholicOrNot, name, image, doneDate, tags }]`.
 
-## Requisitos - Apresentação 2
+  **Observações técnicas**
 
-### 47 - A cobertura de testes unitários deve ser de no mínimo 90%.
+  * Verifica se após favoritar receita de uma comida, ela é salva corretamente no localStorage;
+  * Verifica se após favoritar receita de uma bebida, ela é salva corretamente no localStorage.
+
+### 47 - A cobertura de testes unitários deve ser de no mínimo 90%
 
 ## Tela de receita em processo
 

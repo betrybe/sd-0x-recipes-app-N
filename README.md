@@ -78,6 +78,15 @@ Nesse projeto você será capaz de:
     - [16 - Caso apenas uma receita seja encontrada, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL](#16---caso-apenas-uma-receita-seja-encontrada-a-rota-deve-mudar-para-a-tela-de-detalhes-da-receita-com-o-id-da-mesma-na-url)
     - [17 - Caso mais de uma receita seja encontrada, mostrar as receitas em cards da mesma maneira que a tela principal de receitas](#17---caso-mais-de-uma-receita-seja-encontrada-mostrar-as-receitas-em-cards-da-mesma-maneira-que-a-tela-principal-de-receitas)
     - [18 - Caso nenhuma receita seja encontrada, um `alert` contendo o texto "Sinto muito, não encontramos nenhuma receita para esses filtros." deve ser exibido](#18---caso-nenhuma-receita-seja-encontrada-um-alert-contendo-o-texto-sinto-muito-não-encontramos-nenhuma-receita-para-esses-filtros-deve-ser-exibido)
+  -[Menu inferior](#menu-inferior)
+    - [19 - Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas](#)
+    - [20 - Deve ser fixo e apresentar 3 ícones: um para comidas, um para bebidas e outro para exploração](#)
+    - [21 - O menu inferior só deve aparecer apenas nas telas indicadas pelo protótipo](#)
+    - [22 - Ao clicar no ícone de bebidas, a pessoa deve ser redirecionada para uma lista de cocktails](#)
+    - [23 - Ao clicar no ícone de exploração, a rota deve mudar para a tela de explorar](#)
+    - [24 - Ao clicar no ícone de comidas, a pessoa deve ser redirecionada para uma lista de comidas](#)
+  - [Tela principal de receitas](#tela-principal-de-receitas)
+  
 
   <details>
     <summary>Menu inferior</summary>

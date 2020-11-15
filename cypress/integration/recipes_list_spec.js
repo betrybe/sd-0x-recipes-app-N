@@ -95,7 +95,7 @@ describe('26 - Devem ser carregadas as 12 primeiras receitas de comidas ou bebid
   });
 });
 
-describe('A tela deve possuir botões de categoria para serem utilizados como filtro', () => {
+describe('27 - A tela deve possuir botões de categoria para serem utilizados como filtro', () => {
   it('Caso as receitas sejam de comida, deve-se exibir as 5 primeiras categorias de comida', () => {
     cy.visit('http://localhost:3000/comidas', {
       onBeforeLoad(win) {
@@ -129,7 +129,7 @@ describe('A tela deve possuir botões de categoria para serem utilizados como fi
   });
 });
 
-describe('Ao clicar no filtro de categoria, todas as receitas devem mudar para os dados filtrados da API', () => {
+describe('28 - Ao clicar no filtro de categoria, todas as receitas devem mudar para os dados filtrados da API', () => {
   it('Caso as receitas sejam de comida e a categoria seja "Beef", deve-se carregar as 12 primeiras receitas de "Beef"', () => {
     cy.visit('http://localhost:3000/comidas', {
       onBeforeLoad(win) {

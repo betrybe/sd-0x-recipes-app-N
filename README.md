@@ -122,6 +122,24 @@ Nesse projeto você será capaz de:
     - [45 - Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para "despreenchido" e vice-versa](#45---ao-clicar-no-botão-de-favoritar-o-ícone-do-coração-deve-mudar-de-seu-estado-atual-caso-esteja-preenchido-deve-mudar-para-despreenchido-e-vice-versa)
     - [46 - As receitas favoritas devem ser salvas em `localStorage` na chave `favoriteRecipes`](#46---as-receitas-favoritas-devem-ser-salvas-em-localstorage-na-chave-favoriterecipes)
     </details>
+  
+  <details>
+    <summary>Tela de receita em progresso</summary>
+
+    - []()
+    - []()
+    - []()
+    - []()
+    - []()
+    - []()
+    - []()
+    - []()
+    - []()
+    - []()
+    - []()
+    - []()
+    - []()
+  </details>
 
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
@@ -967,68 +985,87 @@ Os ícones dos botões podem ser encontrados em `src/images/whiteHeartIcon.svg` 
 
 <!-- ### 47 - A cobertura de testes unitários deve ser de no mínimo 90% -->
 
-## Tela de receita em processo
+## Tela de receita em progresso
 
-### 47 - Essa tela deve conter uma imagem da receita, seu titulo, sua categoria (ou se a bebida é alcoólica ou não) uma lista de ingredientes com suas respectivas quantidades, e suas instruções;
+### 47 - Essa tela deve conter uma imagem da receita, seu titulo, sua categoria (ou se a bebida é alcoólica ou não) uma lista de ingredientes com suas respectivas quantidade e suas instruções
+
+Verifica se os atributos data-testid estão presentes na tela com suas respectivas quantidades:
+
+  * A foto deve possuir o atributo `data-testid="recipe-photo"`;
+  * O título deve possuir o atributo `data-testid="recipe-title"`;
+  * O botão de compartilhar deve possuir o atributo `data-testid="share-btn"`;
+  * O botão de favoritar deve possuir o atributo `data-testid="favorite-btn"`;
+  * O texto da categoria deve possuir o atributo `data-testid="recipe-category"`;
+  * Os ingredientes devem possuir o atributo `data-testid=${index}-ingredient-step`, a verificação será feita pelo length do atributo.
+  * O elemento de instruções deve possuir o atributo `data-testid="instructions"`;
+  * O botão para finalizar a receita deve possuir o atributo `data-testid="finish-recipe-btn"`.
+
+  **Observações técnicas**
+
+  * Verifica elementos de uma receita de comida;
+  * Verifica elementos de uma receita de bebida.
+
+### 48 - A lista de ingredientes deve conter um checkbox para cada um dos items
+
+  **Observações técnicas**
+
+  * Todos os ingredientes de uma receita de comida possuem um checkbox;
+  * Todos os ingredientes de uma receita de bebida possuem um checkbox.
+
+### 49 - Ao clicar no checkbox de um ingrediente, o nome dele deve ser "riscado" da lista
+
+Ao clicar no checkbox, o item deve ser riscado, mostrando que esse passo foi finalizado
+
+  **Observações técnicas**
+
+  * Verifica se é possível marcar todos os passos da receita de comida;
+  * Verifica se é possível marcar todos os passos da receita de bebida.
+
+### 50 - O estado do progresso deve ser mantido caso a pessoa atualize a página ou volte para a mesma receita 
+
+O progresso das receitas devem ser salvos em `localStorage` na chave` inProgressRecipes` no formato especificado na seção [`localStorage`](#localStorage);
 
 ##### As seguintes verificações serão feitas:
 
-- A tela de receita de uma comida em processo possui todos os data-testid;
-- A tela de receita de uma bebida em processo possui todos os data-testid.
+- Salva o progresso de uma receita de comida em andamento;
+- Salva o progresso de uma receita de bebida em andamento;
 
-### 48 - A lista de ingredientes deve conter um checkbox para cada um dos items;
+### 51 - A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
-- Cada ingrediente de uma receita de comida deve possuir um checkbox;
-- Cada ingrediente de uma receita de bebida deve possuir um checkbox.
-
-### 49 - Ao clicar no checkbox de um ingrediente, o nome dele deve ser "riscado" da lista;
-
-##### As seguintes verificações serão feitas:
-
-- Verifica se ao marcar clicar em um checkbox de um ingrediente de uma comida, o nome aparecerá riscado, mostrando que esse passo foi finalizado;
-- Verifica se ao marcar clicar em um checkbox de um ingrediente de uma bebida, o nome aparecerá riscado, mostrando que esse passo foi finalizado.
-
-### 50 - O estado do progresso deve ser mantido caso a pessoa atualize a pagina ou volte para a mesma receita. O progresso das receitas devem ser salvos em `localStorage` na chave` inProgressRecipes` no formato especificado na seção [`localStorage`](#localStorage);
-
-##### As seguintes verificações serão feitas:
-
-- Recarrega a página em progresso de um comida e espera que os ingredientes já marcados, continuam marcados;
-- Recarrega a página em progresso de um bebida e espera que os ingredientes já marcados, continuam marcados;
-
-### 51 - A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui;
-
-##### As seguintes verificações serão feitas:
-
-- Verifica a mensagem "Link copiado!" e se o link da receita da comida foi copiado para o clipboard;
-- Verifica a mensagem "Link copiado!" e se o link da receita da bebida foi copiado para o clipboard;
-- Verifica se a comida favoritada vem com o coração preenchido;
-- Verifica se a comida não favoritada vem com o coração "despreenchido";
-- Verifica se a bebida favoritada vem com o coração preenchido;
-- Verifica se a bebida não favoritada vem com o coração "despreenchido";
-- Favorita a comida;
-- Desfavorita a comida;
-- Favorita a bebida;
-- Desfavorita a bebida;
-- Verifica se após favoritar receita de uma comida, ela é salva corretamente no localStorage;
-- Verifica se após favoritar receita de uma bebida, ela é salva corretamente no localStorage.
+  * Verifica se os botões estão disponíveis na tela de detalhes de uma comida;
+  * Verifica se os botões estão disponíveis na tela de detalhes de uma bebida;
+  * Verifica a mensagem "Link copiado!" e se o link da receita da comida foi copiado para o clipboard;
+  * Verifica a mensagem "Link copiado!" e se o link da receita da bebida foi copiado para o clipboard;
+  * Verifica comida favoritada;
+  * Verifica comida não favoritada;
+  * Verifica bebida favoritada;
+  * Verifica bebida não favoritada;
+  * Favorita comida;
+  * Desfavorita comida;
+  * Favorita bebida;
+  * Desfavorita bebida;
+  * Favorita receita de uma comida;
+  * Favorita receita de uma bebida.
 
 ### 52 - O botão de finalizar receita só pode estar habilitado quando todos os ingredientes estiverem _"checkados"_ (marcados);
 
-##### As seguintes verificações serão feitas:
+  O botão deve ficar desabilitado em quanto todos os checkboxs não forem marcados.
 
-- Botão de finalizar receita de comida está desabilitado enquanto todos os checkboxs não estiverem marcados;
-- Botão de finalizar receita de bebida está desabilitado enquanto todos os checkboxs não estiverem marcados;
-- Botão de finalizar receita de comida está habilitado quando todos os checkboxs estiverem marcados;
-- Botão de finalizar receita de bebida está habilitado quando todos os checkboxs estiverem marcados.
+  **Observações técnicas**
+
+  * Verifica se botão para finalizar está desabilitado em receitas de comidas;
+  * Verifica se botão para finalizar está desabilitado em receitas de bebidas;
+  * Verifica se botão para finalizar está habilitado em receitas de comidas;
+  * Verifica se botão para finalizar está habilitado em receitas de bebidas.
 
 ### 53 - Após clicar no botão "Finalizar receita", a rota deve mudar para a página de receitas feitas, cuja rota deve ser `/receitas-feitas`.
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
-- A pessoa é redirecionada para a tela de receitas feitas após finalizar uma receita de comida;
-- A pessoa é redirecionada para a tela de receitas feitas após finalizar uma receita de bebida.
+  * Redireciona após concluir uma receita de comida;
+  * Redireciona após concluir uma receita de bebida.
 
 ## Tela de receitas feitas
 

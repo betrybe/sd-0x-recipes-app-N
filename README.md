@@ -1063,7 +1063,7 @@ O progresso das receitas devem ser salvos em `localStorage` na chave` inProgress
 
 ## Tela de receitas feitas
 
-### 55 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas feitas.
+### 54 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas feitas.
 
 ### 56 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, a data em que a pessoa fez a receita, as 2 primeiras tags retornadas pela API e um botão de compartilhar. O ícone do botão de compartilhar pode ser encontrado em `src/images/shareIcon.svg`.
 

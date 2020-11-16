@@ -188,11 +188,21 @@ Nesse projeto você será capaz de:
   <details>
     <summary>Tela de explorar por local de origem/area</summary>
 
-  - []()
-  - []()
-  - []()
-  - []()
-  - []()
+  - [78 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem]()
+  - [79 - A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown]()
+  - [80 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro]()
+  </details>
+
+  <details>
+    <summary>Tela de perfil</summary>
+
+  - [81 - A rota deve ser apenas `/explorar/comidas/area`]()
+  - [82 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de perfil]()
+  - [83 - O e-mail da pessoa usuária deve estar visível]()
+  - [84 - Essa tela deve conter 3 botões: um de nome "Receitas Feitas", um de nome "Receitas Favoritas" e um de nome "Sair"]()
+  - [85 - Ao clicar no botão de "Receitas Favoritas", a rota deve mudar para a tela de receitas favoritas]()
+  - [86 - Ao clicar no botão de "Receitas Feitas", a rota deve mudar para a tela de receitas feitas]()
+  - [87 - Ao clicar no botão de "Sair", o `localStorage` deve ser limpo e a rota deve mudar para a tela de login]()
   </details>
 
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
@@ -1315,6 +1325,12 @@ Obs: se a opção escolhida for explorar bebidas, o botão para explorar por loc
 ## Tela de explorar por local de origem/area
 
 ### 78 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem
+
+  O elemento de dropdown deve possuir o atributo `data-testid="explore-by-area-dropdown"` e suas opções devem possuir o atributo `[data-testid="${area}-option"]`.
+
+  **Observações técnicas**
+
+  * A tela tem os data-testids de todos os 12 cards e de todos os locais de origem.
 
 ### 79 - A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown
 

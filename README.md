@@ -158,6 +158,13 @@ Nesse projeto você será capaz de:
     - [66 - Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita](#66---ao-clicar-na-foto-ou-no-nome-da-receita-a-rota-deve-mudar-para-a-tela-de-detalhes-daquela-receita)
   </details>
 
+  <details>
+    <summary>Tela de explorar</summary>
+
+    - []()
+
+  </details>
+
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
   - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
@@ -1194,43 +1201,53 @@ Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente
 
 ## Tela de explorar
 
-### 68 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar.
+### 67 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar
 
-### 69 - A tela deve ter dois botões: um para explorar comidas e o outro para explorar bebidas. O nomes dos botões devem ser "Explorar Comidas" e "Explorar Bebidas", respectivamente.
+  **Observações técnicas**
 
-### 70 - Ao clicar em um dos botões, a rota deve mudar para a página de explorar comidas ou de explorar bebidas.
+  * Tem os data-testids explore-food e explore-drinks. 
 
-##### As seguintes verificações serão feitas:
+### 68 - A tela deve ter dois botões: um para explorar comidas e o outro para explorar bebidas. O nomes dos botões devem ser "Explorar Comidas" e "Explorar Bebidas", respectivamente
 
-- Ao clicar no botão "Explorar Comidas" a rota muda para a página de explorar comidas;
-- Ao clicar no botão "Explorar Bebidas" a rota muda para a página de explorar bebidas.
+Verifica se o atributo `data-testid="explore-drinks"` possui o texto "Explorar Comidas" e se o `data-testid="explore-drinks"` possui o texto "Explorar Bebidas".
+
+  **Observações técnicas**
+
+  * O nomes dos botões devem ser "Explorar Comidas" e "Explorar Bebidas".
+
+### 69 - Ao clicar em um dos botões, a rota deve mudar para a página de explorar comidas ou de explorar bebidas
+
+  **Observações técnicas**
+
+  * Ao clicar no botão "Explorar Comidas" a rota muda para a página de explorar comidas;
+  * Ao clicar no botão "Explorar Bebidas" a rota muda para a página de explorar bebidas.
 
 ## Tela de explorar bebidas ou comidas
 
-### 71 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar bebidas ou comidas.
+### 70 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar bebidas ou comidas.
 
 ##### As seguintes verificações serão feitas:
 
 - Tem os data-testids corretos para a tela de explorar comidas;
 - Tem os data-testids corretos para a tela de explorar bebidas.
 
-### 72 - A tela deve ter três botões: um para explorar por ingrediente, um para explorar por local de origem e um para pegar uma receita aleatória. O nomes dos botões devem ser "Por Ingredientes", "Por Local de Origem" e "Me Surpreenda!", respectivamente. Obs: se a opção escolhida for explorar bebidas, o botão para explorar por local de origem não deve estar disponível.
+### 71 - A tela deve ter três botões: um para explorar por ingrediente, um para explorar por local de origem e um para pegar uma receita aleatória. O nomes dos botões devem ser "Por Ingredientes", "Por Local de Origem" e "Me Surpreenda!", respectivamente. Obs: se a opção escolhida for explorar bebidas, o botão para explorar por local de origem não deve estar disponível.
 
 ##### As seguintes verificações serão feitas:
 
 - Tem os botões "Por Ingredientes", "Por Local de Origem" e "Me Surpreenda!" para a tela de explorar comidas;
 - Tem apenas os botões "Por Ingredientes" e "Me Surpreenda!" para a tela de explorar bebidas.
 
-### 73 - Ao clicar em "Por Ingredientes", a rota deve mudar para tela de explorar ingredientes.
+### 71 - Ao clicar em "Por Ingredientes", a rota deve mudar para tela de explorar ingredientes.
 
 ##### As seguintes verificações serão feitas:
 
 - Ao clicar no botão "Por Ingredientes" da tela de explorar comidas a rota muda para a página de explorar comidas por ingrediente;
 - Ao clicar no botão "Explorar Bebidas" da tela de explorar bebidas a rota muda para a página de explorar bebidas por ingrediente.
 
-### 74 - Ao clicar em "Por Local de Origem", a rota deve mudar para tela de explorar por local de origem.
+### 73 - Ao clicar em "Por Local de Origem", a rota deve mudar para tela de explorar por local de origem.
 
-### 75 - Ao clicar em "Me Surpreenda!", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória através da API.
+### 74 - Ao clicar em "Me Surpreenda!", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória através da API.
 
 ##### As seguintes verificações serão feitas:
 
@@ -1239,21 +1256,21 @@ Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente
 
 ## Tela de explorar ingredientes
 
-### 76 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar ingredientes.
+### 75 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar ingredientes.
 
 ##### As seguintes verificações serão feitas:
 
 - Tem os data-testids corretos para a tela de explorar comidas por ingredientes;
 - Tem os data-testids corretos para a tela de explorar bebidas por ingredientes.
 
-### 77 - A tela deve ter cards para os 12 primeiros ingredientes, de forma que cada card contêm: o nome do ingrediente e uma foto.
+### 76 - A tela deve ter cards para os 12 primeiros ingredientes, de forma que cada card contêm: o nome do ingrediente e uma foto.
 
 ##### As seguintes verificações serão feitas:
 
 - Tem o nome e a foto corretos para a tela de explorar comidas por ingredientes;
 - Tem o nome e a foto corretos para a tela de explorar bebidas por ingredientes.
 
-### 78 -  Ao clicar no card do ingrediente a rota deve mudar para tela principal de receitas, mas mostrando apenas as receitas que contém o ingrediente escolhido.
+### 77 -  Ao clicar no card do ingrediente a rota deve mudar para tela principal de receitas, mas mostrando apenas as receitas que contém o ingrediente escolhido.
 
 ##### As seguintes verificações serão feitas:
 
@@ -1262,9 +1279,9 @@ Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente
 
 ## Tela de explorar por local de origem/area
 
-### 79 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem.
+### 78 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem.
 
-### 80 - A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown.
+### 79 - A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown.
 
 ##### As seguintes verificações serão feitas:
 
@@ -1272,28 +1289,28 @@ Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente
 - Ao selecionar um filtro de local de origem, todas as receitas devem mudar para os dados filtrados da API;
 - Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL.
 
-### 81 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro.
+### 80 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro.
 
 ##### As seguintes verificações serão feitas:
 
 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All";
 - A opção "All" retorna as receitas sem nenhum filtro.
 
-### 82 - A rota deve ser apenas `/explorar/comidas/area`. A rota `/explorar/bebidas/area` não deve estar disponível, retornando um erro de "Not Found".
+### 81 - A rota deve ser apenas `/explorar/comidas/area`. A rota `/explorar/bebidas/area` não deve estar disponível, retornando um erro de "Not Found".
 
 ## Tela de perfil
 
-### 83 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de perfil.
+### 82 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de perfil.
 
-### 84 - O e-mail da pessoa usuária deve estar visível.
+### 83 - O e-mail da pessoa usuária deve estar visível.
 
-### 85 - Essa tela deve conter 3 botões: um de nome "Receitas Feitas", um de nome "Receitas Favoritas" e um de nome "Sair".
+### 84 - Essa tela deve conter 3 botões: um de nome "Receitas Feitas", um de nome "Receitas Favoritas" e um de nome "Sair".
 
-### 86 - Ao clicar no botão de "Receitas Favoritas", a rota deve mudar para a tela de receitas favoritas.
+### 85 - Ao clicar no botão de "Receitas Favoritas", a rota deve mudar para a tela de receitas favoritas.
 
-### 87 - Ao clicar no botão de "Receitas Feitas", a rota deve mudar para a tela de receitas feitas.
+### 86 - Ao clicar no botão de "Receitas Feitas", a rota deve mudar para a tela de receitas feitas.
 
-### 88 - Ao clicar no botão de "Sair", o `localStorage` deve ser limpo e a rota deve mudar para a tela de login.
+### 87 - Ao clicar no botão de "Sair", o `localStorage` deve ser limpo e a rota deve mudar para a tela de login.
 
 ##### As seguintes verificações serão feitas:
 

@@ -146,6 +146,11 @@ Nesse projeto você será capaz de:
     - [59 - Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita](#59---ao-clicar-na-foto-ou-no-nome-da-receita-a-rota-deve-mudar-para-a-tela-de-detalhes-daquela-receita)
   </details>
 
+ <details>
+  <summary>Tela de receitas favoritas</summary>
+
+ </details>
+
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
   - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
@@ -1131,40 +1136,54 @@ Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente.
 
 ## Tela de receitas favoritas
 
-### 61 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas favoritas (cumulativo com os atributos em comum com a tela de receitas feitas).
+### 60 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas favoritas (cumulativo com os atributos em comum com a tela de receitas feitas)
 
-### 62 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de "desfavoritar". Os ícones dos botões podem ser encontrados em `src/images/shareIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
+### 61 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de "desfavoritar"
 
-### 63 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica ou não, um botão de compartilhar e um de "desfavoritar". Os ícones dos botões podem ser encontrados em `src/images/shareIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
+Os ícones dos botões podem ser encontrados em `src/images/shareIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
 
-### 64 - O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard.
+  **Observações técnicas**
 
-##### As seguintes verificações serão feitas:
+  * O card possui os atributos corretos de uma comida.
 
-- Ao clicar no botão de compartilhar deve aparecer a mensagem "Link copiado!";
-- A URL da tela de detalhes da receita é copiada para o clipboard.
+### 62 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica ou não, um botão de compartilhar e um de "desfavoritar"
 
-### 65 - O botão de "desfavoritar" deve remover a receita da lista de receitas favoritas do `localStorage` e da tela.
+Os ícones dos botões podem ser encontrados em `src/images/shareIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
-- Ao clicar no botão de "desfavoritar" a respectiva receita é removida da tela;
-- Ao clicar no botão de "desfavoritar" a respectiva receita é removida do `localStorage`.
+  * O card possui os atributos corretos de uma bebida.
 
-### 66 - Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros. Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente.
+### 63 - O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
-- Ao clicar no botão "Food" as receitas devem ser filtradas por comidas;
-- Ao clicar no botão "Drinks" as receitas devem ser filtradas por bebidas;
-- Ao clicar no botão "All" o filtro deve ser removido.
+  * Ao clicar no botão de compartilhar deve aparecer a mensagem "Link copiado!";
+  * A URL da tela de detalhes da receita é copiada para o clipboard.
 
-### 67 - Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita.
+### 64 - O botão de "desfavoritar" deve remover a receita da lista de receitas favoritas do `localStorage` e da tela
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
-- Ao clicar na foto da receita, a rota deve mudar para a tela de detalhes daquela receita;
-- Ao clicar no nome da receita, a rota deve mudar para a tela de detalhes daquela receita.
+  * Ao clicar no botão de "desfavoritar" a respectiva receita é removida da tela;
+  * Ao clicar no botão de "desfavoritar" a respectiva receita é removida do `localStorage`.
+
+### 65 - Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros
+
+Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente
+
+  **ObservaçÕes técnicas**
+
+ * Ao clicar no botão "Food" as receitas devem ser filtradas por comidas;
+ * Ao clicar no botão "Drinks" as receitas devem ser filtradas por bebidas;
+ * Ao clicar no botão "All" o filtro deve ser removido.
+
+### 66 - Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita
+
+  **Observações técnicas**
+
+ * Ao clicar na foto da receita, a rota deve mudar para a tela de detalhes daquela receita;
+ * Ao clicar no nome da receita, a rota deve mudar para a tela de detalhes daquela receita.
 
 ## Tela de explorar
 

@@ -146,16 +146,17 @@ Nesse projeto você será capaz de:
     - [59 - Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita](#59---ao-clicar-na-foto-ou-no-nome-da-receita-a-rota-deve-mudar-para-a-tela-de-detalhes-daquela-receita)
   </details>
 
- <details>
-  <summary>Tela de receitas favoritas</summary>
+  <details>
+    <summary>Tela de receitas favoritas</summary>
 
-  - [60 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas favoritas (cumulativo com os atributos em comum com a tela de receitas feitas)](#60--Todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-de-receitas-favoritas-(cumulativo-com-os-atributos-em-comum-com-a-tela-de-receitas-feitas))
-  - [61 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de "desfavoritar"]()
-  - [62 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica ou não, um botão de compartilhar e um de "desfavoritar"]()
-  - [63 - O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard]()
-  - [64 - O botão de "desfavoritar" deve remover a receita da lista de receitas favoritas do `localStorage` e da tela]()
-  - [65 - Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros]()
- </details>
+    - [60 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas favoritas (cumulativo com os atributos em comum com a tela de receitas feitas)](#60---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-de-receitas-favoritas-cumulativo-com-os-atributos-em-comum-com-a-tela-de-receitas-feitas)
+    - [61 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de "desfavoritar"](#61---caso-a-receita-do-card-seja-uma-comida-ela-deve-possuir-a-foto-da-receita-o-nome-a-categoria-a-area-um-botão-de-compartilhar-e-um-de-desfavoritar)
+    - [62 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica ou não, um botão de compartilhar e um de "desfavoritar"](#62---caso-a-receita-do-card-seja-uma-bebida-ela-deve-possuir-a-foto-da-receita-o-nome-se-é-alcoólica-ou-não-um-botão-de-compartilhar-e-um-de-desfavoritar)
+    - [63 - O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard](#63---o-botão-de-compartilhar-deve-copiar-a-url-da-tela-de-detalhes-da-receita-para-o-clipboard)
+    - [64 - O botão de "desfavoritar" deve remover a receita da lista de receitas favoritas do `localStorage` e da tela](#64---o-botão-de-desfavoritar-deve-remover-a-receita-da-lista-de-receitas-favoritas-do-localstorage-e-da-tela)
+    - [65 - Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros](#65---devem-existir-2-botões-que-filtram-as-receitas-por-comida-ou-bebida-e-um-terceiro-que-remove-todos-os-filtros)
+    - [66 - Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita](#66---ao-clicar-na-foto-ou-no-nome-da-receita-a-rota-deve-mudar-para-a-tela-de-detalhes-daquela-receita)
+  </details>
 
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)

@@ -41,7 +41,7 @@ Nesse projeto você será capaz de:
     <summary>Testes unitários</summary>
 
     <!-- - [Testes unitários](#testes-unitários) -->
-    - [1 - A cobertura de testes unitários deve ser de no mínimo 90%](#1---a-cobertura-de-testes-unit%C3%A1rios-deve-ser-de-no-m%C3%ADnimo-90)
+    - [1 - Desenvolva os testes unitários de maneira que a seja de, no mínimo, 90%](#1---a-cobertura-de-testes-unit%C3%A1rios-deve-ser-de-no-m%C3%ADnimo-90)
 
   </details>
 
@@ -49,46 +49,45 @@ Nesse projeto você será capaz de:
     <summary>Tela de Login</summary>
 
     <!-- - [Tela de login](#tela-de-login) -->
-    - [2 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de login](#2---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-de-login)
-    - [3 - A pessoa deve conseguir escrever seu email no input de email](#3---a-pessoa-deve-conseguir-escrever-seu-email-no-input-de-email)
-    - [4 - A pessoa deve conseguir escrever sua senha no input de senha](#4---a-pessoa-deve-conseguir-escrever-sua-senha-no-input-de-senha)
-    - [5 - O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos](#5---o-formulário-só-fica-válido-após-um-email-válido-e-uma-senha-de-mais-de-6-caracteres-serem-preenchidos)
-    - [6 - Após a submissão, 2 tokens devem ser salvos em localStorage identificados pelas chaves mealsToken e cocktailsToken](#6---após-a-submissão-2-tokens-devem-ser-salvos-em-localstorage-identificados-pelas-chaves-mealstoken-e-cocktailstoken)
-    - [7 - Desenvolva o estilo que, ao clicar em uma resposta, a correta deve ficar verde e as incorretas, vermelhas](#7---após-a-submissão-o-e-mail-de-pessoa-usuária-deve-ser-salvo-em-localstorage-na-chave-user)
-    - [8 -  Após a submissão e validação com sucesso do login, o usuário deve ser redirecionado para a tela principal de receitas de comidas](#8---após-a-submissão-e-validação-com-sucesso-do-login-o-usuário-deve-ser-redirecionado-para-a-tela-principal-de-receitas-de-comidas)
+    - [2 - Crie todos os elementos que devem respeitar os atributos descritos no protótipo para a tela de login](#2---crie-todos-os-elementos-que-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-de-login)
+    - [3 - Desenvolva a tela de maneira que a pessoa deve conseguir escrever seu email no input de email](#3---a-pessoa-deve-conseguir-escrever-seu-email-no-input-de-email)
+    - [4 - Desenvolva a tela de maneira que a pessoa deve conseguir escrever sua senha no input de senha](#4---a-pessoa-deve-conseguir-escrever-sua-senha-no-input-de-senha)
+    - [5 - Desenvolva a tela de maneira que o formulário só seja válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos](#5---o-formulário-só-fica-válido-após-um-email-válido-e-uma-senha-de-mais-de-6-caracteres-serem-preenchidos)
+    - [6 - Salve 2 tokens no localStorage após a submissão, identificados pelas chaves mealsToken e cocktailsToken](#6---após-a-submissão-2-tokens-devem-ser-salvos-em-localstorage-identificados-pelas-chaves-mealstoken-e-cocktailstoken)
+    - [7 - Salve o e-mail da pessoa usuária no localStorage na chave user após a submissão](#7---após-a-submissão-o-e-mail-de-pessoa-usuária-deve-ser-salvo-em-localstorage-na-chave-user)
+    - [8 - Redirecione a pessoa usuária para a tela principal de receitas de comidas após a submissão e validação com sucesso do login](#8---após-a-submissão-e-validação-com-sucesso-do-login-o-usuário-deve-ser-redirecionado-para-a-tela-principal-de-receitas-de-comidas)
   </details>
 
   <details>
     <summary>Header</summary>
 
-    <!-- - [Header](#header) -->
-    - [9 - Todos os elementos devem respeitar os atributos descritos no protótipo para o header disponível na tela principal de receitas](#9---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-o-header-disponível-na-tela-principal-de-receitas)
-    - [10 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo) ](#10---deve-apresentar-um-ícone-para-a-tela-de-perfil-um-título-e-um-ícone-para-a-busca-caso-exista-no-protótipo)
-    - [11 - Ao clicar no botão de perfil, deve-se ir para a tela de perfil](#11---ao-clicar-no-botão-de-perfil-deve-se-ir-para-a-tela-de-perfil)
-    - [12 - Ao clicar no botão de busca, a barra de busca deve aparecer. O mesmo serve para escondê-la](#12---ao-clicar-no-botão-de-busca-a-barra-de-busca-deve-aparecer-o-mesmo-serve-para-escondê-la)
+    - [9 - Implemente os elementos do header na tela principal de receitas, respeitando os atributos descritos no protótipo](#9---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-o-header-disponível-na-tela-principal-de-receitas)
+    - [10 - Implemente um ícone para a tela de perfil, um título e um ícone para a busca, caso exista no protótipo](#10---deve-apresentar-um-ícone-para-a-tela-de-perfil-um-título-e-um-ícone-para-a-busca-caso-exista-no-protótipo)
+    - [11 - Redirecione a pessoa usuária para a tela de perfil ao clicar no botão de perfil](#11---ao-clicar-no-botão-de-perfil-deve-se-ir-para-a-tela-de-perfil)
+    - [12 - Desenvolva o botão de busca que, ao ser clicado, a barra de busca deve aparecer. O mesmo serve para escondê-la](#12---ao-clicar-no-botão-de-busca-a-barra-de-busca-deve-aparecer-o-mesmo-serve-para-escondê-la)
   </details>
 
   <details>
     <summary>Barra de busca</summary>
 
     <!-- - [Barra de busca - Header](#barra-de-busca---header) -->
-    - [13 - Todos os elementos devem respeitar os atributos descritos no protótipo para a barra de busca](#13---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-barra-de-busca)
-    - [14 - A barra de busca deve ficar logo abaixo do header e deve possuir 3 radio buttons: Ingrediente, Nome e Primeira letra. Eles devem mudar a forma como serão filtradas as receitas](#14---a-barra-de-busca-deve-ficar-logo-abaixo-do-header-e-deve-possuir-3-radio-buttons-ingrediente-nome-e-primeira-letra-eles-devem-mudar-a-forma-como-serão-filtradas-as-receitas)
-    - [15 - A busca deve ocorrer na API de comidas caso a pessoa esteja na página de comidas e na de bebidas caso esteja na de bebidas](#15---a-busca-deve-ocorrer-na-api-de-comidas-caso-a-pessoa-esteja-na-página-de-comidas-e-na-de-bebidas-caso-esteja-na-de-bebidas)
-    - [16 - Caso apenas uma receita seja encontrada, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL](#16---caso-apenas-uma-receita-seja-encontrada-a-rota-deve-mudar-para-a-tela-de-detalhes-da-receita-com-o-id-da-mesma-na-url)
-    - [17 - Caso mais de uma receita seja encontrada, mostrar as receitas em cards da mesma maneira que a tela principal de receitas](#17---caso-mais-de-uma-receita-seja-encontrada-mostrar-as-receitas-em-cards-da-mesma-maneira-que-a-tela-principal-de-receitas)
-    - [18 - Caso nenhuma receita seja encontrada, um `alert` contendo o texto "Sinto muito, não encontramos nenhuma receita para esses filtros." deve ser exibido](#18---caso-nenhuma-receita-seja-encontrada-um-alert-contendo-o-texto-sinto-muito-não-encontramos-nenhuma-receita-para-esses-filtros-deve-ser-exibido)
+    - [13 - Implemente os elementos da barra de busca respeitando os atributos descritos no protótipo](#13---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-barra-de-busca)
+    - [14 - Posicione a barra logo abaixo do header e implemente 3 radio buttons: Ingrediente, Nome e Primeira letra](#14---a-barra-de-busca-deve-ficar-logo-abaixo-do-header-e-deve-possuir-3-radio-buttons-ingrediente-nome-e-primeira-letra-eles-devem-mudar-a-forma-como-serão-filtradas-as-receitas)
+    - [15 - Busque na API de comidas caso a pessoa esteja na página de comidas e na de bebidas caso esteja na de bebidas](#15---a-busca-deve-ocorrer-na-api-de-comidas-caso-a-pessoa-esteja-na-página-de-comidas-e-na-de-bebidas-caso-esteja-na-de-bebidas)
+    - [16 - Redirecione para a tela de detalhes da receita caso apenas uma receita seja encontrada, com o ID da mesma na URL](#16---caso-apenas-uma-receita-seja-encontrada-a-rota-deve-mudar-para-a-tela-de-detalhes-da-receita-com-o-id-da-mesma-na-url)
+    - [17 - Mostre as receitas em cards caso mais de uma receita seja encontrada](#17---caso-mais-de-uma-receita-seja-encontrada-mostrar-as-receitas-em-cards-da-mesma-maneira-que-a-tela-principal-de-receitas)
+    - [18 - Exiba um `alert` caso nenhuma receita seja encontrada](#18---caso-nenhuma-receita-seja-encontrada-um-alert-contendo-o-texto-sinto-muito-não-encontramos-nenhuma-receita-para-esses-filtros-deve-ser-exibido)
   </details>
 
   <details>
     <summary>Menu inferior</summary>
   
-    - [19 - Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas](#19---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-o-menu-inferior-disponível-na-tela-principal-de-receitas)
-    - [20 - Deve ser fixo e apresentar 3 ícones: um para comidas, um para bebidas e outro para exploração](#20---deve-ser-fixo-e-apresentar-3-ícones-um-para-comidas-um-para-bebidas-e-outro-para-exploração)
-    - [21 - O menu inferior só deve aparecer apenas nas telas indicadas pelo protótipo](#21---o-menu-inferior-só-deve-aparecer-apenas-nas-telas-indicadas-pelo-protótipo)
-    - [22 - Ao clicar no ícone de bebidas, a pessoa deve ser redirecionada para uma lista de cocktails](#22---ao-clicar-no-ícone-de-bebidas-a-pessoa-deve-ser-redirecionada-para-uma-lista-de-cocktails)
-    - [23 - Ao clicar no ícone de exploração, a rota deve mudar para a tela de explorar](#23---ao-clicar-no-ícone-de-exploração-a-rota-deve-mudar-para-a-tela-de-explorar)
-    - [24 - Ao clicar no ícone de comidas, a pessoa deve ser redirecionada para uma lista de comidas](#24---ao-clicar-no-ícone-de-comidas-a-pessoa-deve-ser-redirecionada-para-uma-lista-de-comidas)
+    - [19 - Implemente os elementos do menu inferior respeitando os atributos descritos no protótipo](#19---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-o-menu-inferior-disponível-na-tela-principal-de-receitas)
+    - [20 - Posicione o menu inferior de forma fixa e apresente 3 ícones: um para comidas, um para bebidas e outro para exploração](#20---deve-ser-fixo-e-apresentar-3-ícones-um-para-comidas-um-para-bebidas-e-outro-para-exploração)
+    - [21 - Exiba o menu inferior apenas nas telas indicadas pelo protótipo](#21---o-menu-inferior-só-deve-aparecer-apenas-nas-telas-indicadas-pelo-protótipo)
+    - [22 - Redirecione a pessoa usuária para uma lista de cocktails ao clicar no ícone de bebidas](#22---ao-clicar-no-ícone-de-bebidas-a-pessoa-deve-ser-redirecionada-para-uma-lista-de-cocktails)
+    - [23 - Redirecione a pessoa usuária para a tela de explorar ao clicar no ícone de exploração](#23---ao-clicar-no-ícone-de-exploração-a-rota-deve-mudar-para-a-tela-de-explorar)
+    - [24 - Redirecione a pessoa usuárua para uma lista de comidas ao clicar no ícone de comidas](#24---ao-clicar-no-ícone-de-comidas-a-pessoa-deve-ser-redirecionada-para-uma-lista-de-comidas)
   </details>
 
   <details>
@@ -646,11 +645,11 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
 
 ## Testes unitários
 
-### 1 - A cobertura de testes unitários deve ser de no mínimo 90%
+### 1 - Desenvolva os testes unitários de maneira que a seja de, no mínimo, 90%
 
 ## Tela de login
 
-### 2 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de login
+### 2 - Crie todos os elementos que devem respeitar os atributos descritos no protótipo para a tela de login
 
   **Observações técnicas**
 
@@ -658,11 +657,11 @@ As telas sofrem variações dependendo do tipo da receita (se é comida ou bebid
   * O input de senha deve possuir o atributo `data-testid="password-input"`;
   * O botão "Entrar" deve possuir o atributo `data-testid="login-submit-btn"`.
 
-### 3 - A pessoa deve conseguir escrever seu email no input de email
+### 3 - Desenvolva a tela de maneira que a pessoa deve conseguir escrever seu email no input de email
 
-### 4 - A pessoa deve conseguir escrever sua senha no input de senha
+### 4 - Desenvolva a tela de maneira que a pessoa deve conseguir escrever sua senha no input de senha
 
-### 5 - O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos
+### 5 - Desenvolva a tela de maneira que o formulário só seja válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos
 
 O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos. Caso o formulário esteja inválido, o botão de submeter deve estar desativado, contendo a propriedade `disabled`. Caso contrário, deve estar ativado, não contendo a propriedade `disabled`.
 
@@ -673,19 +672,19 @@ O formulário só fica válido após um email válido e uma senha de mais de 6 c
   * O botão deve estar ativado se o email e a senha forem válidos.
 
 
-### 6 - Após a submissão, 2 tokens devem ser salvos em `localStorage` identificados pelas chaves `mealsToken` e `cocktailsToken`
+### 6 - Salve 2 tokens no localStorage após a submissão, identificados pelas chaves mealsToken e cocktailsToken
 
   **Observações técnicas**
 
   * O token de teste é sempre `1`.
 
-### 7 - Após a submissão, o e-mail de pessoa usuária deve ser salvo em localStorage na chave user
+### 7 - Salve o e-mail da pessoa usuária no localStorage na chave user após a submissão
 
-  **Observações ténicas**
+  **Observações técnicas**
 
   * Após a submissão, o e-mail de pessoa usuária deve ser salvo em `localStorage` na chave `user` no formato `{ email: email-da-pessoa }`.
 
-### 8 - Após a submissão e validação com sucesso do login, o usuário deve ser redirecionado para a tela principal de receitas de comidas
+### 8 - Redirecione a pessoa usuária para a tela principal de receitas de comidas após a submissão e validação com sucesso do login
 
   **Observações técnicas**
 
@@ -693,14 +692,14 @@ O formulário só fica válido após um email válido e uma senha de mais de 6 c
 
 ## Header
 
-### 9 - Todos os elementos devem respeitar os atributos descritos no protótipo para o header disponível na tela principal de receitas
+### 9 - Implemente os elementos do header na tela principal de receitas, respeitando os atributos descritos no protótipo
 
   **Observações técnicas**
 
   * Possui os data-testids `profile-top-btn`, `page-title` e `search-top-btn`.
 
 
-### 10 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo) 
+### 10 - Implemente um ícone para a tela de perfil, um título e um ícone para a busca, caso exista no protótipo
 
 Todas as [rotas](#rotas) serão verificadas. Os ícones podem ser encontrados em `src/images/profileIcon.svg` e em `src/images/searchIcon.svg`.
 
@@ -723,13 +722,13 @@ Todas as [rotas](#rotas) serão verificadas. Os ícones podem ser encontrados em
   * O header tem os ícones corretos na tela de receitas feitas;
   * O header tem os ícones corretos na tela de receitas favoritas.
 
-### 11 - Ao clicar no botão de perfil, deve-se ir para a tela de perfil
+### 11 - Redirecione a pessoa usuária para a tela de perfil ao clicar no botão de perfil
 
   **Observações técnicas**
 
   * A mudança de tela ocorre.
 
-### 12 - Ao clicar no botão de busca, a barra de busca deve aparecer. O mesmo serve para escondê-la
+### 12 - Desenvolva o botão de busca que, ao ser clicado, a barra de busca deve aparecer. O mesmo serve para escondê-la
 
   **Observações técnicas**
   
@@ -738,7 +737,7 @@ Todas as [rotas](#rotas) serão verificadas. Os ícones podem ser encontrados em
 
 ## Barra de busca - Header
 
-### 13 - Todos os elementos devem respeitar os atributos descritos no protótipo para a barra de busca
+### 13 - Implemente os elementos da barra de busca respeitando os atributos descritos no protótipo
 
 Deve existir os data-testids tanto da barra de busca quanto de todos os radio-buttons.
 
@@ -748,7 +747,7 @@ Deve existir os data-testids tanto da barra de busca quanto de todos os radio-bu
   * O radio button de busca de ingrediente deve possuir o atributo `data-testid="ingredient-search-radio"`;
   * O radio button de busca da primeira letra deve possuir o atributo `"data-testid="first-letter-search-radio"`.
 
-### 14 - A barra de busca deve ficar logo abaixo do header e deve possuir 3 radio buttons: Ingrediente, Nome e Primeira letra. Eles devem mudar a forma como serão filtradas as receitas
+### 14 - Posicione a barra logo abaixo do header e implemente 3 radio buttons: Ingrediente, Nome e Primeira letra
 
 A barra de busca deve ficar logo abaixo do header e deve possuir 3 _radio buttons_: `Ingrediente`, `Nome` e `Primeira letra`. Eles, em conjunto com a `search-input`, devem mudar a forma como serão filtradas as receitas após clicar no botão `Buscar`.  Os _endpoints_ da API que você deve usar podem ser consultados [aqui para a API de comidas](https://www.themealdb.com/api.php) e [aqui para a API de bebidas](https://www.thecocktaildb.com/api.php).
 
@@ -763,7 +762,7 @@ A barra de busca deve ficar logo abaixo do header e deve possuir 3 _radio button
 
 ##### Observação: Para esse requisito será verificada apenas a tela principal de receitas de comidas.
 
-### 15 - A busca deve ocorrer na API de comidas caso a pessoa esteja na página de comidas e na de bebidas caso esteja na de bebidas
+### 15 - Busque na API de comidas caso a pessoa esteja na página de comidas e na de bebidas caso esteja na de bebidas
 
   **Observações técnicas**
 
@@ -773,30 +772,36 @@ A barra de busca deve ficar logo abaixo do header e deve possuir 3 _radio button
   * Na tela de bebidas, se o radio selecionado for `Primeira letra` e a busca na API for feita com mais de uma letra, deve-se exibir um `alert` com a mensgem "Sua busca deve conter somente 1 (um) caracter".
 ##### Observação: Para esse requisito será verificada apenas a tela principal de receitas de bebidas, já que a de comidas já foi verificada no requisito 15.
 
-### 16 - Caso apenas uma receita seja encontrada, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL
+### 16 - Redirecione para a tela de detalhes da receita caso apenas uma receita seja encontrada, com o ID da mesma na URL
 
   **Observações técnicas**
 
   * Caso apenas uma comida seja encontrada, deve-se ir para sua rota de detalhes (`/comidas/{id-da-receita}`);
   * Caso apenas uma bebida seja encontrada, deve-se ir para sua rota de detalhes (`/bebidas/{id-da-receita}`).
 
-### 17 - Caso mais de uma receita seja encontrada, mostrar as receitas em cards da mesma maneira que a tela principal de receitas
+### 17 - Mostre as receitas em cards caso mais de uma receita seja encontrada
+
+  Mostre as receitas em cards como as da tela principal, caso mais de uma receita seja encontrada.
 
   **ObservaçÕes técnicas**
 
   * Caso mais de uma comida seja encontrada, mostrar as 12 primeiras (ou menos, se não hoverem 12);
   * Caso mais de uma bebida seja encontrada, mostrar as 12 primeiras (ou menos, se não hoverem 12).
 
-### 18 - Caso nenhuma receita seja encontrada, um `alert` contendo o texto "Sinto muito, não encontramos nenhuma receita para esses filtros." deve ser exibido
+### 18 - Exiba um `alert` caso nenhuma receita seja encontrada
 
-  **ObservaçÕes técnicas**
+  O alert deve contendo o texto "Sinto muito, não encontramos nenhuma receita para esses filtros."
+
+  **Observações técnicas**
 
   * Caso nenhuma comida seja encontrada o alert deve ser exibido;
   * Caso nenhuma bebida seja encontrada o alert deve ser exibido.
 
 ## Menu inferior
 
-### 19 - Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas
+### 19 - Implemente os elementos do menu inferior respeitando os atributos descritos no protótipo
+
+  Todos os elementos devem respeitar os atributos descritos no protótipo para o menu inferior disponível na tela principal de receitas
 
   **Observações técnicas**
 
@@ -805,18 +810,18 @@ A barra de busca deve ficar logo abaixo do header e deve possuir 3 _radio button
   * O elemento que leva para a página de explorar deve possuir o atributo `data-testid="explore-bottom-btn"`;
   * O elemento que leva para a página de comidas deve possuir o atributo `data-testid="food-bottom-btn"`.
 
-### 20 - Deve ser fixo e apresentar 3 ícones: um para comidas, um para bebidas e outro para exploração
+### 20 - Posicione o menu inferior de forma fixa e apresente 3 ícones: um para comidas, um para bebidas e outro para exploração
 
   **Observações técnicas**
 
   * O menu inferior deve ficar fixado sempre ao final da página;
   * Apresenta os ícones corretos (drinkIcon.svg, exploreIcon.svg e mealIcon.svg, disponíveis na pasta `src/images/`).
 
-### 21 - O menu inferior só deve aparecer apenas nas telas indicadas pelo protótipo
+### 21 - Exiba o menu inferior apenas nas telas indicadas pelo protótipo
 
-O menu inferior deve aparecer somente nas telas indicas no protótipo, sendo elas de comida, de explorar e de perfil.
+O menu inferior deve aparecer somente nas telas indicas no protótipo, como a de comida, de explorar e de perfil.
 
-  **ObservaçÕes técnicas**
+  **Observações técnicas**
 
   * Não tem footer na tela de login;
   * Tem footer na tela de principal de receitas de comidas;
@@ -835,11 +840,11 @@ O menu inferior deve aparecer somente nas telas indicas no protótipo, sendo ela
   * Não tem footer na tela de receitas feitas;
   * Não tem footer na tela de receitas favoritas.
 
-### 22 - Ao clicar no ícone de bebidas, a pessoa deve ser redirecionada para uma lista de cocktails
+### 22 - Redirecione a pessoa usuária para uma lista de cocktails ao clicar no ícone de bebidas
 
-### 23 - Ao clicar no ícone de exploração, a rota deve mudar para a tela de explorar
+### 23 - Redirecione a pessoa usuária para a tela de explorar ao clicar no ícone de exploração
 
-### 24 - Ao clicar no ícone de comidas, a pessoa deve ser redirecionada para uma lista de comidas
+### 24 - Redirecione a pessoa usuárua para uma lista de comidas ao clicar no ícone de comidas
 
 ## Tela principal de receitas
 

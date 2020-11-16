@@ -135,6 +135,17 @@ Nesse projeto você será capaz de:
     - [53 - Após clicar no botão "Finalizar receita", a rota deve mudar para a página de receitas feitas, cuja rota deve ser `/receitas-feitas`](#53---após-clicar-no-botão-finalizar-receita-a-rota-deve-mudar-para-a-página-de-receitas-feitas-cuja-rota-deve-ser-receitas-feitas)
   </details>
 
+  <details>
+    <summary>Tela de receitas feitas</summary>
+
+    - []()
+    - []()
+    - []()
+    - []()
+    - []()
+    - []()
+  </details>
+
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
   - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
@@ -853,7 +864,7 @@ Ou seja, retornando novamente todas as receitas. O nome do filtro deve ser "All"
 
 ### 33 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de detalhes de uma receita
 
-A verificação será feita a partir dos atributos data-testid's:
+A verificação será feita a partir dos atributos data-testids:
 
   * A foto deve possuir o atributo `data-testid="recipe-photo"`;
   * O título deve possuir o atributo `data-testid="recipe-title"`;
@@ -1063,33 +1074,60 @@ O progresso das receitas devem ser salvos em `localStorage` na chave` inProgress
 
 ## Tela de receitas feitas
 
-### 54 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas feitas.
+### 54 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas feitas
 
-### 56 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, a data em que a pessoa fez a receita, as 2 primeiras tags retornadas pela API e um botão de compartilhar. O ícone do botão de compartilhar pode ser encontrado em `src/images/shareIcon.svg`.
+  **Observações técnicas**
 
-### 57 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica, a data em que a pessoa fez a receita e um botão de compartilhar. O ícone do botão de compartilhar pode ser encontrado em `src/images/shareIcon.svg`.
+  * Todos os data-testids estão presentes:
+    * O botão de filtro `All` deve ter o atributo `data-testid="filter-by-all-btn"`;
+    * O botão de filtro `Food` deve ter o atributo `data-testid="filter-by-food-btn"`;
+    * O botão de `Drinks` deve ter o atributo `data-testid="filter-by-drink-btn"`;
+    * O imagem do card de receita deve ter o atributo `data-testid="${index}-horizontal-image"`;
+    * O texto da categoria da receita deve ter o atributo `data-testid="${index}-horizontal-top-text"`;
+    * O texto do nome da receita deve ter o atributo `data-testid="${index}-horizontal-name"`;
+    * O texto da data que a receita foi feita deve ter o atributo `data-testid="${index}-horizontal-done-date"`;
+    * O elemento de compartilhar a receita deve ter o atributo `data-testid="${index}-horizontal-share-btn"`;
+    * As `tags` da receita devem possuir o atributo `data-testid=${index}-${tagName}-horizontal-tag`;
 
-### 58 - O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard.
+### 55 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, a data em que a pessoa fez a receita, as 2 primeiras tags retornadas pela API e um botão de compartilhar
+
+O ícone do botão de compartilhar pode ser encontrado em `src/images/shareIcon.svg`.
+
+  **ObservaçÕes técnicas**
+
+  * O card possui os atributos corretos de uma comida
+
+### 56 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica, a data em que a pessoa fez a receita e um botão de compartilhar
+
+O ícone do botão de compartilhar pode ser encontrado em `src/images/shareIcon.svg`.
+
+  **Observações técnicas**
+
+  * O card possui os atributos corretos de uma bebida.
+
+### 57 - O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard
+
+  **ObservaçÕes técnicas**
+
+  * Ao clicar no botão de compartilhar deve aparecer a mensagem "Link copiado!";
+  * A URL da tela de detalhes da receita é copiada para o clipboard.
+
+### 58 - Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros
+
+Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente.
 
 ##### As seguintes verificações serão feitas:
 
-- Ao clicar no botão de compartilhar deve aparecer a mensagem "Link copiado!";
-- A URL da tela de detalhes da receita é copiada para o clipboard.
+  * Ao clicar no botão "Food" as receitas devem ser filtradas por comidas;
+  * Ao clicar no botão "Drinks" as receitas devem ser filtradas por bebidas;
+  * Ao clicar no botão "All" o filtro deve ser removido.
 
-### 59 - Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros. Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente.
+### 59 - Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
-- Ao clicar no botão "Food" as receitas devem ser filtradas por comidas;
-- Ao clicar no botão "Drinks" as receitas devem ser filtradas por bebidas;
-- Ao clicar no botão "All" o filtro deve ser removido.
-
-### 60 - Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita.
-
-##### As seguintes verificações serão feitas:
-
-- Ao clicar na foto da receita, a rota deve mudar para a tela de detalhes daquela receita;
-- Ao clicar no nome da receita, a rota deve mudar para a tela de detalhes daquela receita.
+  * Ao clicar na foto da receita, a rota deve mudar para a tela de detalhes daquela receita;
+  * Ao clicar no nome da receita, a rota deve mudar para a tela de detalhes daquela receita.
 
 ## Tela de receitas favoritas
 

@@ -138,12 +138,12 @@ Nesse projeto você será capaz de:
   <details>
     <summary>Tela de receitas feitas</summary>
 
-    - []()
-    - []()
-    - []()
-    - []()
-    - []()
-    - []()
+    - [54 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas feitas]()
+    - [55 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, a data em que a pessoa fez a receita, as 2 primeiras tags retornadas pela API e um botão de compartilhar]()
+    - [56 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica, a data em que a pessoa fez a receita e um botão de compartilhar]()
+    - [57 - O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard]()
+    - [58 - Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros]()
+    - [59 - Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita]()
   </details>
 
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)

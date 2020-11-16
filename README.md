@@ -170,39 +170,39 @@ Nesse projeto você será capaz de:
   <details>
     <summary>Tela de explorar bebidas ou comidas</summary>
 
-    - [70 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar bebidas ou comidas]()
-    - [71 - A tela deve ter três botões: um para explorar por ingrediente, um para explorar por local de origem e um para pegar uma receita aleatória]()
-    - [72 - Ao clicar em "Por Ingredientes", a rota deve mudar para tela de explorar ingredientes]()
-    - [73 - Ao clicar em "Por Local de Origem", a rota deve mudar para tela de explorar por local de origem]()
-    - [74 - Ao clicar em "Me Surpreenda!", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória através da API]()
+    - [70 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar bebidas ou comidas](#70---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-de-explorar-bebidas-ou-comidas)
+    - [71 - A tela deve ter três botões: um para explorar por ingrediente, um para explorar por local de origem e um para pegar uma receita aleatória](#71---a-tela-deve-ter-três-botões-um-para-explorar-por-ingrediente-um-para-explorar-por-local-de-origem-e-um-para-pegar-uma-receita-aleatória)
+    - [72 - Ao clicar em "Por Ingredientes", a rota deve mudar para tela de explorar ingredientes](#72---ao-clicar-em-por-ingredientes-a-rota-deve-mudar-para-tela-de-explorar-ingredientes)
+    - [73 - Ao clicar em "Por Local de Origem", a rota deve mudar para tela de explorar por local de origem](#73---ao-clicar-em-por-local-de-origem-a-rota-deve-mudar-para-tela-de-explorar-por-local-de-origem)
+    - [74 - Ao clicar em "Me Surpreenda!", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória através da API](#74---ao-clicar-em-me-surpreenda-a-rota-deve-mudar-para-a-tela-de-detalhes-de-uma-receita-que-deve-ser-escolhida-de-forma-aleatória-através-da-api)
   </details>
 
   <details>
     <summary>Tela de explorar ingredientes</summary>
 
-    - [75 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar ingredientes]()
-    - [76 - A tela deve ter cards para os 12 primeiros ingredientes, de forma que cada card contêm: o nome do ingrediente e uma foto]()
-    - [77 -  Ao clicar no card do ingrediente a rota deve mudar para tela principal de receitas, mas mostrando apenas as receitas que contém o ingrediente escolhido]()
+    - [75 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar ingredientes](#75---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-de-explorar-ingredientes)
+    - [76 - A tela deve ter cards para os 12 primeiros ingredientes, de forma que cada card contêm: o nome do ingrediente e uma foto](#76---a-tela-deve-ter-cards-para-os-12-primeiros-ingredientes-de-forma-que-cada-card-contêm-o-nome-do-ingrediente-e-uma-foto)
+    - [77 -  Ao clicar no card do ingrediente a rota deve mudar para tela principal de receitas, mas mostrando apenas as receitas que contém o ingrediente escolhido](#77----ao-clicar-no-card-do-ingrediente-a-rota-deve-mudar-para-tela-principal-de-receitas-mas-mostrando-apenas-as-receitas-que-contém-o-ingrediente-escolhido)
   </details>
 
   <details>
     <summary>Tela de explorar por local de origem/area</summary>
 
-  - [78 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem]()
-  - [79 - A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown]()
-  - [80 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro]()
+  - [78 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem](#78---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-de-explorar-por-local-de-origem)
+  - [79 - A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown](#79---a-tela-segue-as-mesmas-especificações-da-tela-de-receitas-principal-a-única-diferença-é-que-os-filtros-de-categoria-são-substituídos-por-um-dropdown)
+  - [80 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro](#80---no-dropdown-devem-estar-disponíveis-todas-as-áreas-retornadas-da-api-incluindo-a-opção-all-que-retorna-as-receitas-sem-nenhum-filtro)
   </details>
 
   <details>
     <summary>Tela de perfil</summary>
 
-  - [81 - A rota deve ser apenas `/explorar/comidas/area`]()
-  - [82 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de perfil]()
-  - [83 - O e-mail da pessoa usuária deve estar visível]()
-  - [84 - Essa tela deve conter 3 botões: um de nome "Receitas Feitas", um de nome "Receitas Favoritas" e um de nome "Sair"]()
-  - [85 - Ao clicar no botão de "Receitas Favoritas", a rota deve mudar para a tela de receitas favoritas]()
-  - [86 - Ao clicar no botão de "Receitas Feitas", a rota deve mudar para a tela de receitas feitas]()
-  - [87 - Ao clicar no botão de "Sair", o `localStorage` deve ser limpo e a rota deve mudar para a tela de login]()
+  - [81 - A rota deve ser apenas `/explorar/comidas/area`](#81---a-rota-deve-ser-apenas-explorarcomidasarea)
+  - [82 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de perfil](#82---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-de-perfil)
+  - [83 - O e-mail da pessoa usuária deve estar visível](#83---o-e-mail-da-pessoa-usuária-deve-estar-visível)
+  - [84 - Essa tela deve conter 3 botões: um de nome "Receitas Feitas", um de nome "Receitas Favoritas" e um de nome "Sair"](#84---essa-tela-deve-conter-3-botões-um-de-nome-receitas-feitas-um-de-nome-receitas-favoritas-e-um-de-nome-sair)
+  - [85 - Ao clicar no botão de "Receitas Favoritas", a rota deve mudar para a tela de receitas favoritas](#85---ao-clicar-no-botão-de-receitas-favoritas-a-rota-deve-mudar-para-a-tela-de-receitas-favoritas)
+  - [86 - Ao clicar no botão de "Receitas Feitas", a rota deve mudar para a tela de receitas feitas](#86---ao-clicar-no-botão-de-receitas-feitas-a-rota-deve-mudar-para-a-tela-de-receitas-feitas)
+  - [87 - Ao clicar no botão de "Sair", o `localStorage` deve ser limpo e a rota deve mudar para a tela de login](#87---ao-clicar-no-botão-de-sair-o-localstorage-deve-ser-limpo-e-a-rota-deve-mudar-para-a-tela-de-login)
   </details>
 
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)

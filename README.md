@@ -185,6 +185,16 @@ Nesse projeto você será capaz de:
     - [77 -  Ao clicar no card do ingrediente a rota deve mudar para tela principal de receitas, mas mostrando apenas as receitas que contém o ingrediente escolhido]()
   </details>
 
+  <details>
+    <summary>Tela de explorar por local de origem/area</summary>
+
+  - []()
+  - []()
+  - []()
+  - []()
+  - []()
+  </details>
+
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
   - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
@@ -1304,43 +1314,71 @@ Obs: se a opção escolhida for explorar bebidas, o botão para explorar por loc
 
 ## Tela de explorar por local de origem/area
 
-### 78 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem.
+### 78 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem
 
-### 79 - A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown.
+### 79 - A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown
 
-  **Observações técnicas**
-
-- Devem ser carregadas as 12 primeiras receitas de comidas;
-- Ao selecionar um filtro de local de origem, todas as receitas devem mudar para os dados filtrados da API;
-- Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL.
-
-### 80 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro.
+  O elemento de dropdown deve possuir o atributo `data-testid="explore-by-area-dropdown"`.
 
   **Observações técnicas**
 
-- No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All";
-- A opção "All" retorna as receitas sem nenhum filtro.
+  * Devem ser carregadas as 12 primeiras receitas de comidas;
+  * Ao selecionar um filtro de local de origem, todas as receitas devem mudar para os dados filtrados da API;
+  * Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL.
 
-### 81 - A rota deve ser apenas `/explorar/comidas/area`. A rota `/explorar/bebidas/area` não deve estar disponível, retornando um erro de "Not Found".
+### 80 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro
+
+  **Observações técnicas**
+
+  * No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All";
+  * A opção "All" retorna as receitas sem nenhum filtro.
+
+### 81 - A rota deve ser apenas `/explorar/comidas/area`
+
+A rota `/explorar/bebidas/area` não deve estar disponível, retornando um erro de "Not Found".
+
+  **Observações técnicas**
+
+  * Ao acessar a rota ela retorna um erro de "Not Found".
 
 ## Tela de perfil
 
-### 82 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de perfil.
-
-### 83 - O e-mail da pessoa usuária deve estar visível.
-
-### 84 - Essa tela deve conter 3 botões: um de nome "Receitas Feitas", um de nome "Receitas Favoritas" e um de nome "Sair".
-
-### 85 - Ao clicar no botão de "Receitas Favoritas", a rota deve mudar para a tela de receitas favoritas.
-
-### 86 - Ao clicar no botão de "Receitas Feitas", a rota deve mudar para a tela de receitas feitas.
-
-### 87 - Ao clicar no botão de "Sair", o `localStorage` deve ser limpo e a rota deve mudar para a tela de login.
+### 82 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de perfil
 
   **Observações técnicas**
 
-- Limpa todas as chaves da localStorage;
-- A rota muda para a tela de login.
+  * Todos o data-testid do email e de todos os botões
+    * O elemento de email deve possuir o atributo `data-testid="profile-email"`;
+    * O botão com as "Receitas Feitas" deve possuir o atributo `data-testid="profile-done-btn"`;
+    * O botão com as "Receitas Favoritas" deve possuir o atributo `data-testid="profile-favorite-btn"`;
+    * O botão de sair deve possuir o atributo `data-testid="profile-logout-btn"`.
+
+### 83 - O e-mail da pessoa usuária deve estar visível
+
+### 84 - Essa tela deve conter 3 botões: um de nome "Receitas Feitas", um de nome "Receitas Favoritas" e um de nome "Sair"
+
+  **Observações técnicas**
+
+  * A tela contêm todos os 3 botões.
+
+### 85 - Ao clicar no botão de "Receitas Favoritas", a rota deve mudar para a tela de receitas favoritas
+
+  **Observações técnicas**
+
+  * Redireciona para a rota correta.
+
+### 86 - Ao clicar no botão de "Receitas Feitas", a rota deve mudar para a tela de receitas feitas
+
+  **Observações técnicas**
+
+  * Redireciona para a rota correta.
+
+### 87 - Ao clicar no botão de "Sair", o `localStorage` deve ser limpo e a rota deve mudar para a tela de login
+
+  **Observações técnicas**
+
+  * Limpa todas as chaves da localStorage;
+  * A rota muda para a tela de login.
 
 ---
 

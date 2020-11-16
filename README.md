@@ -161,10 +161,20 @@ Nesse projeto você será capaz de:
   <details>
     <summary>Tela de explorar</summary>
 
-    - [67 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar]()
-    - [68 - A tela deve ter dois botões: um para explorar comidas e o outro para explorar bebidas. O nomes dos botões devem ser "Explorar Comidas" e "Explorar Bebidas", respectivamente]()
-    - [69 - Ao clicar em um dos botões, a rota deve mudar para a página de explorar comidas ou de explorar bebidas]()
+    - [67 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar](#67---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-de-explorar)
+    - [68 - A tela deve ter dois botões: um para explorar comidas e o outro para explorar bebidas. O nomes dos botões devem ser "Explorar Comidas" e "Explorar Bebidas", respectivamente](#68---a-tela-deve-ter-dois-botões-um-para-explorar-comidas-e-o-outro-para-explorar-bebidas-o-nomes-dos-botões-devem-ser-explorar-comidas-e-explorar-bebidas-respectivamente)
+    - [69 - Ao clicar em um dos botões, a rota deve mudar para a página de explorar comidas ou de explorar bebidas](#69---ao-clicar-em-um-dos-botões-a-rota-deve-mudar-para-a-página-de-explorar-comidas-ou-de-explorar-bebidas)
 
+  </details>
+  
+  <details>
+    <summary>Tela de explorar bebidas ou comidas</summary>
+
+    - [70 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar bebidas ou comidas]()
+    - [71 - A tela deve ter três botões: um para explorar por ingrediente, um para explorar por local de origem e um para pegar uma receita aleatória]()
+    - [72 - Ao clicar em "Por Ingredientes", a rota deve mudar para tela de explorar ingredientes]()
+    - [73 - Ao clicar em "Por Local de Origem", a rota deve mudar para tela de explorar por local de origem]()
+    - [74 - Ao clicar em "Me Surpreenda!", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória através da API]()
   </details>
 
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
@@ -1154,7 +1164,7 @@ Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente.
 
 ### 60 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas favoritas (cumulativo com os atributos em comum com a tela de receitas feitas)
 
-### 61 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de "desfavoritar"
+### 61 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, um botão de compartilhar e um de "desfavoritar"
 
 Os ícones dos botões podem ser encontrados em `src/images/shareIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
 
@@ -1228,33 +1238,36 @@ Verifica se o atributo `data-testid="explore-drinks"` possui o texto "Explorar C
 
 ### 70 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar bebidas ou comidas
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
-- Tem os data-testids corretos para a tela de explorar comidas;
-- Tem os data-testids corretos para a tela de explorar bebidas.
+  * Tem os data-testids corretos para a tela de explorar comidas;
+  * Tem os data-testids corretos para a tela de explorar bebidas.
 
-### 71 - A tela deve ter três botões: um para explorar por ingrediente, um para explorar por local de origem e um para pegar uma receita aleatória. O nomes dos botões devem ser "Por Ingredientes", "Por Local de Origem" e "Me Surpreenda!", respectivamente. Obs: se a opção escolhida for explorar bebidas, o botão para explorar por local de origem não deve estar disponível.
+### 71 - A tela deve ter três botões: um para explorar por ingrediente, um para explorar por local de origem e um para pegar uma receita aleatória
 
-##### As seguintes verificações serão feitas:
+O nomes dos botões devem ser "Por Ingredientes" com o atributo `data-testid="explore-by-ingredient"`, "Por Local de Origem" com o atributo `data-testid="explore-by-area"` e "Me Surpreenda!" com o atributo `data-testid="explore-surprise"`, respectivamente.
+Obs: se a opção escolhida for explorar bebidas, o botão para explorar por local de origem não deve estar disponível.
 
-- Tem os botões "Por Ingredientes", "Por Local de Origem" e "Me Surpreenda!" para a tela de explorar comidas;
-- Tem apenas os botões "Por Ingredientes" e "Me Surpreenda!" para a tela de explorar bebidas.
+  **Observações técnicas**
 
-### 71 - Ao clicar em "Por Ingredientes", a rota deve mudar para tela de explorar ingredientes.
+  * Tem os botões "Por Ingredientes", "Por Local de Origem" e "Me Surpreenda!" para a tela de explorar comidas;
+  * Tem apenas os botões "Por Ingredientes" e "Me Surpreenda!" para a tela de explorar bebidas.
 
-##### As seguintes verificações serão feitas:
+### 72 - Ao clicar em "Por Ingredientes", a rota deve mudar para tela de explorar ingredientes
 
-- Ao clicar no botão "Por Ingredientes" da tela de explorar comidas a rota muda para a página de explorar comidas por ingrediente;
-- Ao clicar no botão "Explorar Bebidas" da tela de explorar bebidas a rota muda para a página de explorar bebidas por ingrediente.
+  **Observações técnicas**
 
-### 73 - Ao clicar em "Por Local de Origem", a rota deve mudar para tela de explorar por local de origem.
+  * Ao clicar no botão "Por Ingredientes" da tela de explorar comidas a rota muda para a página de explorar comidas por ingrediente;
+  * Ao clicar no botão "Explorar Bebidas" da tela de explorar bebidas a rota muda para a página de explorar bebidas por ingrediente.
 
-### 74 - Ao clicar em "Me Surpreenda!", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória através da API.
+### 73 - Ao clicar em "Por Local de Origem", a rota deve mudar para tela de explorar por local de origem
 
-##### As seguintes verificações serão feitas:
+### 74 - Ao clicar em "Me Surpreenda!", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória através da API
 
-- Ao clicar no botão "Por Ingredientes" da tela de explorar comidas a rota muda para a página de detalhes de uma comida aleatória obtida através do endpoint `https://www.themealdb.com/api/json/v1/1/random.php`;
-- Ao clicar no botão "Explorar Bebidas" da tela de explorar bebidas a rota muda para a página de detalhes de uma bebida aleatória obtida através do endpoint `https://www.thecocktaildb.com/api/json/v1/1/random.php`.
+  **Observações técnicas**
+
+  * Ao clicar no botão "Por Ingredientes" da tela de explorar comidas a rota muda para a página de detalhes de uma comida aleatória obtida através do endpoint `https://www.themealdb.com/api/json/v1/1/random.php`;
+  * Ao clicar no botão "Explorar Bebidas" da tela de explorar bebidas a rota muda para a página de detalhes de uma bebida aleatória obtida através do endpoint `https://www.thecocktaildb.com/api/json/v1/1/random.php`.
 
 ## Tela de explorar ingredientes
 

@@ -54,7 +54,7 @@ describe('Favorite recipes screen', () => {
     });
   });
 
-  describe('61 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de "desfavoritar"', () => {
+  describe('61 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, um botão de compartilhar e um de "desfavoritar"', () => {
     it('O card possui os atributos corretos de uma comida', () => {
       cy.get('[data-testid="0-horizontal-image"]')
         .should('have.attr', 'src')

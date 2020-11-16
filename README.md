@@ -177,6 +177,14 @@ Nesse projeto você será capaz de:
     - [74 - Ao clicar em "Me Surpreenda!", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória através da API]()
   </details>
 
+  <details>
+    <summary>Tela de explorar ingredientes</summary>
+
+    - [75 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar ingredientes]()
+    - [76 - A tela deve ter cards para os 12 primeiros ingredientes, de forma que cada card contêm: o nome do ingrediente e uma foto]()
+    - [77 -  Ao clicar no card do ingrediente a rota deve mudar para tela principal de receitas, mas mostrando apenas as receitas que contém o ingrediente escolhido]()
+  </details>
+
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
   - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
@@ -1061,7 +1069,7 @@ Ao clicar no checkbox, o item deve ser riscado, mostrando que esse passo foi fin
 
 O progresso das receitas devem ser salvos em `localStorage` na chave` inProgressRecipes` no formato especificado na seção [`localStorage`](#localStorage);
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
 - Salva o progresso de uma receita de comida em andamento;
 - Salva o progresso de uma receita de bebida em andamento;
@@ -1147,7 +1155,7 @@ O ícone do botão de compartilhar pode ser encontrado em `src/images/shareIcon.
 
 Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente.
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
   * Ao clicar no botão "Food" as receitas devem ser filtradas por comidas;
   * Ao clicar no botão "Drinks" as receitas devem ser filtradas por bebidas;
@@ -1271,26 +1279,28 @@ Obs: se a opção escolhida for explorar bebidas, o botão para explorar por loc
 
 ## Tela de explorar ingredientes
 
-### 75 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar ingredientes.
+### 75 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar ingredientes
 
-##### As seguintes verificações serão feitas:
+  A tela deve possuir os atributos `data-testid="${index}-ingredient-card"`, `data-testid="${index}-card-img"` e `data-testid="${index}-card-name"`, que estão relacionados ao card, imagem e nome do ingrediente respectivamente.
 
-- Tem os data-testids corretos para a tela de explorar comidas por ingredientes;
-- Tem os data-testids corretos para a tela de explorar bebidas por ingredientes.
+  **Observações técnicas**
 
-### 76 - A tela deve ter cards para os 12 primeiros ingredientes, de forma que cada card contêm: o nome do ingrediente e uma foto.
+  * Tem os data-testids corretos para a tela de explorar comidas por ingredientes;
+  * Tem os data-testids corretos para a tela de explorar bebidas por ingredientes.
 
-##### As seguintes verificações serão feitas:
+### 76 - A tela deve ter cards para os 12 primeiros ingredientes, de forma que cada card contêm: o nome do ingrediente e uma foto
 
-- Tem o nome e a foto corretos para a tela de explorar comidas por ingredientes;
-- Tem o nome e a foto corretos para a tela de explorar bebidas por ingredientes.
+  **Observações técnicas**
 
-### 77 -  Ao clicar no card do ingrediente a rota deve mudar para tela principal de receitas, mas mostrando apenas as receitas que contém o ingrediente escolhido.
+  * Tem o nome e a foto corretos para a tela de explorar comidas por ingredientes;
+  * Tem o nome e a foto corretos para a tela de explorar bebidas por ingredientes.
 
-##### As seguintes verificações serão feitas:
+### 77 -  Ao clicar no card do ingrediente a rota deve mudar para tela principal de receitas, mas mostrando apenas as receitas que contém o ingrediente escolhido
 
-- Ao clicar no card do ingrediente da tela de explorar comidas por ingrediente a rota muda para a tela principal de receitas filtrada pelo ingrediente;
-- Ao clicar no card do ingrediente da tela de explorar bebidas por ingrediente a rota muda para a tela principal de receitas filtrada pelo ingrediente.
+  **Observações técnicas**
+
+  * Ao clicar no card do ingrediente da tela de explorar comidas por ingrediente a rota muda para a tela principal de receitas filtrada pelo ingrediente;
+  * Ao clicar no card do ingrediente da tela de explorar bebidas por ingrediente a rota muda para a tela principal de receitas filtrada pelo ingrediente.
 
 ## Tela de explorar por local de origem/area
 
@@ -1298,7 +1308,7 @@ Obs: se a opção escolhida for explorar bebidas, o botão para explorar por loc
 
 ### 79 - A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown.
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
 - Devem ser carregadas as 12 primeiras receitas de comidas;
 - Ao selecionar um filtro de local de origem, todas as receitas devem mudar para os dados filtrados da API;
@@ -1306,7 +1316,7 @@ Obs: se a opção escolhida for explorar bebidas, o botão para explorar por loc
 
 ### 80 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro.
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All";
 - A opção "All" retorna as receitas sem nenhum filtro.
@@ -1327,7 +1337,7 @@ Obs: se a opção escolhida for explorar bebidas, o botão para explorar por loc
 
 ### 87 - Ao clicar no botão de "Sair", o `localStorage` deve ser limpo e a rota deve mudar para a tela de login.
 
-##### As seguintes verificações serão feitas:
+  **Observações técnicas**
 
 - Limpa todas as chaves da localStorage;
 - A rota muda para a tela de login.

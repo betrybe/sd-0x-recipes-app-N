@@ -149,6 +149,12 @@ Nesse projeto você será capaz de:
  <details>
   <summary>Tela de receitas favoritas</summary>
 
+  - [60 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas favoritas (cumulativo com os atributos em comum com a tela de receitas feitas)](#60--Todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-de-receitas-favoritas-(cumulativo-com-os-atributos-em-comum-com-a-tela-de-receitas-feitas))
+  - [61 - Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de "desfavoritar"]()
+  - [62 - Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica ou não, um botão de compartilhar e um de "desfavoritar"]()
+  - [63 - O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard]()
+  - [64 - O botão de "desfavoritar" deve remover a receita da lista de receitas favoritas do `localStorage` e da tela]()
+  - [65 - Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros]()
  </details>
 
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)

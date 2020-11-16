@@ -191,12 +191,12 @@ Nesse projeto você será capaz de:
   - [78 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem](#78---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-de-explorar-por-local-de-origem)
   - [79 - A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown](#79---a-tela-segue-as-mesmas-especificações-da-tela-de-receitas-principal-a-única-diferença-é-que-os-filtros-de-categoria-são-substituídos-por-um-dropdown)
   - [80 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro](#80---no-dropdown-devem-estar-disponíveis-todas-as-áreas-retornadas-da-api-incluindo-a-opção-all-que-retorna-as-receitas-sem-nenhum-filtro)
+  - [81 - A rota deve ser apenas `/explorar/comidas/area`](#81---a-rota-deve-ser-apenas-explorarcomidasarea)
   </details>
 
   <details>
     <summary>Tela de perfil</summary>
 
-  - [81 - A rota deve ser apenas `/explorar/comidas/area`](#81---a-rota-deve-ser-apenas-explorarcomidasarea)
   - [82 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de perfil](#82---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-de-perfil)
   - [83 - O e-mail da pessoa usuária deve estar visível](#83---o-e-mail-da-pessoa-usuária-deve-estar-visível)
   - [84 - Essa tela deve conter 3 botões: um de nome "Receitas Feitas", um de nome "Receitas Favoritas" e um de nome "Sair"](#84---essa-tela-deve-conter-3-botões-um-de-nome-receitas-feitas-um-de-nome-receitas-favoritas-e-um-de-nome-sair)

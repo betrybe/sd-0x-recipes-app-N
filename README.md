@@ -161,7 +161,9 @@ Nesse projeto você será capaz de:
   <details>
     <summary>Tela de explorar</summary>
 
-    - []()
+    - [67 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar]()
+    - [68 - A tela deve ter dois botões: um para explorar comidas e o outro para explorar bebidas. O nomes dos botões devem ser "Explorar Comidas" e "Explorar Bebidas", respectivamente]()
+    - [69 - Ao clicar em um dos botões, a rota deve mudar para a página de explorar comidas ou de explorar bebidas]()
 
   </details>
 
@@ -1224,7 +1226,7 @@ Verifica se o atributo `data-testid="explore-drinks"` possui o texto "Explorar C
 
 ## Tela de explorar bebidas ou comidas
 
-### 70 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar bebidas ou comidas.
+### 70 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar bebidas ou comidas
 
 ##### As seguintes verificações serão feitas:
 

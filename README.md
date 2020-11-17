@@ -161,7 +161,7 @@ Nesse projeto você será capaz de:
     <summary>Tela de explorar</summary>
 
     - [67 - Implemente os elementos da tela de explorar respeitando os atributos descritos no protótipo](#67---implemente-os-elementos-da-tela-de-explorar-respeitando-os-atributos-descritos-no-protótipo)
-    - [68 - Desenvolva a tela de maneira que tenha 2 botões: um para explorar comidas e o outro para explorar bebidas](#68---desenvolva-a-tela-de-maneira-que-tenha-2-botões-um-para-explorar-comidas-e-o-outro-para-explorar-bebidas-o-nomes-dos-botões-devem-ser-explorar-comidas-e-explorar-bebidas-respectivamente)
+    - [68 - Desenvolva a tela de maneira que tenha 2 botões: um para explorar comidas e o outro para explorar bebidas](#68---desenvolva-a-tela-de-maneira-que-tenha-2-botões-um-para-explorar-comidas-e-o-outro-para-explorar-bebidas)
     - [69 - Redirecione a pessoa usuária ao clicar em um dos botões, a rota deve mudar para a página de explorar comidas ou de explorar bebidas](#69---redirecione-a-pessoa-usuária-ao-clicar-em-um-dos-botões-a-rota-deve-mudar-para-a-página-de-explorar-comidas-ou-de-explorar-bebidas)
 
   </details>
@@ -1252,7 +1252,7 @@ Os nomes dos botões devem ser "Food", "Drinks" e "All", respectivamente
 
   * Tem os data-testids explore-food e explore-drinks. 
 
-### 68 - Desenvolva a tela de maneira que tenha 2 botões: um para explorar comidas e o outro para explorar bebidas. O nomes dos botões devem ser "Explorar Comidas" e "Explorar Bebidas", respectivamente
+### 68 - Desenvolva a tela de maneira que tenha 2 botões: um para explorar comidas e o outro para explorar bebidas
 
 Verifica se o atributo `data-testid="explore-drinks"` possui o texto "Explorar Comidas" e se o `data-testid="explore-drinks"` possui o texto "Explorar Bebidas".
 
@@ -1329,7 +1329,7 @@ Obs: se a opção escolhida for explorar bebidas, o botão para explorar por loc
 
 ## Tela de explorar por local de origem/area
 
-### 78 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem
+### 78 - Implemente os elementos da tela de explorar por local de origem respeitando os atributos descritos no protótipo
 
   O elemento de dropdown deve possuir o atributo `data-testid="explore-by-area-dropdown"` e suas opções devem possuir o atributo `[data-testid="${area}-option"]`.
 

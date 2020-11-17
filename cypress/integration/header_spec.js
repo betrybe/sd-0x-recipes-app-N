@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('9 - Todos os elementos devem respeitar os atributos descritos no protótipo para o header', () => {
+describe('9 - Implemente os elementos do header na tela principal de receitas, respeitando os atributos descritos no protótipo', () => {
   it('Tem os data-testids profile-top-btn, page-title e search-top-btn', () => {
     cy.visit('http://localhost:3000/comidas');
 
@@ -10,7 +10,7 @@ describe('9 - Todos os elementos devem respeitar os atributos descritos no prot�
   });
 });
 
-describe('10 - Deve apresentar um ícone para a tela de perfil, um título e um ícone para a busca (caso exista no protótipo)', () => {
+describe('10 - Implemente um ícone para a tela de perfil, um título e um ícone para a busca, caso exista no protótipo', () => {
   const hasNoHeader = () => {
     cy.get('[data-testid="profile-top-btn"]').should('not.exist');
     cy.get('[data-testid="page-title"]').should('not.exist');
@@ -130,7 +130,7 @@ describe('10 - Deve apresentar um ícone para a tela de perfil, um título e um 
   });
 });
 
-describe('11 - Ao clicar no botão de perfil, deve-se ir para a tela de perfil', () => {
+describe('11 - Redirecione a pessoa usuária para a tela de perfil ao clicar no botão de perfil', () => {
   it('A mudança de tela ocorre corretamente', () => {
     cy.visit('http://localhost:3000/comidas');
 
@@ -142,7 +142,7 @@ describe('11 - Ao clicar no botão de perfil, deve-se ir para a tela de perfil',
   });
 });
 
-describe('Ao clicar no botão de busca, a barra de busca deve aparecer. O mesmo serve para escondê-la', () => {
+describe('12 - Desenvolva o botão de busca que, ao ser clicado, a barra de busca deve aparecer. O mesmo serve para escondê-la', () => {
   it('Ao clicar no botão de busca pela primeira vez a barra de busca aparece', () => {
     cy.visit('http://localhost:3000/comidas');
 

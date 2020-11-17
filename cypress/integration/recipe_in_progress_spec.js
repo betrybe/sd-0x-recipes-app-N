@@ -6,7 +6,7 @@ afterEach(() => {
   });
 });
 
-describe('47 - Essa tela deve conter uma imagem da receita, seu titulo, sua categoria (ou se a bebida é alcoólica ou não) uma lista de ingredientes com suas respectivas quantidades e suas instruções', () => {
+describe('47 - Desenvolva a tela de maneira que contenha uma imagem da receita, seu titulo, sua categoria (ou se a bebida é alcoólica ou não) uma lista de ingredientes com suas respectivas quantidade e suas instruções', () => {
   it('verifica elementos de uma receita de comida', () => {
     cy.visit('http://localhost:3000/comidas/52771/in-progress', {
       onBeforeLoad(win) {
@@ -42,7 +42,7 @@ describe('47 - Essa tela deve conter uma imagem da receita, seu titulo, sua cate
   });
 });
 
-describe('48 - A lista de ingredientes deve conter um checkbox para cada um dos items', () => {
+describe('48 - Desenvolva um checkbox para cada item da lista de ingredientes', () => {
   it('todos os ingredientes de uma receita de comida possuem um checkbox', () => {
     cy.visit('http://localhost:3000/comidas/52771/in-progress', {
       onBeforeLoad(win) {
@@ -68,7 +68,7 @@ describe('48 - A lista de ingredientes deve conter um checkbox para cada um dos 
   });
 });
 
-describe('49 - Ao clicar no checkbox de um ingrediente, o nome dele deve ser "riscado" da lista', () => {
+describe('49 - Implemente uma lógica que, ao clicar no checkbox de um ingrediente, o nome dele deve ser "riscado" da lista', () => {
   const getIngredients = () => (
     cy.get('[data-testid*="ingredient-step"]')
       .find('input[type="checkbox"]')
@@ -103,7 +103,7 @@ describe('49 - Ao clicar no checkbox de um ingrediente, o nome dele deve ser "ri
   });
 });
 
-describe('50 - O estado do progresso deve ser mantido caso a pessoa atualize a página ou volte para a mesma receita', () => {
+describe('50 - Salve o estado do progresso, que deve ser mantido caso a pessoa atualize a página ou volte para a mesma receita', () => {
   it('salva o progresso de uma receita de comida em andamento', () => {
     cy.visit('http://localhost:3000/comidas/52771/in-progress', {
       onBeforeLoad(win) {
@@ -141,7 +141,7 @@ describe('50 - O estado do progresso deve ser mantido caso a pessoa atualize a p
   });
 });
 
-describe('51 - A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui', () => {
+describe('51 - Desenvolva a lógica de favoritar e compartilhar, a lógica da tela de detalhes de uma receita se aplica aqui', () => {
   it('verifica se os botões estão disponíveis na tela de detalhes de uma comida', () => {
     cy.visit('http://localhost:3000/comidas/52771/in-progress', {
       onBeforeLoad(win) {
@@ -407,7 +407,7 @@ describe('51 - A mesma lógica de favoritar e compartilhar da tela de detalhes d
   });
 });
 
-describe('52 - O botão de finalizar receita só pode estar habilitado quando todos os ingredientes estiverem _"checkados"_ (marcados)', () => {
+describe('52 - Implemente a solução de maneira que o botão de finalizar receita só pode estar habilitado quando todos os ingredientes estiverem _"checkados"_ (marcados)', () => {
   it('verifica se botão para finalizar está desabilitado em receitas de comidas', () => {
     cy.visit('http://localhost:3000/comidas/52771/in-progress', {
       onBeforeLoad(win) {
@@ -463,7 +463,7 @@ describe('52 - O botão de finalizar receita só pode estar habilitado quando to
   });
 });
 
-describe('53 - Após clicar no botão "Finalizar receita", a rota deve mudar para a página de receitas feitas, cuja rota deve ser `/receitas-feitas`', () => {
+describe('53 - Redirecione a pessoa usuária após clicar no botão "Finalizar receita", para a página de receitas feitas, cuja rota deve ser `/receitas-feitas`', () => {
   it('redireciona após concluir uma receita de comida', () => {
     cy.visit('http://localhost:3000/comidas/52771/in-progress', {
       onBeforeLoad(win) {

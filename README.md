@@ -161,7 +161,7 @@ Nesse projeto você será capaz de:
     <summary>Tela de explorar</summary>
 
     - [67 - Implemente os elementos da tela de explorar respeitando os atributos descritos no protótipo](#67---todos-os-elementos-devem-respeitar-os-atributos-descritos-no-protótipo-para-a-tela-de-explorar)
-    - [68 - Desenvolva a tela de maneira que tenha 2 botões: um para explorar comidas e o outro para explorar bebidas. O nomes dos botões devem ser "Explorar Comidas" e "Explorar Bebidas", respectivamente](#68---a-tela-deve-ter-dois-botões-um-para-explorar-comidas-e-o-outro-para-explorar-bebidas-o-nomes-dos-botões-devem-ser-explorar-comidas-e-explorar-bebidas-respectivamente)
+    - [68 - Desenvolva a tela de maneira que tenha 2 botões: um para explorar comidas e o outro para explorar bebidas](#68---a-tela-deve-ter-dois-botões-um-para-explorar-comidas-e-o-outro-para-explorar-bebidas-o-nomes-dos-botões-devem-ser-explorar-comidas-e-explorar-bebidas-respectivamente)
     - [69 - Redirecione a pessoa usuária ao clicar em um dos botões, a rota deve mudar para a página de explorar comidas ou de explorar bebidas](#69---ao-clicar-em-um-dos-botões-a-rota-deve-mudar-para-a-página-de-explorar-comidas-ou-de-explorar-bebidas)
 
   </details>

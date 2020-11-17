@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('2 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de login', () => {
+describe('2 - Crie todos os elementos que devem respeitar os atributos descritos no protótipo para a tela de login', () => {
   it('Tem os data-testids email-input, password-input e login-submit-btn', () => {
     cy.visit('http://localhost:3000/');
 
@@ -10,7 +10,7 @@ describe('2 - Todos os elementos devem respeitar os atributos descritos no prot�
   });
 });
 
-describe('3 - A pessoa deve conseguir escrever seu email no input de email', () => {
+describe('3 - Desenvolva a tela de maneira que a pessoa deve conseguir escrever seu email no input de email', () => {
   it('É possível escrever o email', () => {
     cy.visit('http://localhost:3000/');
 
@@ -19,7 +19,7 @@ describe('3 - A pessoa deve conseguir escrever seu email no input de email', () 
   });
 });
 
-describe('4 - A pessoa deve conseguir escrever sua senha no input de senha', () => {
+describe('4 - Desenvolva a tela de maneira que a pessoa deve conseguir escrever sua senha no input de senha', () => {
   it('É possível escrever a senha', () => {
     cy.visit('http://localhost:3000/');
 
@@ -28,7 +28,7 @@ describe('4 - A pessoa deve conseguir escrever sua senha no input de senha', () 
   });
 });
 
-describe('5 - O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos', () => {
+describe('5 - Desenvolva a tela de maneira que o formulário só seja válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos', () => {
   it('O botão deve estar desativado se o email for inválido', () => {
     cy.visit('http://localhost:3000/');
 
@@ -67,7 +67,7 @@ describe('5 - O formulário só fica válido após um email válido e uma senha 
   });
 });
 
-describe('6 - Após a submissão, 2 tokens devem ser salvos em localStorage identificados pelas chaves mealsToken e cocktailsToken', () => {
+describe('6 - Salve 2 tokens no localStorage após a submissão, identificados pelas chaves mealsToken e cocktailsToken', () => {
   it('Após a submissão mealsToken e cocktailsToken devem estar salvos em localStorage', () => {
     cy.visit('http://localhost:3000/', {
       onBeforeLoad(win) {
@@ -94,7 +94,7 @@ describe('6 - Após a submissão, 2 tokens devem ser salvos em localStorage iden
   });
 });
 
-describe('7 - Após a submissão, o e-mail de pessoa usuária deve ser salvo em localStorage na chave user', () => {
+describe('7 - Salve o e-mail da pessoa usuária no localStorage na chave user após a submissão', () => {
   it('Após a submissão a chave user deve estar salva em localStorage', () => {
     cy.visit('http://localhost:3000/', {
       onBeforeLoad(win) {
@@ -119,7 +119,7 @@ describe('7 - Após a submissão, o e-mail de pessoa usuária deve ser salvo em 
   });
 });
 
-describe('8 - Após a submissão e validação com sucesso do login, o usuário deve ser redirecionado para a tela principal de receitas de comidas', () => {
+describe('8 - Redirecione a pessoa usuária para a tela principal de receitas de comidas após a submissão e validação com sucesso do login', () => {
   it('A rota muda para a tela principal de receitas de comidas', () => {
     cy.visit('http://localhost:3000/', {
       onBeforeLoad(win) {

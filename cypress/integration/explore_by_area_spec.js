@@ -23,7 +23,7 @@ const checkFirstMeals = (meals, limit = 12) => {
   cy.get(`[data-testid="${limit}-card-name"]`).should('not.exist');
 };
 
-describe('78 - Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de explorar por local de origem', () => {
+describe('78 - Implemente os elementos da tela de explorar por local de origem respeitando os atributos descritos no protótipo', () => {
   it('A tela tem os data-testids de todos os 12 cards e de todos os locais de origem', () => {
     cy.visit('http://localhost:3000/explorar/comidas/area', {
       onBeforeLoad(win) {
@@ -53,7 +53,7 @@ describe('78 - Todos os elementos devem respeitar os atributos descritos no prot
   });
 });
 
-describe('79 - A tela segue as mesmas especificações da tela de receitas principal, a única diferença é que os filtros de categoria são substituídos por um dropdown', () => {
+describe('79 - Desenvolva as mesmas especificações da tela de receitas principal, com a diferença de que os filtros de categoria são substituídos por um dropdown', () => {
   it('Devem ser carregadas as 12 primeiras receitas de comidas', () => {
     cy.visit('http://localhost:3000/explorar/comidas/area', {
       onBeforeLoad(win) {
@@ -91,7 +91,7 @@ describe('79 - A tela segue as mesmas especificações da tela de receitas princ
   });
 });
 
-describe('80 - No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro', () => {
+describe('80 - Implemente o dropdown de maneira que devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All", que retorna as receitas sem nenhum filtro', () => {
   it('No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção "All"', () => {
     cy.visit('http://localhost:3000/explorar/comidas/area', {
       onBeforeLoad(win) {
@@ -120,7 +120,7 @@ describe('80 - No dropdown devem estar disponíveis todas as áreas retornadas d
   });
 });
 
-describe('81 - A rota /explorar/bebidas/area não deve estar disponível', () => {
+describe('81 - Implemente a rota que deve ser apenas `/explorar/comidas/area`', () => {
   it('Ao acessar a rota ela retorna um erro de "Not Found"', () => {
     cy.visit('http://localhost:3000/explorar/bebidas/area');
 

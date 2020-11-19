@@ -345,6 +345,8 @@ Esses testes não consideram o layout de maneira geral, mas sim os atributos e i
 
 **Atenção:** Sua aplicação deve estar rodando para o Cypress no terminal poder testar.
 
+#### Além dos testes da avaliação automatizada, um dos requisitos do projeto se baseia em **escrever testes unitários que cubram pelo menos 90% do projeto**. Na [documentação do Jest CLI](https://jestjs.io/docs/en/cli) é possível ver como essa cobertura é coletada.
+
 ## APIs
 
 ### TheMealDB API
@@ -1452,20 +1454,14 @@ Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-enginee
 
 #VQV 🚀
 
+---
 
-<!-- ======== -->
+# AVISOS FINAIS
 
-## Desenvolvimento e testes
+Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
 
-Este repositório já contem um _template_ com um App React criado, configurado e com os testes da avaliação automatizada.
+Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH)
 
-Esses [testes E2E](https://www.guru99.com/end-to-end-testing.html) automatizados podem ser utilizados para ajudar a validar as funcionalidades do projeto localmente. É possível executar esses testes via `npm run cy:open`. Esse comando abre a interface que permite rodar a suite de testes do [Cypress](https://www.cypress.io/how-it-works/) que valida o fluxo geral e os requisitos funcionais do projeto.
+O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
 
-Esses testes não consideram o layout de maneira geral, mas sim os atributos e informações corretas, então preste atenção nos atributos definidos no protótipo.
-
-Os testes te darão uma mensagem de erro caso não estejam passando (seja qual for o motivo). 😉
-
-#### Além dos testes da avaliação automatizada, um dos requisitos do projeto se baseia em **escrever testes unitários que cubram pelo menos 90% do projeto**. Na [documentação do Jest CLI](https://jestjs.io/docs/en/cli) é possível ver como essa cobertura é coletada.
-
-
-<!-- ==== -->
+---

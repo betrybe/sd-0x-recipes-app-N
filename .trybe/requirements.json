@@ -1,6 +1,6 @@
 {
   "requirements": [{
-    "description": "1 - Desenvolva os testes unitários de maneira que a seja de, no mínimo, 90%",
+    "description": "1 - Desenvolva os testes unitários de maneira que a cobertura seja de, no mínimo, 90%",
     "bonus": false
   }, {
     "description": "2 - Crie todos os elementos que devem respeitar os atributos descritos no protótipo para a tela de login",

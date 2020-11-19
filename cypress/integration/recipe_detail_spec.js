@@ -6,7 +6,7 @@ afterEach(() => {
   });
 });
 
-describe('Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de detalhes de uma receita', () => {
+describe('33 - Implemente os elementos da tela de detalhes de uma receita respeitando os atributos descritos no protótipo', () => {
   it('A tela de comida possui todos os atributos data-testid', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
@@ -45,7 +45,7 @@ describe('Todos os elementos devem respeitar os atributos descritos no protótip
   });
 });
 
-describe('Uma request para a API deve ser feita passando o `id` da receita que deve estar disponível nos parâmetros da URL', () => {
+describe('34 - Realize uma request para a API passando o `id` da receita que deve estar disponível nos parâmetros da URL', () => {
   it('Verifica se a requisição para a API de comidas foi realizada', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
@@ -71,7 +71,7 @@ describe('Uma request para a API deve ser feita passando o `id` da receita que d
   });
 });
 
-describe('Essa tela deve conter uma imagem da receita, o título, a categoria (ou se é ou não alcoólico), uma lista de ingredientes seguidos pelas quantidades, instruções, um vídeo do youtube "embedado" e recomendações', () => {
+describe('35 - Desenvolva a tela de forma que contenha uma imagem da receita, o título, a categoria (ou se é ou não alcoólico), uma lista de ingredientes seguidos pelas quantidades, instruções, um vídeo do youtube "embedado" e recomendações', () => {
   it('Verifica se os elementos descritos no protótipo existem na tela de detalhes de comida', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
@@ -139,7 +139,7 @@ describe('Essa tela deve conter uma imagem da receita, o título, a categoria (o
   });
 });
 
-describe('As recomendações para receitas de comida deverão ser bebidas e vice-versa', () => {
+describe('36 - Implemente as recomendações, para receitas de comida, a recomendação deverá ser bebida e vice-versa', () => {
   it('Verifica se a requisição para a API de bebidas foi realizada', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
@@ -165,8 +165,8 @@ describe('As recomendações para receitas de comida deverão ser bebidas e vice
   });
 });
 
-describe('Deverão ser mostrados 6 cards de recomendação, onde apenas 2 são mostrados e o scroll é horizontal, similar a um `carousel`', () => {
-  it('Verifica se exitem todas as recomendações na tela de detalhes de uma comida', () => {
+describe('37 - Implemente os cards de recomendação, onde serão 6 cards, mas mostrando apenas 2 e o scroll é horizontal, similar a um `carousel`', () => {
+  it('Verifica se existem todas as recomendações na tela de detalhes de uma comida', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
         win.fetch = fetchMock;
@@ -190,7 +190,7 @@ describe('Deverão ser mostrados 6 cards de recomendação, onde apenas 2 são m
     cy.get('[data-testid="5-recomendation-title"]').contains('252');
   });
 
-  it('Verifica se exitem todas as recomendações na tela de detalhes de uma bebida', () => {
+  it('Verifica se existem todas as recomendações na tela de detalhes de uma bebida', () => {
     cy.visit('http://localhost:3000/bebidas/178319', {
       onBeforeLoad(win) {
         win.fetch = fetchMock;
@@ -215,7 +215,7 @@ describe('Deverão ser mostrados 6 cards de recomendação, onde apenas 2 são m
   });
 });
 
-describe('Um botão de nome "Iniciar Receita" deve ficar fixo na parte de baixo da tela o tempo todo', () => {
+describe('38 - Desenvolva um botão de nome "Iniciar Receita" que deve ficar fixo na parte de baixo da tela o tempo todo', () => {
   it('Verifica posicionamento do botão na tela de detalhes de comida', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
@@ -241,7 +241,7 @@ describe('Um botão de nome "Iniciar Receita" deve ficar fixo na parte de baixo 
   });
 });
 
-describe('Caso a receita já tenha sido feita, o botão "Iniciar Receita" deve sumir', () => {
+describe('39 - Implemente a solução de forma que caso a receita já tenha sido feita, o botão "Iniciar Receita" deve sumir', () => {
   it('Verifica se botão de iniciar receita não é visível na tela de detalhes de uma comida', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
@@ -287,7 +287,7 @@ describe('Caso a receita já tenha sido feita, o botão "Iniciar Receita" deve s
   });
 });
 
-describe('Caso a receita tenha sido iniciada mas não finalizada, o texto do botão deve ser "Continuar Receita"', () => {
+describe('40 - Implemente a solução de modo que caso a receita tenha sido iniciada mas não finalizada, o texto do botão deve ser "Continuar Receita"', () => {
   it('Verifica botão de "Continuar Receita" na tela de detalhes de uma comida', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
@@ -321,7 +321,7 @@ describe('Caso a receita tenha sido iniciada mas não finalizada, o texto do bot
   });
 });
 
-describe('Quando o botão "Iniciar Receita" for clicado, a rota deve mudar para a tela de receita em processo', () => {
+describe('41 - Redirecione a pessoa usuário caso o botão "Iniciar Receita" seja clicado, a rota deve mudar para a tela de receita em processo', () => {
   it('Redireciona para tela de receita da comida em processo', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
@@ -345,7 +345,7 @@ describe('Quando o botão "Iniciar Receita" for clicado, a rota deve mudar para 
   });
 });
 
-describe('Um botão de compartilhar e um de favoritar a receita devem estar disponíveis', () => {
+describe('42 - Implemente um botão de compartilhar e um de favoritar a receita', () => {
   it('Verifica se os botões estão disponíveis na tela de detalhes de uma comida', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
@@ -369,7 +369,7 @@ describe('Um botão de compartilhar e um de favoritar a receita devem estar disp
   });
 });
 
-describe('Ao clicar no botão de compartilhar, o link da receita dentro do app deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer', () => {
+describe('43 - Implemente a solução de forma que, ao clicar no botão de compartilhar, o link da receita dentro do app deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer', () => {
   it('Verifica a mensagem "Link copiado!" e se o link da receita da comida foi copiado para o clipboard', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
@@ -401,7 +401,7 @@ describe('Ao clicar no botão de compartilhar, o link da receita dentro do app d
   });
 });
 
-describe('O ícone do coração (favorito) deve vir preenchido caso a receita esteja favoritada, e "despreenchido" caso contrário', () => {
+describe('44 - Implemente o ícone do coração (favorito) de maneira que, deve vir preenchido caso a receita esteja favoritada e "despreenchido" caso contrário', () => {
   it('Verifica se a comida favoritada vem com o coração preenchido', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
@@ -471,7 +471,7 @@ describe('O ícone do coração (favorito) deve vir preenchido caso a receita es
   });
 });
 
-describe('Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para "despreenchido" e vice-versa', () => {
+describe('45 - Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para "despreenchido" e vice-versa', () => {
   it('Favorita a comida', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
@@ -563,7 +563,7 @@ describe('Ao clicar no botão de favoritar, o ícone do coração deve mudar de 
   });
 });
 
-describe('As receitas favoritas devem ser salvas em `localStorage` na chave `favoriteRecipes`', () => {
+describe('46 - Salve as receitas favoritas no `localStorage` na chave `favoriteRecipes`', () => {
   it('Verifica se após favoritar receita de uma comida, ela é salva corretamente no localStorage', () => {
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {

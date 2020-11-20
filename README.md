@@ -813,7 +813,7 @@ A barra de busca deve ficar logo abaixo do header e deve possuir 3 _radio button
 
   **Observações técnicas**
 
-  * O menu inferior deve ter possuir o atributo `data-testid="footer"`;
+  * O menu inferior deve possuir o atributo `data-testid="footer"`;
   * O elemento que leva para a página de drinks deve possuir o atributo `data-testid="drinks-bottom-btn"`;
   * O elemento que leva para a página de explorar deve possuir o atributo `data-testid="explore-bottom-btn"`;
   * O elemento que leva para a página de comidas deve possuir o atributo `data-testid="food-bottom-btn"`.

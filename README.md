@@ -36,6 +36,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
     - [localStorage](#localStorage)
     - [Ícones](#icones)
     - [Biblioteca clipboard-copy](#biblioteca-clipboard-copy)
+    - [Biblioteca Bootstrap (opcional)](#biblioteca-bootstrap-opcional)
   - [Lista de requisitos](#lista-de-requisitos)
   <details>
     <summary>Testes unitários</summary>

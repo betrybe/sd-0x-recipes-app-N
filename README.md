@@ -687,7 +687,7 @@ Para mais informações, consulte a [documentação](https://www.npmjs.com/packa
 
 ### Biblioteca `Bootstrap` (opcional)
 
-Para os grupos que quiserem implementar estilizações no app, recomendamos o uso da lib `Bootstrap`, ela já vem instalada por padrão neste projeto, bastando apenas implementar nos seus componentes como por exemplo, caso queira implementar um [botão](https://react-bootstrap.github.io/components/buttons/):
+Para os grupos que quiserem implementar estilizações no app, recomendamos o uso da lib `Bootstrap`. Ela já vem instalada por padrão neste projeto, bastando apenas implementar nos seus componentes. Por exemplo, caso queira implementar um [botão](https://react-bootstrap.github.io/components/buttons/):
 
 ``` jsx
 import Button from 'react-bootstrap/Button';

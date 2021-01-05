@@ -35,7 +35,6 @@
         "reset": true
       }
     ],
-    "no-class/no-class": 2,
     "no-console": ["off"],
     "no-param-reassign": ["off"],
     "consistent-return": ["off"],

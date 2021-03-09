@@ -1027,6 +1027,8 @@ O que será verificado:
 
 ## Tela principal de receitas
 
+ - **Observação:** lembre de componentizar muito bem os elementos em React nessa tela para evitar problemas de lógica e de complexidade ;).
+
 ### 25 - Implemente os elementos da tela principal de receitas respeitando os atributos descritos no protótipo
 
 O que será verificado:
@@ -1124,6 +1126,7 @@ Ou seja, retornando novamente todas as receitas. O nome do filtro deve ser "All"
   ```
 
 ## Tela de detalhes de uma receita
+ - **Observação:** lembre de componentizar muito bem os elementos em React nessa tela para evitar problemas de lógica e de complexidade ;).
 
 ### 33 - Implemente os elementos da tela de detalhes de uma receita respeitando os atributos descritos no protótipo
 
@@ -1283,6 +1286,8 @@ Os ícones dos botões podem ser encontrados em `src/images/whiteHeartIcon.svg` 
 <!-- ### 47 - A cobertura de testes unitários deve ser de no mínimo 90% -->
 
 ## Tela de receita em progresso
+
+ - **Observação:** lembre de componentizar muito bem os elementos em React nessa tela para evitar problemas de lógica e de complexidade ;).
 
 ### 47 - Desenvolva a tela de maneira que contenha uma imagem da receita, seu titulo, sua categoria (ou se a bebida é alcoólica ou não) uma lista de ingredientes com suas respectivas quantidade e suas instruções
 

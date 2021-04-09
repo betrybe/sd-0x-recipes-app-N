@@ -13,9 +13,10 @@
     "history": "5.0.0",
     "lodash": "4.17.20",
     "prop-types": "15.7.2",
-    "react": "16.14.0",
+    "react": "^16.14.0",
     "react-bootstrap": "1.4.0",
     "react-dom": "16.14.0",
+    "react-icons": "^4.2.0",
     "react-logger": "1.1.0",
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.1",
@@ -29,7 +30,9 @@
     "test": "react-scripts test",
     "test-coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
-    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js,.jsx"
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js,.jsx",
+    "lint:fix": "eslint --fix --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js,.jsx",
+    "lint:styles": "npx stylelint '**/*.css'"
   },
   "eslintConfig": {
     "extends": "react-app"

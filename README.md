@@ -1211,6 +1211,8 @@ A verificação será feita através das receitas retornadas pela API, como por 
 
 ### 39 - Implemente a solução de forma que caso a receita já tenha sido feita, o botão "Iniciar Receita" deve sumir
 
+As receitas finalizadas devem ser recuperadas do `localStorage` na chave` doneRecipes` no formato especificado na seção [`localStorage`](#localStorage);
+
   O que será verificado:
   ```
   - Verifica se botão de iniciar receita não é visível na tela de detalhes de uma comida
@@ -1275,8 +1277,7 @@ Os ícones dos botões podem ser encontrados em `src/images/whiteHeartIcon.svg` 
 
 ### 46 - Salve as receitas favoritas no `localStorage` na chave `favoriteRecipes`
 
-  * O formato deve ser `[{ id, type, area, category, alcoholicOrNot, name, image }]`.
-  * As receitas feitas devem ser salvas em `localStorage` na chave `favoriteRecipes` no formato `[{ id, type, area, category, alcoholicOrNot, name, image, doneDate, tags }]`.
+  * As receitas feitas devem ser salvas em `localStorage` na chave `favoriteRecipes` no formato especificado na seção [`localStorage`](#localStorage).
 
   O que será verificado:
   ```

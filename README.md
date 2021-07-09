@@ -406,6 +406,7 @@ Para rodar somente um arquivo de teste, você precisa utilizar o comando `npm ru
 
 Para rodar apenas um teste, basta a utilização da função `.only` após o describe. Com isso, será possível que apenas um requisito rode localmente e seja avaliado.
 
+![image](describe-only.png)
 ![image](only-all-green.png)
 
 ## APIs

@@ -400,6 +400,15 @@ Esses testes não consideram o layout de maneira geral, mas sim os atributos e i
 
 #### Além dos testes da avaliação automatizada, um dos requisitos do projeto se baseia em **escrever testes unitários que cubram pelo menos 90% do projeto**. Na [documentação do Jest CLI](https://jestjs.io/docs/en/cli) é possível ver como essa cobertura é coletada.
 
+### Dica: desativando testes
+
+Para rodar somente um arquivo de teste, você precisa utilizar o comando `npm run cy -- --spec cypress/integration/login_spec.js`, sendo que é após o "spec" é preciso acrescentar todo o caminho até o arquivo de testes.
+
+Para rodar apenas um teste, basta a utilização da função `.only` após o describe. Com isso, será possível que apenas um requisito rode localmente e seja avaliado.
+
+![image](describe-only.png)
+![image](only-all-green.png)
+
 ## APIs
 
 ### TheMealDB API
